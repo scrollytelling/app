@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422191554) do
+ActiveRecord::Schema.define(version: 20150422191739) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -266,14 +266,15 @@ ActiveRecord::Schema.define(version: 20150422191554) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "failed_attempts", default: 0
+    t.integer  "failed_attempts",    default: 0
     t.datetime "locked_at"
     t.string   "first_name"
     t.string   "last_name"
     t.datetime "suspended_at"
     t.integer  "account_id"
-    t.string   "role",            default: "editor", null: false
+    t.string   "role",               default: "editor", null: false
     t.string   "locale"
+    t.string   "encrypted_password"
   end
 
   add_index "users", ["account_id"], name: "index_pageflow_users_on_account_id", using: :btree
