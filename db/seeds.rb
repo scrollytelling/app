@@ -2,28 +2,28 @@ include Pageflow::Seeds
 
 # Make sure to change the password if you intend to apply this seed to
 # a production system.
-default_user_password('!Pass123')
+default_user_password('9tzRFz9TS9eH')
 
 account(name: 'Pageflow') do |account|
   entry = sample_entry(account: account, title: 'Example Entry')
 
   user(account: account,
        role: 'admin',
-       email: 'admin@example.com',
-       first_name: 'Alice',
-       last_name: 'Adminson')
+       email: 'beekmans.inge@gmail.com',
+       first_name: 'Inge',
+       last_name: 'Beekmans')
 
   user(account: account,
        role: 'account_manager',
-       email: 'accountmanager@example.com',
-       first_name: 'Alfred',
-       last_name: 'Mc Count')
+       email: 'martijnvantol@gmail.com',
+       first_name: 'Martijn',
+       last_name: 'van Tol')
 
   user(account: account,
-       email: 'editor@example.com',
+       email: 'joost@spacebabies.nl',
        role: 'editor',
-       first_name: 'Ed',
-       last_name: 'Edison') do |editor|
+       first_name: 'Joost',
+       last_name: 'Baaij') do |editor|
 
     membership(user: editor, entry: entry)
   end
