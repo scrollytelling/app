@@ -15,7 +15,6 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -50,5 +49,3 @@ test:
 production:
   <<: *default
   database: storyboard_production
-  username: storyboard
-  password: <%= ENV['STORYBOARD_DATABASE_PASSWORD'] %>
