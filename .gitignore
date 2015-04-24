@@ -13,4 +13,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+/log/jobs
 /tmp
+
+/public/javascripts
