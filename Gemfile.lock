@@ -90,6 +90,9 @@ GEM
       warden (~> 1.2.3)
     devise-async (0.8.0)
       devise (>= 2.2, < 3.2)
+    dotenv (2.0.1)
+    dotenv-rails (2.0.1)
+      dotenv (= 2.0.1)
     ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.5.2)
@@ -277,6 +280,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   formtastic (= 2.3.0)
   inherited_resources (= 1.4.1)
   jquery-rails

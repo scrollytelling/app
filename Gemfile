@@ -26,3 +26,5 @@ gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 group :development do
   gem 'spring'
 end
+
+gem 'dotenv-rails', :groups => [:development, :test]
