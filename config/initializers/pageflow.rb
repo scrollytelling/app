@@ -4,7 +4,7 @@ ActiveAdmin.application.load_paths.unshift(Dir[Pageflow::Engine.root.join('admin
 Pageflow.configure do |config|
   # The email address to use as from header in invitation mails to new
   # users.
-  config.mailer_sender = 'change-me-at-config-initializers-pageflow@example.com'
+  config.mailer_sender = 'info@scrollytelling.io'
 
   # Page types available in the editor. Add futher page types from
   # page type engines below.
