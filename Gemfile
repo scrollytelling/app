@@ -32,4 +32,7 @@ group :test do
   gem 'database_cleaner'
 end
 
-gem 'dotenv-rails', :groups => [:development, :test]
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'dotenv-rails'
+end

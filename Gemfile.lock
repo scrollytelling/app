@@ -254,6 +254,23 @@ GEM
       rufus-scheduler (~> 2.0.24)
     resque_mailer (2.2.7)
       actionmailer (>= 3.0)
+    rspec-core (3.3.1)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-rails (3.3.2)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.19)
@@ -317,6 +334,7 @@ DEPENDENCIES
   pageflow
   rails (= 4.1.12)
   ransack
+  rspec-rails
   sass-rails (~> 4.0.3)
   spring
   state_machine!
