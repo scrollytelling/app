@@ -22,6 +22,7 @@ gem 'ransack'
 gem 'inherited_resources', '1.4.1'
 gem 'formtastic', '2.3.0'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
+gem 'figaro'
 
 group :development do
   gem 'spring'
@@ -34,5 +35,4 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'dotenv-rails'
 end

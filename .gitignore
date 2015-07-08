@@ -17,3 +17,6 @@
 /tmp
 
 /public/javascripts
+
+# Ignore application configuration
+/config/application.yml
