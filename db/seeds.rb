@@ -9,22 +9,21 @@ account(name: 'Pageflow') do |account|
 
   user(account: account,
        role: 'admin',
-       email: 'beekmans.inge@gmail.com',
-       first_name: 'Inge',
-       last_name: 'Beekmans')
+       email: 'admin@example.com',
+       first_name: 'Admin',
+       last_name: 'User')
 
   user(account: account,
        role: 'account_manager',
-       email: 'martijnvantol@gmail.com',
-       first_name: 'Martijn',
-       last_name: 'van Tol')
+       email: 'account_manager@example.com',
+       first_name: 'Account',
+       last_name: 'Manager')
 
   user(account: account,
-       email: 'joost@spacebabies.nl',
        role: 'editor',
-       first_name: 'Joost',
-       last_name: 'Baaij') do |editor|
-
-    membership(user: editor, entry: entry)
-  end
+       email: 'editor@example.com',
+       first_name: 'Editor',
+       last_name: 'Editor') do |editor|
+         membership(user: editor, entry: entry)
+       end
 end
