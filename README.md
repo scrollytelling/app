@@ -6,7 +6,13 @@
 bin/rake db:setup
 ```
 
+## Background jobs
+
+Remember you need to run background jobs to process uploads. See `Procfile`.
+
 ## Zencoder policies
+
+These access policies need to be placed in the respective S3 production buckets. You will also need them in development buckets; substitute `-production` for `-development`.
 
 ### main bucket
 
