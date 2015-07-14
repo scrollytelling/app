@@ -18,3 +18,10 @@ Feature: stories
     And I give it the title "Horizontal cities"
     And I click "Update Story"
     Then I see "Story was successfully updated"
+
+  Scenario: I can delete a story
+    Given a story "Vertical cities"
+    When I click "Stories"
+    And I click "Vertical cities"
+    And I click "Delete Story"
+    Then I see "Story was successfully destroyed"
