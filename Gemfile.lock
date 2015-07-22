@@ -204,6 +204,9 @@ GEM
       i18n-js
       jquery-ui-rails (~> 5.0)
       pageflow (~> 0.7)
+    pageflow-text-page (0.1.0)
+      i18n-js
+      pageflow (~> 0.7)
     paperclip (4.2.4)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -339,6 +342,7 @@ DEPENDENCIES
   mysql2
   pageflow
   pageflow-before-after
+  pageflow-text-page
   rails (= 4.1.12)
   ransack
   rspec-rails

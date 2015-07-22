@@ -3,3 +3,4 @@
 
 //= require pageflow/editor/base
 //= require pageflow/before_after/editor
+//= require pageflow/text_page/editor
