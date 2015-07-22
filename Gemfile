@@ -23,6 +23,7 @@ gem 'inherited_resources', '1.4.1'
 gem 'formtastic', '2.3.0'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'figaro'
+gem 'whenever', require: false
 
 group :development do
   gem 'spring'
