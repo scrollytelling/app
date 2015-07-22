@@ -25,6 +25,9 @@ gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'figaro'
 gem 'whenever', require: false
 
+# Pageflow page types
+gem 'pageflow-before-after'
+
 group :development do
   gem 'spring'
 end
