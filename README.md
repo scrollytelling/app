@@ -82,3 +82,7 @@ These access policies need to be placed in the respective S3 production buckets.
   ]
 }
 ```
+
+## Code of conduct
+
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
