@@ -28,6 +28,7 @@ gem 'whenever', require: false
 # Pageflow page types
 gem 'pageflow-before-after'
 gem 'pageflow-text-page'
+gem 'pageflow-embedded-video'
 
 group :development do
   gem 'spring'

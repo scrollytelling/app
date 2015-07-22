@@ -204,6 +204,9 @@ GEM
       i18n-js
       jquery-ui-rails (~> 5.0)
       pageflow (~> 0.7)
+    pageflow-embedded-video (0.1.0)
+      i18n-js
+      pageflow (~> 0.7)
     pageflow-text-page (0.1.0)
       i18n-js
       pageflow (~> 0.7)
@@ -342,6 +345,7 @@ DEPENDENCIES
   mysql2
   pageflow
   pageflow-before-after
+  pageflow-embedded-video
   pageflow-text-page
   rails (= 4.1.12)
   ransack
