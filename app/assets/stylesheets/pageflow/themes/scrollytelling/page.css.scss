@@ -8,15 +8,15 @@ $page-color: $main-color;
   font-family: $page-font;
 
   .content {
-    font-size: 1em;
+    font-size: 5em;
 
     @include phone {
-      font-size: 0.7em;
+      font-size: 2em;
     }
   }
 
   .shadow {
-    @include shadow(#000);
+    @include shadow(#bae2dc);
   }
 
   &.invert {
