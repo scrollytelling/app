@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422201907) do
+ActiveRecord::Schema.define(version: 20150819115457) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -42,12 +42,13 @@ ActiveRecord::Schema.define(version: 20150422201907) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "pageflow_accounts", force: true do |t|
-    t.string   "name",                default: "", null: false
+    t.string   "name",                   default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "default_file_rights", default: "", null: false
-    t.string   "landing_page_name",   default: "", null: false
+    t.string   "default_file_rights",    default: "", null: false
+    t.string   "landing_page_name",      default: "", null: false
     t.integer  "default_theming_id"
+    t.text     "features_configuration"
   end
 
   add_index "pageflow_accounts", ["default_theming_id"], name: "index_pageflow_accounts_on_default_theming_id", using: :btree
@@ -84,9 +85,10 @@ ActiveRecord::Schema.define(version: 20150422201907) do
     t.integer  "entry_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "position",    default: 0,  null: false
-    t.string   "title",       default: "", null: false
+    t.integer  "position",      default: 0,  null: false
+    t.string   "title",         default: "", null: false
     t.integer  "revision_id"
+    t.text     "configuration"
   end
 
   add_index "pageflow_chapters", ["entry_id"], name: "index_pageflow_chapters_on_entry_id", using: :btree
@@ -103,13 +105,15 @@ ActiveRecord::Schema.define(version: 20150422201907) do
   add_index "pageflow_edit_locks", ["user_id"], name: "index_pageflow_edit_locks_on_user_id", using: :btree
 
   create_table "pageflow_entries", force: true do |t|
-    t.string   "title",      default: "", null: false
+    t.string   "title",                  default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "slug",                    null: false
+    t.string   "slug",                                null: false
     t.integer  "account_id"
     t.integer  "folder_id"
     t.integer  "theming_id"
+    t.text     "features_configuration"
+    t.string   "password_digest"
   end
 
   add_index "pageflow_entries", ["account_id"], name: "index_pageflow_entries_on_account_id", using: :btree
@@ -203,6 +207,7 @@ ActiveRecord::Schema.define(version: 20150422201907) do
     t.integer  "share_image_x"
     t.integer  "share_image_y"
     t.string   "locale"
+    t.boolean  "password_protected"
   end
 
   add_index "pageflow_revisions", ["restored_from_id"], name: "index_pageflow_revisions_on_restored_from_id", using: :btree
