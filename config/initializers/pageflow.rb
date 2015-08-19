@@ -56,7 +56,7 @@ Pageflow.configure do |config|
       :s3_host_name => ENV['S3_HOST_NAME']
     },
     :s3_host_alias => ENV['S3_HOST_ALIAS'],
-    :s3_protocol => 'http'
+    :s3_protocol => ENV['S3_PROTOCOL']
   )
 
   # Default options for paperclip attachments which are supposed to
@@ -66,7 +66,7 @@ Pageflow.configure do |config|
     :api_key => ENV['ZENCODER_API_KEY'],
     :output_bucket => ENV['S3_OUTPUT_BUCKET'],
     :s3_host_alias => ENV['S3_OUTPUT_HOST_ALIAS'],
-    :s3_protocol => 'http',
+    :s3_protocol => ENV['S3_PROTOCOL'],
     :attachments_version => 'v1'
   )
 end
