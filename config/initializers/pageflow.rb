@@ -8,15 +8,15 @@ Pageflow.configure do |config|
 
   # Page types available in the editor. Add futher page types from
   # page type engines below.
-  config.register_page_type(Pageflow::BuiltInPageType.background_image)
-  config.register_page_type(Pageflow::BuiltInPageType.background_video)
-  config.register_page_type(Pageflow::BuiltInPageType.video)
-  config.register_page_type(Pageflow::BuiltInPageType.audio)
-  config.register_page_type(Pageflow::BuiltInPageType.audio_loop)
-  config.register_page_type(Pageflow::BuiltInPageType.internal_links)
-  config.register_page_type(Pageflow::BeforeAfter::PageType.new)
-  config.register_page_type(Pageflow::TextPage.page_type)
-  config.register_page_type(Pageflow::EmbeddedVideo.page_type)
+  config.page_types.register(Pageflow::BuiltInPageType.background_image)
+  config.page_types.register(Pageflow::BuiltInPageType.background_video)
+  config.page_types.register(Pageflow::BuiltInPageType.video)
+  config.page_types.register(Pageflow::BuiltInPageType.audio)
+  config.page_types.register(Pageflow::BuiltInPageType.audio_loop)
+  config.page_types.register(Pageflow::InternalLinks.grid_page_type)
+  config.page_types.register(Pageflow::BeforeAfter::PageType.new)
+  config.page_types.register(Pageflow::TextPage.page_type)
+  config.page_types.register(Pageflow::EmbeddedVideo.page_type)
 
   # Add custom themes by invoking the pageflow:theme generator and
   # registering the theme here.

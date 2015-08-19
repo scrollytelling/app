@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/codevise/pageflow-internal-links.git
+  revision: 28e06ac2266093911a44a7a6caa3583c63868daf
+  specs:
+    pageflow-internal-links (0.1.0)
+      pageflow (>= 0.9.pre)
+
+GIT
   remote: git://github.com/codevise/pageflow.git
   revision: 4ae8d350dad78b7f04de00c3418be5a56f9cbcc9
   specs:
@@ -352,6 +359,7 @@ DEPENDENCIES
   pageflow!
   pageflow-before-after
   pageflow-embedded-video
+  pageflow-internal-links!
   pageflow-text-page
   rails (= 4.1.12)
   ransack
