@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # gems we need
-gem 'pageflow'
+gem 'pageflow', github: 'codevise/pageflow'
 gem 'activeadmin', git: 'https://github.com/codevise/active_admin.git', branch: 'rails4'
 gem 'ransack'
 gem 'inherited_resources', '1.4.1'

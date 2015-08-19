@@ -1,4 +1,45 @@
 GIT
+  remote: git://github.com/codevise/pageflow.git
+  revision: 4ae8d350dad78b7f04de00c3418be5a56f9cbcc9
+  specs:
+    pageflow (0.9.0.alpha)
+      activeadmin (~> 0.6.0)
+      ar_after_transaction (~> 0.4.0)
+      aws-sdk (~> 1.60)
+      backbone-rails (~> 1.0.0)
+      bcrypt (~> 3.1.7)
+      bourbon (~> 3.1.8)
+      cancan (~> 1.6)
+      devise (~> 3.0.2)
+      devise-async (~> 0.8.0)
+      ejs (~> 1.1)
+      friendly_id (~> 5.0)
+      http_accept_language (~> 2.0)
+      i18n-js (~> 2.1)
+      jbuilder (>= 1.5, < 3.0)
+      jquery-fileupload-rails (= 0.4.1)
+      jquery-layout-rails (~> 0.1.0)
+      jquery-rails (~> 3.0)
+      jquery-ui-rails (~> 5.0)
+      kramdown (~> 1.5)
+      marionette-rails (~> 1.1.0)
+      paperclip (~> 4.2.4)
+      rails (>= 4.0.2, < 4.2)
+      redis (~> 3.0)
+      redis-namespace (~> 1.5)
+      resque (~> 1.25)
+      resque-logger (~> 0.2.0)
+      resque-scheduler (~> 2.5)
+      resque_mailer (~> 2.2)
+      sass-rails (~> 4.0)
+      state_machine (~> 1.2)
+      state_machine_job (~> 0.2.0)
+      videojs_rails (= 4.1.0)
+      wysihtml5x-rails (= 0.4.17)
+      yajl-ruby (~> 1.2)
+      zencoder (~> 2.5)
+
+GIT
   remote: https://github.com/codevise/active_admin.git
   revision: 2385a54a15eb383b66f12ab2c084c436c78efb8f
   branch: rails4
@@ -165,41 +206,6 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
-    pageflow (0.8.2)
-      activeadmin (~> 0.6.0)
-      ar_after_transaction (~> 0.4.0)
-      aws-sdk (~> 1.60)
-      backbone-rails (~> 1.0.0)
-      bourbon (~> 3.1.8)
-      cancan (~> 1.6)
-      devise (~> 3.0.2)
-      devise-async (~> 0.8.0)
-      ejs (~> 1.1)
-      friendly_id (~> 5.0)
-      http_accept_language (~> 2.0)
-      i18n-js (~> 2.1)
-      jbuilder (>= 1.5, < 3.0)
-      jquery-fileupload-rails (= 0.4.1)
-      jquery-layout-rails (~> 0.1.0)
-      jquery-rails (~> 3.0)
-      jquery-ui-rails (~> 5.0)
-      kramdown (~> 1.5)
-      marionette-rails (~> 1.1.0)
-      paperclip (~> 4.2.4)
-      rails (>= 4.0.2, < 4.2)
-      redis (~> 3.0)
-      redis-namespace (~> 1.5)
-      resque (~> 1.25)
-      resque-logger (~> 0.2.0)
-      resque-scheduler (~> 2.5)
-      resque_mailer (~> 2.2)
-      sass-rails (~> 4.0)
-      state_machine (~> 1.2)
-      state_machine_job (~> 0.2.0)
-      videojs_rails (= 4.1.0)
-      wysihtml5x-rails (= 0.4.17)
-      yajl-ruby (~> 1.2)
-      zencoder (~> 2.5)
     pageflow-before-after (0.2.0)
       i18n-js
       jquery-ui-rails (~> 5.0)
@@ -343,7 +349,7 @@ DEPENDENCIES
   inherited_resources (= 1.4.1)
   jquery-rails
   mysql2
-  pageflow
+  pageflow!
   pageflow-before-after
   pageflow-embedded-video
   pageflow-text-page
