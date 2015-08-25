@@ -136,3 +136,11 @@ $page-color: $main-color;
 .js .vjs-progress-control .vjs-play-progress, .js .vjs-progress-control.vjs-fade-out .vjs-play-progress {
   background-color: $main-color;
 }
+
+.text_position_right {
+  .contentText {
+    p {
+      text-align: right;
+    }
+  }
+}
