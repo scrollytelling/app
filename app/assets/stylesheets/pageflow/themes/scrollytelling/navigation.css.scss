@@ -9,7 +9,10 @@ $nav-bg-color-transparent: $basic-background-color-transparent;
 
 .navigation {
 
-  width: 0 !important;
+  width: 40px !important;
+  opacity: 0.5;
+  
+  }
 
   .navigation_bullet, .navigation_menu > a {
     font-size: 16px;
@@ -22,7 +25,7 @@ $nav-bg-color-transparent: $basic-background-color-transparent;
     border-radius: 18px;
     color: rgba(255,255,255,0.8);
     cursor: pointer;
-    margin: 13px 28px;
+    margin: 13px 8px;
     position: relative;
     background-color: rgb(219, 219, 219) !important;
     @include shine-gradient;
@@ -87,6 +90,7 @@ $nav-bg-color-transparent: $basic-background-color-transparent;
 
   &.js a.scroll_indicator {
     background-image: image-url('pageflow/themes/default/scroll_indicator_sprite.png');
+    right: 2px;
   }
 
   .navigation_bullet.navigation_fullscreen {
