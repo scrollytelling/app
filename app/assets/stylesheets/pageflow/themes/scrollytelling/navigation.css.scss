@@ -86,11 +86,11 @@ $nav-bg-color-transparent: $basic-background-color-transparent;
   }
 }
 
-&.js .navigation_bar_bottom li.fullscreen {
+.js .navigation_bar_bottom li.fullscreen {
   height: auto;
 }
 
-&.js a.scroll_indicator {
+.js a.scroll_indicator {
   background-image: image-url('pageflow/themes/default/scroll_indicator_sprite.png');
   right: 2px;
 }
