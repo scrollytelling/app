@@ -14,7 +14,7 @@ $page-color: $main-color;
       font-size: 0.7em;
     }
   }
-  
+
   .slideshow .content {
 	left: 80px;
 	}
@@ -139,4 +139,13 @@ $page-color: $main-color;
 
 .js .vjs-progress-control .vjs-play-progress, .js .vjs-progress-control.vjs-fade-out .vjs-play-progress {
   background-color: $main-color;
+}
+
+.js .page .scroller > div {
+  padding: 15% 8% 5% 8%;
+}
+
+.page h1, .page h2 span.subtitle, .page h2 span.tagline, .page h3, .page p {
+  max-width: 400px;
+  width: 60%;
 }
