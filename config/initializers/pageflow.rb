@@ -37,6 +37,8 @@ Pageflow.configure do |config|
   # pageflow_filesystem_root paperclip interpolation.
   config.paperclip_filesystem_root = 'tmp/attachments/production'
 
+  config.public_https_mode = :ignore
+
   # Rewrite the below section to use your favorite configuration
   # method: ENV variables, secrets.yml, custom yml files. If you use
   # environment variables consider the dotenv gem to configure your
