@@ -1,0 +1,32 @@
+/*
+  theme standards for Scrollytelling
+
+  These are visual standards we feel should apply to each Scrollytelling theme.
+  */
+
+
+// hide the nav menu until we can make it really pretty
+.navigation {
+  display: none !important;
+}
+
+
+// we feel the standard page width is too wide
+.js .page .scroller > div {
+  padding: 15% 8% 5% 8%;
+}
+
+.page h1, .page h2 span.subtitle, .page h2 span.tagline, .page h3, .page p {
+  max-width: 400px;
+  width: 60%;
+}
+
+// transparent video controls please
+.js .vjs-control-bar {
+  background-color: transparent;
+	border: 0;
+}
+
+.js .vjs-slider-handle {
+  display: none;
+}
