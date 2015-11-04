@@ -33,25 +33,26 @@ $page-color: $main-color;
   }
 
   h2 .tagline {
-      display: block;
-      font-size: 1em;
-      font-weight: normal;
-      margin-top: 0;
-      letter-spacing: 0em;
+    font-family: $header-font;
+    font-weight: 600;
+    display: block;
+    font-size: 1em;
+    margin-top: 0;
+    letter-spacing: 0em;
   }
 
   h2 .title {
-      font-family: $page-font;
-      display: block;
-      font-size: 2.3em;
-      font-weight: normal;
-      margin-top: 0.4em;
-      margin-bottom: 0.4em;
-      letter-spacing: 0em;
-      line-height: 1em;
-      @include phone {
-        font-size: 1.8em;
-      }
+    font-family: $header-font;
+    font-weight: 600;
+    display: block;
+    font-size: 2.3em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    letter-spacing: 0em;
+    line-height: 1em;
+    @include phone {
+      font-size: 1.8em;
+    }
   }
 
   h2 .subtitle {
