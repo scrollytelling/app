@@ -1,8 +1,5 @@
 .loading_spinner {
-  background-color: #252526;
-  background-image: image-url('pageflow/loading_spinner_glow.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: black;
 
   .loading_spinner_inner {
     left: 50%;
@@ -13,7 +10,6 @@
     margin-top: -101px;
     position: absolute;
     z-index: 0;
-    background-color: $main-color;
     animation: fadeInLoadingSpinner  linear 2s;
     animation-iteration-count: 1;
     -webkit-animation: fadeInLoadingSpinner linear 2s;
@@ -24,17 +20,6 @@
     -o-animation-iteration-count: 1;
     -ms-animation: fadeInLoadingSpinner linear 2s;
     -ms-animation-iteration-count: 1;
-
-    &:before {
-      content: " ";
-      width: 208px;
-      height: 208px;
-      position: absolute;
-      background-image: image-url('pageflow/themes/#{$theme-name}/loading_spinner_bg.png');
-      z-index: 1;
-      top:-2px;
-      left: -2px;
-    }
 
     div {
       width: 204px;
