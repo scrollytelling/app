@@ -41,6 +41,14 @@ Pageflow.configure do |config|
 
   config.public_https_mode = :ignore
 
+  # When a theme has a cname, we usually don't have the ssl key/cert from the customer.
+  # So we default back to plain old http for the protocol.
+  config.public_entry_url_options = lambda do |theming|
+    if theming.cname.present?
+      {protocol: "http"}
+    end
+  end
+
   # Rewrite the below section to use your favorite configuration
   # method: ENV variables, secrets.yml, custom yml files. If you use
   # environment variables consider the dotenv gem to configure your
