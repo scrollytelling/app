@@ -45,7 +45,7 @@ Pageflow.configure do |config|
   # So we default back to plain old http for the protocol.
   config.public_entry_url_options = lambda do |theming|
     if theming.cname.present?
-      {protocol: "http"}
+      {protocol: "http", host: theming.cname}
     end
   end
 
