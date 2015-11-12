@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150819115457) do
+ActiveRecord::Schema.define(version: 20151112100507) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 20150819115457) do
     t.integer  "theming_id"
     t.text     "features_configuration"
     t.string   "password_digest"
+    t.datetime "first_published_at"
   end
 
   add_index "pageflow_entries", ["account_id"], name: "index_pageflow_entries_on_account_id", using: :btree
