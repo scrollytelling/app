@@ -10,10 +10,26 @@
   display: none !important;
 }
 
+.js {
+  // we feel the standard page width is too wide
+  .page .scroller > div {
+    padding: 15% 8% 5% 8%;
+  }
 
-// we feel the standard page width is too wide
-.js .page .scroller > div {
-  padding: 15% 8% 5% 8%;
+  // transparent video controls please
+  .vjs-control-bar {
+    background-color: transparent;
+  	border: 0;
+  }
+
+  .vjs-slider-handle {
+    display: none;
+  }
+
+  // https://github.com/codevise/pageflow/issues/413
+  .widget_progress_navigation_bar_present .videoWrapper {
+    margin-right: -140px;
+  }
 }
 
 .page {
@@ -26,14 +42,4 @@
     max-width: 400px !important;
     width: 60%;
   }
-}
-
-// transparent video controls please
-.js .vjs-control-bar {
-  background-color: transparent;
-	border: 0;
-}
-
-.js .vjs-slider-handle {
-  display: none;
 }
