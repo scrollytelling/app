@@ -35,7 +35,7 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 
 body { margin: 0; font-size: 100%; line-height: 1.231; }
 
-body, button, input, select, textarea { font-family: helvetica, arial,"lucida grande", verdana, "メイリオ", "ＭＳ Ｐゴシック", sans-serif; color: #222; }
+body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #222; }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
@@ -319,13 +319,12 @@ input[type=button]:active {
     box-shadow: inset 0 1px rgba(0,0,0,0.1);
 }
 
-/* Reset anchor styles to an unstyled default to be in parity with design surface. It 
+/* Reset anchor styles to an unstyled default to be in parity with design surface. It
    is presumed that most link styles in real-world designs are custom (non-default). */
 a, a:visited, a:hover, a:active {
     color: inherit;
     text-decoration: inherit;
-}/* This code is only meant for previewing your Reflow design. */
-.primaryContainer {
+}.primaryContainer {
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -337,7 +336,7 @@ a, a:visited, a:hover, a:active {
 
 #text {
     float: left;
-    font-size: 6em;
+    font-size: 3em;
     width: 90%;
     height: auto;
     text-align: left;
@@ -397,7 +396,7 @@ a, a:visited, a:hover, a:active {
     color: rgb(255, 255, 255);
     position: absolute;
     top: auto;
-    left: 203.921875px;
+    left: 210.921875px;
     bottom: 36px;
     right: auto;
 }
@@ -425,3 +424,116 @@ a, a:visited, a:hover, a:active {
     font-weight: 100;
 }
 
+@media only screen and (max-width: 1024px) {
+    #text {
+        margin-top: 72.546875px;
+        margin-left: 7.998657%;
+        clear: both;
+        height: auto;
+        min-height: 113px;
+        font-size: 4em;
+    }
+
+    #text1 {
+        margin-top: 16.9375px;
+        margin-left: 8.242798%;
+        clear: both;
+    }
+
+    #text2 {
+        bottom: 36px;
+        left: 174.75px;
+    }
+
+    #image1 {
+        bottom: 30px;
+        left: 7.476807%;
+    }
+
+    #text2:hover {
+        color: rgb(163, 163, 163);
+    }
+
+    #image1:hover {
+        opacity: 0.63;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #text {
+        margin-top: 24.640625px;
+        margin-left: 8.183594%;
+        clear: both;
+        height: auto;
+        min-height: 51px;
+        width: 88.90625%;
+        font-size: 2.3em;
+    }
+
+    #text1 {
+        margin-top: 11.90625px;
+        margin-left: 8.4375%;
+        clear: both;
+        font-size: 1em;
+        height: auto;
+        min-height: 52px;
+        width: 76.894531%;
+    }
+
+    #text2 {
+        bottom: 36px;
+        left: 136.921875px;
+    }
+
+    #image1 {
+        bottom: 30px;
+        left: 7.475586%;
+    }
+
+    #image {
+        height: 38.453125px;
+        width: 155.90625px;
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #text {
+        margin-top: 43.5625px;
+        margin-left: 7.998047%;
+        clear: both;
+        font-size: 2em;
+        height: auto;
+        min-height: 52px;
+        width: 77.426758%;
+    }
+
+    #text1 {
+        font-size: 1em;
+        height: auto;
+        min-height: 204px;
+        width: 77.104492%;
+        margin-top: 14.9375px;
+        margin-left: 8.320313%;
+        clear: both;
+    }
+
+    #text2 {
+        bottom: 30px;
+        left: 119.921875px;
+        height: auto;
+        min-height: 30px;
+        width: 33.828125%;
+    }
+
+    #image1 {
+        bottom: 30px;
+        left: 7.475586%;
+    }
+
+    #image {
+        height: 36.984375px;
+        width: 149.921875px;
+        max-width: none;
+    }
+}
