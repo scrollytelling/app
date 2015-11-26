@@ -1,6 +1,7 @@
 production:
-  nginx:
+  rails:
     configuration:
-      cors:
-        origin: 'verhalen.volkskrant.nl'
-        methods: 'GET, OPTIONS'
+      nginx:
+        cors:
+          origin: 'verhalen.volkskrant.nl'
+          methods: 'GET, OPTIONS'
