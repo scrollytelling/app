@@ -1,0 +1,6 @@
+production:
+  nginx:
+    configuration:
+      cors:
+        origin: 'verhalen.volkskrant.nl'
+        methods: 'GET, OPTIONS'
