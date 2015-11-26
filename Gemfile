@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # ruby
 ruby '2.1.6'
 
-# rack
-gem 'rack-cors', :require => 'rack/cors'
-
 # rails
 gem 'rails', '4.1.12'
 

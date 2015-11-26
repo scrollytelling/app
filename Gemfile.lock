@@ -226,7 +226,6 @@ GEM
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     rack (1.5.5)
-    rack-cors (0.4.0)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -357,7 +356,6 @@ DEPENDENCIES
   pageflow-embedded-video
   pageflow-internal-links!
   pageflow-text-page
-  rack-cors
   rails (= 4.1.12)
   ransack
   rspec-rails
