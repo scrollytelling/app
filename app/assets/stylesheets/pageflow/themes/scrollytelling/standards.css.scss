@@ -16,6 +16,10 @@
     padding: 15% 8% 5% 8%;
   }
 
+  .vjs-loading-spinner {
+    display: none !important;
+  }
+
   // transparent video controls please
   .vjs-control-bar {
     background-color: transparent;
