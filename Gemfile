@@ -26,7 +26,7 @@ gem 'figaro'
 gem 'whenever', require: false
 
 # Pageflow page types
-gem 'pageflow-internal-links', github: 'codevise/pageflow-internal-links'
+gem 'pageflow-internal-links'
 gem 'pageflow-before-after'
 gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'

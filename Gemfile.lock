@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/codevise/pageflow-internal-links.git
-  revision: 28e06ac2266093911a44a7a6caa3583c63868daf
-  specs:
-    pageflow-internal-links (0.1.0)
-      pageflow (>= 0.9.pre)
-
-GIT
   remote: https://github.com/codevise/active_admin.git
   revision: 2385a54a15eb383b66f12ab2c084c436c78efb8f
   branch: rails4
@@ -215,6 +208,8 @@ GEM
     pageflow-embedded-video (0.1.0)
       i18n-js
       pageflow (~> 0.7)
+    pageflow-internal-links (0.1.0)
+      pageflow (~> 0.9)
     pageflow-text-page (0.1.0)
       i18n-js
       pageflow (~> 0.7)
@@ -354,7 +349,7 @@ DEPENDENCIES
   pageflow
   pageflow-before-after
   pageflow-embedded-video
-  pageflow-internal-links!
+  pageflow-internal-links
   pageflow-text-page
   rails (= 4.1.12)
   ransack
