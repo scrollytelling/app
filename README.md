@@ -10,6 +10,38 @@ bin/rake db:setup
 
 Remember you need to run background jobs to process uploads. See `Procfile`.
 
+## Deploying a new theme
+
+```
+rails generate pageflow:theme newtheme
+```
+
+Register it:
+
+```
+# config/initializers/pageflow.rb
+Pageflow.configure do
+  config.themes.register(:newtheme)
+end
+```
+
+Add our standards to the main theme css:
+
+```
+# app/assets/stylesheets/pageflow/themes/newtheme.css.scss
+@import "./scrollytelling/standards.css.scss";
+```
+
+Then copy the contents of the most recent (or a good) theme already in use.
+
+Images to be created:
+
+```
+pageflow/themes/#{$theme-name}/loading.png (150x150)
+pageflow/themes/#{$theme-name}/logo_header.png (100 - 221 px wide)
+pageflow/themes/#{$theme-name}/logo_header_invert.png (100 - 221 px wide)
+```
+
 ## Zencoder policies
 
 These access policies need to be placed in the respective S3 production buckets. You will also need them in development buckets; substitute `-production` for `-development`.
