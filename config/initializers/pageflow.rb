@@ -6,6 +6,10 @@ Pageflow.configure do |config|
   # users.
   config.mailer_sender = 'info@scrollytelling.io'
 
+  # Activate a constraint for the editor routes defined by Pageflow.
+  # This is useful when you have accounts with CNAMEs.
+  config.editor_route_constraint = HostConstraint.new
+
   # Page types available in the editor. Add futher page types from
   # page type engines below.
   config.page_types.register(Pageflow::BuiltInPageType.background_image)
