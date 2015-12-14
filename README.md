@@ -40,6 +40,7 @@ Images to be created:
 pageflow/themes/#{$theme-name}/loading.png (150x150)
 pageflow/themes/#{$theme-name}/logo_header.png (100 - 221 px wide)
 pageflow/themes/#{$theme-name}/logo_header_invert.png (100 - 221 px wide)
+pageflow/themes/#{$theme-name}/favicon.ico
 ```
 
 ## Zencoder policies
