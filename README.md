@@ -32,7 +32,7 @@ Add our standards to the main theme css:
 @import "./scrollytelling/standards.css.scss";
 ```
 
-Then copy the contents of the most recent (or a good) theme already in use.
+Then copy the Scss contents of the most recent (or a good) theme already in use. Don't use any of the CSS that was generated!
 
 Images to be created:
 
