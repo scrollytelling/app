@@ -28,7 +28,7 @@ end
 Add our standards to the main theme css:
 
 ```
-# app/assets/stylesheets/pageflow/themes/newtheme.css.scss
+# app/assets/stylesheets/pageflow/themes/#{$theme-name}.css.scss
 @import "./scrollytelling/standards.css.scss";
 ```
 
