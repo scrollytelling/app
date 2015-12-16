@@ -43,6 +43,8 @@ pageflow/themes/#{$theme-name}/logo_header_invert.png (100 - 221 px wide)
 pageflow/themes/#{$theme-name}/favicon.ico
 ```
 
+Lastly change the colors in `variables.css.scss` into the colors used in the theme.
+
 ## Zencoder policies
 
 These access policies need to be placed in the respective S3 production buckets. You will also need them in development buckets; substitute `-production` for `-development`.
