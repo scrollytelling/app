@@ -31,7 +31,7 @@
 .loader {
  font-size: 11px;
  text-indent: -99999em;
- margin: 20% auto;
+ margin: 20% auto 0 auto;
  position: relative;
  width: 10em;
  height: 10em;
@@ -78,5 +78,5 @@
   height: 60px;
   background-image: image-url('pageflow/themes/#{$theme-name}/logo_header.png');
   background-size: cover;
-  margin: auto;
+  margin: 10% auto;
 }
