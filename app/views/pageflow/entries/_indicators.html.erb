@@ -1,0 +1,71 @@
+<% if theme.has_scroll_back_indicator? %>
+  <div class="scroll_back_indicator scroll_indicator indicator" data-direction="up">
+    <%= t('pageflow.public.scroll_back_indicator') %>
+  </div>
+<% end %>
+
+<div class="scroll_next_indicator scroll_indicator indicator" data-direction="down">
+  <%= t('pageflow.public.scroll_indicator', default: "Scroll om door te gaan") %>
+</div>
+
+<div class="hidden_text_indicator indicator">
+  <%= t('pageflow.public.swipe_indicator') %>
+</div>
+
+<ul class="sharing">
+  <li><a href="#" id="share-tw"><%= image_tag "twitter.png", alt: "Share on Twitter" %></a></li>
+  <li><a href="#" id="share-fb"><%= image_tag "facebook.png", alt: "Share on Facebook" %></a></li>
+</ul>
+
+<script>
+  $('#share-fb').on('click', function(event) {
+    event.preventDefault();
+    var fbSharer = window.open(
+      "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(window.location.href),
+      "Facebook",
+      "width=600,height=300"
+    );
+  });
+
+  $('#share-tw').on('click', function(event) {
+    event.preventDefault();
+    var twSharer = window.open(
+      "https://twitter.com/intent/tweet?url="+encodeURIComponent(window.location.href),
+      "Twitter",
+      "width=600,height=260"
+    )
+  })
+</script>
+
+<style>
+ul.sharing {
+  position: absolute;
+  top: 3%;
+  right: 8%;
+  width: 200px;
+  max-width: 80%;
+  height: 40px;
+  z-index: 5;
+  text-align: right;
+}
+
+ul.sharing li {
+  display: inline;
+}
+
+ul.sharing img {
+  width: 50px;
+  height: 50px;
+  opacity: .8;
+}
+
+ul.sharing img:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  ul.sharing {
+    display: none;
+  }
+}
+</style>
