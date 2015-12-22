@@ -3,5 +3,5 @@ production:
     configuration:
       nginx:
         cors:
-          origin: 'http://verhalen.volkskrant.nl'
+          origin: "*"
           methods: 'GET, OPTIONS'
