@@ -22,6 +22,11 @@ Pageflow.configure do |config|
   config.page_types.register(Pageflow::TextPage.page_type)
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
 
+  # Register our own widget types
+  config.widget_types.register(Widgets::Analytics::Radio1.widget_type)
+  config.widget_types.register(Widgets::Analytics::Nos.widget_type)
+  config.widget_types.register(Widgets::Analytics::Volkskrant.widget_type)
+
   # Add custom themes by invoking the pageflow:theme generator and
   # registering the theme here.
   #
