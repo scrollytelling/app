@@ -6,3 +6,7 @@ en:
       widget_type_name: Radio 1 ComScore Analytics
     analytics_volkskrant:
       widget_type_name: de Volkskrant Analytics
+    widgets:
+      roles:
+        head: HTML header widget
+        overview: Overview widget
