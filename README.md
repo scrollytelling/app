@@ -13,7 +13,7 @@ Remember you need to run background jobs to process uploads. See `Procfile`.
 ## Deploying a new theme
 
 ```
-rails generate pageflow:theme newtheme
+bundle exec rails generate pageflow:theme newtheme
 ```
 
 Register it:
