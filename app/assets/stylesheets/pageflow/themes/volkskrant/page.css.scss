@@ -97,7 +97,7 @@ $page-color: $main-color;
   }
 
   &.invert .content_and_background .scroller > div:after {
-    background-image: image-url("pageflow/themes/#{$theme-name}/volkskrant@2x");
+    background-image: image-url("pageflow/themes/#{$theme-name}/volkskrant@2x-invert.png");
   }
 
   .scroller > div, .content_and_background > .page_header {
