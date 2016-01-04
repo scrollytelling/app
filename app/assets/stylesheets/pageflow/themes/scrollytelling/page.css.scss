@@ -34,6 +34,7 @@ $page-color: $main-color;
 
   h2 {
     font-size: 1.375em;
+    font-family: $header-font;
   }
 
   h2 .tagline {
@@ -45,7 +46,6 @@ $page-color: $main-color;
   }
 
   h2 .title {
-      font-family: $page-font;
       display: block;
       font-size: 2.3em;
       font-weight: normal;
