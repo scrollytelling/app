@@ -10,6 +10,10 @@ bin/rake db:setup
 
 Remember you need to run background jobs to process uploads. See `Procfile`.
 
+## Environment variables
+
+Make sure to create config/application.yml and set the ENV variables.
+
 ## Deploying a new theme
 
 ```
