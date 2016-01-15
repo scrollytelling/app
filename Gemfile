@@ -24,6 +24,7 @@ gem 'formtastic', '2.3.0'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'figaro'
 gem 'whenever', require: false
+gem "sentry-raven"
 
 # Pageflow page types
 gem 'pageflow-internal-links'
