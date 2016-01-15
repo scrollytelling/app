@@ -13,8 +13,14 @@
 </div>
 
 <ul class="sharing">
-  <li><a href="#" id="share-tw"><%= image_tag "twitter.png", alt: "Share on Twitter" %></a></li>
-  <li><a href="#" id="share-fb"><%= image_tag "facebook.png", alt: "Share on Facebook" %></a></li>
+  <li><a href="#" id="share-tw"><%= image_tag "twitter.png", alt: "Share on Twitter", title: "Share on Twitter" %></a></li>
+  <li><a href="#" id="share-fb"><%= image_tag "facebook.png", alt: "Share on Facebook", title: "Share on Facebook" %></a></li>
+</ul>
+
+<ul class="options">
+  <li><a href="#" id="back-to-top"><%= image_tag "arrow_up.png", alt: "Back to top", title: "Back to top" %></a></li>
+  <li><a href="#" id="mute-audio"><%= image_tag "audio_on.png", alt: "Mute", title: "Mute" %></a></li>
+  <li><a href="#" id="play-audio" style="display: none;"><%= image_tag "audio_off.png", alt: "Mute", title: "Mute" %></a></li>
 </ul>
 
 <script>
@@ -34,7 +40,26 @@
       "Twitter",
       "width=600,height=260"
     )
-  })
+  });
+
+  $('#mute-audio').on('click', function(event) {
+    event.preventDefault();
+    pageflow.settings.set('volume', 0);
+    $('#mute-audio').css({display: "none"});
+    $('#play-audio').css({display: "inline"});
+  });
+
+  $('#play-audio').on('click', function(event) {
+    event.preventDefault();
+    pageflow.settings.set('volume', 1);
+    $('#mute-audio').css({display: "inline"});
+    $('#play-audio').css({display: "none"});
+  });
+
+  $('#back-to-top').on('click', function(event) {
+    event.preventDefault();
+    location.hash = "#" + pageflow.pages[0].perma_id;
+  });
 </script>
 
 <style>
@@ -53,14 +78,24 @@ ul.sharing li {
   display: inline;
 }
 
-ul.sharing img {
+ul.sharing img,
+ul.options img {
   width: 50px;
   height: 50px;
   opacity: .8;
 }
 
-ul.sharing img:hover {
+ul.sharing img:hover,
+ul.options img:hover {
   opacity: 1;
+}
+
+ul.options {
+  position: absolute;
+  bottom: 2%;
+  right: 8%;
+  z-index: 5;
+  list-style-type: none;
 }
 
 @media screen and (max-width: 768px) {
