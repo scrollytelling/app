@@ -23,13 +23,13 @@ Pageflow.configure do |config|
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
 
   # Register our own widget types, wrapped in a feature so we can enable per account.
-  config.features.register("radio1_analytics") do |feature_config|
+  config.features.register("analytics.radio1") do |feature_config|
     feature_config.widget_types.register(Widgets::Analytics.radio1)
   end
-  config.features.register("nos_analytics") do |feature_config|
+  config.features.register("analytics.nos") do |feature_config|
     feature_config.widget_types.register(Widgets::Analytics.nos)
   end
-  config.features.register("volkskrant_analytics") do |feature_config|
+  config.features.register("analytics.volkskrant") do |feature_config|
     feature_config.widget_types.register(Widgets::Analytics.volkskrant)
   end
 

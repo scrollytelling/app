@@ -8,7 +8,7 @@ module Widgets
       end
 
       def name
-        "analytics_#{account}"
+        "analytics.#{account}"
       end
 
       def roles
