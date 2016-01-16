@@ -1,11 +1,11 @@
 en:
   pageflow:
-    analytics_nos:
-      widget_type_name: NOS ComScore Analytics
-    analytics_radio1:
-      widget_type_name: Radio 1 ComScore Analytics
-    analytics_volkskrant:
-      widget_type_name: de Volkskrant Analytics
+    nos_analytics:
+      feature_name: Analytics for NOS
+    radio1_analytics:
+      feature_name: Analytics for NPO Radio 1
+    volkskrant_analytics:
+      feature_name: Analytics for de Volkskrant
     widgets:
       roles:
         head: HTML header widget

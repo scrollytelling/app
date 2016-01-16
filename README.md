@@ -49,78 +49,17 @@ pageflow/themes/#{$theme-name}/favicon.ico
 
 Lastly change the colors in `variables.css.scss` into the colors used in the theme.
 
-## Zencoder policies
+## Deploying new analytics
 
-These access policies need to be placed in the respective S3 production buckets. You will also need them in development buckets; substitute `-production` for `-development`.
+Go into `app/models/analytics.rb` and add a new static factory method.
 
-### main bucket
+Copy one of the existing analytics folders: `cp -r app/views/widgets/analytics/volkskrant app/views/widgets/analytics/NAME`.
 
-```json
-{
-  "Version": "2008-10-17",
-  "Id": "ZencoderBucketPolicy",
-  "Statement": [
-    {
-      "Sid": "Stmt1295042087538",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::395540211253:root"
-      },
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::storyboard-pageflow-production/*"
-    },
-    {
-      "Sid": "Stmt1295042087538",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::395540211253:root"
-      },
-      "Action": [
-        "s3:ListBucketMultipartUploads",
-        "s3:GetBucketLocation"
-      ],
-      "Resource": "arn:aws:s3:::storyboard-pageflow-production"
-    }
-  ]
-}
-```
+Change the contents of both files, head and body. They must both remain present. Use HTML comments if you don't have a script to render here.
 
-### output bucket
+Then, register the new widget in `config/initializers/pageflow.rb`. Wrap it in a feature block.
 
-```json
-{
-  "Version": "2008-10-17",
-  "Id": "ZencoderBucketPolicy",
-  "Statement": [
-    {
-      "Sid": "Stmt1295042087538",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::395540211253:root"
-      },
-      "Action": [
-        "s3:GetObject",
-        "s3:PutObjectAcl",
-        "s3:ListMultipartUploadParts",
-        "s3:PutObject"
-      ],
-      "Resource": "arn:aws:s3:::storyboard-pageflow-production-out/*"
-    },
-    {
-      "Sid": "Stmt1295042087538",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::395540211253:root"
-      },
-      "Action": [
-        "s3:ListBucketMultipartUploads",
-        "s3:GetBucketLocation"
-      ],
-      "Resource": "arn:aws:s3:::storyboard-pageflow-production-out"
-    }
-  ]
-}
-```
+Lastly, enable the feature in the corresponding account.
 
 ## Code of conduct
 
