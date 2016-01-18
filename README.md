@@ -36,16 +36,26 @@ Add our standards to the main theme css:
 @import "./scrollytelling/standards.css.scss";
 ```
 
-Then copy the Scss contents of the most recent (or a good) theme already in use. Don't use any of the CSS that was generated!
+Then copy all scss and images of a known good theme into the new one. Do *not* use any of the generated stuff.
+
+```
+rm -r app/assets/stylesheets/pageflow/themes/new
+rm -r app/assets/images/pageflow/themes/new
+
+cp -r app/assets/stylesheets/pageflow/themes/old app/assets/stylesheets/pageflow/themes/new
+cp -r app/assets/images/pageflow/themes/old app/assets/images/pageflow/themes/new
+```
 
 Images to be created:
 
 ```
-pageflow/themes/#{$theme-name}/loading.png (150x150)
+pageflow/themes/#{$theme-name}/loading.png
 pageflow/themes/#{$theme-name}/logo_header.png (100 - 221 px wide)
 pageflow/themes/#{$theme-name}/logo_header_invert.png (100 - 221 px wide)
 pageflow/themes/#{$theme-name}/favicon.ico
 ```
+
+Place fonts in `app/assets/fonts/pageflow/themes/#{$theme-name}`. Only use .woff - this format is implemented in all browsers.
 
 Lastly change the colors in `variables.css.scss` into the colors used in the theme.
 
