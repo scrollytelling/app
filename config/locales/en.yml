@@ -1,6 +1,9 @@
 en:
   pageflow:
     analytics:
+      grasnapolsky:
+        feature_name: Analytics for Grasnapolsky
+        widget_type_name: Grasnapolsky Google Analytics
       nos:
         feature_name: Analytics for NOS
         widget_type_name: NOS ComScore

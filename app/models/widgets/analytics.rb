@@ -44,5 +44,9 @@ module Widgets
     def self.volkskrant
       WidgetType.new 'volkskrant'
     end
+
+    def self.grasnapolsky
+      WidgetType.new 'grasnapolsky'
+    end
   end
 end

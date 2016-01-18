@@ -51,7 +51,7 @@ Lastly change the colors in `variables.css.scss` into the colors used in the the
 
 ## Deploying new analytics
 
-Go into `app/models/analytics.rb` and add a new static factory method.
+Go into `app/models/widgets/analytics.rb` and add a new static factory method.
 
 Copy one of the existing analytics folders: `cp -r app/views/widgets/analytics/volkskrant app/views/widgets/analytics/NAME`.
 
@@ -59,7 +59,9 @@ Change the contents of both files, head and body. They must both remain present.
 
 Then, register the new widget in `config/initializers/pageflow.rb`. Wrap it in a feature block.
 
-Lastly, enable the feature in the corresponding account.
+Add the widget translations to `en.yml` and any other localization file you have active.
+
+Then deploy the code and enable the widget in the corresponding account, and the code in the corresponding theming (edit account). After that, all new stories will have this widget enabled. For previous stories, you need to add the widget manually.
 
 ## Code of conduct
 
