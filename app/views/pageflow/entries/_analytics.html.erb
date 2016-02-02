@@ -1,6 +1,8 @@
 <!-- Piwik -->
 <script>
   var _paq = _paq || [];
+  _paq.push(["setCustomVariable", 1, "account", "<%= entry.account.name %>", "visit"]);
+  _paq.push(["setCustomVariable", 2, "entry", "<%= entry.title %>", "visit"]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
