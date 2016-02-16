@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Akzidenz Grotesk Light';
+    src: font-url('pageflow/themes/#{$theme-name}/AkzidenzGrotesk-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Condensed';
+    src: font-url('pageflow/themes/#{$theme-name}/AkzidenzGrotesk-Condensed.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Chevin Medium Italic';
+    src: font-url('pageflow/themes/#{$theme-name}/ChevinMedium-Italic.woff') format('woff');
+}
