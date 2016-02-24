@@ -52,5 +52,9 @@ module Widgets
     def self.beeldengeluid
       WidgetType.new 'beeldengeluid'
     end
+
+    def self.psv
+      WidgetType.new 'psv'
+    end
   end
 end

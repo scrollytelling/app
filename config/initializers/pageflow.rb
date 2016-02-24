@@ -38,6 +38,9 @@ Pageflow.configure do |config|
   config.features.register("analytics.beeldengeluid") do |feature_config|
     feature_config.widget_types.register(Widgets::Analytics.beeldengeluid)
   end
+  config.features.register("analytics.psv") do |feature_config|
+    feature_config.widget_types.register(Widgets::Analytics.psv)
+  end
 
   # Add custom themes by invoking the pageflow:theme generator and
   # registering the theme here.
