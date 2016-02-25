@@ -56,5 +56,9 @@ module Widgets
     def self.psv
       WidgetType.new 'psv'
     end
+
+    def self.stephaniestruijk
+      WidgetType.new 'stephaniestruijk'
+    end
   end
 end

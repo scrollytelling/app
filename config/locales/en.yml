@@ -16,6 +16,9 @@ en:
       radio1:
         feature_name: Analytics for NPO Radio 1
         widget_type_name: NPO Radio 1 ComScore
+      stephaniestruijk:
+        feature_name: Analytics for Stephanie Struijk
+        widget_type_name: Stephanie Struijk Google Analytics
       volkskrant:
         feature_name: Analytics for de Volkskrant
         widget_type_name: de volkskrant Google Tag Manger
