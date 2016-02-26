@@ -80,13 +80,13 @@ $page-color: $main-color;
   .content_and_background .scroller > div:after {
     content: " ";
     position: absolute;
-    background-image: image-url("pageflow/themes/#{$theme-name}/logo.png");
+    background-image: image-url("pageflow/themes/#{$theme-name}/logo_aaneen.png");
     background-size: contain;
     background-repeat: no-repeat;
     top: 50px;
     z-index: 200;
     padding-top: 6.8%;
-    width: 110px;
+    width:200px;
     height: 39px;
     left: 8%;
 
