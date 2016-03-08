@@ -47,3 +47,57 @@
     width: 60%;
   }
 }
+
+ul.sharing {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 200px;
+  max-width: 80%;
+  height: 40px;
+  z-index: 5;
+  text-align: right;
+  margin: 0;
+}
+
+ul.sharing li {
+  display: inline;
+}
+
+ul.sharing img,
+ul.options img {
+  width: 40px;
+  height: 40px;
+  opacity: .8;
+}
+
+ul.sharing img:hover,
+ul.options img:hover {
+  opacity: 1;
+}
+
+ul.options {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  z-index: 5;
+  list-style-type: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  ul.sharing,
+  ul.options {
+    display: none;
+  }
+}
+
+.entry .indicator {
+  left: 2%;
+  height: 30px;
+}
+
+.js .page:first-child .content_and_background .scroller > div:after {
+  left: 2%;
+  top: 3%;
+}

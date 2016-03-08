@@ -80,12 +80,10 @@ $page-color: $main-color;
     background-image: image-url("pageflow/themes/#{$theme-name}/logo_header.png");
     background-size: contain;
     background-repeat: no-repeat;
-    top: 50px;
     z-index: 200;
     padding-top: 6.8%;
     width: 110px;
     height: 39px;
-    left: 8%;
 
     @include mobile {
       padding-top: 1%;

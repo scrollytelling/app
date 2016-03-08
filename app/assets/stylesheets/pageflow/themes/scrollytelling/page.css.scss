@@ -83,7 +83,6 @@ $page-color: $main-color;
     position: absolute;
     background-image: image-url("pageflow/themes/#{$theme-name}/logo_header.png");
     background-repeat: no-repeat;
-    top: 50px;
     z-index: 200;
     background-size: contain;
     background-position: left top;
@@ -91,7 +90,6 @@ $page-color: $main-color;
     min-width: 100px;
     max-width: 221px;
     width: 13%;
-    left: 8%;
 
     @include mobile {
       padding-top: 1%;
