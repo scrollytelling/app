@@ -1,6 +1,9 @@
 en:
   pageflow:
     analytics:
+      anmesty:
+        feature_name: Analytics for Amnesty International
+        widget_type_name: Amnesty International Google Analytics
       beeldengeluid:
         feature_name: Analytics for Beeld en Geluid
         widget_type_name: Beeld en Geluid Google Analytics

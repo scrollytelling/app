@@ -60,5 +60,9 @@ module Widgets
     def self.stephaniestruijk
       WidgetType.new 'stephaniestruijk'
     end
+
+    def self.amnesty
+      WidgetType.new 'amnesty'
+    end
   end
 end
