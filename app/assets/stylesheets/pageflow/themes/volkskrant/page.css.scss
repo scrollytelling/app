@@ -73,31 +73,18 @@ $page-color: $main-color;
 
 }
 
+#center-brand {
+  padding-top: 6.8%;
+  min-width: 100px;
+  max-width: 221px;
+  width: 13%;
+
+  @include mobile {
+    height: 35px;
+  }
+}
+
 .js .page:first-child {
-
-  .content_and_background .scroller > div:after {
-    content: " ";
-    position: absolute;
-    background-image: image-url("pageflow/themes/#{$theme-name}/volkskrant@2x.png");
-    background-repeat: no-repeat;
-    top: 30px;
-    z-index: 200;
-    background-size: contain;
-    background-position: left top;
-    padding-top: 6.8%;
-    min-width: 100px;
-    max-width: 221px;
-    width: 13%;
-
-    @include mobile {
-      padding-top: 1%;
-      height: 35px;
-    }
-  }
-
-  &.invert .content_and_background .scroller > div:after {
-    background-image: image-url("pageflow/themes/#{$theme-name}/volkskrant@2x-invert.png");
-  }
 
   .scroller > div, .content_and_background > .page_header {
     @include mobile {

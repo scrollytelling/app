@@ -76,30 +76,19 @@ $page-color: $main-color;
 
 }
 
+#center-brand {
+  min-width: 100px;
+  max-width: 221px;
+  width: 13%;
+  height: 35px;
+  top: 20px;
+
+  @include mobile {
+    top: 1%;
+  }
+}
+
 .js .page:first-child {
-
-  .content_and_background .scroller > div:after {
-    content: " ";
-    position: absolute;
-    background-image: image-url("pageflow/themes/#{$theme-name}/logo_header.png");
-    background-repeat: no-repeat;
-    z-index: 200;
-    background-size: contain;
-    background-position: left top;
-    padding-top: 6.8%;
-    min-width: 100px;
-    max-width: 221px;
-    width: 13%;
-
-    @include mobile {
-      padding-top: 1%;
-      height: 35px;
-    }
-  }
-
-  &.invert .content_and_background .scroller > div:after {
-    background-image: image-url("pageflow/themes/#{$theme-name}/logo_header_invert.png");
-  }
 
   .scroller > div, .content_and_background > .page_header {
     @include mobile {

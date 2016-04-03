@@ -75,28 +75,16 @@ $page-color: $main-color;
 
 }
 
+#center-brand {
+  width:300px;
+  height: 50px;
+
+  @include mobile {
+    height: 35px;
+  }
+}
+
 .js .page:first-child {
-
-  .content_and_background .scroller > div:after {
-    content: " ";
-    position: absolute;
-    background-image: image-url("pageflow/themes/#{$theme-name}/logo_aaneen.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 200;
-    padding-top: 6.8%;
-    width:300px;
-    height: 50px;
-
-    @include mobile {
-      padding-top: 1%;
-      height: 35px;
-    }
-  }
-
-  &.invert .content_and_background .scroller > div:after {
-    background-image: image-url("pageflow/themes/#{$theme-name}/logo_invert.png");
-  }
 
   .scroller > div, .content_and_background > .page_header {
     @include mobile {

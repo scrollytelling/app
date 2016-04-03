@@ -8,12 +8,7 @@
   background: linear-gradient(to bottom,  rgba(255,255,255,0.1) 0%,rgba(0, 0, 0, 0.1) 29%,rgba(0,0,0,0.05) 90%,rgba(246,246,246,0.1) 100%); /* W3C */
 }
 
-@import "bourbon";
-@import "pageflow/mixins";
-@import "pageflow/animations";
-
 @import "./fonts";
-@import "./variables";
 @import "./anchors";
 @import "./loading_spinner";
 @import "./page";

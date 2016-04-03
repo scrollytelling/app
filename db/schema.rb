@@ -213,17 +213,6 @@ ActiveRecord::Schema.define(version: 20160224155112) do
 
   add_index "pageflow_revisions", ["restored_from_id"], name: "index_pageflow_revisions_on_restored_from_id", using: :btree
 
-  create_table "pageflow_storylines", force: true do |t|
-    t.integer  "perma_id"
-    t.integer  "revision_id"
-    t.integer  "position"
-    t.text     "configuration"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "pageflow_storylines", ["revision_id"], name: "index_pageflow_storylines_on_revision_id", using: :btree
-
   create_table "pageflow_themings", force: true do |t|
     t.string   "imprint_link_url"
     t.string   "imprint_link_label"

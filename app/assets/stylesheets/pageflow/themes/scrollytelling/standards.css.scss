@@ -1,9 +1,48 @@
+@import "bourbon";
+@import "pageflow/mixins";
+@import "pageflow/animations";
+
 /*
   theme standards for Scrollytelling
 
   These are visual standards we feel should apply to each Scrollytelling theme.
   */
 
+.back_home_link {
+  position: absolute;
+  top: 30px;
+  left: 8%;
+  color: $anchor-color;
+  font-family: $header-font;
+  text-decoration: none;
+  z-index: 200;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#center-brand {
+  position: absolute;;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: image-url("pageflow/themes/#{$theme-name}/logo_header.png");
+  background-repeat: no-repeat;
+  z-index: 200;
+  background-size: contain;
+  background-position: left top;
+
+  @include mobile {
+    top: 1%;
+  }
+}
+
+.invert #center-brand {
+  background-image: image-url("pageflow/themes/#{$theme-name}/logo_header_invert.png");
+}
 
 // hide the nav menu until we can make it really pretty
 .navigation {
