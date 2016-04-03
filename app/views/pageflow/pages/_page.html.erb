@@ -7,7 +7,7 @@
       :id => page.id,
       :chapter_id => page.chapter_id
     } do %>
-    <%= render partial: Pageflow.config.page_types.find_by_name!(page.template).template_path.sub('_', ''),
+    <%= render template: Pageflow.config.page_types.find_by_name!(page.template).template_path,
       locals: {
         page: page,
         configuration: page.configuration,
