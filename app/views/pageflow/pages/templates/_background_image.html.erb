@@ -6,7 +6,7 @@
   </div>
   <div class="content scroller">
     <div>
-      <%= render partial: "zero_page", locals: {revision: revision} if page_counter && page_counter.zero? %>
+      <%= render partial: "zero_page", locals: {revision: revision} if defined?(page_counter) && page_counter.zero? %>
       <div class="contentWrapper">
         <div class="page_header">
           <h2>
