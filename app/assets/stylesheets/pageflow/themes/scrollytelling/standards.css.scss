@@ -10,12 +10,16 @@
 
 .back_home_link {
   position: absolute;
-  top: 30px;
+  top: 2%;
   left: 2%;
   color: $anchor-color;
   font-family: $header-font;
   text-decoration: none;
   pointer-events: auto;
+
+  @include mobile {
+    top: 1%;
+  }
 
   &:hover {
     text-decoration: underline;
@@ -24,19 +28,20 @@
 
 #center-brand {
   position: absolute;;
-  top: 30px;
+  top: 2%;
   left: 0;
   right: 0;
+  width: 200px;
+  height: 50px;
   margin-left: auto;
   margin-right: auto;
   background-image: image-url("pageflow/themes/#{$theme-name}/logo_header.png");
   background-repeat: no-repeat;
-  z-index: 200;
   background-size: contain;
-  background-position: left top;
 
   @include mobile {
     top: 1%;
+    height: 35px;
   }
 }
 

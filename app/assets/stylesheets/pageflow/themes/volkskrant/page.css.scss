@@ -73,17 +73,6 @@ $page-color: $main-color;
 
 }
 
-#center-brand {
-  padding-top: 6.8%;
-  min-width: 100px;
-  max-width: 221px;
-  width: 13%;
-
-  @include mobile {
-    height: 35px;
-  }
-}
-
 .js .page:first-child {
 
   .scroller > div, .content_and_background > .page_header {

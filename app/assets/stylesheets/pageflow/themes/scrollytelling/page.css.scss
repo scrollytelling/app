@@ -77,15 +77,8 @@ $page-color: $main-color;
 }
 
 #center-brand {
-  min-width: 100px;
-  max-width: 221px;
   width: 13%;
   height: 35px;
-  top: 20px;
-
-  @include mobile {
-    top: 1%;
-  }
 }
 
 .js .page:first-child {
