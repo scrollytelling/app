@@ -11,11 +11,11 @@
 .back_home_link {
   position: absolute;
   top: 30px;
-  left: 8%;
+  left: 2%;
   color: $anchor-color;
   font-family: $header-font;
   text-decoration: none;
-  z-index: 200;
+  pointer-events: auto;
 
   &:hover {
     text-decoration: underline;
@@ -134,9 +134,4 @@ ul.options {
 .entry .indicator {
   left: 2%;
   height: 30px;
-}
-
-.js .page:first-child .content_and_background .scroller > div:after {
-  left: 2%;
-  top: 3%;
 }
