@@ -10,7 +10,7 @@
 
 .back_home_link {
   position: absolute;
-  top: 2%;
+  bottom: 2%;
   left: 2%;
   color: $anchor-color;
   font-family: $header-font;
@@ -18,7 +18,7 @@
   pointer-events: auto;
 
   @include mobile {
-    top: 1%;
+    bottom: 1%;
   }
 
   &:hover {
@@ -40,7 +40,11 @@
   background-size: contain;
 
   @include mobile {
-    top: 1%;
+    top: 20px;
+    left: 16px;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
     height: 35px;
   }
 }
