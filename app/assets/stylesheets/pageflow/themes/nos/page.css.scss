@@ -72,16 +72,15 @@ $page-color: $main-color;
 
 }
 
-#center-brand {
-  width: 110px;
-  height: 39px;
-
-  @include mobile {
-    height: 35px;
-  }
-}
-
 .js .page:first-child {
+  .content_and_background .scroller > div:after {
+    width: 110px;
+    height: 39px;
+
+    @include mobile {
+      height: 35px;
+    }
+  }
 
   .scroller > div, .content_and_background > .page_header {
     @include mobile {

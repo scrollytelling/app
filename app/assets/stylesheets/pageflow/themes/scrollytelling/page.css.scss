@@ -76,11 +76,10 @@ $page-color: $main-color;
 
 }
 
-#center-brand {
-  width: 150px;
-}
-
 .js .page:first-child {
+  .content_and_background .scroller > div:after {
+    width: 150px;
+  }
 
   .scroller > div, .content_and_background > .page_header {
     @include mobile {
