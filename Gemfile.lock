@@ -251,8 +251,24 @@ GEM
       i18n
       polyamorous (~> 1.2)
     redis (3.0.7)
+    redis-actionpack (4.0.1)
+      actionpack (~> 4)
+      redis-rack (~> 1.5.0)
+      redis-store (~> 1.1.0)
+    redis-activesupport (4.1.5)
+      activesupport (>= 3, < 5)
+      redis-store (~> 1.1.0)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
+    redis-rack (1.5.0)
+      rack (~> 1.5)
+      redis-store (~> 1.1.0)
+    redis-rails (4.0.0)
+      redis-actionpack (~> 4)
+      redis-activesupport (~> 4)
+      redis-store (~> 1.1.0)
+    redis-store (1.1.7)
+      redis (>= 2.2)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     resque (1.25.2)
@@ -358,6 +374,7 @@ DEPENDENCIES
   pageflow-text-page
   rails (= 4.1.14.1)
   ransack
+  redis-rails
   rspec-rails
   sass-rails (~> 4.0.3)
   sentry-raven
@@ -365,3 +382,6 @@ DEPENDENCIES
   state_machine!
   uglifier (>= 1.3.0)
   whenever
+
+BUNDLED WITH
+   1.11.2

@@ -8,6 +8,7 @@ gem 'rails', '4.1.14.1'
 
 # database
 gem 'mysql2'
+gem "redis-rails"
 
 # asset pipeline
 gem 'sass-rails', '~> 4.0.3'
