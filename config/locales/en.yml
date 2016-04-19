@@ -29,7 +29,6 @@ en:
       blank_entry:
         header: This is an empty story
         intro: Each story consist of chapters and pages. The editor panel to your right shows the outline.
-        smoke_test: Is this button on?
     widgets:
       roles:
         head: HTML header widget
