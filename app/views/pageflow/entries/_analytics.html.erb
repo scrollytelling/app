@@ -1,10 +1,9 @@
-<!-- Piwik -->
+<!-- Analytics for Scrollytelling internal use -->
 <script>
   var _paq = _paq || [];
   _paq.push(["setCustomVariable", 1, "account", "<%= entry.account.name %>", "visit"]);
   _paq.push(["setCustomVariable", 2, "entry", "<%= entry.title %>", "visit"]);
   _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
   (function() {
     var u="//www.spacebabies.nl/analytics/";
     _paq.push(['setTrackerUrl', u+'piwik.php']);
@@ -14,4 +13,4 @@
   })();
 </script>
 <noscript><p><img src="//www.spacebabies.nl/analytics/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
+<!-- End of Analytics for Scrollytelling internal use -->
