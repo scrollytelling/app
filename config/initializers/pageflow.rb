@@ -104,7 +104,7 @@ Pageflow.configure do |config|
       :secret_access_key => ENV['S3_SECRET_KEY'],
       :s3_host_name => ENV['S3_HOST_NAME']
     },
-    :s3_host_alias => ENV['S3_OUTPUT_HOST_ALIAS'],
+    :s3_host_alias => ENV['S3_HOST_ALIAS'],
     :s3_protocol => ENV['S3_PROTOCOL']
   )
 
