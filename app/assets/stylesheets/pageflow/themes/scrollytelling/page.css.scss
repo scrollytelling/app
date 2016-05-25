@@ -25,7 +25,14 @@ $page-color: $main-color;
 
   &.invert {
     color: #000;
-    background-color: #fff;
+
+    &.text_position_right {
+        background-color: transparent;
+    }
+
+    .blackLayer {
+        background-color: #fff;
+    }
 
     .shadow {
       @include shadow(#fff);
