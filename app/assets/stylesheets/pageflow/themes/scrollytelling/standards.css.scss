@@ -147,3 +147,22 @@ ul.options {
   left: 2%;
   height: 30px;
 }
+
+// Hide loader
+.finished-loading .loader_wrapper {
+    display:none;
+}
+
+// Set initial state of hidden
+.page.invert, .page.invert.text_position_right {
+    background-color:transparent;
+}
+
+// When loaded - set bg to white
+.slideshow .page.invert, .slideshow .page.invert.text_position_right {
+    background-color:#fff;
+}
+
+.slideshow section.fade.text_position_right.invert, .slideshow section.fade.invert {
+    background-color: transparent;
+}

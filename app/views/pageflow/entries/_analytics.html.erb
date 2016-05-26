@@ -14,3 +14,10 @@
 </script>
 <noscript><p><img src="//www.spacebabies.nl/analytics/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
 <!-- End of Analytics for Scrollytelling internal use -->
+
+<!-- fix visible spinner and white transition flash -->
+<script>
+pageflow.ready.then(function() {
+  $('body').addClass('finished-loading');
+});
+</script>
