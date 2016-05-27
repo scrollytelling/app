@@ -34,7 +34,7 @@ pageflow.Counter = {
 
   dots: function(pages) {
     return pages.map(function(page) {
-      return $('<li><a href="#'+page.perma_id+'"><span></span></a><div class="st-tooltip right">'+page.configuration.title+'</div></li>');
+      return $('<li><a href="#'+page.perma_id+'"><span></span></a><div class="st-tooltip">'+page.configuration.title+'</div></li>');
     });
   },
 
@@ -48,7 +48,6 @@ pageflow.Counter = {
   },
 
   init: function() {
-    this.placeHtml.css('margin-top', -12 * pageflow.pages.length);
     this.placeHtml.html(this.dots(pageflow.pages));
 
     // Init active dot

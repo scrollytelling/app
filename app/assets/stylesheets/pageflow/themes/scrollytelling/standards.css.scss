@@ -173,9 +173,7 @@ ul.options {
   z-index: 100;
   top: 50%;
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  padding: 0;
-  margin: 0;
+  transform: translateY(-50%);
 
   ul {
     margin: 0;
@@ -199,7 +197,6 @@ ul.options {
     }
 
     .st-tooltip {
-      -webkit-transition: opacity 0.2s ease-in;
       transition: opacity 0.2s ease-in;
       width: auto;
       opacity: 1;
@@ -227,9 +224,6 @@ ul.options {
       left: 50%;
       top: 50%;
       margin: -2px 0 0 -2px;
-      -webkit-transition: all 0.1s ease-in-out;
-      -moz-transition: all 0.1s ease-in-out;
-      -o-transition: all 0.1s ease-in-out;
       transition: all 0.1s ease-in-out;
     }
 
