@@ -23,6 +23,29 @@
   <li><a href="#" id="play-audio" style="display: none;"><%= image_tag "audio_off.png", alt: "Mute", title: "Mute" %></a></li>
 </ul>
 
+<div id="fp-nav" class="right" style="margin-top: -33.5px;">
+  <ul>
+    <li>
+      <a href="#firstPage" class=""><span></span></a>
+      <div class="fp-tooltip right">First</div>
+    </li>
+    <li>
+      <a href="#secondPage"><span></span></a>
+      <div class="fp-tooltip right">Second</div>
+    </li>
+    <li>
+      <a href="#3rdPage" class="active"><span></span></a>
+      <div class="fp-tooltip right">Third</div>
+    </li>
+  </ul>
+</div>
+
+<script>
+pageflow.Counter = {
+
+}
+</script>
+
 <script>
   $('#share-fb').on('click', function(event) {
     event.preventDefault();
