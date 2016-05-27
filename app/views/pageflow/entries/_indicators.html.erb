@@ -23,27 +23,45 @@
   <li><a href="#" id="play-audio" style="display: none;"><%= image_tag "audio_off.png", alt: "Mute", title: "Mute" %></a></li>
 </ul>
 
-<div id="fp-nav" class="right" style="margin-top: -33.5px;">
+<div id="st-counter">
   <ul>
-    <li>
-      <a href="#firstPage" class=""><span></span></a>
-      <div class="fp-tooltip right">First</div>
-    </li>
-    <li>
-      <a href="#secondPage"><span></span></a>
-      <div class="fp-tooltip right">Second</div>
-    </li>
-    <li>
-      <a href="#3rdPage" class="active"><span></span></a>
-      <div class="fp-tooltip right">Third</div>
-    </li>
   </ul>
 </div>
 
 <script>
 pageflow.Counter = {
+  placeHtml: $('#st-counter ul'),
 
+  dots: function(pages) {
+    return pages.map(function(page) {
+      return $('<li><a href="#'+page.perma_id+'"><span></span></a><div class="st-tooltip right">'+page.configuration.title+'</div></li>');
+    });
+  },
+
+  setActive: function(id) {
+    this.placeHtml.find('a').removeClass('active');
+    this.placeHtml.find('a[href="#'+id+'"]').addClass('active');
+  },
+
+  updateActive: function(page) {
+    this.setActive(page.element[0].id);
+  },
+
+  init: function() {
+    this.placeHtml.css('margin-top', -12 * pageflow.pages.length);
+    this.placeHtml.html(this.dots(pageflow.pages));
+
+    // Init active dot
+    this.setActive(pageflow.atmo.slideshow.currentPage()[0].id);
+
+    // Listen to page changes
+    pageflow.events.on('page:change', this.updateActive.bind(this));
+  }
 }
+
+pageflow.ready.then(function() {
+  pageflow.Counter.init();
+});
 </script>
 
 <script>

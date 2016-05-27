@@ -167,9 +167,8 @@ ul.options {
     background-color: transparent;
 }
 
-#fp-nav {
-  margin-top: -33.5px;
-  right: 2.2%;
+#st-counter {
+  right: 2.3%;
   position: fixed;
   z-index: 100;
   top: 50%;
@@ -190,6 +189,22 @@ ul.options {
     height: 13px;
     margin: 7px;
     position: relative;
+  }
+
+  li:hover {
+    a span {
+      width: 10px;
+      height: 10px;
+      margin: -5px 0 0 -5px;
+    }
+
+    .st-tooltip {
+      -webkit-transition: opacity 0.2s ease-in;
+      transition: opacity 0.2s ease-in;
+      width: auto;
+      opacity: 1;
+      right: 20px;
+    }
   }
 
   a {
@@ -218,7 +233,7 @@ ul.options {
       transition: all 0.1s ease-in-out;
     }
 
-    a.active span {
+    &.active span {
       height: 12px;
       width: 12px;
       margin: -6px 0 0 -6px;
@@ -226,7 +241,7 @@ ul.options {
     }
   }
 
-  .fp-tooltip {
+  .st-tooltip {
     right: 20px;
     position: absolute;
     top: -2px;
