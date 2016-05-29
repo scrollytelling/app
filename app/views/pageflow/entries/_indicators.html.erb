@@ -18,7 +18,6 @@
 </ul>
 
 <ul class="options">
-  <li><a href="#" id="back-to-top"><%= image_tag "arrow_up.png", alt: "Back to top", title: "Back to top" %></a></li>
   <li><a href="#" id="mute-audio"><%= image_tag "audio_on.png", alt: "Mute", title: "Mute" %></a></li>
   <li><a href="#" id="play-audio" style="display: none;"><%= image_tag "audio_off.png", alt: "Mute", title: "Mute" %></a></li>
 </ul>
@@ -94,10 +93,5 @@ pageflow.ready.then(function() {
     pageflow.settings.set('volume', 1);
     $('#mute-audio').css({display: "inline"});
     $('#play-audio').css({display: "none"});
-  });
-
-  $('#back-to-top').on('click', function(event) {
-    event.preventDefault();
-    location.hash = "#" + pageflow.pages[0].perma_id;
   });
 </script>
