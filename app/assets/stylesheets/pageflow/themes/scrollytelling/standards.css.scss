@@ -250,4 +250,14 @@ ul.options {
     width: 0;
     cursor: pointer;
   }
+
+  ul.invert {
+    a span {
+      background: black;
+    }
+
+    .st-tooltip {
+      color: black;
+    }
+  }
 }

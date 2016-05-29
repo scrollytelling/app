@@ -1,0 +1,40 @@
+<div id="st-counter">
+  <ul>
+  </ul>
+</div>
+
+<script>
+pageflow.Counter = {
+  placeHtml: $('#st-counter ul'),
+
+  dots: function(pages) {
+    return pages.map(function(page) {
+      return $('<li><a href="#'+page.perma_id+'"><span></span></a><div class="st-tooltip">'+page.configuration.title+'</div></li>');
+    });
+  },
+
+  setActive: function(page) {
+    $(page).hasClass('invert') ? this.placeHtml.addClass('invert') : this.placeHtml.removeClass('invert');
+    this.placeHtml.find('a').removeClass('active');
+    this.placeHtml.find('a[href="#'+page.id+'"]').addClass('active');
+  },
+
+  updateActive: function(page) {
+    this.setActive(page.element[0]);
+  },
+
+  init: function() {
+    this.placeHtml.html(this.dots(pageflow.pages));
+
+    // Init active dot
+    this.setActive(pageflow.atmo.slideshow.currentPage()[0]);
+
+    // Listen to page changes
+    pageflow.events.on('page:change', this.updateActive.bind(this));
+  }
+}
+
+pageflow.ready.then(function() {
+  pageflow.Counter.init();
+});
+</script>
