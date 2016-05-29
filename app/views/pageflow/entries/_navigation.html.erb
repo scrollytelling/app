@@ -1,22 +1,19 @@
-<div id="st-counter">
+<nav id="polka-nav">
   <ul>
+    <% entry.pages.displayed_in_navigation.each do |page| %>
+      <li><a href="#<%= page.perma_id %>"><span></span></a><div class="polka-tooltip"><%= page.configuration["title"] %></div></li>
+    <% end %>
   </ul>
 </div>
 
 <script>
 pageflow.Counter = {
-  placeHtml: $('#st-counter ul'),
-
-  dots: function(pages) {
-    return pages.map(function(page) {
-      return $('<li><a href="#'+page.perma_id+'"><span></span></a><div class="st-tooltip">'+page.configuration.title+'</div></li>');
-    });
-  },
+  polkaNav: $('#polka-nav'),
 
   setActive: function(page) {
-    $(page).hasClass('invert') ? this.placeHtml.addClass('invert') : this.placeHtml.removeClass('invert');
-    this.placeHtml.find('a').removeClass('active');
-    this.placeHtml.find('a[href="#'+page.id+'"]').addClass('active');
+    $(page).hasClass('invert') ? this.polkaNav.addClass('invert') : this.polkaNav.removeClass('invert');
+    this.polkaNav.find('a').removeClass('active');
+    this.polkaNav.find('a[href="#'+page.id+'"]').addClass('active');
   },
 
   updateActive: function(page) {
@@ -24,8 +21,6 @@ pageflow.Counter = {
   },
 
   init: function() {
-    this.placeHtml.html(this.dots(pageflow.pages));
-
     // Init active dot
     this.setActive(pageflow.atmo.slideshow.currentPage()[0]);
 

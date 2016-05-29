@@ -1,0 +1,99 @@
+@media screen and (max-width: 768px) {
+  #polka-nav {
+    display: none;
+  }
+}
+
+#polka-nav {
+  right: 2.3%;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  opacity: 1;
+  transform: translateY(-50%);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+  }
+
+  li:hover {
+    a span {
+      width: 10px;
+      height: 10px;
+      margin: -5px 0 0 -5px;
+    }
+
+    .polka-tooltip {
+      transition: opacity 0.2s ease-in;
+      width: auto;
+      opacity: 1;
+      right: 20px;
+    }
+  }
+
+  a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+
+    span {
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+      height: 4px;
+      width: 4px;
+      border: 0;
+      background: white;
+      left: 50%;
+      top: 50%;
+      margin: -2px 0 0 -2px;
+      transition: all 0.1s ease-in-out;
+    }
+
+    &.active span {
+      height: 12px;
+      width: 12px;
+      margin: -6px 0 0 -6px;
+      border-radius: 100%;
+    }
+  }
+
+  .polka-tooltip {
+    right: 20px;
+    position: absolute;
+    top: -2px;
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+  }
+
+  &.invert {
+    a span {
+      background: black;
+    }
+
+    .polka-tooltip {
+      color: black;
+    }
+  }
+}
