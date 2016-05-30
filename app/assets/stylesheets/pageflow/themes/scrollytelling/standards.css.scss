@@ -183,3 +183,10 @@ ul.options {
 .slideshow section.fade.text_position_right.invert, .slideshow section.fade.invert {
     background-color: transparent;
 }
+
+// Logo in loader on mobile always fitting in browser
+.loader_wrapper .loader_logo {
+  max-width: 80%;
+  background-size: contain;
+}
+
