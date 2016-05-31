@@ -37,7 +37,11 @@
       transition: opacity 0.2s ease-in;
       width: auto;
       opacity: 1;
-      right: 20px;
+      display: block;
+
+      &:empty {
+        display: none;
+      }
     }
   }
 
@@ -73,27 +77,59 @@
   }
 
   .polka-tooltip {
+    $bg-color: #000;
+
     right: 20px;
     position: absolute;
-    top: -2px;
+    top: -7px;
     color: white;
     font-size: 14px;
     white-space: nowrap;
     max-width: 220px;
-    overflow: hidden;
-    display: block;
     opacity: 0;
     width: 0;
     cursor: pointer;
+    line-height: 1;
+    display: none;
+
+    background-color: $bg-color;
+    padding: 6px;
+    padding-right: 20px;
+    border-radius: 3px;
+
+    &:after {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-left-color: $bg-color;
+      border-width: 5px;
+      margin-top: -5px;
+    }
+
   }
 
-  &.invert {
+  .page-invert & {
     a span {
       background: black;
     }
 
     .polka-tooltip {
+
+      $bg-color: #fff;
+
       color: black;
+      background-color: $bg-color;
+
+      &:after {
+        border-left-color: $bg-color;
+      }
+
     }
   }
 }
