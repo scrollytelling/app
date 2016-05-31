@@ -1,7 +1,7 @@
 <nav id="polka-nav">
   <ul>
     <% entry.pages.displayed_in_navigation.each do |page| %>
-      <li><a href="#<%= page.perma_id %>" data-page-id="<%= page.perma_id %>"><span></span></a><div class="polka-tooltip"><%= page.configuration["title"] %></div></li>
+      <li><a href="#<%= page.perma_id %>" data-page-id="<%= page.id %>"><span></span></a><div class="polka-tooltip"><%= page.configuration["title"] %></div></li>
     <% end %>
   </ul>
 </div>
