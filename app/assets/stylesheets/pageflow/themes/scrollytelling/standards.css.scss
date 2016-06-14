@@ -28,24 +28,6 @@ body {
   These are visual standards we feel should apply to each Scrollytelling theme.
   */
 
-.back_home_link {
-  position: absolute;
-  bottom: 2%;
-  left: 2%;
-  color: $anchor-color;
-  font-family: $header-font;
-  text-decoration: none;
-  pointer-events: auto;
-
-  @include mobile {
-    bottom: 1%;
-  }
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 .js .page:first-child {
   .content_and_background .scroller > div:after {
     content: " ";
