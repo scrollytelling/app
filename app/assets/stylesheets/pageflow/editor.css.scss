@@ -7,3 +7,7 @@
   background-image: asset-url("logo60x60@2x.png");
   background-size: 60px;
 }
+
+.dummy {
+  color: white; // trigger recompile
+}
