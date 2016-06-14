@@ -16,10 +16,6 @@ Make sure to create config/application.yml and set the ENV variables.
 
 ## Deploying a new theme
 
-```
-bundle exec rails generate pageflow:theme newtheme
-```
-
 Register it:
 
 ```
@@ -29,24 +25,9 @@ Pageflow.configure do
 end
 ```
 
-Add our standards to the main theme css:
+Copy one of the existing theme's main CSS file, css folder and images folder.
 
-```
-# app/assets/stylesheets/pageflow/themes/#{$theme-name}.css.scss
-@import "./scrollytelling/standards.css.scss";
-```
-
-Then copy all scss and images of a known good theme into the new one. Do *not* use any of the generated stuff.
-
-```
-rm -r app/assets/stylesheets/pageflow/themes/new
-rm -r app/assets/images/pageflow/themes/new
-
-cp -r app/assets/stylesheets/pageflow/themes/old app/assets/stylesheets/pageflow/themes/new
-cp -r app/assets/images/pageflow/themes/old app/assets/images/pageflow/themes/new
-```
-
-Images to be created:
+Images to be replaced:
 
 ```
 pageflow/themes/#{$theme-name}/loading.png
