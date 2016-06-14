@@ -32,6 +32,7 @@ gem 'pageflow-internal-links'
 gem 'pageflow-before-after'
 gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
+gem 'pageflow-linkmap-page'
 
 group :development do
   gem 'spring'

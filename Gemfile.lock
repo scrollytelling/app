@@ -215,8 +215,16 @@ GEM
     pageflow-embedded-video (0.1.0)
       i18n-js
       pageflow (~> 0.7)
+    pageflow-external-links (0.4.0)
+      i18n-js
+      pageflow (~> 0.10)
+      pageflow-public-i18n (~> 1.0)
     pageflow-internal-links (0.1.0)
       pageflow (~> 0.9)
+    pageflow-linkmap-page (0.1.0)
+      i18n-js
+      pageflow (~> 0.10)
+      pageflow-external-links (~> 0.3)
     pageflow-public-i18n (1.1.0)
     pageflow-text-page (0.1.0)
       i18n-js
@@ -377,6 +385,7 @@ DEPENDENCIES
   pageflow-before-after
   pageflow-embedded-video
   pageflow-internal-links
+  pageflow-linkmap-page
   pageflow-text-page
   rails (= 4.1.14.1)
   ransack

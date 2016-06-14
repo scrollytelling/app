@@ -1,6 +1,7 @@
 @import "pageflow/editor/base";
 @import "pageflow/embedded_video/editor";
 @import "pageflow/internal_links/editor";
+@import "pageflow/linkmap_page/editor";
 
 .blank_entry h2:before {
   background-image: asset-url("logo60x60@2x.png");

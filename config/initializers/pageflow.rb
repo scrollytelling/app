@@ -48,6 +48,8 @@ Pageflow.configure do |config|
     feature_config.widget_types.register(Widgets::Analytics.amnesty)
   end
 
+  config.plugin(Pageflow::LinkmapPage.plugin)
+
   # Add custom themes by invoking the pageflow:theme generator and
   # registering the theme here.
   #
