@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224155112) do
+ActiveRecord::Schema.define(version: 20160614064237) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -82,17 +82,15 @@ ActiveRecord::Schema.define(version: 20160224155112) do
   end
 
   create_table "pageflow_chapters", force: true do |t|
-    t.integer  "entry_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position",      default: 0,  null: false
     t.string   "title",         default: "", null: false
-    t.integer  "revision_id"
     t.text     "configuration"
+    t.integer  "storyline_id"
   end
 
-  add_index "pageflow_chapters", ["entry_id"], name: "index_pageflow_chapters_on_entry_id", using: :btree
-  add_index "pageflow_chapters", ["revision_id"], name: "index_pageflow_chapters_on_revision_id", using: :btree
+  add_index "pageflow_chapters", ["storyline_id"], name: "index_pageflow_chapters_on_storyline_id", using: :btree
 
   create_table "pageflow_edit_locks", force: true do |t|
     t.integer  "user_id"
@@ -209,9 +207,23 @@ ActiveRecord::Schema.define(version: 20160224155112) do
     t.integer  "share_image_y"
     t.string   "locale"
     t.boolean  "password_protected"
+    t.string   "author"
+    t.string   "publisher"
+    t.string   "keywords"
   end
 
   add_index "pageflow_revisions", ["restored_from_id"], name: "index_pageflow_revisions_on_restored_from_id", using: :btree
+
+  create_table "pageflow_storylines", force: true do |t|
+    t.integer  "perma_id"
+    t.integer  "revision_id"
+    t.integer  "position"
+    t.text     "configuration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pageflow_storylines", ["revision_id"], name: "index_pageflow_storylines_on_revision_id", using: :btree
 
   create_table "pageflow_themings", force: true do |t|
     t.string   "imprint_link_url"
@@ -225,6 +237,7 @@ ActiveRecord::Schema.define(version: 20160224155112) do
     t.string   "theme_name"
     t.string   "home_url",                       default: "",   null: false
     t.boolean  "home_button_enabled_by_default", default: true, null: false
+    t.string   "additional_cnames"
   end
 
   add_index "pageflow_themings", ["cname"], name: "index_pageflow_themings_on_cname", using: :btree

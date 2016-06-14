@@ -71,6 +71,13 @@ Pageflow.configure do |config|
   # reprocessing attachments.
   config.paperclip_attachments_version = 'v1'
 
+  # Specify default meta tags to use in published stories.
+  # These defaults will be included in the page <head> unless overriden by the Entry.
+  # If you set these to <tt>nil</tt> or <tt>""</tt> the meta tag won't be included.
+  config.default_keywords_meta_tag = 'story, scrollytelling, multimedia, journalism'
+  config.default_author_meta_tag = 'Scrollytelling'
+  config.default_publisher_meta_tag = 'Scrollytelling'
+
   # Path to the location in the filesystem where attachments shall
   # be stored. The value of this option is available via the
   # pageflow_filesystem_root paperclip interpolation.
