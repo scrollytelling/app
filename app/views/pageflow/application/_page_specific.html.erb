@@ -1,5 +1,0 @@
-<% if page_counter == revision.pages.count - 1 %><%# last page %>
-  <% if revision.home_button_enabled? && revision.home_url.present? %>
-    <%= link_to "← #{revision.home_url.sub(/https?:\/\//, '')}", revision.home_url, class: "back_home_link" %>
-  <% end %>
-<% end %>
