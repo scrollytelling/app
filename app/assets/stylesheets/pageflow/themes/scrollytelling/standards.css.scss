@@ -1,6 +1,3 @@
-@import "pageflow/linkmap_page/themes/default";
-@import "pageflow/linkmap_page/themes/default/scroll_indicators";
-
 @mixin shine-gradient {
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(255,255,255,0.1) 0%,rgba(0, 0, 0, 0.1) 29%,rgba(0,0,0,0.05) 90%,rgba(246,246,246,0.1) 100%); /* FF3.6+ */
@@ -14,6 +11,9 @@
 @import "bourbon";
 @import "pageflow/mixins";
 @import "pageflow/animations";
+
+@import "pageflow/linkmap_page/themes/default";
+@import "pageflow/linkmap_page/themes/default/scroll_indicators";
 
 @import "navigation";
 @import "polka-nav";
