@@ -387,6 +387,7 @@ DEPENDENCIES
   pageflow
   pageflow-before-after
   pageflow-embedded-video
+  pageflow-external-links
   pageflow-internal-links
   pageflow-linkmap-page
   pageflow-text-page

@@ -29,6 +29,7 @@ gem "sentry-raven"
 
 # Pageflow page types
 gem 'pageflow-internal-links'
+gem 'pageflow-external-links'
 gem 'pageflow-before-after'
 gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
