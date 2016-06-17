@@ -4,5 +4,9 @@ Rails.application.routes.draw do
     ActiveAdmin.routes(self)
   end
 
+  authenticated do
+    mount Pageflow::ExternalLinks::Engine, at: "/external_links"
+  end
+
   Pageflow.routes(self)
 end
