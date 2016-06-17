@@ -64,5 +64,9 @@ module Widgets
     def self.amnesty
       WidgetType.new 'amnesty'
     end
+
+    def self.blof
+      WidgetType.new 'blof'
+    end
   end
 end

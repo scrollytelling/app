@@ -7,6 +7,9 @@ en:
       beeldengeluid:
         feature_name: Analytics for Beeld en Geluid
         widget_type_name: Beeld en Geluid Google Analytics
+      blof:
+        feature_name: Analytics for BLØF
+        widget_type_name: BLØF Google Analytics
       grasnapolsky:
         feature_name: Analytics for Grasnapolsky
         widget_type_name: Grasnapolsky Google Analytics
