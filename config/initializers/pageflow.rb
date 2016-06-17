@@ -49,7 +49,7 @@ Pageflow.configure do |config|
     feature_config.widget_types.register(Widgets::Analytics.amnesty)
   end
   config.features.register("analytics.blof") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.blog)
+    feature_config.widget_types.register(Widgets::Analytics.blof)
   end
 
   config.plugin(Pageflow::LinkmapPage.plugin)
