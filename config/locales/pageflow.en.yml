@@ -166,7 +166,7 @@ en:
         create_page: Use the <em>New page</em> button within the chapter to add pages.
         edit_page: Click directly on a page to switch to the pages edit view.
         header: This is an empty story
-        intro: Each story consist of chapters and pages. The editor panel to your right shows the outline of your story.
+        intro: Each story consists of chapters and pages. The editor panel to your right shows the outline of your story.
         outro: In this area, a live preview will be shown.
       errors:
         UnmatchedUploadError: This filetype is not supported.
