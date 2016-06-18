@@ -2,7 +2,7 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 # When updating Pageflow, update this as well. It will force a refresh for i18n-js.
-Rails.application.config.assets.version = '0.10'
+Rails.application.config.assets.version = '0.10.external-links'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
