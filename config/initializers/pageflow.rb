@@ -53,6 +53,7 @@ Pageflow.configure do |config|
   end
 
   config.plugin(Pageflow::LinkmapPage.plugin)
+  config.plugin(Pageflow::Sitemap.plugin)
 
   # Add custom themes by invoking the pageflow:theme generator and
   # registering the theme here.
