@@ -26,6 +26,7 @@ gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'figaro'
 gem 'whenever', require: false
 gem "sentry-raven"
+gem "snitcher"
 
 # Pageflow page types
 gem 'pageflow-internal-links'

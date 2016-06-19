@@ -14,3 +14,6 @@ account(name: 'Scrollytelling demo') do |account|
        first_name: 'Scrollytelling',
        last_name: 'Demo')
 end
+
+# let Dead Man's Snitch know we're alive
+Snitcher.snitch("6524a29246")
