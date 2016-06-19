@@ -236,8 +236,6 @@ GEM
       pageflow (~> 0.10)
       pageflow-external-links (~> 0.3)
     pageflow-public-i18n (1.1.0)
-    pageflow-sitemap (0.1.0)
-      pageflow (~> 0.10)
     pageflow-text-page (0.3.0)
       i18n-js
       pageflow (~> 0.10)
@@ -400,7 +398,6 @@ DEPENDENCIES
   pageflow-external-links
   pageflow-internal-links
   pageflow-linkmap-page
-  pageflow-sitemap
   pageflow-text-page
   rails (= 4.1.14.1)
   ransack
