@@ -7,7 +7,7 @@ ruby '2.1.6'
 gem 'rails', '4.1.14.1'
 
 # database
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.21' # 0.3.x is for rails 4.x
 gem "redis-rails"
 
 # asset pipeline
