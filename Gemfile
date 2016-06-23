@@ -28,13 +28,14 @@ gem 'whenever', require: false
 gem "sentry-raven"
 gem "snitcher"
 
-# Pageflow page types
+# Pageflow extensions
 gem 'pageflow-internal-links'
 gem 'pageflow-external-links'
 gem 'pageflow-before-after'
 gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
 gem 'pageflow-linkmap-page'
+gem 'scrollytelling-loading_spinner'
 
 group :development do
   gem 'spring'
