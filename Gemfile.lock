@@ -339,7 +339,7 @@ GEM
     scrollytelling-loading_spinner (0.1.0)
       pageflow (>= 0.7, < 0.11)
       rails (>= 3.0)
-    sentry-raven (0.15.3)
+    sentry-raven (1.1.0)
       faraday (>= 0.7.6)
     sinatra (1.4.7)
       rack (~> 1.5)
