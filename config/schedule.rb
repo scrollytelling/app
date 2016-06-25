@@ -2,11 +2,6 @@ env :PATH, '/usr/local/bin:/usr/bin:$PATH'
 
 set :output, 'log/cron.log'
 
-every :day do
-  runner "db/demo.rb"
-end
-
-
 # * * * * *  command to execute
 # │ │ │ │ │
 # │ │ │ │ │
