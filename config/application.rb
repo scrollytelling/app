@@ -17,7 +17,7 @@ module Storyboard
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Amsterdam'
 
     # I found that in applications which explicitly change the I18n.load_path
     # in their application.rb app paths actually come last and thus can override translations:
