@@ -3,3 +3,27 @@ $theme-name: "nos";
 @import "./nos/variables.css.scss";
 @import "./scrollytelling/standards.css.scss";
 @import "./nos/base.css.scss";
+
+.js .page:first-child {
+  .content_and_background .scroller > div:after {
+    content: " ";
+    position: absolute;
+    margin: 0;
+    top: 3.5%;
+    left: 8%;
+    width: 200px;
+    height: 50px;
+    background-image: image-url("pageflow/themes/#{$theme-name}/logo_header.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include mobile {
+      top: 26px;
+      height: 35px;
+    }
+  }
+}
+
+.js.page-invert .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/#{$theme-name}/logo_header_invert.png");
+}
