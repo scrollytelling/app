@@ -11,7 +11,7 @@ gem 'mysql2', '~> 0.3.21' # 0.3.x is for rails 4.x
 gem "redis-rails"
 
 # asset pipeline
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.5' # because of the ancient active_admin
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
@@ -36,6 +36,7 @@ gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
 gem 'pageflow-linkmap-page'
 gem 'scrollytelling-loading_spinner'
+gem 'scrollytelling-pageflow-navigation'
 
 group :development do
   gem 'spring'
