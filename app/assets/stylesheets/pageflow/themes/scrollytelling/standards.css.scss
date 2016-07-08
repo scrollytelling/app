@@ -12,6 +12,8 @@
 @import "pageflow/mixins";
 @import "pageflow/animations";
 
+$linkmap-audio-icon: "\f025" !default;
+
 @import "pageflow/linkmap_page/themes/default";
 @import "pageflow/linkmap_page/themes/default/scroll_indicators";
 @import "pageflow/external_links/themes/legacy";
