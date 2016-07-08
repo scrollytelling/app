@@ -7,3 +7,8 @@
 @import "pageflow/linkmap_page";
 @import "scrollytelling/loading_spinner";
 @import "scrollytelling/pageflow/navigation";
+
+/* Override text_page */
+.page_spacer {
+  display: none !important;
+}
