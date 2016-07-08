@@ -18,6 +18,17 @@ $linkmap-audio-icon: "\f025" !default;
 @import "pageflow/linkmap_page/themes/default/scroll_indicators";
 @import "pageflow/external_links/themes/legacy";
 
+/* Override default linkmap theme. */
+
+.linkmap_page {
+  .hover_area.dynamic_marker {
+    .linkmap_marker {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
 @import "navigation";
 
 body {
