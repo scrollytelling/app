@@ -125,6 +125,28 @@ body {
   }
 }
 
+.navigation_mobile {
+  &.active .menu.sharing {
+    opacity: 0.8;
+  }
+
+  .menu {
+    font-family: "FontAwesome";
+    font-size: 2em;
+    opacity: 0.8;
+
+    &.index {
+      background: none;
+      &:before { content: "\f05a"; }
+    }
+
+    &.sharing {
+      background: none;
+      &:before { content: "\f045"; }
+    }
+  }
+}
+
 ul.sharing, ul.options {
 
   $size: 40px;
