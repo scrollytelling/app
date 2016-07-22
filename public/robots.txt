@@ -1,4 +1,5 @@
 # On-sites:
-https://scroll.beeldengeluid.nl/henk-terlingen-onsite
-https://scroll.beeldengeluid.nl/theo-koomen-onsite
-https://scroll.beeldengeluid.nl/dick-van-rijn-onsite
+User-agent: *
+Disallow: https://scroll.beeldengeluid.nl/henk-terlingen-onsite
+Disallow: https://scroll.beeldengeluid.nl/theo-koomen-onsite
+Disallow: https://scroll.beeldengeluid.nl/dick-van-rijn-onsite
