@@ -32,41 +32,8 @@ module Widgets
       end
     end
 
-    # Static factory methods, one per analytics account.
-    def self.radio1
-      WidgetType.new 'radio1'
-    end
-
-    def self.nos
-      WidgetType.new 'nos'
-    end
-
-    def self.volkskrant
-      WidgetType.new 'volkskrant'
-    end
-
-    def self.grasnapolsky
-      WidgetType.new 'grasnapolsky'
-    end
-
-    def self.beeldengeluid
-      WidgetType.new 'beeldengeluid'
-    end
-
-    def self.psv
-      WidgetType.new 'psv'
-    end
-
-    def self.stephaniestruijk
-      WidgetType.new 'stephaniestruijk'
-    end
-
-    def self.amnesty
-      WidgetType.new 'amnesty'
-    end
-
-    def self.blof
-      WidgetType.new 'blof'
+    def self.default
+      WidgetType.new 'default'
     end
   end
 end

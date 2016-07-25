@@ -23,33 +23,12 @@ Pageflow.configure do |config|
   config.page_types.register(Pageflow::TextPage.page_type)
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
 
-  # Register our own widget types, wrapped in a feature so we can enable per account.
-  config.features.register("analytics.radio1") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.radio1)
-  end
-  config.features.register("analytics.nos") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.nos)
-  end
-  config.features.register("analytics.volkskrant") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.volkskrant)
-  end
-  config.features.register("analytics.grasnapolsky") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.grasnapolsky)
-  end
-  config.features.register("analytics.beeldengeluid") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.beeldengeluid)
-  end
-  config.features.register("analytics.psv") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.psv)
-  end
-  config.features.register("analytics.stephaniestruijk") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.stephaniestruijk)
-  end
-  config.features.register("analytics.amnesty") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.amnesty)
-  end
-  config.features.register("analytics.blof") do |feature_config|
-    feature_config.widget_types.register(Widgets::Analytics.blof)
+  # Register tracking code WidgetType per account, so they're not visible across accounts.
+  config.widget_types.register(Widgets::Analytics.default)
+  %w(radio1 nos volkskrant grasnapolsky beeldengeluid psv stephaniestruijk amnesty blof).each do |account|
+    config.features.register("analytics.#{account}") do |feature_config|
+      feature_config.widget_types.register(Widgets::Analytics::WidgetType.new(account))
+    end
   end
 
   config.plugin(Pageflow::LinkmapPage.plugin)
