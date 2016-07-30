@@ -104,11 +104,6 @@ body {
   height: 30px;
 }
 
-// Hide loader
-.finished-loading .loader_wrapper {
-    display:none;
-}
-
 // Set initial state of hidden
 .entry .page.invert, .entry .page.invert.text_position_right {
     background-color:transparent;
@@ -121,10 +116,4 @@ body {
 
 .slideshow section.fade.text_position_right.invert, .slideshow section.fade.invert {
     background-color: transparent;
-}
-
-// Logo in loader on mobile always fitting in browser
-.loader_wrapper .loader_logo {
-  max-width: 80%;
-  background-size: contain;
 }
