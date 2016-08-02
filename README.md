@@ -42,11 +42,9 @@ Lastly change the colors in `variables.css.scss` into the colors used in the the
 
 ## Deploying new analytics
 
-Copy one of the existing analytics folders: `cp -r app/views/widgets/analytics/volkskrant app/views/widgets/analytics/NAME`.
+Add the new account to the list in `config/initializers/pageflow.rb`. This will register it for the account only.
 
-Change the contents of both files, head and body. They must both remain present. Use HTML comments if you don't have a script to render here.
-
-Then, add the new account to the list in `config/initializers/pageflow.rb`. This will register it for the account only.
+Create a new directory in `app/views/widgets/analytics` and place two partials in it: one for the header and one for the body. Most files must be present, but can be empty.
 
 Add the widget translations to `en.yml` and any other localization file you have active.
 
