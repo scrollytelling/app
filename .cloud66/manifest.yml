@@ -1,7 +1,15 @@
 production:
+  mysql:
+    server:
+      unique_name: db
   rails:
     configuration:
       nginx:
         cors:
           origin: "*"
           methods: 'GET, OPTIONS'
+    server:
+      unique_name: app
+  redis:
+    server:
+      unique_name: db
