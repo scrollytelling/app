@@ -10,6 +10,9 @@ en:
       blof:
         feature_name: Analytics for BLØF
         widget_type_name: BLØF tracking codes
+      buildingbridges:
+        feature_name: Building Bridges trackers
+        widget_type_name: Building Bridges
       default:
         feature_name: Analytics default (blank)
         widget_type_name: Blank (no tracking codes)
