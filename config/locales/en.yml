@@ -19,9 +19,6 @@ en:
       grasnapolsky:
         feature_name: Analytics for Grasnapolsky
         widget_type_name: Grasnapolsky tracking codes
-      knvb:
-        feature_name: KNVB trackers
-        widget_type_name: KNVB
       nos:
         feature_name: Analytics for NOS
         widget_type_name: NOS tracking codes
