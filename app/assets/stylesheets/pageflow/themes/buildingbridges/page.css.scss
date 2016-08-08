@@ -2,6 +2,16 @@ $page-font: $standard-font;
 $page-color: $main-color;
 
 .page {
+  h1,
+  h2 span.subtitle,
+  h2 span.title,
+  h2 span.tagline,
+  h3,
+  p {
+    max-width: 550px !important;
+    width: 60%;
+  }
+
   font-size: 16px;
   color: #fff;
   background-color: #000;
