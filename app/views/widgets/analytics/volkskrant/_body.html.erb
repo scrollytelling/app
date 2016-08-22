@@ -7,3 +7,25 @@
   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-KX8PFJ');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Chartbeat -->
+<script type='text/javascript'>
+    var _sf_async_config = _sf_async_config || {};
+    _sf_async_config.uid = '46966';
+    (function() {
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+            loadChartbeat : function() {
+                oldonload();
+                loadChartbeat();
+            };
+    })();
+</script>
