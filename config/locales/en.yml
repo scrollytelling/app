@@ -10,6 +10,9 @@ en:
       blof:
         feature_name: Analytics for BLØF
         widget_type_name: BLØF tracking codes
+      ricostickstyphoon:
+        feature_name: Analytics for Rico, Sticks en Typhoon
+        widget_type_name: Rico, Sticks en Typhoon tracking codes
       buildingbridges:
         feature_name: Building Bridges trackers
         widget_type_name: Building Bridges
