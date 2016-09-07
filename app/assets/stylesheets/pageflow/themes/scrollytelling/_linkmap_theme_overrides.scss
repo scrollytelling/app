@@ -1,5 +1,9 @@
 /* Override default linkmap theme. */
 
+/*
+ need the below overrides for a prettier audio icon,
+ but don't want them for regular old hotspots.
+
 .linkmap_page {
   .hover_area.dynamic_marker {
     .linkmap_marker {
@@ -19,3 +23,5 @@
     }
   }
 }
+
+*/
