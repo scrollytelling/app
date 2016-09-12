@@ -31,6 +31,9 @@ en:
       radio1:
         feature_name: Analytics for NPO Radio 1
         widget_type_name: Radio 1 tracking codes
+      sbb:
+        feature_name: Analytics for Staatsbosbeheer
+        widget_type_name: Analytics for Staatsbosbeheer
       stephaniestruijk:
         feature_name: Analytics for Stephanie Struijk
         widget_type_name: Stephanie Struijk tracking codes

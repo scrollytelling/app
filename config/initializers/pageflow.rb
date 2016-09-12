@@ -27,7 +27,7 @@ Pageflow.configure do |config|
   config.widget_types.register(Widgets::Analytics.default)
   %w(
     radio1 nos volkskrant grasnapolsky beeldengeluid psv
-    stephaniestruijk amnesty blof buildingbridges ricostickstyphoon).each do |account|
+    stephaniestruijk amnesty blof buildingbridges ricostickstyphoon sbb).each do |account|
     config.features.register("analytics.#{account}") do |feature_config|
       feature_config.widget_types.register(Widgets::Analytics::WidgetType.new(account))
     end
@@ -45,7 +45,7 @@ Pageflow.configure do |config|
   %i(
     scrollytelling volkskrant dia nos radio1 grasnapolsky
     beeldengeluid psv amnesty_international stephaniestruijk
-    blof buildingbridges ricostickstyphoon).each do |theme|
+    blof buildingbridges ricostickstyphoon sbb).each do |theme|
       config.themes.register(theme)
   end
 
