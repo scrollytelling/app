@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: storyboard_development
+  database: scrollytelling_development
 
 test: &test
   <<: *default
-  database: storyboard_test
+  database: scrollytelling_test
 
 production:
   <<: *default
