@@ -13,7 +13,10 @@ test: &test
 
 production:
   <<: *default
-  database: scrollytelling_production
+  database: storyboard_production
+  username: root
+  password: "<%= ENV['MYSQL_PASSWORD']%>"
+  host: "<%= ENV['MYSQL_ADDRESS']%>"
 
 cucumber:
   <<: *test
