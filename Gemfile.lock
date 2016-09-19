@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/scrollytelling/pageflow-linkmap-page.git
-  revision: abf68227c53897184357dab9024c5d34393f300e
+  revision: ef6be6e9052e35eebc5be667c81898be776ba38b
   branch: scrollytelling-rendered-text
   specs:
     pageflow-linkmap-page (0.2.0.dev)
