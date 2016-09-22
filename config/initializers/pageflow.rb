@@ -45,7 +45,7 @@ Pageflow.configure do |config|
   %i(
     scrollytelling volkskrant dia nos radio1 grasnapolsky
     beeldengeluid psv amnesty_international stephaniestruijk
-    blof buildingbridges ricostickstyphoon sbb).each do |theme|
+    blof buildingbridges ricostickstyphoon sbb worldpressphoto).each do |theme|
       config.themes.register(theme)
   end
 
