@@ -26,18 +26,6 @@ $main-color-dark: #b14a08 !default;
   color: #333;
 }
 
-.page {
-  h1,
-  h2 span.subtitle,
-  h2 span.title,
-  h2 span.tagline,
-  h3,
-  p {
-    max-width: 400px !important;
-    width: 60%;
-  }
-}
-
 h2 {
   @include mobile {
     font-size: 16px;
@@ -54,7 +42,7 @@ h2 {
   }
 
   .title {
-    font-size: 4em;
+    font-size: 3.5em;
   }
 
   .subtitle {
@@ -104,8 +92,40 @@ section.delayed_text_fade_in_short {
     padding: 15% 8% 5% 8%;
   }
 
-  .vjs-loading-spinner {
+  .vjs-loading-spinner,
+  .vjs-control-bar:before {
     display: none !important;
+  }
+
+  .vjs-default-skin .vjs-control:focus:before,
+  .vjs-default-skin .vjs-control:hover:before {
+    text-shadow: none;
+    color: $main-color;
+  }
+
+  .vjs-progress-control .vjs-play-progress,
+  .vjs-progress-control.vjs-fade-out .vjs-play-progres {
+    background-color: $main-color;
+  }
+
+  .vjs-play-control {
+    background-image: none;
+
+    &:before {
+      color: white;
+      content: "\f144";
+      font-family: "FontAwesome";
+    }
+
+    .vjs-pause-control {
+      background-image: none;
+
+      &:before {
+        color: white;
+        content: "\f28b";
+        font-family: "FontAwesome";
+      }
+    }
   }
 
   // transparent video controls please
