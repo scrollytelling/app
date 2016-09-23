@@ -1,5 +1,7 @@
 @import "./base.scss";
 
+$main-color: #133472;
+
 .loader_logo,
 .js .page:first-child .content_and_background .scroller > div:after {
   background-image: image-url("pageflow/themes/radio1/logo.png");

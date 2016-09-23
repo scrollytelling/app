@@ -1,6 +1,6 @@
 // Base stylesheet for all Scrollytelling themes.
-$main-color: #e84d2c !default;
-$main-color-dark: #b14a08 !default;
+$main-color: #c3e2dd !default;
+$main-color-dark: darken($main-color, 30%) !default;
 
 @import "bourbon";
 @import "pageflow/mixins";
@@ -103,6 +103,10 @@ section.delayed_text_fade_in_short {
     color: $main-color;
   }
 
+  .vjs-progress-control {
+    left: 70px;
+  }
+
   .vjs-progress-control .vjs-play-progress,
   .vjs-progress-control.vjs-fade-out .vjs-play-progres {
     background-color: $main-color;
@@ -110,22 +114,26 @@ section.delayed_text_fade_in_short {
 
   .vjs-play-control {
     background-image: none;
+  }
 
-    &:before {
-      color: white;
-      content: "\f144";
-      font-family: "FontAwesome";
-    }
+  .vjs-play:before {
+    font-size: 40px;
+    line-height: 40px;
+    color: white;
+    content: "\f144";
+    font-family: "FontAwesome";
   }
 
   .vjs-pause-control {
     background-image: none;
+  }
 
-    &:before {
-      color: white;
-      content: "\f28b";
-      font-family: "FontAwesome";
-    }
+  .vjs-pause:before {
+    font-size: 40px;
+    line-height: 40px;
+    color: white;
+    content: "\f28b";
+    font-family: "FontAwesome";
   }
 
   // transparent video controls please
