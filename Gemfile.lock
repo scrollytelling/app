@@ -337,7 +337,7 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    scrollytelling-loading_spinner (1.0.1)
+    scrollytelling-loading_spinner (1.0.2)
       pageflow (>= 0.7, < 0.11)
       rails (>= 3.0)
     scrollytelling-pageflow-navigation (1.8.0)

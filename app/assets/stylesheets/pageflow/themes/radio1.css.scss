@@ -1,5 +1,6 @@
-$theme-name: "radio1";
+@import "./base.scss";
 
-@import "./radio1/variables.css.scss";
-@import "./scrollytelling/standards.css.scss";
-@import "./radio1/base.css.scss";
+.loader_logo,
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/radio1/logo.png");
+}
