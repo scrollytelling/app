@@ -116,15 +116,15 @@ section.delayed_text_fade_in_short {
       content: "\f144";
       font-family: "FontAwesome";
     }
+  }
 
-    .vjs-pause-control {
-      background-image: none;
+  .vjs-pause-control {
+    background-image: none;
 
-      &:before {
-        color: white;
-        content: "\f28b";
-        font-family: "FontAwesome";
-      }
+    &:before {
+      color: white;
+      content: "\f28b";
+      font-family: "FontAwesome";
     }
   }
 
@@ -145,7 +145,8 @@ section.delayed_text_fade_in_short {
 }
 
 // Set initial state of hidden
-.entry .page.invert, .entry .page.invert.text_position_right {
+.entry .page.invert,
+.entry .page.invert.text_position_right {
     background-color: transparent;
 }
 
@@ -154,6 +155,7 @@ section.delayed_text_fade_in_short {
     background-color: #fff;
 }
 
-.slideshow section.fade.text_position_right.invert, .slideshow section.fade.invert {
+.slideshow section.fade.text_position_right.invert,
+.slideshow section.fade.invert {
     background-color: transparent;
 }
