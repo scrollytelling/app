@@ -226,11 +226,6 @@ GEM
       wysihtml5x-rails (= 0.4.17)
       yajl-ruby (~> 1.2)
       zencoder (~> 2.5)
-    pageflow-before-after (0.4.0)
-      i18n-js
-      jquery-ui-rails (~> 5.0)
-      pageflow (~> 0.10)
-      pageflow-public-i18n (~> 1.0)
     pageflow-embedded-video (0.2.1)
       i18n-js
       pageflow (~> 0.10)
@@ -405,7 +400,6 @@ DEPENDENCIES
   jquery-rails
   mysql2 (~> 0.3.21)
   pageflow
-  pageflow-before-after
   pageflow-embedded-video
   pageflow-external-links
   pageflow-internal-links

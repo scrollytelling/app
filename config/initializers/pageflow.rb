@@ -19,7 +19,6 @@ Pageflow.configure do |config|
   config.page_types.register(Pageflow::BuiltInPageType.audio_loop)
   config.page_types.register(Pageflow::InternalLinks.grid_page_type)
   config.page_types.register(Pageflow::ExternalLinks.page_type)
-  config.page_types.register(Pageflow::BeforeAfter::PageType.new)
   config.page_types.register(Pageflow::TextPage.page_type)
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
 
