@@ -1,6 +1,7 @@
 // Base stylesheet for all Scrollytelling themes.
 $main-color: #c3e2dd !default;
 $main-color-dark: darken($main-color, 30%) !default;
+$anchor-color: $main-color !default;
 
 @import "bourbon";
 @import "pageflow/mixins";
@@ -24,6 +25,19 @@ $main-color-dark: darken($main-color, 30%) !default;
 
 .invert .content {
   color: #333;
+}
+
+.contentText a {
+  pointer-events: all;
+  color: white;
+
+  &:hover {
+    color: $anchor-color;
+  }
+}
+
+.invert .contentText a {
+  color: black;
 }
 
 h2 {
