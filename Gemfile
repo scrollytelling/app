@@ -31,6 +31,7 @@ gem "snitcher"
 # Pageflow extensions
 gem 'pageflow-internal-links'
 gem 'pageflow-external-links'
+gem 'pageflow-before-after'
 gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
 gem 'pageflow-linkmap-page', github: 'scrollytelling/pageflow-linkmap-page', branch: 'scrollytelling-rendered-text'
