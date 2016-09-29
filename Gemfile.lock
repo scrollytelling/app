@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/scrollytelling/pageflow-linkmap-page.git
-  revision: ef6be6e9052e35eebc5be667c81898be776ba38b
+  revision: 879b92e23d4d84051674c2e3923cea11bcdef91f
   branch: scrollytelling-rendered-text
   specs:
     pageflow-linkmap-page (0.2.0.dev)
@@ -178,7 +178,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
-    minitest (5.9.0)
+    minitest (5.9.1)
     mono_logger (1.1.0)
     multi_json (1.12.1)
     multi_test (0.1.2)
