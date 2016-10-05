@@ -25,20 +25,17 @@ Pageflow.configure do
 end
 ```
 
-Copy one of the existing theme's main CSS file, css folder and images folder.
+Copy the most recent theme's .scss file to `themename.scss` and modify at will.
 
-Images to be replaced:
+Images to be placed:
 
 ```
-pageflow/themes/#{$theme-name}/loading.png
-pageflow/themes/#{$theme-name}/logo_header.png (100 - 221 px wide)
-pageflow/themes/#{$theme-name}/logo_header_invert.png (100 - 221 px wide)
+pageflow/themes/#{$theme-name}/logo.png
+pageflow/themes/#{$theme-name}/logo_print.png
 pageflow/themes/#{$theme-name}/favicon.ico
 ```
 
 Place fonts in `app/assets/fonts/pageflow/themes/#{$theme-name}`. Only use .woff - this format is implemented in all browsers.
-
-Lastly change the colors in `variables.css.scss` into the colors used in the theme.
 
 ## Deploying new analytics
 
