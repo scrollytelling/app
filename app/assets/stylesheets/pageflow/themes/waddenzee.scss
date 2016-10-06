@@ -6,4 +6,14 @@ $main-color: #0051D0;
   font-family: 'Share', sans-serif;
 }
 
+.contentText {
+  font-size: 1.4em;
+  line-height: 1.6;
+}
+
+.loader_logo,
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: none;
+}
+
 @import "./base.scss";
