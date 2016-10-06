@@ -2,6 +2,8 @@ $main-color: #0051D0;
 
 @import 'https://fonts.googleapis.com/css?family=Share:400,700';
 
+@import "./base.scss";
+
 #outer_wrapper {
   font-family: 'Share', sans-serif;
 }
@@ -15,5 +17,3 @@ $main-color: #0051D0;
 .js .page:first-child .content_and_background .scroller > div:after {
   background-image: none;
 }
-
-@import "./base.scss";
