@@ -1,0 +1,25 @@
+$main-color: #133472;
+
+@import 'https://fonts.googleapis.com/css?family=Bree+Serif|Imprima';
+
+@import "./base.scss";
+
+#outer_wrapper {
+  font-family: 'Imprima', sans-serif;
+}
+
+h2 {
+  font-family: 'Bree Serif', serif;
+}
+
+.contentText {
+  font-size: 1.3em;
+}
+
+.loader_logo {
+  background-image: image-url("pageflow/themes/scrollytelling/logo.png");
+}
+
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/scrollytelling/logo_header.png");
+}
