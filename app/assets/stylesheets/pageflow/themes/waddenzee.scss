@@ -1,0 +1,9 @@
+$main-color: #0051D0;
+
+@import 'https://fonts.googleapis.com/css?family=Share:400,700';
+
+#outer_wrapper {
+  font-family: 'Share', sans-serif;
+}
+
+@import "./base.scss";
