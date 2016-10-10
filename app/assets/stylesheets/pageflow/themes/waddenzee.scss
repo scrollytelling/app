@@ -11,6 +11,10 @@ $main-color: #0051D0;
 .contentText {
   font-size: 1.4em;
   line-height: 1.6;
+
+  @include mobile {
+    font-size: 1em;
+  }
 }
 
 .loader_logo,
