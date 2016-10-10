@@ -4,7 +4,8 @@ $main-color: #0051D0;
 
 @import "./base.scss";
 
-#outer_wrapper {
+#outer_wrapper,
+#entry_preview {
   font-family: 'Share', sans-serif;
 }
 
