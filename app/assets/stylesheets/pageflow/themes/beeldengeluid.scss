@@ -22,7 +22,12 @@ $main-color: #df0b37;
 }
 
 h2 {
-  font-family: 'Chevin Medium Italic', serif;
+  font-family: 'Akzidenz Grotesk Condensed', sans-serif;
+
+  &.tagline,
+  &.subtitle {
+    font-family: 'Chevin Medium Italic', sans-serif;
+  }
 }
 
 .loader_logo,
