@@ -1,5 +1,22 @@
-$theme-name: "worldpressphoto";
+$main-color: #cb0936;
 
-@import "./worldpressphoto/variables.css.scss";
-@import "./scrollytelling/standards.css.scss";
-@import "./worldpressphoto/base.css.scss";
+@font-face {
+    font-family: 'akkuratregular';
+    src: font-url('pageflow/themes/worldpressphoto/akkurat_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "./base.scss";
+
+h2 {
+  font-family: 'akkuratregular', sans-serif;
+}
+
+.loader_logo {
+  background-image: image-url("pageflow/themes/worldpressphoto/logo.png");
+}
+
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/worldpressphoto/logo_header.png");
+}

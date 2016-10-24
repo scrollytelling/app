@@ -1,0 +1,22 @@
+$main-color: #0f6bb0;
+
+@font-face {
+    font-family: 'baron_von_wesselingblack';
+    src: font-url('pageflow/themes/buildingbridges/baron_von_wesseling_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "./base.scss";
+
+h2 {
+  font-family: 'baron_von_wesselingblack', sans-serif;
+}
+
+.loader_logo {
+  background-image: image-url("pageflow/themes/buildingbridges/logo.png");
+}
+
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/buildingbridges/logo_header.png");
+}

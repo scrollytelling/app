@@ -1,0 +1,20 @@
+$main-color: #ed1c24;
+
+@font-face {
+    font-family: 'Klavika Medium Condensed';
+    src: font-url('pageflow/themes/psv/KlavikaWebMediumCondensed.woff') format('woff');
+}
+
+@import "./base.scss";
+
+h2 {
+  font-family: 'Klavika Medium Condensed', sans-serif;
+}
+
+.loader_logo {
+  background-image: image-url("pageflow/themes/psv/logo.png");
+}
+
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/psv/logo_header.png");
+}
