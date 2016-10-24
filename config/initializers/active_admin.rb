@@ -1,3 +1,5 @@
+ActiveAdmin.application.load_paths.unshift(Pageflow.active_admin_load_path)
+
 ActiveAdmin.setup do |config|
   Pageflow.active_admin_settings(config)
 

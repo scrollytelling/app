@@ -4,24 +4,20 @@ source 'https://rubygems.org'
 ruby '2.1.6'
 
 # rails
-gem 'rails', '4.1.15'
+gem 'rails', '4.2.7.1'
 
 # database
 gem 'mysql2', '~> 0.3.21' # 0.3.x is for rails 4.x
 gem "redis-rails"
 
 # asset pipeline
-gem 'sass-rails', '~> 4.0.5' # because of the ancient active_admin
+gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 
 # gems we need
-gem 'pageflow'
-gem 'activeadmin', git: 'https://github.com/codevise/active_admin.git', branch: 'rails4'
-gem 'ransack'
-gem 'inherited_resources', '1.4.1'
-gem 'formtastic', '2.3.0'
+gem 'pageflow', '0.11.1'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'figaro'
 gem 'whenever', require: false
@@ -40,6 +36,7 @@ gem 'scrollytelling-pageflow-navigation'
 
 group :development do
   gem 'spring'
+  gem 'web-console'
 end
 
 group :test do
