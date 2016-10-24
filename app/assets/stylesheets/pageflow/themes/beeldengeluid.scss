@@ -1,6 +1,29 @@
 $main-color: #df0b37;
 
+@font-face {
+    font-family: 'Akzidenz Grotesk Light';
+    src: font-url('pageflow/themes/#{$theme-name}/AkzidenzGrotesk-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Condensed';
+    src: font-url('pageflow/themes/#{$theme-name}/AkzidenzGrotesk-Condensed.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Chevin Medium Italic';
+    src: font-url('pageflow/themes/#{$theme-name}/ChevinMedium-Italic.woff') format('woff');
+}
+
 @import "./base.scss";
+
+#outer_wrapper {
+  font-family: 'Akzidenz Grotesk Light', sans-serif;
+}
+
+h2 {
+  font-family: 'Chevin Medium Italic', serif;
+}
 
 .loader_logo,
 .js .page:first-child .content_and_background .scroller > div:after {
