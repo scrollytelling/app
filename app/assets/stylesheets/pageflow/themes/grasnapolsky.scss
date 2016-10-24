@@ -1,0 +1,30 @@
+$main-color: #ff33c8;
+
+@import url(https://fonts.googleapis.com/css?family=Karla);
+
+@font-face {
+    font-family: 'Neue Droschke';
+    src: font-url('pageflow/themes/grasnapolsky/neue_droschke-webfont.woff') format('woff');
+}
+
+@import "./base.scss";
+
+#outer_wrapper {
+  font-family: 'Karla', sans-serif;
+}
+
+h2 {
+  font-family: 'Neue Droschke', serif;
+}
+
+.contentText {
+  font-size: 1.3em;
+}
+
+.loader_logo {
+  background-image: image-url("pageflow/themes/scrollytelling/logo.png");
+}
+
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/scrollytelling/logo_header.png");
+}
