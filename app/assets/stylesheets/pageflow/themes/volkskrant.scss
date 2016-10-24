@@ -1,0 +1,18 @@
+$main-color: #cf282c;
+
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+
+@import "./base.scss";
+
+#outer_wrapper {
+  font-family: Georgia, serif;
+}
+
+h2 {
+  font-family: 'Crimson Text', Georgia, serif;
+}
+
+.loader_logo,
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/volkskrant/logo.png");
+}
