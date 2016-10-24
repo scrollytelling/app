@@ -1,0 +1,19 @@
+$main-color: #cf282c;
+
+@font-face {
+    font-family: 'pmn_caecilia85_heavy';
+    src: font-url('pageflow/themes/#{$theme-name}/caecilia-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "./base.scss";
+
+h2 {
+  font-family: 'pmn_caecilia85_heavy', serif;
+}
+
+.loader_logo,
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/blof/logo.png");
+}
