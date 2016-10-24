@@ -1,0 +1,8 @@
+$main-color: #df0b37;
+
+@import "./base.scss";
+
+.loader_logo,
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/beeldengeluid/logo.png");
+}

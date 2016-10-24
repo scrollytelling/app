@@ -1,0 +1,8 @@
+$main-color: #0a9edf;
+
+@import "./base.scss";
+
+.loader_logo,
+.js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/ricostickstyphoon/logo.png");
+}

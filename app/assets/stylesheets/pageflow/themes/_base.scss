@@ -2,10 +2,16 @@
 $main-color: #c3e2dd !default;
 $main-color-dark: darken($main-color, 30%) !default;
 $anchor-color: $main-color !default;
+$indicator-text-shadow-color: 3e3e3e !default;
 
 @import "bourbon";
 @import "pageflow/mixins";
 @import "pageflow/animations";
+
+@import "pageflow/themes/default/definitions";
+@import "pageflow/themes/default/player_controls";
+@import "pageflow/themes/default/video_player";
+@import "pageflow/themes/default/video_wrapper";
 
 @import "pageflow/internal_links/themes/default";
 @import "pageflow/internal_links/themes/default/list_as_multiple_choice";
@@ -105,65 +111,6 @@ section.delayed_text_fade_in_short {
   // we feel the standard page width is too wide
   .page .scroller > div {
     padding: 15% 8% 5% 8%;
-  }
-
-  .vjs-loading-spinner,
-  .vjs-control-bar:before {
-    display: none !important;
-  }
-
-  .vjs-default-skin .vjs-control:focus:before,
-  .vjs-default-skin .vjs-control:hover:before {
-    text-shadow: none;
-    color: $main-color;
-  }
-
-  .vjs-progress-control {
-    left: 70px;
-  }
-
-  .vjs-progress-control .vjs-play-progress,
-  .vjs-progress-control.vjs-fade-out .vjs-play-progres {
-    background-color: $main-color;
-  }
-
-  .vjs-play-control {
-    background-image: none;
-  }
-
-  .vjs-play:before {
-    font-size: 40px;
-    line-height: 40px;
-    color: white;
-    content: "\f144";
-    font-family: "FontAwesome";
-  }
-
-  .vjs-pause-control {
-    background-image: none;
-  }
-
-  .vjs-pause:before {
-    font-size: 40px;
-    line-height: 40px;
-    color: white;
-    content: "\f04c";
-    font-family: "FontAwesome";
-  }
-
-  // transparent video controls please
-  .vjs-control-bar {
-    background-color: transparent;
-  	border: 0;
-  }
-
-  .vjs-slider-handle {
-    display: none;
-  }
-
-  // https://github.com/codevise/pageflow/issues/413
-  .videoWrapper {
-    margin-right: 0 !important;
   }
 }
 
