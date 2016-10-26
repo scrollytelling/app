@@ -82,7 +82,8 @@ section.delayed_text_fade_in_short {
 }
 
 @include desktop {
-  .contentWrapper {
+  .page_header,
+  .contextText {
     width: 45%;
   }
 }
