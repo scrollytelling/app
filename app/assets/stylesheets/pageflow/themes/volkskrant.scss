@@ -12,11 +12,16 @@ h2 {
   font-family: 'Crimson Text', Georgia, serif;
 }
 
-.loader_logo,
+.loader_logo {
+  background-image: image-url("pageflow/themes/volkskrant/logo.png");
+}
+
 .js .page:first-child .content_and_background .scroller > div:after {
+  height: 30px;
   background-image: image-url("pageflow/themes/volkskrant/logo.png");
 }
 
 .invert .js .page:first-child .content_and_background .scroller > div:after {
+  height: 30px;
   background-image: image-url("pageflow/themes/volkskrant/logo_header_invert.png");
 }
