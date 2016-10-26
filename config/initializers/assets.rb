@@ -2,7 +2,7 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 # When updating Pageflow, update this as well. It will force a refresh for i18n-js.
-Rails.application.config.assets.version = '22'
+Rails.application.config.assets.version = '23'
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
