@@ -16,3 +16,7 @@ h2 {
 .js .page:first-child .content_and_background .scroller > div:after {
   background-image: image-url("pageflow/themes/volkskrant/logo.png");
 }
+
+.invert .js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/volkskrant/logo_header_invert.png");
+}

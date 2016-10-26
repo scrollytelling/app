@@ -22,9 +22,13 @@ h2 {
 }
 
 .loader_logo {
-  background-image: image-url("pageflow/themes/scrollytelling/logo.png");
+  background-image: image-url("pageflow/themes/grasnapolsky/logo.png");
 }
 
 .js .page:first-child .content_and_background .scroller > div:after {
-  background-image: image-url("pageflow/themes/scrollytelling/logo_header.png");
+  background-image: image-url("pageflow/themes/grasnapolsky/logo_header.png");
+}
+
+.invert .js .page:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/grasnapolsky/logo_header_invert.png");
 }
