@@ -81,6 +81,12 @@ section.delayed_text_fade_in_short {
   }
 }
 
+@include desktop {
+  .contentWrapper {
+    width: 45%;
+  }
+}
+
 .js {
   .page:first-child .content_and_background .scroller > div:after {
     content: " ";
