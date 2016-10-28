@@ -1,6 +1,33 @@
 $main-color: #3f97aa;
 
+@font-face {
+    font-family: 'pmn_caecilia85_heavy';
+    src: font-url('pageflow/themes/blof/caecilia-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'p85Hvsmallcapsoldstylefigures';
+    src: font-url('pageflow/themes/blof/caecilia-heavysc-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @import "./base.scss";
+
+#outer_wrapper {
+  font-family: 'Imprima', sans-serif;
+}
+
+h2 {
+  font-family: 'pmn_caecilia85_heavy', sans-serif;
+
+  &.tagline,
+  &.subtitle {
+    font-family: 'p85Hvsmallcapsoldstylefigures', sans-serif;
+  }
+}
 
 .loader_logo,
 .js .page:first-child .content_and_background .scroller > div:after {
