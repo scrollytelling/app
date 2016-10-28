@@ -1,10 +1,8 @@
 $main-color: #3f97aa;
 
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text:600);
-
 @import "./base.scss";
 
 .loader_logo,
 .js .page:first-child .content_and_background .scroller > div:after {
-  background-image: image-url("pageflow/themes/umoja/logo.png");
+  background-image: image-url("pageflow/themes/blof/logo.png");
 }
