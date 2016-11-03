@@ -1,16 +1,18 @@
 GIT
-  remote: https://github.com/codevise/state_machine.git
-  revision: f49c0bc75d505c60516a7430acfae0fa514e01d9
-  specs:
-    state_machine (1.2.0)
-
-PATH
-  remote: /Users/joost/Gems/pageflow-linkmap-page
+  remote: git://github.com/scrollytelling/pageflow-linkmap-page.git
+  revision: e8db6d620d16f60ab988036d9fb8ed09796fbcb0
+  branch: scrollytelling-rendered-text
   specs:
     pageflow-linkmap-page (0.2.0.dev)
       i18n-js
       pageflow (~> 0.10)
       pageflow-external-links (~> 0.3)
+
+GIT
+  remote: https://github.com/codevise/state_machine.git
+  revision: f49c0bc75d505c60516a7430acfae0fa514e01d9
+  specs:
+    state_machine (1.2.0)
 
 GEM
   remote: https://rubygems.org/
