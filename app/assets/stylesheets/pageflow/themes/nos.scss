@@ -6,3 +6,7 @@ $main-color: #cf282c;
 .js .page:first-child .content_and_background .scroller > div:after {
   background-image: image-url("pageflow/themes/nos/logo.png");
 }
+
+.js .page.invert:first-child .content_and_background .scroller > div:after {
+  background-image: image-url("pageflow/themes/nos/logo_print.png");
+}
