@@ -4,8 +4,14 @@ $main-color: #0a9edf;
 
 @import "./base.scss";
 
-h2 {
+#outer_wrapper {
   font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  @include mobile {
+    font-size: 13px;
+  };
 
   .title {
     text-transform: uppercase;

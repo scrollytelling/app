@@ -3,6 +3,8 @@ $main-color: #c3e2dd !default;
 $main-color-dark: darken($main-color, 30%) !default;
 $anchor-color: $main-color !default;
 $indicator-text-shadow-color: 3e3e3e !default;
+$text-color: white;
+$text-invert-color: #333;
 
 @import "bourbon";
 @import "pageflow/mixins";
@@ -26,16 +28,16 @@ $indicator-text-shadow-color: 3e3e3e !default;
 }
 
 .content {
-  color: white;
+  color: $text-color;
 }
 
 .invert .content {
-  color: #333;
+  color: $text-invert-color;
 }
 
 .contentText a {
   pointer-events: all;
-  color: white;
+  color: $text-color;
 
   &:hover {
     color: $anchor-color;
@@ -43,7 +45,7 @@ $indicator-text-shadow-color: 3e3e3e !default;
 }
 
 .invert .contentText a {
-  color: black;
+  color: $text-invert-color;
 }
 
 h2 {
@@ -92,7 +94,7 @@ section.delayed_text_fade_in_short {
   .page:first-child .content_and_background .scroller > div:after {
     content: " ";
     position: absolute;
-    top: 2%;
+    top: 3%;
     left: 0;
     right: 0;
     width: 90%;
@@ -108,7 +110,7 @@ section.delayed_text_fade_in_short {
       left: 8%;
       right: auto;
       height: 35px;
-      max-width: 90%;
+      max-width: 70%;
       background-position: left;
     }
   }
@@ -116,6 +118,10 @@ section.delayed_text_fade_in_short {
   // we feel the standard page width is too wide
   .page .scroller > div {
     padding: 15% 8% 5% 8%;
+  }
+
+  .page.is_near_top .scroller > div {
+    padding-top: 30%;
   }
 }
 
