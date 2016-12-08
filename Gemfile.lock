@@ -370,7 +370,7 @@ GEM
     scrollytelling-loading_spinner (1.1.0)
       pageflow (>= 0.7, < 0.12.0)
       rails (>= 3.0)
-    scrollytelling-pageflow-navigation (1.12.0)
+    scrollytelling-pageflow-navigation (1.12.1)
       pageflow (>= 0.11.0)
       rails (>= 3.0)
     sentry-raven (2.1.3)
