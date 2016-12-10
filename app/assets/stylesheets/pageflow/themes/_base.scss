@@ -136,3 +136,57 @@ section.delayed_text_fade_in_short {
 .slideshow section.fade.invert {
     background-color: transparent;
 }
+
+.navigation_mobile.active {
+  .sharing_mobile {
+    a.share.facebook {
+      p:before {
+        font-family: "FontAwesome";
+        content: "\f082";
+        margin-right: 12px;
+      }
+    }
+
+    a.share.twitter {
+      p:before {
+        font-family: "FontAwesome";
+        content: "\f081";
+        margin-right: 12px;
+      }
+    }
+
+    a.share.google {
+      p:before {
+        font-family: "FontAwesome";
+        content: "\f0d4";
+        margin-right: 12px;
+      }
+    }
+
+    li {
+      background-color: darkgrey;
+      font-family: sourcesanspro;
+
+      >a {
+        color: white;
+        padding-top: 10px;
+        height: 50px;
+        margin-left: 24px;
+      }
+
+      >a:before {
+        display: none;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.imprint_mobile {
+  li {
+    background-color: darkgrey;
+  }
+}
