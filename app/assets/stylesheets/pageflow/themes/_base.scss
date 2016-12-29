@@ -91,7 +91,7 @@ section.delayed_text_fade_in_short {
 }
 
 .js {
-  .page:first-child .content_and_background .scroller > div:after {
+  .page:first-child .contentWrapper:after {
     content: " ";
     position: absolute;
     top: 3%;

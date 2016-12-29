@@ -20,10 +20,10 @@ h2 {
   background-image: image-url("pageflow/themes/scrollytelling/logo.png");
 }
 
-.js .page:first-child .content_and_background .scroller > div:after {
+.js .page:first-child .contentWrapper:after {
   background-image: image-url("pageflow/themes/scrollytelling/logo_header.png");
 }
 
-.js .page.invert:first-child .content_and_background .scroller > div:after {
+.js .page.invert:first-child .contentWrapper:after {
   background-image: image-url("pageflow/themes/scrollytelling/logo_header_invert.png");
 }
