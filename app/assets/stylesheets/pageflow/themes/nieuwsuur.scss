@@ -1,0 +1,12 @@
+$main-color: #0072bf;
+
+@import "./base.scss";
+
+.loader_logo,
+.js .page:first-child .contentWrapper:after {
+  background-image: image-url("pageflow/themes/nieuwsuur/logo.png");
+}
+
+.js .page.invert:first-child .contentWrapper:after {
+  background-image: image-url("pageflow/themes/nieuwsuur/logo.png");
+}
