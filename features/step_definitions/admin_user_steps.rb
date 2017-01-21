@@ -4,7 +4,9 @@ Given(/^I have logged in as administrator$/) do
 end
 
 When(/^I login as an administrator$/) do
-  fill_in "Email", with: "admin@example.com"
-  fill_in "Password", with: "9tzRFz9TS9eH"
-  click_on "Login"
+  @user = FactoryGirl.create :admin
+
+  fill_in "user_email", with: "admin@example.com"
+  fill_in "user_password", with: "9tzRFz9TS9eH"
+  page.find('input[name="commit"]').click
 end

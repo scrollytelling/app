@@ -19,6 +19,15 @@ Feature: stories
     And I click "Update Story"
     Then I see "Story was successfully updated"
 
+  @javascript
+  Scenario: I can publish a story
+    Given a story "Vertical cities"
+    When I click "Stories"
+    And I click "Vertical cities"
+    And I click "Editor"
+    And I publish the story
+    Then I see "Your story has been sucessfully published"
+
   Scenario: I can delete a story
     Given a story "Vertical cities"
     When I click "Stories"
