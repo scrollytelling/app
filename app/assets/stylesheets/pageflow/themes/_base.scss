@@ -83,10 +83,9 @@ section.delayed_text_fade_in_short {
   }
 }
 
-@include desktop {
-  .page_header,
-  .contextText {
-    width: 45%;
+@include mobile {
+  .page p {
+      max-width: 65%;
   }
 }
 
