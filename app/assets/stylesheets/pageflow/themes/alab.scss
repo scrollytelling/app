@@ -1,0 +1,24 @@
+$main-color: #0072bf;
+
+@import url(https://fonts.googleapis.com/css?family=Karla|Merriweather);
+
+@import "./base.scss";
+
+#outer_wrapper {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+}
+
+.loader_logo,
+.js .page:first-child .contentWrapper:after {
+  background-image: image-url("pageflow/themes/alab/logo.png");
+}
+
+.js .page.invert:first-child .contentWrapper:after {
+  background-image: image-url("pageflow/themes/alab/logo.png");
+}
