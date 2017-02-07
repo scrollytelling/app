@@ -22,7 +22,8 @@ $text-invert-color: #333;
 @import "pageflow/linkmap_page/themes/default";
 @import "pageflow/linkmap_page/themes/default/scroll_indicators";
 
-#outer_wrapper {
+#outer_wrapper,
+#entry_preview {
   font-family: sans-serif;
   line-height: 1.6;
 }
