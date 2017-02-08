@@ -1,11 +1,11 @@
 $main-color: #0072bf;
 
-@import url(https://fonts.googleapis.com/css?family=Karla|Merriweather);
+@import url(https://fonts.googleapis.com/css?family=Lato|Merriweather);
 
 @import "./base.scss";
 
 #outer_wrapper {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Lato', sans-serif;
   line-height: 1.5;
   font-weight: bold;
 }
