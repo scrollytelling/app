@@ -207,7 +207,7 @@ GEM
       activesupport (>= 3.2, < 5)
     htmlentities (4.3.4)
     http_accept_language (2.1.0)
-    i18n (0.7.0)
+    i18n (0.8.0)
     i18n-js (2.1.2)
       i18n
     inherited_resources (1.6.0)
@@ -354,7 +354,7 @@ GEM
       redis (~> 3.0.4)
       resque (~> 1.25.1)
       rufus-scheduler (~> 2.0.24)
-    resque_mailer (2.4.1)
+    resque_mailer (2.4.2)
       actionmailer (>= 3.0)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
