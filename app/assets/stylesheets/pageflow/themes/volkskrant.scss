@@ -13,6 +13,16 @@ h2 {
   font-family: 'Crimson Text', Georgia, serif;
 }
 
+@include mobile {
+  .page p {
+      max-width: 65%;
+  }
+  .text_position_right.page h2 {
+    max-width: 65%;
+    margin-left: auto;
+  }
+}
+
 .loader_logo {
   background-image: image-url("pageflow/themes/volkskrant/logo.png");
 }

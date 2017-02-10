@@ -86,16 +86,6 @@ section.delayed_text_fade_in_short {
   }
 }
 
-@include mobile {
-  .page p {
-      max-width: 65%;
-  }
-  .text_position_right.page h2 {
-    max-width: 65%;
-    margin-left: auto;
-  }
-}
-
 .js {
   .page:first-child .contentWrapper:after {
     content: " ";
