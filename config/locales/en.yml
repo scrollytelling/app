@@ -25,6 +25,9 @@ en:
       nos:
         feature_name: Analytics for NOS
         widget_type_name: NOS tracking codes
+      nieuwsuur:
+        feature_name: Analytics for Nieuwsuur
+        widget_type_name: Nieuwsuur tracking codes
       psv:
         feature_name: Analytics for PSV
         widget_type_name: PSV tracking codes

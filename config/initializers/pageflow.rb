@@ -23,7 +23,7 @@ Pageflow.configure do |config|
   # Register tracking code WidgetType per account, so they're not visible across accounts.
   config.widget_types.register(Widgets::Analytics.default)
   %w(
-    radio1 nos volkskrant grasnapolsky beeldengeluid psv
+    radio1 nos nieuwsuur volkskrant grasnapolsky beeldengeluid psv
     stephaniestruijk amnesty blof buildingbridges ricostickstyphoon sbb).each do |account|
     config.features.register("analytics.#{account}") do |feature_config|
       feature_config.widget_types.register(Widgets::Analytics::WidgetType.new(account))
