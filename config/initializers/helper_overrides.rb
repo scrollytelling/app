@@ -1,0 +1,1 @@
+Pageflow::EntriesHelper.prepend(HelperOverrides)
