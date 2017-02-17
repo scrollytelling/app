@@ -43,7 +43,7 @@ Pageflow.configure do |config|
     scrollytelling volkskrant nos nieuwsuur radio1 grasnapolsky
     beeldengeluid psv amnesty_international stephaniestruijk
     blof buildingbridges ricostickstyphoon sbb worldpressphoto
-    phtgrphr waddenzee humanrightswatch alab).each do |theme|
+    phtgrphr waddenzee humanrightswatch alab ed).each do |theme|
       config.themes.register(theme)
   end
 
