@@ -186,3 +186,9 @@ section.delayed_text_fade_in_short {
     background-color: darkgrey;
   }
 }
+
+@include mobile {
+  p {
+    font-size: 18px;
+  }
+}
