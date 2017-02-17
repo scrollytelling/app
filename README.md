@@ -45,6 +45,8 @@ Create a new directory in `app/views/widgets/analytics` and place two partials i
 
 Add the widget translations to `en.yml` and any other localization file you have active.
 
+Change the asset version, because the widget names are cached in the front-end and this cache needs to expire.
+
 Then deploy the code and enable the widget in the corresponding account, and the code in the corresponding theming (edit account). After that, all new stories will have this widget enabled. For previous stories, you need to add the widget manually.
 
 ## Code of conduct
