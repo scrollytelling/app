@@ -1,21 +1,38 @@
-$main-color: #0072bf;
+$main-color: #d10099;
 
-@import url(https://fonts.googleapis.com/css?family=Lato|Merriweather);
+@font-face {
+    font-family: 'Druk Medium';
+    src: font-url('pageflow/themes/ed/Druk-Medium-Web.woff') format('woff');
+}
 
 @import "./base.scss";
 
 #outer_wrapper {
-  font-family: 'Lato', sans-serif;
-  line-height: 1.5;
-  font-weight: bold;
+  font-family: sans-serif;
+  color: #d2d2d2;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-family: 'Merriweather', serif;
+  color: #d2d2d2;
+  font-family: 'Druk Medium', serif;
+  text-transform: uppercase;
+
+  .title {
+    font-size: 100px;
+  }
+
+  .subtitle {
+    font-size: 80px;
+    margin: 0;
+  }
 }
 
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
+  height: 90px;
   background-image: image-url("pageflow/themes/ed/logo.png");
 }
 
