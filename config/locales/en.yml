@@ -43,6 +43,9 @@ en:
       stephaniestruijk:
         feature_name: Analytics for Stephanie Struijk
         widget_type_name: Stephanie Struijk tracking codes
+      krisberry:
+        feature_name: Analytics for Kris Berry
+        widget_type_name: Kris Berry tracking codes
       volkskrant:
         feature_name: Analytics for de Volkskrant
         widget_type_name: de Volkskrant tracking codes
