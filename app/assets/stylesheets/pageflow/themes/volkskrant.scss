@@ -7,20 +7,11 @@ $main-color: #cf282c;
 #outer_wrapper {
   font-family: Georgia, serif;
   line-height: 1.7;
+  font-size: 18px;
 }
 
 h2 {
   font-family: 'Crimson Text', Georgia, serif;
-}
-
-@include mobile {
-  .page p {
-      max-width: 65%;
-  }
-  .text_position_right.page h2 {
-    max-width: 65%;
-    margin-left: auto;
-  }
 }
 
 .loader_logo {
