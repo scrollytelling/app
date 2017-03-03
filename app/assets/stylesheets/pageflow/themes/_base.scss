@@ -205,9 +205,18 @@ section.delayed_text_fade_in_short {
 //// Styling specific for the text page @Joost: Ruby gem TODO
 
 // A wrapper around image (centered text)
-.page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image {
+.page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image {
   width: 100%;
   padding: 0;
   margin: 0;
@@ -219,14 +228,20 @@ section.delayed_text_fade_in_short {
 }
 
 // Position from top of page (because of logo)
-.page .text_page .scroller > div .contentInnerWrapper .contentText, .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
+.page .text_page .scroller > div .contentInnerWrapper .contentText,
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
   @include desktop {
     padding-top: 10em;
   }
 }
 
 // Title size
-.page .text_page .scroller > div .contentInnerWrapper .contentText h3, .page .text_page .scroller > div .contentInnerWrapper .contentText h3, .js .page .text_page .scroller > div .contentInnerWrapper .contentText h3, .js .page .text_page .scroller > div .contentInnerWrapper .contentText h3, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3 {
+.page .text_page .scroller > div .contentInnerWrapper .contentText h3,
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText h3,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3 {
   @include desktop {
     font-size: 3em;
     line-height: 1.2em;
@@ -235,21 +250,34 @@ section.delayed_text_fade_in_short {
 }
 
 // Text size
-.page .text_page .scroller > div .contentInnerWrapper .contentText p, .page .text_page .scroller > div .contentInnerWrapper .contentText p, .js .page .text_page .scroller > div .contentInnerWrapper .contentText p, .js .page .text_page .scroller > div .contentInnerWrapper .contentText p, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p {
+.page .text_page .scroller > div .contentInnerWrapper .contentText p,
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText p,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p {
   @include desktop {
     font-size: 1.6em;
   }
 }
 
 // Make text wider and scroll to the next one later
-.page .text_page .scroller > div .contentInnerWrapper .contentText, .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
+.page .text_page .scroller > div .contentInnerWrapper .contentText,
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
   @include desktop {
     max-width: 700px;
   }
 }
 
-.page .contentText  h1, .page .contentText  h2 span.subtitle, .page .contentText  h2 span.tagline, .page .contentText  h3, .page .contentText  p {
-  @include desktop {
-    max-width: 700px;
+.page .text_page .contentText {
+  h1,
+  h2 span.subtitle,
+  h2 span.tagline,
+  h3,
+  p {
+    @include desktop {
+      max-width: 700px;
+    }
   }
 }
+
