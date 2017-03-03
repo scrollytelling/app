@@ -247,3 +247,9 @@ section.delayed_text_fade_in_short {
     max-width: 700px;
   }
 }
+
+.page .contentText  h1, .page .contentText  h2 span.subtitle, .page .contentText  h2 span.tagline, .page .contentText  h3, .page .contentText  p {
+  @include desktop {
+    max-width: 700px;
+  }
+}
