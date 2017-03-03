@@ -90,7 +90,7 @@ section.delayed_text_fade_in_short {
   .page:first-child .contentWrapper:after {
     content: " ";
     position: absolute;
-    top: 3%;
+    top: 30px;
     left: 0;
     right: 0;
     width: 90%;
@@ -104,6 +104,7 @@ section.delayed_text_fade_in_short {
 
     @include mobile {
       left: 8%;
+      top: 20px;
       right: auto;
       height: 35px;
       max-width: 70%;
@@ -181,6 +182,13 @@ section.delayed_text_fade_in_short {
   }
 }
 
+// @Joost: Ruby gem TODO
+.navigation_mobile .menu.index {
+  @include mobile {
+    top: 11px;
+  }
+}
+
 .imprint_mobile {
   li {
     background-color: darkgrey;
@@ -190,5 +198,58 @@ section.delayed_text_fade_in_short {
 @include mobile {
   p {
     font-size: 18px;
+  }
+}
+
+
+//// Styling specific for the text page @Joost: Ruby gem TODO
+
+// A wrapper around image (centered text)
+.page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .js .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  display: block;
+  max-width: none;
+  position: relative;
+  top: inherit !important;
+}
+
+// Position from top of page (because of logo)
+.page .text_page .scroller > div .contentInnerWrapper .contentText, .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
+  @include desktop {
+    padding-top: 10em;
+  }
+}
+
+// Title size
+.page .text_page .scroller > div .contentInnerWrapper .contentText h3, .page .text_page .scroller > div .contentInnerWrapper .contentText h3, .js .page .text_page .scroller > div .contentInnerWrapper .contentText h3, .js .page .text_page .scroller > div .contentInnerWrapper .contentText h3, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3 {
+  @include desktop {
+    font-size: 3em;
+    line-height: 1.2em;
+    padding-bottom: 1em;
+  }
+}
+
+// Text size
+.page .text_page .scroller > div .contentInnerWrapper .contentText p, .page .text_page .scroller > div .contentInnerWrapper .contentText p, .js .page .text_page .scroller > div .contentInnerWrapper .contentText p, .js .page .text_page .scroller > div .contentInnerWrapper .contentText p, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p {
+  @include desktop {
+    font-size: 1.6em;
+  }
+}
+
+// Make text wider and scroll to the next one later
+.page .text_page .scroller > div .contentInnerWrapper .contentText, .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page .text_page .scroller > div .contentInnerWrapper .contentText, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText, .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
+  @include desktop {
+    max-width: 700px;
+  }
+}
+
+.page .contentText  h1, .page .contentText  h2 span.subtitle, .page .contentText  h2 span.tagline, .page .contentText  h3, .page .contentText  p {
+  @include desktop {
+    max-width: 700px;
   }
 }
