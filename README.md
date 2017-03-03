@@ -2,9 +2,18 @@
 
 ## Getting started
 
+You need Ruby, version is listed in `.ruby-version`. Use rbenv or RVM to install it.
+You also need MySQL, Redis and ImageMagick. On a mac, use Homebrew to install them all.
+
+After installing Ruby and doing `gem install bundler` you can switch to the project
+root directory and install the required software, and set up the database.
+
 ```
+bundle
 bin/rake db:setup
 ```
+
+Then start the server with `bin/rails s`.
 
 ## Background jobs
 
