@@ -9,3 +9,10 @@
   background-image: asset-url("logo60x60@2x.png");
   background-size: 60px;
 }
+
+[data-wysihtml5-command="formatInline"] {
+  &::before {
+    font-family: "FontAwesome";
+    content: "\f02a";
+  }
+}
