@@ -221,7 +221,7 @@ section.delayed_text_fade_in_short {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 1.5em;
   display: block;
   max-width: none;
   position: relative;
@@ -233,8 +233,10 @@ section.delayed_text_fade_in_short {
 .js .page .text_page .scroller > div .contentInnerWrapper .contentText,
 .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
 .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
+  padding-top: 4em;
+
   @include desktop {
-    padding-top: 10em;
+    padding-top: 8em;
   }
 }
 
@@ -243,6 +245,8 @@ section.delayed_text_fade_in_short {
 .js .page .text_page .scroller > div .contentInnerWrapper .contentText h3,
 .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3,
 .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3 {
+  padding-bottom: 1em;
+
   @include desktop {
     font-size: 3em;
     line-height: 1.2em;
@@ -268,16 +272,81 @@ section.delayed_text_fade_in_short {
   @include desktop {
     max-width: 700px;
   }
+
+  @include mobile {
+    width: 84% !important;
+    margin: 0 auto !important;
+  }
 }
 
-.page .text_page .contentText {
-  h1,
-  h2 span.subtitle,
-  h2 span.tagline,
-  h3,
-  p {
-    @include desktop {
-      max-width: 700px;
+// Remove large padding on the right of page_header
+.page .text_page .scroller > div .contentInnerWrapper .page_header h2,
+.js .page .text_page .scroller > div .contentInnerWrapper .page_header h2,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .page_header h2,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .page_header h2 {
+  padding-right: 0;
+}
+
+
+.page .text_page {
+
+  .backgroundArea, .page_header {
+    opacity: 0;
+  }
+
+  .content {
+    .page_spacer {
+      display: block !important;
     }
+
+    .contentText {
+      h1,
+      h2 span.subtitle,
+      h2 span.tagline,
+      h3,
+      p {
+        @include desktop {
+          max-width: 700px;
+        }
+      }
+    }
+  }
+
+  .page_header {
+    h2 {
+      color: #fff;
+    }
+
+    span:last-child {
+      margin-bottom: 2em;
+    }
+
+    h1, h2 span.subtitle, h2 span.tagline, h3, p {
+      width: 100%;
+    }
+  }
+
+}
+
+.page.text_position_center.chapter_beginning .text_page {
+  .page_header {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
+// Inverted colors
+.page.invert .text_page {
+  .page_header {
+    h2 {
+      color: #000;
+    }
+  }
+}
+
+// Page finished loading
+.slideshow .page .text_page {
+  .backgroundArea, .page_header {
+    opacity: 1;
   }
 }
