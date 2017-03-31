@@ -1,6 +1,6 @@
 $main-color: #333333;
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
 
 @import "./base.scss";
 
@@ -18,7 +18,7 @@ p {
 
 h2 {
   font-family: 'Raleway', sans-serif;
-  font-weight: 900;
+  font-weight: 600;
 
   .title {
     text-transform: uppercase;
