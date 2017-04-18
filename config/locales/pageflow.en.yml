@@ -1,5 +1,7 @@
 en:
   pageflow:
+    public:
+      scroll_indicator: Scroll to continue
     admin:
       accounts:
         no_entries: No Stories
