@@ -1,0 +1,40 @@
+$main-color: #ca3249;
+// e498a4 lighter
+// f4d6db lightest
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+@import "./base.scss";
+
+.entry {
+  font-family: Calibri, 'PT Sans', sans-serif;
+  font-size: 11pt;
+  line-height: 13pt;
+
+  h2 {
+    span.title {
+      font-weight: bold;
+      font-size: 20pt;
+    }
+
+    span.subtitle {
+      text-transform: uppercase;
+      font-size: 14pt;
+    }
+
+    span.tagline {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.loader_logo,
+.js .page:first-child .contentWrapper:after {
+  height: 100px;
+  background-image: image-url("pageflow/themes/meerveerkracht/logo.png");
+}
+
+.js .page.invert:first-child .contentWrapper:after {
+  height: 100px;
+  background-image: image-url("pageflow/themes/meerveerkracht/logo-black.png");
+}

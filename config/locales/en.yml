@@ -10,6 +10,9 @@ en:
       blof:
         feature_name: Analytics for BLØF
         widget_type_name: BLØF tracking codes
+      meerveerkracht:
+        feature_name: Analytics for Meer Veerkracht, Langer Thuis
+        widget_type_name: Meer Veerkracht, Langer Thuis tracking codes
       ed:
         feature_name: Analytics for Ed
         widget_type_name: Ed tracking codes

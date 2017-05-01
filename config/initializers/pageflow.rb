@@ -26,8 +26,10 @@ Pageflow.configure do |config|
   # Register tracking code WidgetType per account, so they're not visible across accounts.
   config.widget_types.register(Widgets::Analytics.default)
   %w(
-    radio1 nos nieuwsuur volkskrant grasnapolsky beeldengeluid psv
-    stephaniestruijk amnesty blof buildingbridges ricostickstyphoon sbb ed krisberry).each do |account|
+    radio1 nos nieuwsuur volkskrant grasnapolsky beeldengeluid
+    amnesty sbb ed psv meerveerkracht
+    stephaniestruijk blof ricostickstyphoon krisberry
+    buildingbridges).each do |account|
     config.features.register("analytics.#{account}") do |feature_config|
       feature_config.widget_types.register(Widgets::Analytics::WidgetType.new(account))
     end
@@ -46,7 +48,7 @@ Pageflow.configure do |config|
     scrollytelling volkskrant nos nieuwsuur radio1 grasnapolsky
     beeldengeluid psv amnesty_international stephaniestruijk
     blof buildingbridges ricostickstyphoon sbb worldpressphoto
-    phtgrphr waddenzee humanrightswatch alab ed krisberry).each do |theme|
+    phtgrphr waddenzee humanrightswatch alab ed krisberry meerveerkracht).each do |theme|
       config.themes.register(theme)
   end
 
