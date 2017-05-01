@@ -9,7 +9,6 @@ $main-color: #ca3249;
 .entry {
   font-family: Calibri, 'PT Sans', sans-serif;
   font-size: 11pt;
-  line-height: 13pt;
 
   h2 {
     span.title {
@@ -25,6 +24,10 @@ $main-color: #ca3249;
     span.tagline {
       text-transform: uppercase;
     }
+  }
+
+  p {
+    line-height: 13pt;
   }
 }
 
