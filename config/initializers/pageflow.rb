@@ -28,7 +28,7 @@ Pageflow.configure do |config|
   %w(
     radio1 nos nieuwsuur volkskrant grasnapolsky beeldengeluid
     amnesty sbb ed psv meerveerkracht
-    stephaniestruijk blof ricostickstyphoon krisberry
+    stephaniestruijk blof ricostickstyphoon krisberry concertatsea
     buildingbridges).each do |account|
     config.features.register("analytics.#{account}") do |feature_config|
       feature_config.widget_types.register(Widgets::Analytics::WidgetType.new(account))
@@ -46,7 +46,7 @@ Pageflow.configure do |config|
   #
   %i(
     scrollytelling volkskrant nos nieuwsuur radio1 grasnapolsky
-    beeldengeluid psv amnesty_international stephaniestruijk
+    beeldengeluid psv amnesty_international stephaniestruijk concertatsea
     blof buildingbridges ricostickstyphoon sbb worldpressphoto
     phtgrphr waddenzee humanrightswatch alab ed krisberry meerveerkracht).each do |theme|
       config.themes.register(theme)

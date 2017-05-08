@@ -10,6 +10,9 @@ en:
       blof:
         feature_name: Analytics for BLØF
         widget_type_name: BLØF tracking codes
+      concertatsea:
+        feature_name: Analytics for Concert at SEA
+        widget_type_name: Concert at SEA tracking codes
       meerveerkracht:
         feature_name: Analytics for Meer Veerkracht, Langer Thuis
         widget_type_name: Meer Veerkracht, Langer Thuis tracking codes
