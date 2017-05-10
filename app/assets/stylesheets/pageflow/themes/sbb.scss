@@ -2,7 +2,10 @@ $main-color: #468c3f;
 
 @import "./base.scss";
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
   background-image: image-url("pageflow/themes/sbb/logo.png");
+}
+
+.js .page:first-child .contentWrapper:after {
+  background-image: none;
 }
