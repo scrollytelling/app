@@ -1,43 +1,33 @@
-$main-color: #ca3249;
-// e498a4 lighter
-// f4d6db lightest
-
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+$main-color: #d63926;
+// ffd122 lighter
 
 @import "./base.scss";
 
 .entry {
-  font-family: Calibri, 'PT Sans', sans-serif;
-  font-size: 11pt;
+  font-family: sans-serif;
 
   h2 {
     span.title {
-      font-weight: bold;
-      font-size: 20pt;
     }
 
     span.subtitle {
-      text-transform: uppercase;
-      font-size: 14pt;
     }
 
     span.tagline {
-      text-transform: uppercase;
     }
   }
 
   p {
-    line-height: 13pt;
   }
 }
 
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
   height: 100px;
-  background-image: image-url("pageflow/themes/concertatsea/logo.svg");
+  background-image: image-url("pageflow/themes/concertatsea/logo.png");
 }
 
 .js .page.invert:first-child .contentWrapper:after {
   height: 100px;
-  background-image: image-url("pageflow/themes/concertatsea/logo.svg");
+  background-image: image-url("pageflow/themes/concertatsea/logo-black.png");
 }
