@@ -12,6 +12,9 @@ ActiveAdmin.setup do |config|
                :url => '/admin/users/me')
       admin.add_logout_button_to_menu(menu)
     end
+
+    # Add custom scripts to the footer
+    config.view_factory.footer = Admin::Scripts
   end
 
   # == Site Title
