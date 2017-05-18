@@ -6,6 +6,6 @@
 class HostConstraint
   def matches?(request)
     return true if Rails.env.in? %w(test development)
-    request.host == 'app.scrollytelling.io'
+    /scrollytelling.io\z/.match?(request.host)
   end
 end
