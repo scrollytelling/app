@@ -1,14 +1,12 @@
-nginx-configuration: &nginx-configuration
-  configuration:
-    nginx:
-      # cross-origin-resource-sharing is required for custom CNAMEs
-      cors: true
 staging:
   mysql:
     server:
       unique_name: app
   rails:
-    <<: *nginx-configuration
+    configuration:
+      nginx:
+        # cross-origin-resource-sharing is required for custom CNAMEs
+        cors: true
     server:
       unique_name: app
   redis:
@@ -24,7 +22,10 @@ production:
       unique_name: db
       size: 4gb
   rails:
-    <<: *nginx-configuration
+    configuration:
+      nginx:
+        # cross-origin-resource-sharing is required for custom CNAMEs
+        cors: true
     servers:
       - server:
         unique_name: ari
