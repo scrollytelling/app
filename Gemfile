@@ -23,6 +23,7 @@ gem 'figaro'
 gem 'whenever', require: false
 gem "sentry-raven"
 gem "snitcher"
+gem "okcomputer"
 
 # Pageflow extensions
 gem 'pageflow-internal-links'
