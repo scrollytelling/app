@@ -251,6 +251,7 @@ GEM
     mysql2 (0.4.5)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
+    okcomputer (1.16.0)
     orm_adapter (0.5.0)
     pageflow-before-after (0.5.0)
       i18n-js
@@ -449,6 +450,7 @@ DEPENDENCIES
   figaro
   jquery-rails
   mysql2
+  okcomputer
   pageflow!
   pageflow-before-after
   pageflow-embedded-video
