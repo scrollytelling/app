@@ -5,8 +5,7 @@ staging:
   rails:
     configuration:
       nginx:
-        # cross-origin-resource-sharing is required for custom CNAMEs
-        cors: true
+        cors: true # required for custom CNAMES to load fonts
     server:
       unique_name: app
   redis:
@@ -16,24 +15,33 @@ production:
   load_balancer:
     server:
       unique_name: lb
+      vendor: digitalocean
+      region: ams3
       size: 1gb
   mysql:
     server:
       unique_name: db
+      vendor: digitalocean
+      region: ams3
       size: 4gb
   rails:
-    configuration:
-      nginx:
-        # cross-origin-resource-sharing is required for custom CNAMEs
-        cors: true
     servers:
       - server:
         unique_name: ari
+        vendor: digitalocean
+        region: ams3
         size: 4gb
       - server:
         unique_name: bea
+        vendor: digitalocean
+        region: ams3
         size: 4gb
+    configuration:
+      nginx:
+        cors: true # required for custom CNAMES to load fonts
   redis:
     server:
       unique_name: cache
+      vendor: digitalocean
+      region: ams3
       size: 2gb
