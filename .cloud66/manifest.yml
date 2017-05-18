@@ -1,3 +1,13 @@
+staging:
+  mysql:
+    server:
+      unique_name: app
+  rails:
+    server:
+      unique_name: app
+  redis:
+    server:
+      unique_name: app
 production:
   mysql:
     server:
