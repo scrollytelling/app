@@ -1,14 +1,14 @@
-nginx-configuration: &nginx-configuration
-  configuration:
-    nginx:
-      # cross-origin-resource-sharing is required for custom CNAMEs
-      cors: true
+location: &location
+  vendor: digitalocean
+  region: ams3
 staging:
   mysql:
     server:
       unique_name: app
   rails:
-    <<: *nginx-configuration
+    configuration:
+      nginx:
+        cors: true # required for custom CNAMES to load fonts
     server:
       unique_name: app
   redis:
@@ -19,20 +19,27 @@ production:
     server:
       unique_name: lb
       size: 1gb
+      <<: *location
   mysql:
     server:
       unique_name: db
       size: 4gb
+      <<: *location
   rails:
-    <<: *nginx-configuration
     servers:
-      - server:
+      server:
         unique_name: ari
         size: 4gb
-      - server:
+        <<: *location
+      server:
         unique_name: bea
         size: 4gb
+        <<: *location
+    configuration:
+      nginx:
+        cors: true # required for custom CNAMES to load fonts
   redis:
     server:
       unique_name: cache
       size: 2gb
+      <<: *location
