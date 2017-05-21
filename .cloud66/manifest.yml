@@ -1,3 +1,6 @@
+location: &location
+  vendor: digitalocean
+  region: ams3
 staging:
   mysql:
     server:
@@ -16,18 +19,22 @@ production:
     server:
       unique_name: lb
       size: 1gb
+      <<: *location
   mysql:
     server:
       unique_name: db
       size: 4gb
+      <<: *location
   rails:
     servers:
       server:
         unique_name: ari
         size: 4gb
+        <<: *location
       server:
         unique_name: bea
         size: 4gb
+        <<: *location
     configuration:
       nginx:
         cors: true # required for custom CNAMES to load fonts
@@ -35,3 +42,4 @@ production:
     server:
       unique_name: cache
       size: 2gb
+      <<: *location
