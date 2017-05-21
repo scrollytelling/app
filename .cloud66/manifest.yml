@@ -1,45 +1,27 @@
-location: &location
-  vendor: digitalocean
-  region: ams3
+config: &config
+  nginx:
+    cors: true
 staging:
-  mysql:
-    server:
-      unique_name: app
   rails:
     configuration:
-      nginx:
-        cors: true # required for custom CNAMES to load fonts
+      <<: *config
+    server:
+      unique_name: app
+  mysql:
     server:
       unique_name: app
   redis:
     server:
       unique_name: app
 production:
-  load_balancer:
+  rails:
+    configuration:
+      <<: *config
     server:
-      unique_name: lb
-      size: 1gb
-      <<: *location
+      unique_name: app
   mysql:
     server:
       unique_name: db
-      size: 4gb
-      <<: *location
-  rails:
-    servers:
-      server:
-        unique_name: ari
-        size: 4gb
-        <<: *location
-      server:
-        unique_name: bea
-        size: 4gb
-        <<: *location
-    configuration:
-      nginx:
-        cors: true # required for custom CNAMES to load fonts
   redis:
     server:
       unique_name: cache
-      size: 2gb
-      <<: *location
