@@ -11,6 +11,13 @@ test: &test
   <<: *default
   database: scrollytelling_test
 
+staging:
+  <<: *default
+  database: scrollytelling_staging
+  username: root
+  password: "<%= ENV['MYSQL_PASSWORD']%>"
+  host: "<%= ENV['MYSQL_ADDRESS']%>"
+
 production:
   <<: *default
   database: storyboard_production
