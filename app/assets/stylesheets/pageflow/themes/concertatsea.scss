@@ -1,12 +1,16 @@
 $main-color: #d63926;
 // ffd122 lighter
 
+@import url('https://fonts.googleapis.com/css?family=Pragati+Narrow');
+
 @import "./base.scss";
 
 .entry {
   font-family: sans-serif;
 
   h2 {
+    font-family: 'Pragati Narrow', sans-serif;
+
     span.title {
     }
 
