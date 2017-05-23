@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024080133) do
+ActiveRecord::Schema.define(version: 20170523151618) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 191
@@ -81,7 +81,11 @@ ActiveRecord::Schema.define(version: 20161024080133) do
     t.string   "format",                                limit: 191
     t.string   "rights",                                limit: 191,                         default: "", null: false
     t.integer  "confirmed_by_id",                       limit: 4
+    t.integer  "parent_file_id",                        limit: 4
+    t.string   "parent_file_model_type",                limit: 255
   end
+
+  add_index "pageflow_audio_files", ["parent_file_id", "parent_file_model_type"], name: "index_audio_files_on_parent_id_and_parent_model_type", using: :btree
 
   create_table "pageflow_chapters", force: :cascade do |t|
     t.datetime "created_at"
@@ -116,6 +120,7 @@ ActiveRecord::Schema.define(version: 20161024080133) do
     t.string   "password_digest",        limit: 191
     t.datetime "first_published_at"
     t.datetime "edited_at"
+    t.integer  "users_count",            limit: 4,     default: 0,  null: false
   end
 
   add_index "pageflow_entries", ["account_id"], name: "index_pageflow_entries_on_account_id", using: :btree
@@ -138,11 +143,12 @@ ActiveRecord::Schema.define(version: 20161024080133) do
   add_index "pageflow_external_links_sites", ["revision_id"], name: "index_pageflow_external_links_sites_on_revision_id", using: :btree
 
   create_table "pageflow_file_usages", force: :cascade do |t|
-    t.integer  "revision_id", limit: 4
-    t.integer  "file_id",     limit: 4
-    t.string   "file_type",   limit: 191
+    t.integer  "revision_id",   limit: 4
+    t.integer  "file_id",       limit: 4
+    t.string   "file_type",     limit: 191
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "configuration", limit: 65535
   end
 
   add_index "pageflow_file_usages", ["file_id", "file_type"], name: "index_pageflow_file_usages_on_file_id_and_file_type", using: :btree
@@ -174,17 +180,33 @@ ActiveRecord::Schema.define(version: 20161024080133) do
     t.integer  "width",                               limit: 4
     t.integer  "height",                              limit: 4
     t.string   "rights",                              limit: 191,   default: "", null: false
+    t.integer  "parent_file_id",                      limit: 4
+    t.string   "parent_file_model_type",              limit: 255
   end
 
-  create_table "pageflow_memberships", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.integer  "entry_id",   limit: 4
-    t.string   "name",       limit: 191
+  add_index "pageflow_image_files", ["parent_file_id", "parent_file_model_type"], name: "index_image_files_on_parent_id_and_parent_model_type", using: :btree
+
+  create_table "pageflow_linkmap_page_mask_sprites", force: :cascade do |t|
+    t.integer  "image_file_id",           limit: 4
+    t.string   "attachment_file_name",    limit: 255
+    t.string   "attachment_content_type", limit: 255
+    t.integer  "attachment_file_size",    limit: 8
+    t.datetime "attachment_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "pageflow_memberships", ["entry_id"], name: "index_pageflow_memberships_on_entry_id", using: :btree
+  create_table "pageflow_memberships", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.integer  "entity_id",   limit: 4
+    t.string   "name",        limit: 191
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "entity_type", limit: 255
+    t.string   "role",        limit: 255, default: "editor", null: false
+  end
+
+  add_index "pageflow_memberships", ["entity_id"], name: "index_pageflow_memberships_on_entity_id", using: :btree
   add_index "pageflow_memberships", ["user_id"], name: "index_pageflow_memberships_on_user_id", using: :btree
 
   create_table "pageflow_pages", force: :cascade do |t|
@@ -245,6 +267,34 @@ ActiveRecord::Schema.define(version: 20161024080133) do
 
   add_index "pageflow_storylines", ["revision_id"], name: "index_pageflow_storylines_on_revision_id", using: :btree
 
+  create_table "pageflow_text_track_files", force: :cascade do |t|
+    t.integer  "entry_id",                              limit: 4
+    t.integer  "uploader_id",                           limit: 4
+    t.string   "state",                                 limit: 255
+    t.string   "rights",                                limit: 255
+    t.string   "attachment_on_filesystem_file_name",    limit: 255
+    t.string   "attachment_on_filesystem_content_type", limit: 255
+    t.integer  "attachment_on_filesystem_file_size",    limit: 8
+    t.datetime "attachment_on_filesystem_updated_at"
+    t.string   "attachment_on_s3_file_name",            limit: 255
+    t.string   "attachment_on_s3_content_type",         limit: 255
+    t.integer  "attachment_on_s3_file_size",            limit: 8
+    t.datetime "attachment_on_s3_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "parent_file_id",                        limit: 4
+    t.string   "parent_file_model_type",                limit: 255
+    t.text     "configuration",                         limit: 65535
+    t.string   "processed_attachment_file_name",        limit: 255
+    t.string   "processed_attachment_content_type",     limit: 255
+    t.integer  "processed_attachment_file_size",        limit: 8
+    t.datetime "processed_attachment_updated_at"
+  end
+
+  add_index "pageflow_text_track_files", ["entry_id"], name: "index_pageflow_text_track_files_on_entry_id", using: :btree
+  add_index "pageflow_text_track_files", ["parent_file_id", "parent_file_model_type"], name: "index_text_track_files_on_parent_id_and_parent_model_type", using: :btree
+  add_index "pageflow_text_track_files", ["uploader_id"], name: "index_pageflow_text_track_files_on_uploader_id", using: :btree
+
   create_table "pageflow_themings", force: :cascade do |t|
     t.string   "imprint_link_url",               limit: 191
     t.string   "imprint_link_label",             limit: 191
@@ -278,7 +328,7 @@ ActiveRecord::Schema.define(version: 20161024080133) do
     t.datetime "attachment_on_s3_updated_at"
     t.integer  "job_id",                                limit: 4
     t.string   "state",                                 limit: 191
-    t.decimal  "encoding_progress",                                 precision: 5, scale: 2
+    t.decimal  "encoding_progress",                                   precision: 5, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "encoding_error_message",                limit: 191
@@ -290,9 +340,14 @@ ActiveRecord::Schema.define(version: 20161024080133) do
     t.string   "poster_file_name",                      limit: 191
     t.string   "poster_content_type",                   limit: 191
     t.string   "thumbnail_content_type",                limit: 191
-    t.string   "rights",                                limit: 191,                         default: "", null: false
+    t.string   "rights",                                limit: 191,                           default: "", null: false
     t.integer  "confirmed_by_id",                       limit: 4
+    t.text     "output_presences",                      limit: 65535
+    t.integer  "parent_file_id",                        limit: 4
+    t.string   "parent_file_model_type",                limit: 255
   end
+
+  add_index "pageflow_video_files", ["parent_file_id", "parent_file_model_type"], name: "index_video_files_on_parent_id_and_parent_model_type", using: :btree
 
   create_table "pageflow_widgets", force: :cascade do |t|
     t.integer  "subject_id",   limit: 4
@@ -313,8 +368,6 @@ ActiveRecord::Schema.define(version: 20161024080133) do
     t.string   "first_name",             limit: 191
     t.string   "last_name",              limit: 191
     t.datetime "suspended_at"
-    t.integer  "account_id",             limit: 4
-    t.string   "role",                   limit: 191, default: "editor", null: false
     t.string   "locale",                 limit: 191
     t.string   "encrypted_password",     limit: 191
     t.string   "reset_password_token",   limit: 191
@@ -331,9 +384,9 @@ ActiveRecord::Schema.define(version: 20161024080133) do
     t.string   "unconfirmed_email",      limit: 191
     t.string   "unlock_token",           limit: 191
     t.string   "authentication_token",   limit: 191
+    t.boolean  "admin",                              default: false, null: false
   end
 
-  add_index "users", ["account_id"], name: "index_pageflow_users_on_account_id", using: :btree
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true, using: :btree
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_pageflow_users_on_email", unique: true, using: :btree

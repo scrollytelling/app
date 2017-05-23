@@ -9,11 +9,7 @@ Pageflow.configure do |config|
 
   # Page types available in the editor. Add futher page types from
   # page type engines below.
-  config.page_types.register(Pageflow::BuiltInPageType.background_image)
-  config.page_types.register(Pageflow::BuiltInPageType.background_video)
-  config.page_types.register(Pageflow::BuiltInPageType.video)
-  config.page_types.register(Pageflow::BuiltInPageType.audio)
-  config.page_types.register(Pageflow::BuiltInPageType.audio_loop)
+  config.plugin(Pageflow.built_in_page_types_plugin)
   config.page_types.register(Pageflow::InternalLinks.grid_page_type)
   config.page_types.register(Pageflow::ExternalLinks.page_type)
   config.page_types.register(Pageflow::BeforeAfter::PageType.new)
