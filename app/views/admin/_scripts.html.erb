@@ -1,6 +1,13 @@
+<% if current_user %>
 <script data-cfasync="false">window.civchat = {
 apiKey: "24FZFC7LJDQcpR7EeA5oJfBaB6EZFSBayoKDNB3bAyRAC4BtBiQI1LUFN1Q9rJTo",
-name: "<%= current_user.try(:first_name) %> <%= current_user.try(:last_name) %>",
-email: "<%= current_user.try(:email) %>"
+name: "<%= current_user.full_name %>",
+email: "<%= current_user.email %>",
+role: "<%= current_user.role %>",
+company: {
+  name: "<%= current_user.account.name %>",
+  entries_count: <%= current_user.account.entries_count %>
+}
 };</script>
 <script data-cfasync="false" src="https://widget.userengage.io/widget.js"></script>
+<% end %>
