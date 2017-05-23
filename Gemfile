@@ -17,7 +17,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 
 # gems we need
-gem 'pageflow', '12.0.0.rc4'
+gem 'pageflow', '~> 12.0.1'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'rack-attack'
 gem 'figaro'
@@ -28,15 +28,20 @@ gem "okcomputer"
 
 # Pageflow extensions
 gem 'pageflow-internal-links'
+gem 'pageflow-linkmap-page'
 gem 'pageflow-external-links'
+gem 'pageflow-text-page'
+gem 'pageflow-embedded-video'
 gem 'pageflow-before-after'
 gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
-gem 'pageflow-linkmap-page', github: 'scrollytelling/pageflow-linkmap-page', branch: 'scrollytelling-rendered-text'
+gem 'pageflow-linkmap-page'
 gem 'pageflow-chart'
-gem 'scrollytelling-loading_spinner'
-gem 'pageflow-oembed'
-gem 'scrollytelling-navigation'
+gem 'pageflow-oembed', path: '/Users/joost/Gems/pageflow-oembed'
+
+# Scrollytelling
+gem 'scrollytelling-navigation', path: '/Users/joost/Gems/scrollytelling-navigation'
+gem 'scrollytelling-loading_spinner', path: '/Users/joost/Gems/scrollytelling-loading_spinner'
 
 group :development do
   gem 'spring'

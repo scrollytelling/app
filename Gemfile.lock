@@ -1,63 +1,31 @@
 GIT
-  remote: git://github.com/scrollytelling/pageflow-linkmap-page.git
-  revision: b01ef03603fffdaa2e1b7e9ab3b8be845b26e080
-  branch: scrollytelling-rendered-text
-  specs:
-    pageflow-linkmap-page (0.2.0.dev)
-      i18n-js
-      pageflow (~> 0.10)
-      pageflow-external-links (~> 0.3)
-
-GIT
-  remote: git://github.com/scrollytelling/pageflow.git
-  revision: 98c24088583a76b785e0545ac59a36206e0bcab5
-  branch: 0-11-atmo-initializer
-  specs:
-    pageflow (0.11.3)
-      activeadmin (= 1.0.0.pre4)
-      ar_after_transaction (~> 0.4.0)
-      aws-sdk (~> 1.60)
-      backbone-rails (~> 1.0.0)
-      bcrypt (~> 3.1.7)
-      bourbon (~> 3.1.8)
-      cancancan (~> 1.10)
-      devise (~> 3.5)
-      devise-async (~> 0.9.0)
-      ejs (~> 1.1)
-      friendly_id (~> 5.0)
-      htmlentities (~> 4.3)
-      http_accept_language (~> 2.0)
-      i18n-js (~> 2.1)
-      jbuilder (>= 1.5, < 3.0)
-      jquery-fileupload-rails (= 0.4.1)
-      jquery-layout-rails (~> 0.1.0)
-      jquery-rails (~> 3.0)
-      jquery-ui-rails (= 5.0.5)
-      kramdown (~> 1.5)
-      marionette-rails (~> 1.1.0)
-      pageflow-public-i18n (~> 1.2)
-      paperclip (~> 4.2.4)
-      rails (~> 4.2.6)
-      redis (~> 3.0)
-      redis-namespace (~> 1.5)
-      resque (~> 1.25)
-      resque-logger (~> 0.2.0)
-      resque-scheduler (~> 2.5)
-      resque_mailer (~> 2.2)
-      sass (~> 3.4)
-      sass-rails (~> 5.0)
-      state_machine (~> 1.2)
-      state_machine_job (~> 0.2.0)
-      videojs_rails (= 4.1.0)
-      wysihtml5x-rails (= 0.4.17)
-      yajl-ruby (~> 1.2)
-      zencoder (~> 2.5)
-
-GIT
   remote: https://github.com/codevise/state_machine.git
   revision: f49c0bc75d505c60516a7430acfae0fa514e01d9
   specs:
     state_machine (1.2.0)
+
+PATH
+  remote: /Users/joost/Gems/pageflow-oembed
+  specs:
+    pageflow-oembed (12.0.0.pre)
+      faraday
+      faraday_middleware
+      pageflow (~> 12.0)
+      rails (>= 3.0)
+
+PATH
+  remote: /Users/joost/Gems/scrollytelling-loading_spinner
+  specs:
+    scrollytelling-loading_spinner (12.0.0)
+      pageflow (~> 12.0.0.rc1)
+      rails (>= 3.0)
+
+PATH
+  remote: /Users/joost/Gems/scrollytelling-navigation
+  specs:
+    scrollytelling-navigation (12.0.0.pre)
+      pageflow (~> 12.x)
+      rails (>= 3.0, < 5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -122,6 +90,10 @@ GEM
     aws-sdk-v1 (1.67.0)
       json (~> 1.4)
       nokogiri (~> 1)
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     backbone-rails (1.0.0.1)
       rails (>= 3.0.0)
     bcrypt (3.1.11)
@@ -150,6 +122,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     cucumber (2.4.0)
       builder (>= 2.1.2)
       cucumber-core (~> 1.5.0)
@@ -253,38 +226,72 @@ GEM
       mini_portile2 (~> 2.2.0)
     okcomputer (1.16.0)
     orm_adapter (0.5.0)
-    pageflow-before-after (0.5.0)
+    pageflow (12.0.1)
+      activeadmin (= 1.0.0.pre4)
+      ar_after_transaction (~> 0.4.0)
+      aws-sdk (~> 1.60)
+      backbone-rails (~> 1.0.0)
+      bcrypt (~> 3.1.7)
+      bourbon (~> 3.1.8)
+      cancancan (~> 1.10)
+      devise (~> 3.5)
+      devise-async (~> 0.9.0)
+      ejs (~> 1.1)
+      friendly_id (~> 5.0)
+      htmlentities (~> 4.3)
+      http_accept_language (~> 2.0)
+      i18n-js (~> 2.1)
+      jbuilder (>= 1.5, < 3.0)
+      jquery-fileupload-rails (= 0.4.1)
+      jquery-layout-rails (~> 0.1.0)
+      jquery-rails (~> 3.0)
+      jquery-ui-rails (= 5.0.5)
+      kramdown (~> 1.5)
+      marionette-rails (~> 1.1.0)
+      pageflow-public-i18n (~> 1.11)
+      paperclip (~> 4.2.4)
+      rails (~> 4.2.6)
+      react-rails (~> 1.8)
+      redis (~> 3.0)
+      redis-namespace (~> 1.5)
+      resque (~> 1.25)
+      resque-logger (~> 0.2.0)
+      resque-scheduler (~> 2.5)
+      resque_mailer (~> 2.2)
+      sass (~> 3.4)
+      sass-rails (~> 5.0)
+      state_machine (~> 1.2)
+      state_machine_job (>= 0.2.0, < 2)
+      webvtt-ruby (~> 0.3.2)
+      wysihtml5x-rails (= 0.4.17)
+      yajl-ruby (~> 1.2)
+      zencoder (~> 2.5)
+    pageflow-before-after (1.0.0)
       i18n-js
       jquery-ui-rails (~> 5.0)
-      pageflow (~> 0.11)
-      pageflow-public-i18n (~> 1.0)
-    pageflow-chart (0.2.2)
-      i18n-js
-      nokogiri
-      pageflow (~> 0.10)
+      pageflow (>= 0.11, < 13)
+      pageflow-public-i18n (~> 1.8)
+    pageflow-chart (1.0.1)
+      nokogiri (~> 1.0)
+      pageflow (~> 12.x)
       pageflow-public-i18n (~> 1.0)
       paperclip (~> 4.2)
-      state_machine
-      state_machine_job
-    pageflow-embedded-video (0.3.1)
-      i18n-js
-      pageflow (~> 0.11)
+      state_machine (~> 1.2)
+      state_machine_job (>= 0.2, < 2)
+    pageflow-embedded-video (1.0.0)
+      pageflow (~> 12.x)
       pageflow-public-i18n (~> 1.0)
-    pageflow-external-links (0.4.0)
-      i18n-js
-      pageflow (~> 0.10)
+    pageflow-external-links (1.0.0)
+      pageflow (~> 12.x)
       pageflow-public-i18n (~> 1.0)
-    pageflow-internal-links (0.2.0)
-      pageflow (~> 0.10)
-    pageflow-oembed (1.2.1)
-      faraday
-      faraday_middleware
-      pageflow (>= 0.10.0, < 12.0.0)
-      rails (>= 3.0)
-    pageflow-public-i18n (1.11.0)
-    pageflow-text-page (0.3.0)
-      i18n-js
-      pageflow (~> 0.10)
+    pageflow-internal-links (1.0.0)
+      pageflow (~> 12.x)
+    pageflow-linkmap-page (1.0.0)
+      pageflow (>= 0.10, < 13)
+      pageflow-external-links (>= 0.3, < 2)
+    pageflow-public-i18n (1.12.0)
+    pageflow-text-page (1.0.0)
+      pageflow (~> 12.x)
       pageflow-public-i18n (~> 1.0)
     paperclip (4.2.4)
       activemodel (>= 3.2.0)
@@ -339,6 +346,12 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    react-rails (1.11.0)
+      babel-transpiler (>= 0.7.0)
+      connection_pool
+      execjs
+      railties (>= 3.2)
+      tilt
     redis (3.0.7)
     redis-actionpack (5.0.1)
       actionpack (>= 4.0, < 6)
@@ -406,12 +419,6 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    scrollytelling-loading_spinner (1.1.0)
-      pageflow (>= 0.7, < 0.12.0)
-      rails (>= 3.0)
-    scrollytelling-navigation (1.15.4)
-      pageflow (~> 0.11.0)
-      rails (>= 3.0, < 5.0)
     sentry-raven (2.6.2)
       faraday (>= 0.7.6, < 1.0)
     sinatra (1.4.8)
@@ -424,14 +431,14 @@ GEM
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.2.0)
+    sprockets-rails (3.2.1)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    state_machine_job (0.2.0)
-      resque
-      resque-logger
-      state_machine
+    state_machine_job (1.0.0)
+      resque (~> 1.25)
+      resque-logger (~> 0.2.0)
+      state_machine (~> 1.2)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -441,7 +448,6 @@ GEM
       execjs (>= 0.3.0, < 3)
     vegas (0.1.11)
       rack (>= 1.0.0)
-    videojs_rails (4.1.0)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.3.0)
@@ -451,6 +457,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    webvtt-ruby (0.3.2)
     whenever (0.9.7)
       chronic (>= 0.6.3)
     wysihtml5x-rails (0.4.17)
@@ -473,14 +480,14 @@ DEPENDENCIES
   jquery-rails
   mysql2
   okcomputer
-  pageflow!
+  pageflow (~> 12.0.1)
   pageflow-before-after
   pageflow-chart
   pageflow-embedded-video
   pageflow-external-links
   pageflow-internal-links
-  pageflow-linkmap-page!
-  pageflow-oembed
+  pageflow-linkmap-page
+  pageflow-oembed!
   pageflow-text-page
   poltergeist
   rack-attack
@@ -488,8 +495,8 @@ DEPENDENCIES
   redis-rails
   rspec-rails
   sass-rails
-  scrollytelling-loading_spinner
-  scrollytelling-navigation
+  scrollytelling-loading_spinner!
+  scrollytelling-navigation!
   sentry-raven
   snitcher
   spring
@@ -502,4 +509,4 @@ RUBY VERSION
    ruby 2.3.4p301
 
 BUNDLED WITH
-   1.15.3
+   1.15.4
