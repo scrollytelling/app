@@ -26,12 +26,14 @@ gem "snitcher"
 gem "okcomputer"
 
 # Pageflow extensions
-gem 'pageflow-internal-links'
-gem 'pageflow-external-links'
+# grab prereleases from github since compat with 12 isn't published yet
+gem 'pageflow-internal-links', github: 'codevise/pageflow-internal-links' # need 0.3.0
+gem 'pageflow-linkmap-page', github: 'codevise/pageflow-linkmap-page' # need 0.3.0
+gem 'pageflow-external-links', github: 'codevise/pageflow-external-links' # need 0.5.0
+gem 'pageflow-text-page', github: 'codevise/pageflow-text-page' # need 0.4.0
+gem 'pageflow-embedded-video', github: 'codevise/pageflow-embedded-video' # need 0.4.0
+
 gem 'pageflow-before-after'
-gem 'pageflow-text-page'
-gem 'pageflow-embedded-video'
-gem 'pageflow-linkmap-page', github: 'scrollytelling/pageflow-linkmap-page', branch: 'scrollytelling-rendered-text'
 gem 'scrollytelling-loading_spinner'
 gem 'scrollytelling-pageflow-navigation'
 
