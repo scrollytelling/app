@@ -28,14 +28,11 @@ gem "okcomputer"
 
 # Pageflow extensions
 gem 'pageflow-internal-links'
-gem 'pageflow-linkmap-page'
 gem 'pageflow-external-links'
+gem 'pageflow-linkmap-page'
 gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
 gem 'pageflow-before-after'
-gem 'pageflow-text-page'
-gem 'pageflow-embedded-video'
-gem 'pageflow-linkmap-page'
 gem 'pageflow-chart'
 gem 'pageflow-oembed', path: '/Users/joost/Gems/pageflow-oembed'
 
