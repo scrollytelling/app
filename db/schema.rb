@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 20170523151618) do
     t.string   "rights",                                limit: 191,                         default: "", null: false
     t.integer  "confirmed_by_id",                       limit: 4
     t.integer  "parent_file_id",                        limit: 4
-    t.string   "parent_file_model_type",                limit: 255
+    t.string   "parent_file_model_type",                limit: 191
   end
 
   add_index "pageflow_audio_files", ["parent_file_id", "parent_file_model_type"], name: "index_audio_files_on_parent_id_and_parent_model_type", using: :btree
@@ -181,7 +181,7 @@ ActiveRecord::Schema.define(version: 20170523151618) do
     t.integer  "height",                              limit: 4
     t.string   "rights",                              limit: 191,   default: "", null: false
     t.integer  "parent_file_id",                      limit: 4
-    t.string   "parent_file_model_type",              limit: 255
+    t.string   "parent_file_model_type",              limit: 191
   end
 
   add_index "pageflow_image_files", ["parent_file_id", "parent_file_model_type"], name: "index_image_files_on_parent_id_and_parent_model_type", using: :btree
@@ -283,7 +283,7 @@ ActiveRecord::Schema.define(version: 20170523151618) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "parent_file_id",                        limit: 4
-    t.string   "parent_file_model_type",                limit: 255
+    t.string   "parent_file_model_type",                limit: 191
     t.text     "configuration",                         limit: 65535
     t.string   "processed_attachment_file_name",        limit: 255
     t.string   "processed_attachment_content_type",     limit: 255
@@ -344,7 +344,7 @@ ActiveRecord::Schema.define(version: 20170523151618) do
     t.integer  "confirmed_by_id",                       limit: 4
     t.text     "output_presences",                      limit: 65535
     t.integer  "parent_file_id",                        limit: 4
-    t.string   "parent_file_model_type",                limit: 255
+    t.string   "parent_file_model_type",                limit: 191
   end
 
   add_index "pageflow_video_files", ["parent_file_id", "parent_file_model_type"], name: "index_video_files_on_parent_id_and_parent_model_type", using: :btree

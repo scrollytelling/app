@@ -21,7 +21,7 @@ class AddTextTrackFiles < ActiveRecord::Migration
       t.timestamps
 
       t.integer(:parent_file_id)
-      t.string(:parent_file_model_type)
+      t.string(:parent_file_model_type, limit: 191)
 
       t.text(:configuration)
     end
