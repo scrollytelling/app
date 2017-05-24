@@ -17,7 +17,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 
 # gems we need
-gem 'pageflow', '12.0.0.rc4'
+gem 'pageflow', '~> 12.0.0.rc4', github: 'scrollytelling/pageflow', branch: '12-0-stable'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'figaro'
 gem 'whenever', require: false
@@ -32,8 +32,9 @@ gem 'pageflow-linkmap-page', github: 'codevise/pageflow-linkmap-page' # need 0.3
 gem 'pageflow-external-links', github: 'codevise/pageflow-external-links' # need 0.5.0
 gem 'pageflow-text-page', github: 'codevise/pageflow-text-page' # need 0.4.0
 gem 'pageflow-embedded-video', github: 'codevise/pageflow-embedded-video' # need 0.4.0
+gem 'pageflow-before-after', github: 'codevise/pageflow-before-after' # need 0.6.0
 
-gem 'pageflow-before-after'
+# Scrollytelling
 gem 'scrollytelling-loading_spinner'
 gem 'scrollytelling-pageflow-navigation'
 

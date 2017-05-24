@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/codevise/pageflow-before-after.git
+  revision: e486482b5e19d42b91609612e6644861bafc5b57
+  specs:
+    pageflow-before-after (0.6.0.dev)
+      i18n-js
+      jquery-ui-rails (~> 5.0)
+      pageflow (>= 0.11, < 13)
+      pageflow-public-i18n (~> 1.0)
+
+GIT
   remote: git://github.com/codevise/pageflow-embedded-video.git
   revision: f88038ed4d40a5e2e9ad684e1e31350292bb664e
   specs:
@@ -40,6 +50,52 @@ GIT
       i18n-js
       pageflow (~> 12.0.pre)
       pageflow-public-i18n (~> 1.0)
+
+GIT
+  remote: git://github.com/scrollytelling/pageflow.git
+  revision: 8418273114c8e492767f497233fc71b0ab41cc92
+  branch: 12-0-stable
+  specs:
+    pageflow (12.0.0.rc4)
+      activeadmin (= 1.0.0.pre4)
+      ar_after_transaction (~> 0.4.0)
+      aws-sdk (~> 1.60)
+      backbone-rails (~> 1.0.0)
+      bcrypt (~> 3.1.7)
+      bourbon (~> 3.1.8)
+      cancancan (~> 1.10)
+      devise (~> 3.5)
+      devise-async (~> 0.9.0)
+      ejs (~> 1.1)
+      friendly_id (~> 5.0)
+      htmlentities (~> 4.3)
+      http_accept_language (~> 2.0)
+      i18n-js (~> 2.1)
+      jbuilder (>= 1.5, < 3.0)
+      jquery-fileupload-rails (= 0.4.1)
+      jquery-layout-rails (~> 0.1.0)
+      jquery-rails (~> 3.0)
+      jquery-ui-rails (= 5.0.5)
+      kramdown (~> 1.5)
+      marionette-rails (~> 1.1.0)
+      pageflow-public-i18n (~> 1.9)
+      paperclip (~> 4.2.4)
+      rails (~> 4.2.6)
+      react-rails (~> 1.8)
+      redis (~> 3.0)
+      redis-namespace (~> 1.5)
+      resque (~> 1.25)
+      resque-logger (~> 0.2.0)
+      resque-scheduler (~> 2.5)
+      resque_mailer (~> 2.2)
+      sass (~> 3.4)
+      sass-rails (~> 5.0)
+      state_machine (~> 1.2)
+      state_machine_job (~> 0.2.0)
+      webvtt-ruby (~> 0.3.2)
+      wysihtml5x-rails (= 0.4.17)
+      yajl-ruby (~> 1.2)
+      zencoder (~> 2.5)
 
 GIT
   remote: https://github.com/codevise/state_machine.git
@@ -246,49 +302,6 @@ GEM
       mini_portile2 (~> 2.1.0)
     okcomputer (1.16.0)
     orm_adapter (0.5.0)
-    pageflow (12.0.0.rc4)
-      activeadmin (= 1.0.0.pre4)
-      ar_after_transaction (~> 0.4.0)
-      aws-sdk (~> 1.60)
-      backbone-rails (~> 1.0.0)
-      bcrypt (~> 3.1.7)
-      bourbon (~> 3.1.8)
-      cancancan (~> 1.10)
-      devise (~> 3.5)
-      devise-async (~> 0.9.0)
-      ejs (~> 1.1)
-      friendly_id (~> 5.0)
-      htmlentities (~> 4.3)
-      http_accept_language (~> 2.0)
-      i18n-js (~> 2.1)
-      jbuilder (>= 1.5, < 3.0)
-      jquery-fileupload-rails (= 0.4.1)
-      jquery-layout-rails (~> 0.1.0)
-      jquery-rails (~> 3.0)
-      jquery-ui-rails (= 5.0.5)
-      kramdown (~> 1.5)
-      marionette-rails (~> 1.1.0)
-      pageflow-public-i18n (~> 1.9)
-      paperclip (~> 4.2.4)
-      rails (~> 4.2.6)
-      react-rails (~> 1.8)
-      redis (~> 3.0)
-      redis-namespace (~> 1.5)
-      resque (~> 1.25)
-      resque-logger (~> 0.2.0)
-      resque-scheduler (~> 2.5)
-      resque_mailer (~> 2.2)
-      sass (~> 3.4)
-      sass-rails (~> 5.0)
-      state_machine (~> 1.2)
-      state_machine_job (~> 0.2.0)
-      webvtt-ruby (~> 0.3.2)
-      wysihtml5x-rails (= 0.4.17)
-      yajl-ruby (~> 1.2)
-      zencoder (~> 2.5)
-    pageflow-before-after (0.1.0)
-      i18n-js
-      pageflow
     pageflow-public-i18n (1.10.0)
     paperclip (4.2.4)
       activemodel (>= 3.2.0)
@@ -475,8 +488,8 @@ DEPENDENCIES
   jquery-rails
   mysql2
   okcomputer
-  pageflow (= 12.0.0.rc4)
-  pageflow-before-after
+  pageflow (~> 12.0.0.rc4)!
+  pageflow-before-after!
   pageflow-embedded-video!
   pageflow-external-links!
   pageflow-internal-links!
@@ -501,4 +514,4 @@ RUBY VERSION
    ruby 2.3.4p301
 
 BUNDLED WITH
-   1.14.6
+   1.15.0
