@@ -8,17 +8,15 @@ $main-color: #ca3249;
 
 .entry {
   font-family: Calibri, 'PT Sans', sans-serif;
-  font-size: 11pt;
+  font-size: 18px;
 
   h2 {
     span.title {
       font-weight: bold;
-      font-size: 20pt;
     }
 
     span.subtitle {
       text-transform: uppercase;
-      font-size: 14pt;
     }
 
     span.tagline {
@@ -27,7 +25,7 @@ $main-color: #ca3249;
   }
 
   p {
-    line-height: 13pt;
+    line-height: 1.7;
   }
 }
 
