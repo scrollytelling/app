@@ -1,6 +1,8 @@
 config: &config
   nginx:
-    cors: true
+    cors:
+      origin: '*'
+      methods: 'GET, OPTIONS'
 staging:
   rails:
     configuration:
