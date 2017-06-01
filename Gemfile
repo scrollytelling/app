@@ -17,7 +17,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 
 # gems we need
-gem 'pageflow', '~> 12.0.0.rc4', github: 'scrollytelling/pageflow', branch: '12-0-stable'
+gem 'pageflow', '~> 12.0.0.rc5'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'figaro'
 gem 'whenever', require: false
