@@ -17,6 +17,8 @@ Pageflow.configure do |config|
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
 
   # override the default player controls widget, to make slim player the default
+  config.widget_types.register(Pageflow::BuiltInWidgetType.navigation, default: true)
+  config.widget_types.register(Pageflow::BuiltInWidgetType.mobile_navigation, default: true)
   config.widget_types.register(Pageflow::BuiltInWidgetType.slim_player_controls, default: true)
 
   # Register tracking code WidgetType per account, so they're not visible across accounts.
