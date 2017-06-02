@@ -13,10 +13,12 @@ company: {
 
 <!-- userengage events -->
 <script>
-pageflow.ready.then(function(result) {
-  $('a.publish').on('click', function(event) {
-    userengage('event.publish', {'entry_title': pageflow.entry.attributes.entry_title});
+if (typeof variable !== 'undefined') {
+  pageflow.ready.then(function(result) {
+    $('a.publish').on('click', function(event) {
+      userengage('event.publish', {'entry_title': pageflow.entry.attributes.entry_title});
+    });
   });
-});
+}
 </script>
 <% end %>
