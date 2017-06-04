@@ -99,11 +99,7 @@ Pageflow.configure do |config|
       s3_host_name: ENV['S3_HOST_NAME']
     },
     s3_host_alias: ENV['S3_HOST_ALIAS'],
-    s3_protocol: ENV['S3_PROTOCOL'],
-    s3_headers: {
-      'Expires' => "Wed, 17 Jul 2047 16:58:03 GMT", # keep until we're on Pageflow 12.0.0
-      'Cache-Control' => "public, max-age=31536000"
-    }
+    s3_protocol: ENV['S3_PROTOCOL']
   )
 
   # Default options for paperclip attachments which are supposed to
@@ -114,7 +110,8 @@ Pageflow.configure do |config|
     output_bucket: ENV['S3_OUTPUT_BUCKET'],
     s3_host_alias: ENV['S3_OUTPUT_HOST_ALIAS'],
     s3_protocol: ENV['S3_PROTOCOL'],
-    attachments_version: 'v1'
+    attachments_version: 'v1',
+    skip_smil: true
   )
 end
 
