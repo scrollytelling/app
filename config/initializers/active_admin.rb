@@ -145,13 +145,12 @@ ActiveAdmin.setup do |config|
   # You can change the order for the comments and you can change the column
   # to be used for ordering:
   # config.comments_order = 'created_at ASC'
-
+  #
   # You can disable the menu item for the comments index page:
   # config.comments_menu = false
   #
   # You can customize the comment menu:
   # config.comments_menu = { parent: 'Admin', priority: 1 }
-
 
   # == Batch Actions
   #
@@ -220,7 +219,6 @@ ActiveAdmin.setup do |config|
   #
   # Force the use of quotes
   # config.csv_options = { force_quotes: true }
-
 
   # == Menu System
   #
