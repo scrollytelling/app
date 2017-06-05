@@ -7,4 +7,8 @@ if Rails.env.staging?
   Paperclip.interpolates(:pageflow_filesystem_root) do |attachment, style|
     Pageflow.config.paperclip_filesystem_root
   end
+
+  Paperclip.interpolates(:host) do |attachment, style|
+    'main'
+  end
 end
