@@ -45,6 +45,7 @@ Pageflow.configure do |config|
   #     => creates app/assets/stylesheets/pageflow/themes/my_custom_theme.css.scss
   #
   %i(
+    default
     scrollytelling volkskrant nos nieuwsuur radio1 grasnapolsky
     beeldengeluid psv amnesty_international stephaniestruijk concertatsea
     blof buildingbridges ricostickstyphoon sbb worldpressphoto

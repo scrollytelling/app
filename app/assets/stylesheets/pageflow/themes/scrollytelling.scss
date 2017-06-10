@@ -4,16 +4,16 @@ $main-color: #133472;
 
 @import "./base.scss";
 
-#outer_wrapper {
+.entry {
   font-family: 'Imprima', sans-serif;
-}
 
-h2 {
-  font-family: 'Bree Serif', serif;
-}
+  h2 {
+    font-family: 'Bree Serif', serif;
+  }
 
-.contentText {
-  font-size: 1.3em;
+  p {
+    font-size: 1.3em;
+  }
 }
 
 .loader_logo {

@@ -34,17 +34,17 @@ Pageflow.configure do
 end
 ```
 
-Copy the most recent theme's .scss file to `themename.scss` and modify at will.
+In `app/assets/stylesheets/pageflow/themes`, copy `default.scss` to `newtheme.scss` and modify at will.
 
 Images to be placed:
 
 ```
-pageflow/themes/#{$theme-name}/logo.png
-pageflow/themes/#{$theme-name}/logo_print.png
-pageflow/themes/#{$theme-name}/favicon.ico
+pageflow/themes/newtheme/logo.png
+pageflow/themes/newtheme/logo_print.png
+pageflow/themes/newtheme/favicon.ico
 ```
 
-Place fonts in `app/assets/fonts/pageflow/themes/#{$theme-name}`. Only use .woff - this format is implemented in all browsers.
+Place fonts in `app/assets/fonts/pageflow/themes/newtheme`. Only use .woff and maybe .woff2—these formats are implemented in all browsers. Other formats are just pollution.
 
 ## Deploying new analytics
 
