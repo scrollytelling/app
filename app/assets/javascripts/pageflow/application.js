@@ -15,3 +15,7 @@ pageflow.ready.then(function(result) {
   // we override the feature detection that disables atmo on mobile.
   pageflow.atmo.enable();
 });
+
+function test() {
+  // just a recompile.
+}
