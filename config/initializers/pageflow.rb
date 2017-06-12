@@ -122,11 +122,3 @@ end
 # state. Otherwise Pageflow configuration errors might prevent you
 # from initializing the environment. Required for Pageflow to run.
 Pageflow.finalize!
-
-module Pageflow
-  module HostedFile
-    def keep_on_filesystem_after_upload_to_s3?
-      true
-    end
-  end
-end
