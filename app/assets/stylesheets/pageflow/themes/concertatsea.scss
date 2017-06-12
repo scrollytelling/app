@@ -35,3 +35,18 @@ $main-color: #d63926;
   height: 100px;
   background-image: image-url("pageflow/themes/concertatsea/logo-black.png");
 }
+
+@media screen and (max-width: 900px) {
+  h2.tagline {
+    font-size: 1.6em;
+  }
+
+  .js .page:first-child {
+    h2 {
+      padding-top: 3em;
+    }
+    .contentWrapper:after {
+      top: 8px;
+    }
+  }
+}
