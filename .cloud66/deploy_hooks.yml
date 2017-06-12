@@ -1,15 +1,20 @@
-bash_profile: &bash_profile
-  - source: /.cloud66/.bash_profile
-    destination: ~/.bash_profile
-    target: rails
-    apply_during: build_only
-    halt_on_error: false
-    run_on: all_servers
-    parse: false
-    execute: false
 staging:
   first_thing:
-    <<: *bash_profile
+    - source: /.cloud66/.bash_profile
+      destination: ~/.bash_profile
+      target: rails
+      apply_during: build_only
+      halt_on_error: false
+      run_on: all_servers
+      parse: false
+      execute: false
 production:
   first_thing:
-    <<: *bash_profile
+    - source: /.cloud66/.bash_profile
+      destination: ~/.bash_profile
+      target: rails
+      apply_during: build_only
+      halt_on_error: false
+      run_on: all_servers
+      parse: false
+      execute: false
