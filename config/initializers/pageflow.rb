@@ -125,6 +125,10 @@ end
 # from initializing the environment. Required for Pageflow to run.
 Pageflow.finalize!
 
-Paperclip.interpolates(:host) do |attachment, style|
-  'preview'
+module Pageflow
+  module HostedFile
+    def keep_on_filesystem_after_upload_to_s3?
+      true
+    end
+  end
 end
