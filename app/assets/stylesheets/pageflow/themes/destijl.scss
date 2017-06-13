@@ -1,6 +1,6 @@
-$main-color: #133472;
-
-// @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+$main-color: #ff0000;
+$text-color: #ffffff;
+$text-invert-color: #000000;
 
 @font-face {
     font-family: 'Maxeville Constructed';
@@ -19,33 +19,38 @@ $main-color: #133472;
 .entry {
   font-family: 'Maxeville Regular', sans-serif;
 
+  .indicator {
+    font-family: 'Maxeville Constructed', serif;
+    font-size: 14px;
+  }
+
   h2 {
     font-family: 'Maxeville Constructed', serif;
+    font-weight: normal;
   }
 
   p {
+    font-size: 22px;
+    line-height: 30px;
   }
 
   span.title {
-    // font-weight: bold;
+    font-size: 70px;
+    line-height: 70px;
   }
 
   span.subtitle {
-    // text-transform: uppercase;
   }
 
   span.tagline {
-    // text-transform: uppercase;
   }
 }
 
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
-  // height: 100px;
-  // background-image: image-url("pageflow/themes/default/logo.png");
+  background-image: none;
 }
 
 .js .page.invert:first-child .contentWrapper:after {
-  // height: 100px;
-  // background-image: image-url("pageflow/themes/default/logo-black.png");
+  background-image: none;
 }

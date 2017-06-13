@@ -22,8 +22,10 @@ $text-invert-color: #333;
 @import "pageflow/linkmap_page/themes/default";
 @import "pageflow/linkmap_page/themes/default/scroll_indicators";
 
-#outer_wrapper,
-#entry_preview {
+.entry {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
   font-family: sans-serif;
   line-height: 1.6;
   font-size: 18px;
