@@ -1,23 +1,17 @@
-$main-color: #333333;
-
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+
+$main-color: #333333;
+$title-font: 'Raleway', sans-serif;
 
 @import "./base.scss";
 
 #outer_wrapper {
-  font-family: sans-serif;
   font-size: 20px;
   line-height: 26px;
   letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-p {
 }
 
 h2 {
-  font-family: 'Raleway', sans-serif;
   font-weight: 600;
 
   .title {

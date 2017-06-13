@@ -1,18 +1,17 @@
-$main-color: #0072bf;
-
 @import url(https://fonts.googleapis.com/css?family=Karla|Merriweather);
+
+$main-color: #0072bf;
+$body-font: 'Karla', sans-serif;
+$title-font: 'Merriweather', serif;
 
 @import "./base.scss";
 
 #outer_wrapper {
-  font-family: 'Karla', sans-serif;
   line-height: 1.5;
   font-weight: bold;
 }
 
 h2 {
-  font-family: 'Merriweather', serif;
-
   span.title {
     font-size: 2.3em;
   }

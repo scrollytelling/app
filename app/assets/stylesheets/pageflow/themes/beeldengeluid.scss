@@ -1,5 +1,3 @@
-$main-color: #df0b37;
-
 @font-face {
     font-family: 'Akzidenz Grotesk Light';
     src: font-url('pageflow/themes/beeldengeluid/AkzidenzGrotesk-Light.woff') format('woff');
@@ -15,18 +13,16 @@ $main-color: #df0b37;
     src: font-url('pageflow/themes/beeldengeluid/ChevinMedium-Italic.woff') format('woff');
 }
 
+$main-color: #df0b37;
+$body-font: 'Akzidenz Grotesk Light', system, sans-serif;
+$title-font: 'Akzidenz Grotesk Condensed', system, sans-serif;
+
 @import "./base.scss";
 
-#outer_wrapper {
-  font-family: 'Akzidenz Grotesk Light', sans-serif;
-}
-
 h2 {
-  font-family: 'Akzidenz Grotesk Condensed', sans-serif;
-
   &.tagline,
   &.subtitle {
-    font-family: 'Chevin Medium Italic', sans-serif;
+    font-family: 'Chevin Medium Italic', system, sans-serif;
   }
 }
 

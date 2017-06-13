@@ -1,16 +1,12 @@
-$main-color: #133472;
-
 @import 'https://fonts.googleapis.com/css?family=Bree+Serif|Imprima';
+
+$main-color: #133472;
+$body-font: 'Imprima', system, sans-serif;
+$title-font: 'Bree Serif', system, serif;
 
 @import "./base.scss";
 
 .entry {
-  font-family: 'Imprima', sans-serif;
-
-  h2 {
-    font-family: 'Bree Serif', serif;
-  }
-
   p {
     font-size: 1.3em;
   }

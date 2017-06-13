@@ -1,13 +1,9 @@
-$main-color: #415a4d;
-
 @import url('https://fonts.googleapis.com/css?family=Karla');
 
-@import "./base.scss";
+$main-color: #415a4d;
+$body-font: 'Karla', system, sans-serif;
 
-#outer_wrapper,
-h2 {
-  font-family: 'Karla', sans-serif;
-}
+@import "./base.scss";
 
 .loader_logo {
   background-image: image-url("pageflow/themes/stephaniestruijk/logo.png");

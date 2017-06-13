@@ -1,13 +1,9 @@
-$main-color: #0051D0;
-
 @import 'https://fonts.googleapis.com/css?family=Share:400,700';
 
-@import "./base.scss";
+$main-color: #0051D0;
+$body-font: 'Share', system, sans-serif;
 
-#outer_wrapper,
-#entry_preview {
-  font-family: 'Share', sans-serif;
-}
+@import "./base.scss";
 
 .contentText {
   font-size: 1.4em;

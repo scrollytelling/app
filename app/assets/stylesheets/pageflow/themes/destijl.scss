@@ -1,7 +1,3 @@
-$main-color: #ff0000;
-$text-color: #ffffff;
-$text-invert-color: #000000;
-
 @font-face {
     font-family: 'Maxeville Constructed';
     src:  font-url('pageflow/themes/destijl/SMMaxeville-Constructed.woff2') format('woff2'),
@@ -14,18 +10,29 @@ $text-invert-color: #000000;
           font-url('pageflow/themes/destijl/SMMaxeville-Regular.woff') format('woff');
 }
 
+$main-color: #ff0000;
+$text-color: #ffffff;
+$text-invert-color: #000000;
+$body-font: 'Maxeville Regular', system, sans-serif;
+$title-font: 'Maxeville Constructed', system, sans-serif;
+
 @import "./base.scss";
 
+.scrollytelling-pageflow-navigation-tooltip {
+  font-family: $body-font;
+}
+
 .entry {
-  font-family: 'Maxeville Regular', sans-serif;
+  font-family: $body-font;
 
   .indicator {
-    font-family: 'Maxeville Constructed', serif;
+    font-family: $body-font;
     font-size: 14px;
+    letter-spacing: 2px;
   }
 
   h2 {
-    font-family: 'Maxeville Constructed', serif;
+    font-family: $title-font;
     font-weight: normal;
   }
 

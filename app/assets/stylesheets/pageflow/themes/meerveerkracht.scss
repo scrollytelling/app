@@ -1,13 +1,11 @@
-$main-color: #ca3249;
-// e498a4 lighter
-// f4d6db lightest
-
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+$main-color: #ca3249; // e498a4 lighter // f4d6db lightest
+$body-font: Calibri, 'PT Sans', sans-serif;
 
 @import "./base.scss";
 
 .entry {
-  font-family: Calibri, 'PT Sans', sans-serif;
   font-size: 18px;
 
   h2 {

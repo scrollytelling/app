@@ -1,5 +1,3 @@
-$main-color: #3f97aa;
-
 @font-face {
     font-family: 'pmn_caecilia85_heavy';
     src: font-url('pageflow/themes/blof/caecilia-heavy-webfont.woff') format('woff');
@@ -14,18 +12,16 @@ $main-color: #3f97aa;
     font-style: normal;
 }
 
+$main-color: #3f97aa;
+$body-font: 'Imprima', system, sans-serif;
+$title-font: 'pmn_caecilia85_heavy', system, sans-serif;
+
 @import "./base.scss";
 
-#outer_wrapper {
-  font-family: 'Imprima', sans-serif;
-}
-
 h2 {
-  font-family: 'pmn_caecilia85_heavy', sans-serif;
-
   &.tagline,
   &.subtitle {
-    font-family: 'p85Hvsmallcapsoldstylefigures', sans-serif;
+    font-family: 'p85Hvsmallcapsoldstylefigures', system, sans-serif;
   }
 }
 

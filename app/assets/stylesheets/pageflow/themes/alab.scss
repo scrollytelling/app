@@ -1,16 +1,12 @@
-$main-color: #0072bf;
-
 @import url(https://fonts.googleapis.com/css?family=Lato|Merriweather);
+
+$main-color: #0072bf;
+$title-font: 'Merriweather', serif;
 
 @import "./base.scss";
 
 #outer_wrapper {
-  font-family: sans-serif;
   line-height: 1.5;
-}
-
-h2 {
-  font-family: 'Merriweather', serif;
 }
 
 .loader_logo,

@@ -1,29 +1,21 @@
-$main-color: #d10099;
-
 @font-face {
     font-family: 'Druk Medium';
     src: font-url('pageflow/themes/ed/Druk-Medium-Web.woff') format('woff');
 }
 
+$main-color: #d10099;
+$text-color: #d2d2d2;
+$title-font: 'Druk Medium', serif;
+
 @import "./base.scss";
 
 #outer_wrapper {
-  font-family: sans-serif;
-  color: #d2d2d2;
   font-size: 20px;
   line-height: 26px;
   letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-p {
-  color: #d2d2d2;
 }
 
 h2 {
-  color: #d2d2d2;
-  font-family: 'Druk Medium', serif;
   text-transform: uppercase;
   line-height: .9;
 

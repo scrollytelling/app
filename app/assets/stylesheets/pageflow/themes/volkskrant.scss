@@ -1,17 +1,14 @@
-$main-color: #cf282c;
-
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+
+$main-color: #cf282c;
+$body-font: Georgia, system, serif;
+$title-font: 'Crimson Text', Georgia, serif;
 
 @import "./base.scss";
 
 #outer_wrapper {
-  font-family: Georgia, serif;
   line-height: 1.7;
   font-size: 18px;
-}
-
-h2 {
-  font-family: 'Crimson Text', Georgia, serif;
 }
 
 .loader_logo {

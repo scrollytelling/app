@@ -1,29 +1,9 @@
-$main-color: #d63926;
-// ffd122 lighter
-
 @import url('https://fonts.googleapis.com/css?family=Pragati+Narrow');
 
+$main-color: #d63926; // ffd122 lighter
+$title-font: 'Pragati Narrow', system, sans-serif;
+
 @import "./base.scss";
-
-.entry {
-  font-family: sans-serif;
-
-  h2 {
-    font-family: 'Pragati Narrow', sans-serif;
-
-    span.title {
-    }
-
-    span.subtitle {
-    }
-
-    span.tagline {
-    }
-  }
-
-  p {
-  }
-}
 
 .loader_logo,
 .js .page:first-child .contentWrapper:after {

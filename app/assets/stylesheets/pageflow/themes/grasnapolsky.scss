@@ -1,5 +1,3 @@
-$main-color: #ff33c8;
-
 @import url(https://fonts.googleapis.com/css?family=Karla);
 
 @font-face {
@@ -7,15 +5,11 @@ $main-color: #ff33c8;
     src: font-url('pageflow/themes/grasnapolsky/neue_droschke-webfont.woff') format('woff');
 }
 
+$main-color: #ff33c8;
+$body-font: 'Karla', system, sans-serif;
+$title-font: 'Neue Droschke', serif;
+
 @import "./base.scss";
-
-#outer_wrapper {
-  font-family: 'Karla', sans-serif;
-}
-
-h2 {
-  font-family: 'Neue Droschke', serif;
-}
 
 .contentText {
   font-size: 1.3em;

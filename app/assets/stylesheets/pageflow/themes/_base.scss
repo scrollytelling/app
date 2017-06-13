@@ -1,10 +1,22 @@
 // Base stylesheet for all Scrollytelling themes.
+
+/*! system-font.css v1.1.0 | CC0-1.0 License | github.com/jonathantneal/system-font-face */
+@font-face {
+	font-family: system;
+	font-style: normal;
+	font-weight: 300;
+	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+// derived themes can override these variables.
 $main-color: #c3e2dd !default;
 $main-color-dark: darken($main-color, 30%) !default;
 $anchor-color: $main-color !default;
 $indicator-text-shadow-color: 3e3e3e !default;
-$text-color: white;
-$text-invert-color: #333;
+$text-color: #e3e3e3 !default;
+$text-invert-color: #333 !default;
+$body-font: system, sans-serif !default;
+$title-font: system, sans-serif !default;
 
 @import "bourbon";
 @import "pageflow/mixins";
@@ -26,7 +38,7 @@ $text-invert-color: #333;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 
-  font-family: sans-serif;
+  font-family: $body-font;
   line-height: 1.6;
   font-size: 18px;
 }
@@ -53,7 +65,8 @@ $text-invert-color: #333;
 }
 
 h2 {
-  word-wrap: break-word;
+	word-wrap: break-word;
+	font-family: $title-font;
 
   @include mobile {
     font-size: 16px;

@@ -1,5 +1,3 @@
-$main-color: #cb0936;
-
 @font-face {
     font-family: 'akkuratregular';
     src: font-url('pageflow/themes/worldpressphoto/akkurat_regular-webfont.woff') format('woff');
@@ -7,11 +5,10 @@ $main-color: #cb0936;
     font-style: normal;
 }
 
-@import "./base.scss";
+$main-color: #cb0936;
+$title-font: 'akkuratregular', system, sans-serif;
 
-h2 {
-  font-family: 'akkuratregular', sans-serif;
-}
+@import "./base.scss";
 
 .loader_logo {
   background-image: image-url("pageflow/themes/worldpressphoto/logo.png");
