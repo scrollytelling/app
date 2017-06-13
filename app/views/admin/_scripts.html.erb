@@ -1,26 +1,18 @@
-<% if current_user %>
-<script data-cfasync="false">
-  window.civchat = {
-    apiKey: "24FZFC7LJDQcpR7EeA5oJfBaB6EZFSBayoKDNB3bAyRAC4BtBiQI1LUFN1Q9rJTo",
-    name: "<%= current_user.full_name %>",
-    email: "<%= current_user.email %>",
-    role: "<%= current_user.role %>",
-    company: {
-      name: "<%= current_user.account.name %>",
-      entries_count: <%= current_user.account.entries_count %>
-    }
-  }
-</script>
-<script data-cfasync="false" src="https://widget.userengage.io/widget.js"></script>
+<script>!function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!1,baseUrl:""},contact:{enabled:!0,formId:"03dc7793-501d-11e7-a316-0ec85169275a"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});</script>
 
-<!-- userengage events -->
 <script>
-if (typeof pageflow !== 'undefined') {
-  pageflow.ready.then(function(result) {
-    $('.publish_entry button.save').on('click', function(event) {
-      userengage('event.publish', {'entry_title': pageflow.entry.attributes.entry_title});
+  HS.beacon.config({
+    icon: 'message',
+    poweredBy: false,
+    topArticles: true
+  });
+
+  HS.beacon.ready(function() {
+    HS.beacon.identify({
+      name: '<%= current_user.full_name %>',
+      email: '<%= current_user.email %>',
+      role: '<%= current_user.role %>',
+      account: '<%= current_user.account.name %>'
     });
   });
-}
 </script>
-<% end %>
