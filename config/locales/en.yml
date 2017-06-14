@@ -37,6 +37,9 @@ en:
       nieuwsuur:
         feature_name: Analytics for Nieuwsuur
         widget_type_name: Nieuwsuur tracking codes
+      omroepbrabant:
+        feature_name: Analytics for Omroep Brabant
+        widget_type_name: Omroep Brabant tracking codes
       psv:
         feature_name: Analytics for PSV
         widget_type_name: PSV tracking codes

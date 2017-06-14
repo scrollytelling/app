@@ -29,7 +29,7 @@ Pageflow.configure do |config|
     radio1 nos nieuwsuur volkskrant grasnapolsky beeldengeluid
     amnesty sbb ed psv meerveerkracht
     stephaniestruijk blof ricostickstyphoon krisberry concertatsea
-    buildingbridges).each do |account|
+    buildingbridges omroepbrabant).each do |account|
     config.features.register("analytics.#{account}") do |feature_config|
       feature_config.widget_types.register(Widgets::Analytics::WidgetType.new(account))
     end
