@@ -27,8 +27,12 @@ $title-font: 'Maxeville Constructed', system, sans-serif;
 
   .indicator {
     font-family: $body-font;
-    font-size: 14px;
+    font-size: 11px;
     letter-spacing: 2px;
+
+    @include desktop {
+      font-size: 14px;
+    }
   }
 
   h2 {
@@ -42,8 +46,11 @@ $title-font: 'Maxeville Constructed', system, sans-serif;
   }
 
   span.title {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 38px;
+
+    @include desktop {
+      font-size: 70px;
+    }
   }
 
   span.subtitle {
