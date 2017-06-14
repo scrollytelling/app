@@ -30,10 +30,10 @@ $main-color: #ff8200; // ff8200 is omroep brabant orange
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
   // height: 100px;
-  // background-image: image-url("pageflow/themes/default/logo.png");
+  background-image: image-url("pageflow/themes/omroepbrabant/logo.png");
 }
 
 .js .page.invert:first-child .contentWrapper:after {
   // height: 100px;
-  // background-image: image-url("pageflow/themes/default/logo-black.png");
+  background-image: image-url("pageflow/themes/omroepbrabant/logo.png");
 }
