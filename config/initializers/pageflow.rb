@@ -50,7 +50,7 @@ Pageflow.configure do |config|
     beeldengeluid psv amnesty_international stephaniestruijk concertatsea
     blof buildingbridges ricostickstyphoon sbb worldpressphoto
     phtgrphr waddenzee humanrightswatch alab ed krisberry meerveerkracht
-    yip destijl).each do |theme|
+    yip destijl omroepbrabant).each do |theme|
       config.themes.register(theme)
   end
 
