@@ -1,0 +1,8 @@
+<%# IT’S A TRAP! This is not Google, but WhatsApp! %>
+<%= link_to "whatsapp://send?text=#{u request.url}",
+  class: "share whatsapp" do %>
+    <span class="hint">Share with WhatsApp</span>
+    <span class="share_whatsapp button"></span>
+    <%= image_tag 'whatsapp.svg' %>
+    <p>whatsapp</p>
+<% end %>

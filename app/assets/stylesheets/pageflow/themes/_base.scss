@@ -168,13 +168,16 @@ section.delayed_text_fade_in_short {
       }
     }
 
-    a.share.google {
-      p:before {
-        font-family: "FontAwesome";
-        content: "\f0d4";
-        margin-right: 12px;
-      }
-    }
+		a.share.whatsapp {
+			img {
+				width: 16px;
+				height: 16px;
+				border: none;
+				float: left;
+				margin-right: 10px;
+				padding-top: 2px;
+			}
+		}
 
     li {
       background-color: darkgrey;
