@@ -13,6 +13,9 @@ en:
       concertatsea:
         feature_name: Analytics for Concert at SEA
         widget_type_name: Concert at SEA tracking codes
+      destijl:
+        feature_name: Analytics for De Schatkamer van De Stijl
+        widget_type_name: De Schatkamer van De Stijl tracking codes
       meerveerkracht:
         feature_name: Analytics for Meer Veerkracht, Langer Thuis
         widget_type_name: Meer Veerkracht, Langer Thuis tracking codes
