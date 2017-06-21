@@ -258,6 +258,14 @@ GEM
       jquery-ui-rails (~> 5.0)
       pageflow (~> 0.11)
       pageflow-public-i18n (~> 1.0)
+    pageflow-chart (0.2.0)
+      i18n-js
+      nokogiri
+      pageflow (~> 0.10)
+      pageflow-public-i18n (~> 1.0)
+      paperclip (~> 4.2)
+      state_machine
+      state_machine_job
     pageflow-embedded-video (0.3.0)
       i18n-js
       pageflow (~> 0.11)
@@ -453,6 +461,7 @@ DEPENDENCIES
   okcomputer
   pageflow!
   pageflow-before-after
+  pageflow-chart
   pageflow-embedded-video
   pageflow-external-links
   pageflow-internal-links
@@ -477,4 +486,4 @@ RUBY VERSION
    ruby 2.3.4p301
 
 BUNDLED WITH
-   1.14.6
+   1.15.0

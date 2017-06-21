@@ -32,6 +32,7 @@ gem 'pageflow-before-after'
 gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
 gem 'pageflow-linkmap-page', github: 'scrollytelling/pageflow-linkmap-page', branch: 'scrollytelling-rendered-text'
+gem 'pageflow-chart'
 gem 'scrollytelling-loading_spinner'
 gem 'scrollytelling-pageflow-navigation'
 

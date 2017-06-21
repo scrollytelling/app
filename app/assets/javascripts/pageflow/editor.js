@@ -8,3 +8,4 @@
 //= require pageflow/internal_links/editor
 //= require pageflow/external_links/editor
 //= require pageflow/linkmap_page/editor
+//= require pageflow/chart/editor

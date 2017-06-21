@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024080133) do
+ActiveRecord::Schema.define(version: 20170621091021) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 191
@@ -93,6 +93,30 @@ ActiveRecord::Schema.define(version: 20161024080133) do
   end
 
   add_index "pageflow_chapters", ["storyline_id"], name: "index_pageflow_chapters_on_storyline_id", using: :btree
+
+  create_table "pageflow_chart_scraped_sites", force: :cascade do |t|
+    t.string   "url",                          limit: 255
+    t.string   "state",                        limit: 255
+    t.string   "html_file_file_name",          limit: 255
+    t.string   "html_file_content_type",       limit: 255
+    t.integer  "html_file_file_size",          limit: 4
+    t.datetime "html_file_updated_at"
+    t.string   "javascript_file_file_name",    limit: 255
+    t.string   "javascript_file_content_type", limit: 255
+    t.integer  "javascript_file_file_size",    limit: 4
+    t.datetime "javascript_file_updated_at"
+    t.string   "stylesheet_file_file_name",    limit: 255
+    t.string   "stylesheet_file_content_type", limit: 255
+    t.integer  "stylesheet_file_file_size",    limit: 4
+    t.datetime "stylesheet_file_updated_at"
+    t.string   "csv_file_file_name",           limit: 255
+    t.string   "csv_file_content_type",        limit: 255
+    t.integer  "csv_file_file_size",           limit: 4
+    t.datetime "csv_file_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "use_custom_theme",                         default: true, null: false
+  end
 
   create_table "pageflow_edit_locks", force: :cascade do |t|
     t.integer  "user_id",    limit: 4

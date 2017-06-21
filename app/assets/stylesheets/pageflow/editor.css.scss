@@ -3,6 +3,7 @@
 @import "pageflow/internal_links/editor";
 @import "pageflow/linkmap_page/editor";
 @import "pageflow/external_links/editor";
+@import "pageflow/chart/editor";
 
 .blank_entry h2:before {
   background-image: asset-url("logo60x60@2x.png");

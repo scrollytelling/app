@@ -7,6 +7,7 @@
 //= require pageflow/linkmap_page
 //= require scrollytelling/loading_spinner
 //= require scrollytelling/pageflow/navigation
+//= require pageflow/chart
 
 pageflow.ready.then(function(result) {
   // we override the feature detection that disables atmo on mobile.
