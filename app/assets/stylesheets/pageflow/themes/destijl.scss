@@ -43,6 +43,14 @@ $title-font: 'Maxeville Constructed', system, sans-serif;
   p {
     font-size: 22px;
     line-height: 30px;
+
+    mark,
+    i {
+      display: block;
+      background-color: #e2e2e2;
+      padding: 4px 8px;
+      font-style: italic;
+    }
   }
 
   span.title {
