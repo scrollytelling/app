@@ -1,0 +1,23 @@
+<label>
+  <span class="name"></span>
+  <span class="inline_help"></span>
+</label>
+
+<!-- inline style for wysihtml5 to pick up -->
+<textarea style="width: 100%;"></textarea>
+
+<div class="toolbar">
+  <a data-wysihtml5-command="bold" title="<%= I18n.t('pageflow.ui.templates.inputs.text_area_input.bold') %>"></a>
+  <a data-wysihtml5-command="italic" title="<%= I18n.t('pageflow.ui.templates.inputs.text_area_input.italic') %>"></a>
+  <a data-wysihtml5-command="formatInline" data-wysihtml5-command-value="mark" title="Markeer"></a>
+  <a data-wysihtml5-command="createLink" title="<%= I18n.t('pageflow.ui.templates.inputs.text_area_input.create_link') %>"></a>
+
+  <div data-wysihtml5-dialog="createLink" class="dialog" style="display: none;">
+    <label>
+        <%= I18n.t('pageflow.ui.templates.inputs.text_area_input.url') %>:
+      <input data-wysihtml5-dialog-field="href" value="http://">
+    </label>
+    <a data-wysihtml5-dialog-action="save"><%= I18n.t('pageflow.ui.templates.inputs.text_area_input.ok') %></a>
+    <a data-wysihtml5-dialog-action="cancel"><%= I18n.t('pageflow.ui.templates.inputs.text_area_input.cancel') %></a>
+  </div>
+</div>
