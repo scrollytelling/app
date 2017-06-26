@@ -39,13 +39,26 @@ pageflow.TextAreaInputView = Backbone.Marionette.ItemView.extend({
       autoLink: this.options.disableLinks ? 0 : 1,
       parserRules: {
         tags: {
-          em: {unwrap: this.options.disableRichtext ? 1 : 0, rename_tag: "i"},
-          strong: {unwrap: this.options.disableRichtext ? 1 : 0, rename_tag: "b"},
-          u: {unwrap: this.options.disableRichtext ? 1 : 0},
-          b: {unwrap: this.options.disableRichtext ? 1 : 0},
-          i: {unwrap: this.options.disableRichtext ? 1 : 0},
-          br: {},
-          mark: {},
+          em: {
+            unwrap: this.options.disableRichtext ? 1 : 0,
+            rename_tag: "i"
+          },
+          strong: {
+            unwrap: this.options.disableRichtext ? 1 : 0,
+            rename_tag: "b"
+          },
+          i: {
+            unwrap: this.options.disableRichtext ? 1 : 0
+          },
+          b: {
+            unwrap: this.options.disableRichtext ? 1 : 0
+          },
+          br: {
+
+          },
+          mark: {
+            unwrap: this.options.disableRichtext ? 1 : 0
+          },
           a: {
             unwrap: this.options.disableLinks ? 1 : 0,
             check_attributes: {
@@ -63,7 +76,7 @@ pageflow.TextAreaInputView = Backbone.Marionette.ItemView.extend({
     if (this.options.disableRichtext) {
       this.ui.toolbar.find('a[data-wysihtml5-command="bold"]').hide();
       this.ui.toolbar.find('a[data-wysihtml5-command="italic"]').hide();
-      this.ui.toolbar.find('a[data-wysihtml5-command="underline"]').hide();
+      this.ui.toolbar.find('a[data-wysihtml5-command="formatInline"]').hide();
     }
     if (this.options.disableLinks) {
       this.ui.toolbar.find('a[data-wysihtml5-command="createLink"]').hide();
