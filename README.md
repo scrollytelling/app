@@ -52,9 +52,36 @@ Add the new account to the list in `config/initializers/pageflow.rb`. This will 
 
 Create a new directory in `app/views/widgets/analytics` and place two partials in it: one for the header and one for the body. Most files must be present, but can be empty.
 
+### Generating Google Analytics tracking code
+
+Use `isogram` to generate a customized tracking code!
+
+```
+npm install -g isogram
+isogram scrolLy --id XXXXXXX-XX | pbcopy
+```
+
+will put this code in your clipboard:
+
+```
+!function(s,c,r,o,l,L,y){s.GoogleAnalyticsObject=r;s[r]||(s[r]=function(){
+(s[r].q=s[r].q||[]).push(arguments)});s[r].l=+new Date;L=c.createElement(o);
+y=c.getElementsByTagName(o)[0];L.src=l;y.parentNode.insertBefore(L,y)}
+(window,document,'ga','script','//www.google-analytics.com/analytics.js');
+
+ga('create', 'UA-XXXXXXX-XX', 'auto');
+ga('send', 'pageview');
+```
+
+Replace `XXXXXXX-XX` with the ID given to you by the client. This code goes into the `body` partial. As you can see, it's far superior to the standard one from Google.
+
+### Translations
+
 Add the widget translations to `en.yml` and any other localization file you have active.
 
 Change the asset version, because the widget names are cached in the front-end and this cache needs to expire.
+
+### Deploy and enable
 
 Then deploy the code and enable the widget in the corresponding account, and the code in the corresponding theming (edit account). After that, all new stories will have this widget enabled. For previous stories, you need to add the widget manually.
 
