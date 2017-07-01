@@ -41,8 +41,8 @@ $title-font: 'Maxeville Constructed', system, sans-serif;
   }
 
   p {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 26px;
 
     mark,
     i {
@@ -55,10 +55,10 @@ $title-font: 'Maxeville Constructed', system, sans-serif;
   }
 
   span.title {
-    font-size: 38px;
+    font-size: 30px;
 
     @include desktop {
-      font-size: 70px;
+      font-size: 60px;
     }
   }
 
