@@ -9,6 +9,7 @@ $main-color: #133472;
   }
 
   p {
+    font-size: 20px;
   }
 
   span.title {
@@ -26,11 +27,11 @@ $main-color: #133472;
 
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
-  // height: 100px;
+  height: 100px;
   background-image: image-url("pageflow/themes/yip/logo.png");
 }
 
 .js .page.invert:first-child .contentWrapper:after {
-  // height: 100px;
+  height: 100px;
   background-image: image-url("pageflow/themes/yip/logo-black.png");
 }
