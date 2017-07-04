@@ -205,7 +205,7 @@ section.delayed_text_fade_in_short {
   }
 }
 
-// @Joost: Ruby gem TODO
+// TODO remove this once the site uses navigation gem v1.13.3
 .navigation_mobile .menu.index {
   @include mobile {
     top: 11px;
