@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170621091021) do
+ActiveRecord::Schema.define(version: 20170704113024) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 191
@@ -200,6 +200,16 @@ ActiveRecord::Schema.define(version: 20170621091021) do
     t.string   "rights",                              limit: 191,   default: "", null: false
   end
 
+  create_table "pageflow_linkmap_page_mask_sprites", force: :cascade do |t|
+    t.integer  "image_file_id",           limit: 4
+    t.string   "attachment_file_name",    limit: 255
+    t.string   "attachment_content_type", limit: 255
+    t.integer  "attachment_file_size",    limit: 8
+    t.datetime "attachment_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "pageflow_memberships", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "entry_id",   limit: 4
@@ -269,6 +279,34 @@ ActiveRecord::Schema.define(version: 20170621091021) do
 
   add_index "pageflow_storylines", ["revision_id"], name: "index_pageflow_storylines_on_revision_id", using: :btree
 
+  create_table "pageflow_text_track_files", force: :cascade do |t|
+    t.integer  "entry_id",                              limit: 4
+    t.integer  "uploader_id",                           limit: 4
+    t.string   "state",                                 limit: 255
+    t.string   "rights",                                limit: 255
+    t.string   "attachment_on_filesystem_file_name",    limit: 255
+    t.string   "attachment_on_filesystem_content_type", limit: 255
+    t.integer  "attachment_on_filesystem_file_size",    limit: 8
+    t.datetime "attachment_on_filesystem_updated_at"
+    t.string   "attachment_on_s3_file_name",            limit: 255
+    t.string   "attachment_on_s3_content_type",         limit: 255
+    t.integer  "attachment_on_s3_file_size",            limit: 8
+    t.datetime "attachment_on_s3_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "parent_file_id",                        limit: 4
+    t.string   "parent_file_model_type",                limit: 255
+    t.text     "configuration",                         limit: 65535
+    t.string   "processed_attachment_file_name",        limit: 255
+    t.string   "processed_attachment_content_type",     limit: 255
+    t.integer  "processed_attachment_file_size",        limit: 8
+    t.datetime "processed_attachment_updated_at"
+  end
+
+  add_index "pageflow_text_track_files", ["entry_id"], name: "index_pageflow_text_track_files_on_entry_id", using: :btree
+  add_index "pageflow_text_track_files", ["parent_file_id", "parent_file_model_type"], name: "index_text_track_files_on_parent_id_and_parent_model_type", using: :btree
+  add_index "pageflow_text_track_files", ["uploader_id"], name: "index_pageflow_text_track_files_on_uploader_id", using: :btree
+
   create_table "pageflow_themings", force: :cascade do |t|
     t.string   "imprint_link_url",               limit: 191
     t.string   "imprint_link_label",             limit: 191
@@ -277,10 +315,10 @@ ActiveRecord::Schema.define(version: 20170621091021) do
     t.integer  "account_id",                     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "cname",                          limit: 191, default: "",   null: false
+    t.string   "cname",                          limit: 191, default: "",    null: false
     t.string   "theme_name",                     limit: 191
-    t.string   "home_url",                       limit: 191, default: "",   null: false
-    t.boolean  "home_button_enabled_by_default",             default: true, null: false
+    t.string   "home_url",                       limit: 191, default: "",    null: false
+    t.boolean  "home_button_enabled_by_default",             default: false, null: false
     t.string   "additional_cnames",              limit: 191
     t.string   "default_author",                 limit: 255
     t.string   "default_publisher",              limit: 255
