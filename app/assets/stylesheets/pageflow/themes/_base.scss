@@ -104,6 +104,9 @@ section.delayed_text_fade_in_short {
 }
 
 .js {
+	.page:first-child .contentWrapper {
+		margin-top: 40px;
+	}
   .page:first-child .contentWrapper:after {
     content: " ";
     position: absolute;
@@ -120,12 +123,12 @@ section.delayed_text_fade_in_short {
     background-size: contain;
 
     @include mobile {
-      left: 8%;
-      top: 20px;
+      left: 11px;
+      top: 11px;
       right: auto;
-      height: 35px;
+      height: 70px;
       max-width: 70%;
-      background-position: left;
+      background-position: top left;
     }
   }
 
