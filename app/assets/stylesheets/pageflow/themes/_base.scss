@@ -104,9 +104,6 @@ section.delayed_text_fade_in_short {
 }
 
 .js {
-	.page:first-child .contentWrapper {
-		margin-top: 40px;
-	}
   .page:first-child .contentWrapper:after {
     content: " ";
     position: absolute;

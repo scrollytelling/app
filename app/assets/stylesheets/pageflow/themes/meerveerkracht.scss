@@ -27,10 +27,20 @@ $body-font: Calibri, 'PT Sans', sans-serif;
   }
 }
 
+.js .page:first-child .contentWrapper {
+	@include mobile {
+		margin-top: 40px; //as the logo is quite tall
+	}
+}
+
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
   height: 100px;
   background-image: image-url("pageflow/themes/meerveerkracht/logo.png");
+
+  @include mobile {
+    height: 60px;
+  }
 }
 
 .js .page.invert:first-child .contentWrapper:after {
