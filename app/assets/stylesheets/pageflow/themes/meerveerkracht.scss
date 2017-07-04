@@ -39,6 +39,8 @@ $body-font: Calibri, 'PT Sans', sans-serif;
   background-image: image-url("pageflow/themes/meerveerkracht/logo.png");
 
   @include mobile {
+    left: 20px;
+    top: 10px;
     height: 60px;
   }
 }
