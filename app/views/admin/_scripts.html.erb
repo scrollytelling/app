@@ -1,12 +1,12 @@
 <script>
   window.intercomSettings = {
-    app_id: "qhfgd73f",
+    app_id: "<%= ENV.fetch('INTERCOM_APP_ID') %>",
     name: "<%= current_user.full_name %>",
     email: "<%= current_user.email %>",
     created_at: <%= current_user.created_at.to_i %>,
     user_hash: "<%= OpenSSL::HMAC.hexdigest(
       'sha256',
-      ENV.fetch('INTERCOM_SECRET_KEY', 'fallback'),
+      ENV.fetch('INTERCOM_SECRET_KEY'),
       current_user.email
     ) %>"
   };
