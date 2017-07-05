@@ -80,7 +80,7 @@ Pageflow.configure do |config|
   #     config.public_https_mode = :prevent (default) # => redirects https to http
   #     config.public_https_mode = :enforce # => redirects http to https
   #     config.public_https_mode = :ignore # => does nothing
-  config.public_https_mode = :enforce
+  config.public_https_mode = :enforce if Rails.env.in?(%w(staging production))
 
   # Rewrite the below section to use your favorite configuration
   # method: ENV variables, secrets.yml, custom yml files. If you use
