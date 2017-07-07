@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'LeanO FY';
+    src: font-url('pageflow/themes/paxforpeace/LeanOFY-Bold_SWeb.woff') format('woff');
+}
+
+$main-color: #e64f1a;
+$title-font: 'LeanO FY', system, sans-serif;
+
+@import "./base.scss";
+
+.entry {
+  // font-family: Calibri, 'PT Sans', system, sans-serif;
+
+  h2 {
+    // font-family: serif;
+  }
+
+  p {
+  }
+
+  span.title {
+    // font-weight: bold;
+  }
+
+  span.subtitle {
+    // text-transform: uppercase;
+  }
+
+  span.tagline {
+    // text-transform: uppercase;
+  }
+}
+
+.loader_logo,
+.js .page:first-child .contentWrapper:after {
+  // height: 100px;
+  background-image: image-url("pageflow/themes/paxforpeace/logo.png");
+}
+
+.js .page.invert:first-child .contentWrapper:after {
+  // height: 100px;
+  background-image: image-url("pageflow/themes/paxforpeace/logo-black.png");
+}
