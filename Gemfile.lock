@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/scrollytelling/pageflow.git
-  revision: ba5078b86077b222e45fa34d1a852ba5a1059d19
+  revision: 4a40db29ff73474e2ee58f337b6424bab85b6395
   branch: 0-11-atmo-initializer
   specs:
     pageflow (0.11.3)
