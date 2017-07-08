@@ -909,3 +909,15 @@ en:
       next: ! '>>'
       previous: <<
       truncate: ! '...'
+es:
+  pageflow:
+    public:
+      scroll_indicator: Desplazar hacia abajo
+nl:
+  pageflow:
+    public:
+      scroll_indicator: Scroll om door te gaan
+nl-BE:
+  pageflow:
+    public:
+      scroll_indicator: Scroll om door te gaan
