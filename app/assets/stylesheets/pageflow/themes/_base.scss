@@ -21,12 +21,10 @@ $title-font: system, sans-serif !default;
 @import "bourbon";
 @import "pageflow/mixins";
 @import "pageflow/animations";
-
 @import "pageflow/themes/default/definitions";
 @import "pageflow/themes/default/player_controls";
 @import "pageflow/themes/default/video_player";
 @import "pageflow/themes/default/video_wrapper";
-
 @import "pageflow/internal_links/themes/default";
 @import "pageflow/internal_links/themes/default/list_as_multiple_choice";
 @import "pageflow/external_links/themes/legacy";
@@ -34,140 +32,137 @@ $title-font: system, sans-serif !default;
 @import "pageflow/linkmap_page/themes/default";
 @import "pageflow/linkmap_page/themes/default/scroll_indicators";
 @import "pageflow/chart/themes/default";
+@import "text_page_overrides";
 
 .entry {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-family: $body-font;
+	line-height: 1.6;
+	font-size: 18px;
 
-  font-family: $body-font;
-  line-height: 1.6;
-  font-size: 18px;
+	// Set initial state of hidden
+	.page.invert,
+	.page.invert.text_position_right {
+		color: $text-invert-color;
+		background-color: transparent;
+	}
+
+	.invert .contentText a {
+		color: $text-invert-color;
+	}
 }
 
 .content {
-  color: $text-color;
-}
-
-.invert .content {
-  color: $text-invert-color;
+	color: $text-color;
 }
 
 .contentText a {
-  pointer-events: all;
-  color: $text-color;
+	pointer-events: all;
+	color: $text-color;
 
-  &:hover {
-    color: $anchor-color;
-  }
-}
-
-.invert .contentText a {
-  color: $text-invert-color;
+	&:hover {
+		color: $anchor-color;
+	}
 }
 
 h2 {
 	word-wrap: break-word;
 	font-family: $title-font;
+	@include mobile {
+		font-size: 16px;
+	}
 
-  @include mobile {
-    font-size: 16px;
-  }
+	span {
+		display: block;
+		line-height: 1;
+	}
 
-  span {
-    display: block;
-    line-height: 1;
-  }
+	.tagline {
+		font-size: 1.1em;
+		font-weight: 300;
+	}
 
-  .tagline {
-    font-size: 1.1em;
-    font-weight: 300;
-  }
+	.title {
+		font-size: 2.5em;
+	}
 
-  .title {
-    font-size: 2.5em;
-  }
-
-  .subtitle {
-    margin-top: .4em;
-    font-size: 1.5em;
-  }
+	.subtitle {
+		margin-top: 0.4em;
+		font-size: 1.5em;
+	}
 }
 
 section.delayed_text_fade_in_long,
 section.delayed_text_fade_in_medium,
 section.delayed_text_fade_in_short {
-  .page_header,
-  .shadow_wrapper,
-  .contentText {
-    opacity: 0;
-  }
+	.contentText,
+	.page_header,
+	.shadow_wrapper {
+		opacity: 0;
+	}
 }
 
 .js {
-  .page:first-child .contentWrapper:after {
-    content: " ";
-    position: absolute;
-    top: 30px;
-    left: 0;
-    right: 0;
-    width: 90%;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: image-url('scrollytelling/loading_spinner/logo.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    @include mobile {
-      left: 20px;
-      top: 20px;
-      right: auto;
-      height: 35px;
-      max-width: 70%;
-      background-position: top left;
-    }
-  }
-
-  // we feel the standard page width is too wide
-  .page .scroller > div {
-    padding: 15% 8% 5% 20px;
-  }
+	.page:first-child .contentWrapper:after {
+		content: " ";
+		position: absolute;
+		top: 30px;
+		left: 0;
+		right: 0;
+		width: 90%;
+		height: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		background-image: image-url('scrollytelling/loading_spinner/logo.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		@include mobile {
+			left: 20px;
+			top: 20px;
+			right: auto;
+			height: 35px;
+			max-width: 70%;
+			background-position: top left;
+		}
+	}
+	// we feel the standard page width is too wide
+	.page .scroller > div {
+		padding: 200px 100px 70px;
+		@include mobile {
+			padding: 30px 20px 16px;
+		}
+	}
 }
-
-// Set initial state of hidden
-.entry .page.invert,
-.entry .page.invert.text_position_right {
-    background-color: transparent;
-}
-
 // When loaded - set bg to white
-.slideshow .page.invert, .slideshow .page.invert.text_position_right {
-    background-color: #fff;
+.slideshow .page.invert,
+.slideshow .page.invert.text_position_right {
+	background-color: #fff;
 }
 
-.slideshow section.fade.text_position_right.invert,
-.slideshow section.fade.invert {
-    background-color: transparent;
+.slideshow section.fade.invert,
+.slideshow section.fade.text_position_right.invert {
+	background-color: transparent;
 }
-
+// TODO remove until EOF when site is on navigation 1.13.4
 .navigation_mobile.active {
-  .sharing_mobile {
-    a.share.facebook {
-      p:before {
-        font-family: "FontAwesome";
-        content: "\f082";
-        margin-right: 12px;
-      }
-    }
+	.sharing_mobile {
+		a.share.facebook {
+			p:before {
+				font-family: "FontAwesome";
+				content: "\f082";
+				margin-right: 12px;
+			}
+		}
 
-    a.share.twitter {
-      p:before {
-        font-family: "FontAwesome";
-        content: "\f081";
-        margin-right: 12px;
-      }
-    }
+		a.share.twitter {
+			p:before {
+				font-family: "FontAwesome";
+				content: "\f081";
+				margin-right: 12px;
+			}
+		}
 
 		a.share.whatsapp {
 			img {
@@ -180,192 +175,35 @@ section.delayed_text_fade_in_short {
 			}
 		}
 
-    li {
-      background-color: darkgrey;
-      font-family: sourcesanspro;
+		li {
+			background-color: darkgrey;
+			font-family: sourcesanspro;
 
-      >a {
-        color: white;
-        padding-top: 10px;
-        height: 50px;
-        margin-left: 24px;
-      }
+			> a {
+				color: white;
+				padding-top: 10px;
+				height: 50px;
+				margin-left: 24px;
+			}
 
-      >a:before {
-        display: none;
-      }
+			> a:before {
+				display: none;
+			}
 
-      p {
-        margin: 0;
-      }
-    }
-  }
-}
-
-// TODO remove this once the site uses navigation gem v1.13.3
-.navigation_mobile .menu.index {
-  @include mobile {
-    top: 11px;
-  }
+			p {
+				margin: 0;
+			}
+		}
+	}
 }
 
 .imprint_mobile {
-  li {
-    background-color: darkgrey;
-  }
+	li {
+		background-color: darkgrey;
+	}
 }
-
 @include mobile {
-  p {
-    font-size: 18px;
-  }
-}
-
-
-//// Styling specific for the text page @Joost: Ruby gem TODO
-
-// A wrapper around image (centered text)
-.page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
-.js .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
-.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
-.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 1.5em;
-  display: block;
-  max-width: none;
-  position: relative;
-  top: inherit !important;
-}
-
-// Position from top of page (because of logo)
-.page .text_page .scroller > div .contentInnerWrapper .contentText,
-.js .page .text_page .scroller > div .contentInnerWrapper .contentText,
-.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
-.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
-  padding-top: 4em;
-
-  @include desktop {
-    padding-top: 8em;
-  }
-}
-
-// Title size
-.page .text_page .scroller > div .contentInnerWrapper .contentText h3,
-.js .page .text_page .scroller > div .contentInnerWrapper .contentText h3,
-.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3,
-.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3 {
-  padding-bottom: 1em;
-
-  @include desktop {
-    font-size: 3em;
-    line-height: 1.2em;
-    padding-bottom: 1em;
-  }
-}
-
-// Text size
-.page .text_page .scroller > div .contentInnerWrapper .contentText p,
-.js .page .text_page .scroller > div .contentInnerWrapper .contentText p,
-.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p,
-.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p {
-  @include desktop {
-    font-size: 1.6em;
-  }
-}
-
-// Make text wider and scroll to the next one later
-.page .text_page .scroller > div .contentInnerWrapper .contentText,
-.js .page .text_page .scroller > div .contentInnerWrapper .contentText,
-.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
-.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
-  @include desktop {
-    max-width: 700px;
-  }
-
-  @include mobile {
-    width: 84% !important;
-    margin: 0 auto !important;
-  }
-}
-
-// Remove large padding on the right of page_header
-.page .text_page .scroller > div .contentInnerWrapper .page_header h2,
-.js .page .text_page .scroller > div .contentInnerWrapper .page_header h2,
-.js .page:first-child .text_page .scroller > div .contentInnerWrapper .page_header h2,
-.page:first-child .text_page .scroller > div .contentInnerWrapper .page_header h2 {
-  padding-right: 0;
-}
-
-
-.page .text_page {
-
-  .backgroundArea, .page_header {
-    opacity: 0;
-  }
-
-  .content {
-    .page_spacer {
-      display: block !important;
-    }
-
-    .contentText {
-      h1,
-      h2 span.subtitle,
-      h2 span.tagline,
-      h3,
-      p {
-        @include desktop {
-          max-width: 700px;
-        }
-      }
-    }
-  }
-
-  .page_header {
-    h2 {
-      color: #fff;
-    }
-
-    span:last-child {
-      margin-bottom: 2em;
-    }
-
-    h1, h2 span.subtitle, h2 span.tagline, h3, p {
-      width: 100%;
-    }
-  }
-
-}
-
-.page.text_position_center.chapter_beginning .text_page {
-  .page_header {
-    padding-top: 40px;
-    padding-bottom: 50px;
-  }
-}
-
-// Inverted colors
-.page.invert .text_page {
-  .page_header {
-    h2 {
-      color: #000;
-    }
-  }
-}
-
-// Page finished loading
-.slideshow .page .text_page {
-  .backgroundArea, .page_header {
-    opacity: 1;
-  }
+	p {
+		font-size: 18px;
+	}
 }
