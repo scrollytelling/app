@@ -1,89 +1,89 @@
+.page .text_page .backgroundArea .fixed_header_area .page_header_wrapper,
+.js .page .text_page .backgroundArea .fixed_header_area .page_header_wrapper,
+.js .page:first-child .text_page .backgroundArea .fixed_header_area .page_header_wrapper,
+.page:first-child .text_page .backgroundArea .fixed_header_area .page_header_wrapper {
+  padding: 100px 20px 0 20px;
+  @include desktop {
+    padding: 100px 50px 0 50px;
+  }
+}
+
 // A wrapper around image (centered text)
-.page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
-.page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
-.page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
 .js .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
 .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
-.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image {
+.js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image {
   width: 100%;
   padding: 0;
-  margin: 0;
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em;
   display: block;
   max-width: none;
   position: relative;
   top: inherit !important;
 }
-
 // Position from top of page (because of logo)
-.page .text_page .scroller > div .contentInnerWrapper .contentText,
 .js .page .text_page .scroller > div .contentInnerWrapper .contentText,
 .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
+.page .text_page .scroller > div .contentInnerWrapper .contentText,
 .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
   padding-top: 4em;
-
   @include desktop {
     padding-top: 8em;
   }
 }
-
 // Title size
-.page .text_page .scroller > div .contentInnerWrapper .contentText h3,
 .js .page .text_page .scroller > div .contentInnerWrapper .contentText h3,
 .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3,
+.page .text_page .scroller > div .contentInnerWrapper .contentText h3,
 .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3 {
   padding-bottom: 1em;
-
   @include desktop {
     font-size: 3em;
     line-height: 1.2em;
     padding-bottom: 1em;
   }
 }
-
 // Text size
-.page .text_page .scroller > div .contentInnerWrapper .contentText p,
 .js .page .text_page .scroller > div .contentInnerWrapper .contentText p,
 .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p,
+.page .text_page .scroller > div .contentInnerWrapper .contentText p,
 .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p {
   @include desktop {
     font-size: 1.6em;
   }
 }
-
 // Make text wider and scroll to the next one later
-.page .text_page .scroller > div .contentInnerWrapper .contentText,
 .js .page .text_page .scroller > div .contentInnerWrapper .contentText,
 .js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
+.page .text_page .scroller > div .contentInnerWrapper .contentText,
 .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
   @include desktop {
     max-width: 700px;
   }
-
   @include mobile {
     width: 84% !important;
     margin: 0 auto !important;
   }
 }
-
 // Remove large padding on the right of page_header
-.page .text_page .scroller > div .contentInnerWrapper .page_header h2,
 .js .page .text_page .scroller > div .contentInnerWrapper .page_header h2,
 .js .page:first-child .text_page .scroller > div .contentInnerWrapper .page_header h2,
+.page .text_page .scroller > div .contentInnerWrapper .page_header h2,
 .page:first-child .text_page .scroller > div .contentInnerWrapper .page_header h2 {
   padding-right: 0;
 }
 
-
 .page .text_page {
-
-  .backgroundArea, .page_header {
+  .backgroundArea,
+  .page_header {
     opacity: 0;
   }
 
@@ -114,13 +114,15 @@
       margin-bottom: 2em;
     }
 
-    h1, h2 span.subtitle, h2 span.tagline, h3, p {
+    h1,
+    h2 span.subtitle,
+    h2 span.tagline,
+    h3,
+    p {
       width: 100%;
     }
   }
-
 }
-
 // Inverted colors
 .page.invert .text_page {
   .page_header {
@@ -129,10 +131,10 @@
     }
   }
 }
-
 // Page finished loading
 .slideshow .page .text_page {
-  .backgroundArea, .page_header {
+  .backgroundArea,
+  .page_header {
     opacity: 1;
   }
 }
