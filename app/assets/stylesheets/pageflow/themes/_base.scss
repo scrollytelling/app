@@ -70,7 +70,7 @@ h2 {
 	word-wrap: break-word;
 	font-family: $title-font;
 	@include mobile {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	span {
@@ -200,10 +200,5 @@ section.delayed_text_fade_in_short {
 .imprint_mobile {
 	li {
 		background-color: darkgrey;
-	}
-}
-@include mobile {
-	p {
-		font-size: 18px;
 	}
 }
