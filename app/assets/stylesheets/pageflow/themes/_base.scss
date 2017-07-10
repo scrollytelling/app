@@ -43,28 +43,17 @@ $mobile-margins: 30px 20px 16px 20px;
 	line-height: 1.6;
 	font-size: 18px;
 
-	// Set initial state of hidden
-	.page.invert,
-	.page.invert.text_position_right {
-		color: $text-invert-color;
-		background-color: transparent;
+	.contentText a {
+		pointer-events: all;
+		color: $text-color;
+
+		&:hover {
+			color: $anchor-color;
+		}
 	}
 
 	.invert .contentText a {
 		color: $text-invert-color;
-	}
-}
-
-.content {
-	color: $text-color;
-}
-
-.contentText a {
-	pointer-events: all;
-	color: $text-color;
-
-	&:hover {
-		color: $anchor-color;
 	}
 }
 
@@ -127,6 +116,17 @@ section.delayed_text_fade_in_short {
 			max-width: 60%;
 		}
 	}
+
+	.page {
+		color: $text-color;
+	}
+
+	.page.invert,
+	.page.invert.text_position_right {
+		color: $text-invert-color;
+		background-color: transparent;
+	}
+
 	// we feel the standard page width is too wide
 	.page .scroller > div {
 		padding: $desktop-margins;
@@ -144,61 +144,4 @@ section.delayed_text_fade_in_short {
 .slideshow section.fade.invert,
 .slideshow section.fade.text_position_right.invert {
 	background-color: transparent;
-}
-// TODO remove until EOF when site is on navigation 1.13.4
-.navigation_mobile.active {
-	.sharing_mobile {
-		a.share.facebook {
-			p:before {
-				font-family: "FontAwesome";
-				content: "\f082";
-				margin-right: 12px;
-			}
-		}
-
-		a.share.twitter {
-			p:before {
-				font-family: "FontAwesome";
-				content: "\f081";
-				margin-right: 12px;
-			}
-		}
-
-		a.share.whatsapp {
-			img {
-				width: 16px;
-				height: 16px;
-				border: none;
-				float: left;
-				margin-right: 10px;
-				padding-top: 2px;
-			}
-		}
-
-		li {
-			background-color: darkgrey;
-			font-family: sourcesanspro;
-
-			> a {
-				color: white;
-				padding-top: 10px;
-				height: 50px;
-				margin-left: 24px;
-			}
-
-			> a:before {
-				display: none;
-			}
-
-			p {
-				margin: 0;
-			}
-		}
-	}
-}
-
-.imprint_mobile {
-	li {
-		background-color: darkgrey;
-	}
 }
