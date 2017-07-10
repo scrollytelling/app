@@ -12,11 +12,13 @@
 $main-color: #c3e2dd !default;
 $main-color-dark: darken($main-color, 30%) !default;
 $anchor-color: $main-color !default;
-$indicator-text-shadow-color: 3e3e3e !default;
+$indicator-text-shadow-color: #3e3e3e !default;
 $text-color: #e3e3e3 !default;
-$text-invert-color: #333 !default;
+$text-invert-color: #090909 !default;
 $body-font: system, sans-serif !default;
 $title-font: system, sans-serif !default;
+$desktop-margins: 200px 100px 70px 100px;
+$mobile-margins: 30px 20px 16px 20px;
 
 @import "bourbon";
 @import "pageflow/mixins";
@@ -119,19 +121,17 @@ section.delayed_text_fade_in_short {
 		background-position: center;
 		background-size: contain;
 		@include mobile {
-			left: 20px;
-			top: 20px;
+			left: auto;
 			right: auto;
 			height: 35px;
-			max-width: 70%;
-			background-position: top left;
+			max-width: 60%;
 		}
 	}
 	// we feel the standard page width is too wide
 	.page .scroller > div {
-		padding: 200px 100px 70px;
+		padding: $desktop-margins;
 		@include mobile {
-			padding: 30px 20px 16px;
+			padding: $mobile-margins;
 		}
 	}
 }
