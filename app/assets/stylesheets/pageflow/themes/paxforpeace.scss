@@ -1,33 +1,21 @@
-@font-face {
-    font-family: 'LeanO FY';
-    src: font-url('pageflow/themes/paxforpeace/LeanOFY-Bold_SWeb.woff') format('woff');
-}
-
 $main-color: #e64f1a;
-$title-font: 'LeanO FY', system, sans-serif;
 
 @import "./base.scss";
 
 .entry {
-  // font-family: Calibri, 'PT Sans', system, sans-serif;
-
   h2 {
-    // font-family: serif;
   }
 
   p {
   }
 
   span.title {
-    // font-weight: bold;
   }
 
   span.subtitle {
-    // text-transform: uppercase;
   }
 
   span.tagline {
-    // text-transform: uppercase;
   }
 }
 
