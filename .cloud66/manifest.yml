@@ -16,6 +16,9 @@ staging:
     server:
       unique_name: app
 production:
+  load_balancer:
+    configuration:
+      httpchk: /okcomputer
   rails:
     configuration:
       <<: *config
