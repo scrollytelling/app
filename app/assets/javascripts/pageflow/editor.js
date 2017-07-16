@@ -9,3 +9,7 @@
 //= require pageflow/external_links/editor
 //= require pageflow/linkmap_page/editor
 //= require pageflow/chart/editor
+
+pageflow.ready.then(function() {
+  _.extend(pageflow.Configuration.prototype.defaults, {gradient_opacity: 0});
+});
