@@ -192,6 +192,8 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.11.0.1)
+      faraday (>= 0.7.4, < 1.0)
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -277,6 +279,11 @@ GEM
       pageflow-public-i18n (~> 1.0)
     pageflow-internal-links (0.2.0)
       pageflow (~> 0.10)
+    pageflow-oembed (1.0.0)
+      faraday
+      faraday_middleware
+      pageflow (< 12.0.0)
+      rails (>= 3.0)
     pageflow-public-i18n (1.10.0)
     pageflow-text-page (0.3.0)
       i18n-js
@@ -477,6 +484,7 @@ DEPENDENCIES
   pageflow-external-links
   pageflow-internal-links
   pageflow-linkmap-page!
+  pageflow-oembed
   pageflow-text-page
   poltergeist
   rack-attack

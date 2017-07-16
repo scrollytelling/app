@@ -38,6 +38,7 @@ Pageflow.configure do |config|
 
   config.plugin(Pageflow::LinkmapPage.plugin)
   config.plugin(Scrollytelling::Pageflow::Navigation::Plugin.new)
+  config.plugin(Pageflow::Oembed.plugin)
 
   # Add custom themes by invoking the pageflow:theme generator and
   # registering the theme here.

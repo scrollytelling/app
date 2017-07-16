@@ -36,6 +36,7 @@ gem 'pageflow-linkmap-page', github: 'scrollytelling/pageflow-linkmap-page', bra
 gem 'pageflow-chart'
 gem 'scrollytelling-loading_spinner'
 gem 'scrollytelling-pageflow-navigation'
+gem 'pageflow-oembed'
 
 group :development do
   gem 'spring'
