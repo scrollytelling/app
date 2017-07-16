@@ -40,3 +40,9 @@ h2 {
 .js .page.invert:first-child .contentWrapper:after {
   background-image: image-url("pageflow/themes/krisberry/logo.png");
 }
+
+@include mobile {
+	.js .page:first-child .contentWrapper {
+		margin-top: 90px;
+	}
+}

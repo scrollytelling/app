@@ -91,6 +91,7 @@ section.delayed_text_fade_in_short {
 	}
 }
 
+// required to start with .js because that's how Pageflow is styled.
 .js .page {
 	color: $text-color;
 
@@ -138,15 +139,15 @@ section.delayed_text_fade_in_short {
 		font-size: 14px;
 	}
 
-	.page .scroller > div {
+	.js .page .scroller > div {
 		padding: $mobile-margins;
 	}
 
-	.page:first-child .contentWrapper {
+	.js .page:first-child .contentWrapper {
 		margin-top: 50px;
 	}
 
-	.page:first-child .contentWrapper:after {
+	.js .page:first-child .contentWrapper:after {
 		height: 35px;
 		max-width: 60%;
 	}
