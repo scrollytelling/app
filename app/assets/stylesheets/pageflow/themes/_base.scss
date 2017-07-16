@@ -91,7 +91,7 @@ section.delayed_text_fade_in_short {
 	}
 }
 
-.page {
+.js .page {
 	color: $text-color;
 
 	&:first-child .contentWrapper:after {
@@ -117,6 +117,7 @@ section.delayed_text_fade_in_short {
 	}
 
 	.scroller > div {
+		pointer-events: all;
 		padding: $desktop-margins;
 	}
 }

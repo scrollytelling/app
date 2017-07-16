@@ -279,7 +279,7 @@ GEM
       pageflow-public-i18n (~> 1.0)
     pageflow-internal-links (0.2.0)
       pageflow (~> 0.10)
-    pageflow-oembed (1.0.1)
+    pageflow-oembed (1.1.0)
       faraday
       faraday_middleware
       pageflow (< 12.0.0)
