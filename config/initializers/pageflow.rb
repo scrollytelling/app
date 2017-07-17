@@ -95,14 +95,18 @@ Pageflow.configure do |config|
   # use s3 storage. All options allowed in paperclip has_attached_file
   # calls are allowed.
   config.paperclip_s3_default_options.merge!(
-    :s3_credentials => {
-      :bucket => ENV['S3_BUCKET'],
-      :access_key_id => ENV['S3_ACCESS_KEY'],
-      :secret_access_key => ENV['S3_SECRET_KEY'],
-      :s3_host_name => ENV['S3_HOST_NAME']
+    s3_credentials: {
+      bucket: ENV['S3_BUCKET'],
+      access_key_id: ENV['S3_ACCESS_KEY'],
+      secret_access_key: ENV['S3_SECRET_KEY'],
+      s3_host_name: ENV['S3_HOST_NAME']
     },
-    :s3_host_alias => ENV['S3_HOST_ALIAS'],
-    :s3_protocol => ENV['S3_PROTOCOL']
+    s3_host_alias: ENV['S3_HOST_ALIAS'],
+    s3_protocol: ENV['S3_PROTOCOL'],
+    s3_headers: {
+      'Expires' => "Wed, 17 Jul 2047 16:58:03 GMT", # keep until we're on Pageflow 12.0.0
+      'Cache-Control' => "public, max-age=31536000"
+    }
   )
 
   # Default options for paperclip attachments which are supposed to
