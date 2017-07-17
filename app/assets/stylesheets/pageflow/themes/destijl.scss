@@ -54,15 +54,6 @@ ul.scrollytelling-home_button {
   p {
     font-size: 20px;
     line-height: 26px;
-
-    mark,
-    i {
-      display: block;
-      color: black;
-      background-color: #e2e2e2;
-      padding: 4px 8px;
-      font-style: normal;
-    }
   }
 
   span.title {
@@ -77,6 +68,39 @@ ul.scrollytelling-home_button {
   }
 
   span.tagline {
+  }
+}
+
+section#8685 .contentText p,
+section#7758 .contentText p,
+section#8605 .contentText p,
+section#8612 .contentText p,
+section#8615 .contentText p,
+section#8655 .contentText p,
+section#8657 .contentText p,
+section#8659 .contentText p,
+section#8661 .contentText p,
+section#8663 .contentText p,
+section#8665 .contentText p,
+section#8667 .contentText p,
+section#8669 .contentText p,
+section#8671 .contentText p,
+section#8673 .contentText p,
+section#8675 .contentText p,
+section#8677 .contentText p,
+section#8679 .contentText p {
+  margin-top: 20em;
+  margin-bottom: 3em;
+}
+
+// this text is unreadable because of a very wild background.
+// we're giving the text itself a background.
+@include mobile {
+  section#8685 .contentText p {
+    color: black;
+    background-color: #e2e2e2;
+    padding: 4px 8px;
+    font-style: normal;
   }
 }
 
