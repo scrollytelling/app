@@ -200,16 +200,6 @@ ActiveRecord::Schema.define(version: 20170716082601) do
     t.string   "rights",                              limit: 191,   default: "", null: false
   end
 
-  create_table "pageflow_linkmap_page_mask_sprites", force: :cascade do |t|
-    t.integer  "image_file_id",           limit: 4
-    t.string   "attachment_file_name",    limit: 255
-    t.string   "attachment_content_type", limit: 255
-    t.integer  "attachment_file_size",    limit: 8
-    t.datetime "attachment_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "pageflow_memberships", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "entry_id",   limit: 4
@@ -224,7 +214,7 @@ ActiveRecord::Schema.define(version: 20170716082601) do
   create_table "pageflow_oembed_oembeds", force: :cascade do |t|
     t.string   "type",             limit: 255,   default: "", null: false
     t.string   "version",          limit: 255,   default: "", null: false
-    t.string   "url",              limit: 255,   default: "", null: false
+    t.string   "url",              limit: 191,   default: "", null: false
     t.string   "title",            limit: 255
     t.string   "author_name",      limit: 255
     t.string   "author_url",       limit: 255
@@ -301,34 +291,6 @@ ActiveRecord::Schema.define(version: 20170716082601) do
   end
 
   add_index "pageflow_storylines", ["revision_id"], name: "index_pageflow_storylines_on_revision_id", using: :btree
-
-  create_table "pageflow_text_track_files", force: :cascade do |t|
-    t.integer  "entry_id",                              limit: 4
-    t.integer  "uploader_id",                           limit: 4
-    t.string   "state",                                 limit: 255
-    t.string   "rights",                                limit: 255
-    t.string   "attachment_on_filesystem_file_name",    limit: 255
-    t.string   "attachment_on_filesystem_content_type", limit: 255
-    t.integer  "attachment_on_filesystem_file_size",    limit: 8
-    t.datetime "attachment_on_filesystem_updated_at"
-    t.string   "attachment_on_s3_file_name",            limit: 255
-    t.string   "attachment_on_s3_content_type",         limit: 255
-    t.integer  "attachment_on_s3_file_size",            limit: 8
-    t.datetime "attachment_on_s3_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "parent_file_id",                        limit: 4
-    t.string   "parent_file_model_type",                limit: 255
-    t.text     "configuration",                         limit: 65535
-    t.string   "processed_attachment_file_name",        limit: 255
-    t.string   "processed_attachment_content_type",     limit: 255
-    t.integer  "processed_attachment_file_size",        limit: 8
-    t.datetime "processed_attachment_updated_at"
-  end
-
-  add_index "pageflow_text_track_files", ["entry_id"], name: "index_pageflow_text_track_files_on_entry_id", using: :btree
-  add_index "pageflow_text_track_files", ["parent_file_id", "parent_file_model_type"], name: "index_text_track_files_on_parent_id_and_parent_model_type", using: :btree
-  add_index "pageflow_text_track_files", ["uploader_id"], name: "index_pageflow_text_track_files_on_uploader_id", using: :btree
 
   create_table "pageflow_themings", force: :cascade do |t|
     t.string   "imprint_link_url",               limit: 191

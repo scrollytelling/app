@@ -4,7 +4,7 @@ class CreatePageflowOembeds < ActiveRecord::Migration
     create_table :pageflow_oembed_oembeds do |t|
       t.string :type, null: false, default: ''
       t.string :version, null: false, default: ''
-      t.string :url, null: false, default: ''
+      t.string :url, null: false, default: '', limit: 191
       t.string :title
       t.string :author_name
       t.string :author_url
