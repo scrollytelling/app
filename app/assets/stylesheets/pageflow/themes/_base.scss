@@ -34,7 +34,7 @@ $mobile-margins: 30px 20px 16px 20px;
 @import "pageflow/linkmap_page/themes/default";
 @import "pageflow/linkmap_page/themes/default/scroll_indicators";
 @import "pageflow/chart/themes/default";
-@import "text_page_overrides";
+@import "./text_page_overrides";
 
 .entry {
 	text-rendering: optimizeLegibility;
