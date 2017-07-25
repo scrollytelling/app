@@ -246,7 +246,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     mono_logger (1.1.0)
     multi_json (1.12.1)
     multi_test (0.1.2)
@@ -279,12 +279,12 @@ GEM
       pageflow-public-i18n (~> 1.0)
     pageflow-internal-links (0.2.0)
       pageflow (~> 0.10)
-    pageflow-oembed (1.1.0)
+    pageflow-oembed (1.1.1)
       faraday
       faraday_middleware
-      pageflow (< 12.0.0)
+      pageflow (>= 0.10.0, < 12.0.0)
       rails (>= 3.0)
-    pageflow-public-i18n (1.10.0)
+    pageflow-public-i18n (1.10.1)
     pageflow-text-page (0.3.0)
       i18n-js
       pageflow (~> 0.10)
@@ -437,7 +437,7 @@ GEM
       state_machine
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.7)
+    tilt (2.0.8)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (3.0.3)
