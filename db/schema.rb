@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716082601) do
+ActiveRecord::Schema.define(version: 20170727220210) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 191
@@ -269,7 +269,7 @@ ActiveRecord::Schema.define(version: 20170716082601) do
     t.integer  "share_image_id",              limit: 4
     t.integer  "share_image_x",               limit: 4
     t.integer  "share_image_y",               limit: 4
-    t.string   "locale",                      limit: 191
+    t.string   "locale",                      limit: 255,   default: "nl"
     t.boolean  "password_protected"
     t.string   "author",                      limit: 191
     t.string   "publisher",                   limit: 191
