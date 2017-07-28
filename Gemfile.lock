@@ -304,6 +304,8 @@ GEM
     rack (1.6.8)
     rack-attack (5.0.1)
       rack
+    rack-cache (1.6.1)
+      rack (>= 0.4)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -355,6 +357,9 @@ GEM
     redis-rack (1.6.0)
       rack (~> 1.5)
       redis-store (~> 1.2.0)
+    redis-rack-cache (2.0.0)
+      rack-cache (~> 1.6.0)
+      redis-store (~> 1.2.0.pre)
     redis-rails (5.0.1)
       redis-actionpack (~> 5.0.0)
       redis-activesupport (~> 5.0.0)
@@ -489,6 +494,7 @@ DEPENDENCIES
   poltergeist
   rack-attack
   rails (= 4.2.7.1)
+  redis-rack-cache
   redis-rails
   rspec-rails
   sass-rails

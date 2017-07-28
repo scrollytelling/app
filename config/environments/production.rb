@@ -18,7 +18,10 @@ Rails.application.configure do
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like
   # NGINX, varnish or squid.
-  # config.action_dispatch.rack_cache = true
+  config.action_dispatch.rack_cache = {
+    metastore: "#{ENV['REDIS_URL']}/1/metastore",
+    entitystore: "#{ENV['REDIS_URL']}/1/entitystore"
+  }
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
@@ -55,7 +58,7 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production.
-  config.cache_store = :redis_store, "#{ENV['REDIS_URL']}/0/cache", { expires_in: 120.minutes }
+  config.cache_store = :redis_store, "#{ENV['REDIS_URL']}/0/cache", { expires_in: 1.day }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.action_controller.asset_host = Proc.new { |source|
