@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/scrollytelling/pageflow.git
-  revision: 4a40db29ff73474e2ee58f337b6424bab85b6395
+  revision: 74ea7eb8d864e707a3fb7886e6ec96650433e5ee
   branch: 0-11-atmo-initializer
   specs:
     pageflow (0.11.3)
@@ -276,7 +276,7 @@ GEM
       pageflow-public-i18n (~> 1.0)
     pageflow-internal-links (0.2.0)
       pageflow (~> 0.10)
-    pageflow-oembed (1.1.1)
+    pageflow-oembed (1.2.0)
       faraday
       faraday_middleware
       pageflow (>= 0.10.0, < 12.0.0)
