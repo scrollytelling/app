@@ -2,6 +2,8 @@ en:
   pageflow:
     public:
       scroll_indicator: Scroll to continue
+      start_audio: Start audio
+      start_video: Start video
     admin:
       accounts:
         no_entries: No Stories
@@ -917,7 +919,11 @@ nl:
   pageflow:
     public:
       scroll_indicator: Scroll om door te gaan
+      start_audio: Start audio
+      start_video: Start video
 nl-BE:
   pageflow:
     public:
       scroll_indicator: Scroll om door te gaan
+      start_audio: Start audio
+      start_video: Start video
