@@ -20,7 +20,6 @@ gem 'jquery-rails'
 gem 'pageflow', github: 'scrollytelling/pageflow', branch: '0-11-atmo-initializer'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'rack-attack'
-gem 'redis-rack-cache'
 gem 'figaro'
 gem 'whenever', require: false
 gem "sentry-raven"
