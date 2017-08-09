@@ -6,7 +6,7 @@
 //= require pageflow/external_links
 //= require pageflow/linkmap_page
 //= require scrollytelling/loading_spinner
-//= require scrollytelling/pageflow/navigation
+//= require scrollytelling/navigation
 //= require pageflow/chart
 //= require pageflow/oembed
 
