@@ -20,3 +20,11 @@ ga('require', 'urlChangeTracker');
 <% end -%>
 ga('send', 'pageview');
 </script>
+
+<!-- <script>
+function scrollToPage() {
+  ga('set', 'page', location.pathname + location.hash);
+  ga('send', 'pageview');
+}
+window.addEventListener("hashchange", scrollToPage, false);
+</script> -->
