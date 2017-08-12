@@ -276,12 +276,12 @@ GEM
       pageflow-public-i18n (~> 1.0)
     pageflow-internal-links (0.2.0)
       pageflow (~> 0.10)
-    pageflow-oembed (1.2.0)
+    pageflow-oembed (1.2.1)
       faraday
       faraday_middleware
       pageflow (>= 0.10.0, < 12.0.0)
       rails (>= 3.0)
-    pageflow-public-i18n (1.10.1)
+    pageflow-public-i18n (1.11.0)
     pageflow-text-page (0.3.0)
       i18n-js
       pageflow (~> 0.10)
@@ -409,7 +409,7 @@ GEM
     scrollytelling-loading_spinner (1.1.0)
       pageflow (>= 0.7, < 0.12.0)
       rails (>= 3.0)
-    scrollytelling-navigation (1.15.1)
+    scrollytelling-navigation (1.15.2)
       pageflow (~> 0.11.0)
       rails (>= 3.0, < 5.0)
     sentry-raven (2.6.2)
