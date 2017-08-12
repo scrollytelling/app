@@ -1,0 +1,14 @@
+<script>
+  var _paq = _paq || [];
+  _paq.push(["setCustomVariable", 1, "account", "<%= account.name %>", "visit"]);
+  _paq.push(["setCustomVariable", 2, "entry", "<%= entry.title %>", "visit"]);
+  _paq.push(['trackPageView']);
+  (function() {
+    var u="//analytics.scrollytelling.io/analytics/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.scrollytelling.io/analytics/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>

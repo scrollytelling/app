@@ -1,0 +1,22 @@
+<script>
+!function(s,c,r,o,l,L,y){s.GoogleAnalyticsObject=r;s[r]||(s[r]=function(){
+(s[r].q=s[r].q||[]).push(arguments)});s[r].l=+new Date;L=c.createElement(o);
+y=c.getElementsByTagName(o)[0];L.src=l;y.parentNode.insertBefore(L,y)}
+(window,document,'ga','script','//www.google-analytics.com/analytics.js');
+
+ga('create', '<%= analytics['id'] %>', 'auto');
+
+ga('set', 'appName', 'Scrollytelling');
+ga('set', 'appVersion', '<%= Pageflow::VERSION %>');
+ga('set', 'forceSSL', true);
+<% if analytics['anonymize_ip'] -%>ga('set', 'anonymizeIp', true);<% end -%>
+
+<% if analytics['autotrack'] -%>
+ga('require', 'maxScrollTracker');
+ga('require', 'outboundLinkTracker');
+ga('require', 'pageVisibilityTracker');
+ga('require', 'urlChangeTracker');
+
+<% end -%>
+ga('send', 'pageview');
+</script>
