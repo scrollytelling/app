@@ -9,6 +9,7 @@
 //= require scrollytelling/navigation
 //= require pageflow/chart
 //= require pageflow/oembed
+//= require autotrack
 
 pageflow.ready.then(function(result) {
   // we override the feature detection that disables atmo on mobile.

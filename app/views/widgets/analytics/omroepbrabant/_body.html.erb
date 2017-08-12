@@ -5,7 +5,24 @@ y=c.getElementsByTagName(o)[0];L.src=l;y.parentNode.insertBefore(L,y)}
 (window,document,'ga','script','//www.google-analytics.com/analytics.js');
 
 ga('create', 'UA-116305-50', 'auto');
+
 ga('set', 'forceSSL', true);
 ga('set', 'anonymizeIp', true);
+ga('set', 'appName', 'Scrollytelling');
+ga('set', 'appVersion', '<%= Pageflow::VERSION %>');
+
+ga('require', 'maxScrollTracker');
+ga('require', 'outboundLinkTracker');
+ga('require', 'pageVisibilityTracker');
+ga('require', 'urlChangeTracker');
+
 ga('send', 'pageview');
 </script>
+
+<!-- <script>
+function scrollToPage() {
+  ga('set', 'page', location.pathname + location.hash);
+  ga('send', 'pageview');
+}
+window.addEventListener("hashchange", scrollToPage, false);
+</script> -->
