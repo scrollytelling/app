@@ -99,6 +99,9 @@ section[id="9699"] .contentText p,
 section[id="9701"] .contentText p {
   margin-top: 20em;
   margin-bottom: 3em;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: .02em;
 
   @include desktop {
     margin-top: 25em;
