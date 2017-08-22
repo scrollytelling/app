@@ -3,6 +3,7 @@
     src: font-url('pageflow/themes/blof/caecilia-heavy-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
     src: font-url('pageflow/themes/blof/caecilia-heavysc-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 $main-color: #3f97aa;

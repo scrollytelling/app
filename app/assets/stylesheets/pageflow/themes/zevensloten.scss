@@ -4,36 +4,42 @@
   src: font-url('pageflow/themes/zevensloten/aller_bd-webfont.woff2') format('woff2'), font-url('pageflow/themes/zevensloten/aller_bd-webfont.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Aller';
   src: font-url('pageflow/themes/zevensloten/aller_bdit-webfont.woff2') format('woff2'), font-url('pageflow/themes/zevensloten/aller_bdit-webfont.woff') format('woff');
   font-weight: bold;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Aller';
   src: font-url('pageflow/themes/zevensloten/aller_it-webfont.woff2') format('woff2'), font-url('pageflow/themes/zevensloten/aller_it-webfont.woff') format('woff');
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Aller';
   src: font-url('pageflow/themes/zevensloten/aller_lt-webfont.woff2') format('woff2'), font-url('pageflow/themes/zevensloten/aller_lt-webfont.woff') format('woff');
   font-weight: lighter;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Aller';
   src: font-url('pageflow/themes/zevensloten/aller_ltit-webfont.woff2') format('woff2'), font-url('pageflow/themes/zevensloten/aller_ltit-webfont.woff') format('woff');
   font-weight: lighter;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Aller';
   src: font-url('pageflow/themes/zevensloten/aller_rg-webfont.woff2') format('woff2'), font-url('pageflow/themes/zevensloten/aller_rg-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 $main-color: #133472;

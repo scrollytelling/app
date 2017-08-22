@@ -1,11 +1,13 @@
 @font-face {
     font-family: 'Maxeville Constructed';
+    font-display: swap;
     src:  font-url('pageflow/themes/destijl/SMMaxeville-Constructed.woff2') format('woff2'),
           font-url('pageflow/themes/destijl/SMMaxeville-Constructed.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Maxeville Regular';
+    font-display: swap;
     src:  font-url('pageflow/themes/destijl/SMMaxeville-Regular.woff2') format('woff2'),
           font-url('pageflow/themes/destijl/SMMaxeville-Regular.woff') format('woff');
 }
