@@ -125,6 +125,10 @@ section.delayed_text_fade_in_short {
 		pointer-events: all;
 		padding: $desktop-margins;
 	}
+
+	.embedded_video_page .scroller > div {
+		padding-top: 100px;
+	}
 }
 
 // When loaded - set bg to white
