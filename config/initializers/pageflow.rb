@@ -124,3 +124,7 @@ end
 # state. Otherwise Pageflow configuration errors might prevent you
 # from initializing the environment. Required for Pageflow to run.
 Pageflow.finalize!
+
+Paperclip.interpolates(:host) do |attachment, style|
+  'preview'
+end
