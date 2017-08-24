@@ -114,11 +114,11 @@ Pageflow.configure do |config|
   # use filesystem storage. All options allowed in paperclip has_attached_file
   # calls are allowed.
   config.zencoder_options.merge!(
-    :api_key => ENV['ZENCODER_API_KEY'],
-    :output_bucket => ENV['S3_OUTPUT_BUCKET'],
-    :s3_host_alias => ENV['S3_OUTPUT_HOST_ALIAS'],
-    :s3_protocol => ENV['S3_PROTOCOL'],
-    :attachments_version => 'v1'
+    api_key: ENV['ZENCODER_API_KEY'],
+    output_bucket: ENV['S3_OUTPUT_BUCKET'],
+    s3_host_alias: ENV['S3_OUTPUT_HOST_ALIAS'],
+    s3_protocol: ENV['S3_PROTOCOL'],
+    attachments_version: 'v1'
   )
 end
 

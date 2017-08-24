@@ -32,9 +32,9 @@ ActiveAdmin.setup do |config|
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
   #
-  # Note: Recommended image height is 21px to properly fit in the header
+  # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  # config.site_title_image = "/images/logo.png"
+  # config.site_title_image = "logo.png"
 
   # == Default Namespace
   #
@@ -71,10 +71,31 @@ ActiveAdmin.setup do |config|
   # ensure that there is a currently logged in admin user.
   #
   # This setting changes the method which Active Admin calls
-  # within the controller.
+  # within the application controller.
   config.authentication_method = :authenticate_user!
+
+  # == User Authorization
+  #
+  # Active Admin will automatically call an authorization
+  # method in a before filter of all controller actions to
+  # ensure that there is a user with proper rights. You can use
+  # CanCanAdapter or make your own. Please refer to documentation.
   config.authorization_adapter = ActiveAdmin::CanCanAdapter
 
+  # In case you prefer Pundit over other solutions you can here pass
+  # the name of default policy class. This policy will be used in every
+  # case when Pundit is unable to find suitable policy.
+  # config.pundit_default_policy = "MyDefaultPunditPolicy"
+
+  # You can customize your CanCan Ability class name here.
+  # config.cancan_ability_class = "Ability"
+
+  # You can specify a method to be called on unauthorized access.
+  # This is necessary in order to prevent a redirect loop which happens
+  # because, by default, user gets redirected to Dashboard. If user
+  # doesn't have access to Dashboard, he'll end up in a redirect loop.
+  # Method provided here should be defined in application_controller.rb.
+  # config.on_unauthorized_access = :access_denied
 
   # == Current User
   #
@@ -82,7 +103,7 @@ ActiveAdmin.setup do |config|
   # user performing them.
   #
   # This setting changes the method which Active Admin calls
-  # to return the currently logged in user.
+  # (within the application controller) to return the currently logged in user.
   config.current_user_method = :current_user
 
 
@@ -119,13 +140,20 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.allow_comments = false
-  #
-  # You can disable the menu item for the comments index page:
-  # config.show_comments_in_menu = false
+  # config.comments = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
+  #
+  # You can change the order for the comments and you can change the column
+  # to be used for ordering:
+  # config.comments_order = 'created_at ASC'
+
+  # You can disable the menu item for the comments index page:
+  # config.comments_menu = false
+  #
+  # You can customize the comment menu:
+  # config.comments_menu = { parent: 'Admin', priority: 1 }
 
 
   # == Batch Actions
@@ -167,10 +195,10 @@ ActiveAdmin.setup do |config|
   # == CSV options
   #
   # Set the CSV builder separator
-  # config.csv_options = { :col_sep => ';' }
+  # config.csv_options = { col_sep: ';' }
   #
   # Force the use of quotes
-  # config.csv_options = { :force_quotes => true }
+  # config.csv_options = { force_quotes: true }
 
 
   # == Menu System
