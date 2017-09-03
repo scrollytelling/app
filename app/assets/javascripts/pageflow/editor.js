@@ -2,12 +2,14 @@
 //= require i18n/translations
 
 //= require pageflow/editor/base
-//= require pageflow/before_after/editor
-//= require pageflow/text_page/editor
-//= require pageflow/embedded_video/editor
+
+// pageflow plugins
 //= require pageflow/internal_links/editor
 //= require pageflow/external_links/editor
 //= require pageflow/linkmap_page/editor
+//= require pageflow/text_page/editor
+//= require pageflow/embedded_video/editor
+//= require pageflow/before_after/editor
 //= require pageflow/chart/editor
 
 pageflow.ready.then(function() {

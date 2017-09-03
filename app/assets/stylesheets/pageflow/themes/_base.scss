@@ -28,13 +28,18 @@ $font-size: 18px !default;
 @import "pageflow/themes/default/player_controls";
 @import "pageflow/themes/default/video_player";
 @import "pageflow/themes/default/video_wrapper";
+@import "pageflow/embedded_video/themes/default";
+
+/* Pageflow plugins */
 @import "pageflow/internal_links/themes/default";
 @import "pageflow/internal_links/themes/default/list_as_multiple_choice";
-@import "pageflow/external_links/themes/legacy";
-@import "pageflow/embedded_video/themes/default";
+@import "pageflow/external_links/themes/default";
 @import "pageflow/linkmap_page/themes/default";
 @import "pageflow/linkmap_page/themes/default/scroll_indicators";
+// @import "pageflow/text_page/themes/default";
+// @import "pageflow/before_after/themes/default";
 @import "pageflow/chart/themes/default";
+
 @import "./text_page_overrides";
 @import "./external_links_page_overrides";
 @import "./embedded_video_page_overrides";

@@ -1,8 +1,10 @@
 @import "pageflow/editor/base";
-@import "pageflow/embedded_video/editor";
+
+/* pageflow plugins */
 @import "pageflow/internal_links/editor";
-@import "pageflow/linkmap_page/editor";
 @import "pageflow/external_links/editor";
+@import "pageflow/linkmap_page/editor";
+@import "pageflow/embedded_video/editor";
 @import "pageflow/chart/editor";
 
 .blank_entry h2:before {

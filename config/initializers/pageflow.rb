@@ -10,11 +10,12 @@ Pageflow.configure do |config|
   # Page types available in the editor. Add futher page types from
   # page type engines below.
   config.plugin(Pageflow.built_in_page_types_plugin)
-  config.page_types.register(Pageflow::InternalLinks.grid_page_type)
-  config.page_types.register(Pageflow::ExternalLinks.page_type)
-  config.page_types.register(Pageflow::BeforeAfter::PageType.new)
+  config.plugin(Pageflow::InternalLinks.plugin)
+  config.plugin(Pageflow::ExternalLinks.plugin)
+  config.plugin(Pageflow::LinkmapPage.plugin)
   config.page_types.register(Pageflow::TextPage.page_type)
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
+  config.page_types.register(Pageflow::BeforeAfter.page_type)
   config.page_types.register(Pageflow::Chart.page_type)
 
   # override the default player controls widget, to make slim player the default
@@ -34,7 +35,6 @@ Pageflow.configure do |config|
     end
   end
 
-  config.plugin(Pageflow::LinkmapPage.plugin)
   config.plugin(Scrollytelling::Navigation::Plugin.new)
   config.plugin(Pageflow::Oembed.plugin)
 

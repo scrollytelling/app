@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170812112543) do
+ActiveRecord::Schema.define(version: 20170903201441) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 191
@@ -209,16 +209,6 @@ ActiveRecord::Schema.define(version: 20170812112543) do
   end
 
   add_index "pageflow_image_files", ["parent_file_id", "parent_file_model_type"], name: "index_image_files_on_parent_id_and_parent_model_type", using: :btree
-
-  create_table "pageflow_linkmap_page_mask_sprites", force: :cascade do |t|
-    t.integer  "image_file_id",           limit: 4
-    t.string   "attachment_file_name",    limit: 255
-    t.string   "attachment_content_type", limit: 255
-    t.integer  "attachment_file_size",    limit: 8
-    t.datetime "attachment_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "pageflow_linkmap_page_mask_sprites", force: :cascade do |t|
     t.integer  "image_file_id",           limit: 4
