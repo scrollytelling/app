@@ -9,7 +9,7 @@
 //= require pageflow/embedded_video
 //= require pageflow/before_after
 //= require pageflow/chart
-//= require pageflow/oembed
+//  require pageflow/oembed
 
 // scrollytelling
 //= require scrollytelling/loading_spinner

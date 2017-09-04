@@ -34,11 +34,11 @@ gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
 gem 'pageflow-before-after'
 gem 'pageflow-chart'
-gem 'pageflow-oembed', path: '/Users/joost/Gems/pageflow-oembed'
+# gem 'pageflow-oembed'
 
 # Scrollytelling
-gem 'scrollytelling-navigation', path: '/Users/joost/Gems/scrollytelling-navigation'
-gem 'scrollytelling-loading_spinner', path: '/Users/joost/Gems/scrollytelling-loading_spinner'
+gem 'scrollytelling-navigation'
+gem 'scrollytelling-loading_spinner'
 
 group :development do
   gem 'spring'
