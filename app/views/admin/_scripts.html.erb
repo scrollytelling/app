@@ -9,6 +9,7 @@
       name: "<%= account.name %>",
       created_at: <%= account.created_at.to_i %>,
       entries_count: <%= account.entries_count %>,
+      company_website: "<%= account.default_theming.home_url %>",
       admin_account_url: "https://"+window.location.hostname+"/admin/accounts/#{account.id}"
     },
     <% end -%>
