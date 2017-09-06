@@ -19,6 +19,8 @@ Then start the server with `bin/rails s`.
 
 Remember you need to run background jobs to process uploads. See `Procfile`.
 
+To inspect the queues, visit `/background_jobs` with a web browser. You need to be authenticated to do so.
+
 ## Environment variables
 
 Make sure to create config/application.yml and set the ENV variables.
