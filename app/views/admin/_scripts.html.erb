@@ -8,7 +8,8 @@
       id: "<%= account.id %>",
       name: "<%= account.name %>",
       created_at: <%= account.created_at.to_i %>,
-      entries_count: <%= account.entries_count %>
+      entries_count: <%= account.entries_count %>,
+      admin_account_url: "https://"+window.location.hostname+"/admin/accounts/#{account.id}"
     },
     <% end -%>
     <%# Field values must be JSON Strings, Numbers or Booleans - Objects and Arrays will be rejected. -%>
@@ -17,6 +18,7 @@
       map do |membership|
         "#{membership.entity.name} (#{membership.role})"
       end.join(", ") %>",
+    admin_user_url: "https://"+window.location.hostname+"/admin/users/#{current_user.id}",
     created_at: <%= current_user.created_at.to_i %>,
     user_hash: "<%= OpenSSL::HMAC.hexdigest \
       'sha256',
