@@ -17,7 +17,7 @@
     memberships: "<%= current_user.
       memberships.
       map do |membership|
-        "#{membership.entity.name} (#{membership.role})"
+        "#{membership.entity.try(:name) || membership.entity.try(:title)} (#{membership.role})"
       end.join(", ") %>",
     admin_user_url: "https://"+window.location.hostname+"/admin/users/#{current_user.id}",
     created_at: <%= current_user.created_at.to_i %>,
