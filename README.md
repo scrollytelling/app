@@ -1,4 +1,6 @@
-[ ![Codeship Status for scrollytelling/app](https://codeship.com/projects/7f550840-f8e9-0132-4345-3a92bb520805/status?branch=master)](https://codeship.com/projects/86736)
+[![Codeship Status for scrollytelling/app](https://codeship.com/projects/7f550840-f8e9-0132-4345-3a92bb520805/status?branch=master)](https://codeship.com/projects/86736)
+
+[![Dependency Status](https://www.versioneye.com/user/projects/59afec9e0fb24f0032e40ad4/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59afec9e0fb24f0032e40ad4)
 
 ## Getting started
 

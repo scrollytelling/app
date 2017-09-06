@@ -26,6 +26,10 @@ gem "sentry-raven"
 gem "snitcher"
 gem "okcomputer"
 
+# We extend Devise to increase securitay.
+gem 'devise_zxcvbn'
+gem 'devise-uncommon_password'
+
 # Pageflow extensions
 gem 'pageflow-internal-links'
 gem 'pageflow-external-links'

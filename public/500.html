@@ -5,6 +5,13 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0">
+  <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
+  <script>
+    Raven.config('https://c9c7210466c84700bcacc413530df644@sentry.io/63915').install();
+    document.addEventListener('ravenSuccess', function (event) {
+      Raven.showReportDialog({eventId: event.data.event_id});
+    }, false);
+  </script>
     </head>
     <body>
 

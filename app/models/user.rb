@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, 
-         :recoverable, :rememberable, :trackable, :validatable
-
   include Pageflow::UserMixin
+
+  devise :database_authenticatable,
+         :recoverable, :rememberable, :trackable, :validatable,
+         :zxcvbnable, :uncommon_password
+
+  # Add words speficic to us zxcvnable
+  def weak_words
+    ['scrolly', 'scrollytelling', self.name]
+  end
 end

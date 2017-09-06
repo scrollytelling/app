@@ -19,6 +19,11 @@ module Storyboard
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     config.time_zone = 'Amsterdam'
 
+    # Be sure to have the adapter's gem in your Gemfile
+    # and follow the adapter's specific installation
+    # and deployment instructions.
+    config.active_job.queue_adapter = :resque
+
     # I found that in applications which explicitly change the I18n.load_path
     # in their application.rb app paths actually come last and thus can override translations:
     # https://github.com/codevise/pageflow/issues/496
