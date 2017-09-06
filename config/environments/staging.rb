@@ -88,14 +88,3 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
-
-# we have some permission Scheiße going on in staging.
-# Just keep the uploaded files so we can move on with our lives.
-require 'pageflow/hosted_file'
-module Pageflow
-  module HostedFile
-    def keep_on_filesystem_after_upload_to_s3?
-      true
-    end
-  end
-end
