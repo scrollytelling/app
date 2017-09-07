@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri');
+
+@font-face {
+	font-family: "Bagnard";
+	font-style: normal;
+	font-weight: 300;
+  font-display: swap;
+  src:  font-url('pageflow/themes/refugee_gardens/Bagnard.woff2') format('woff2'),
+        font-url('pageflow/themes/refugee_gardens/Bagnard.woff') format('woff');
+}
+
+$main-color: #133472;
+$title-font: 'Bagnard', serif;
+$body-font: 'Amiri', serif;
+
+// @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+@import "./base.scss";
+
+.entry {
+  // font-family: Calibri, 'PT Sans', system, sans-serif;
+
+  h2 {
+    // font-family: serif;
+  }
+
+  p {
+  }
+
+  span.title {
+    // font-weight: bold;
+  }
+
+  span.subtitle {
+    // text-transform: uppercase;
+  }
+
+  span.tagline {
+    // text-transform: uppercase;
+  }
+}
+
+.loader_logo,
+.js .page:first-child .contentWrapper:after {
+  // height: 100px;
+  // background-image: image-url("pageflow/themes/default/logo.png");
+}
+
+.js .page.invert:first-child .contentWrapper:after {
+  // height: 100px;
+  // background-image: image-url("pageflow/themes/default/logo-black.png");
+}

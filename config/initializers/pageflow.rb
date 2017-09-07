@@ -27,7 +27,7 @@ Pageflow.configure do |config|
   config.widget_types.register(Widgets::Analytics.default)
   %w(
     radio1 nos nieuwsuur volkskrant grasnapolsky beeldengeluid
-    amnesty sbb ed psv meerveerkracht
+    amnesty sbb ed psv meerveerkracht refugee_gardens
     stephaniestruijk blof ricostickstyphoon krisberry concertatsea
     buildingbridges omroepbrabant destijl).each do |account|
     config.features.register("analytics.#{account}") do |feature_config|
