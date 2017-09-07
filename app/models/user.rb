@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :zxcvbnable, :uncommon_password
+         :zxcvbnable
 
   # Add words speficic to us zxcvnable
   def weak_words

@@ -128,9 +128,6 @@ GEM
       warden (~> 1.2.3)
     devise-async (0.9.0)
       devise (~> 3.2)
-    devise-uncommon_password (0.1.0)
-      devise (>= 3.5, < 4.4)
-      rails (>= 4.2, < 5.2)
     devise_zxcvbn (4.4.1)
       devise
       zxcvbn-js (~> 4.4.1)
@@ -464,7 +461,6 @@ DEPENDENCIES
   coffee-rails
   cucumber-rails
   database_cleaner
-  devise-uncommon_password
   devise_zxcvbn
   factory_girl_rails
   figaro
