@@ -1,5 +1,5 @@
 require 'resque/server'
-require 'rescue/scheduler/server'
+require 'resque/scheduler/server'
 
 Rails.application.routes.draw do
   # route invalid JS to a 404 since the Facebook spider keeps requesting this.
