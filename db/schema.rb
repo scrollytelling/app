@@ -236,7 +236,7 @@ ActiveRecord::Schema.define(version: 20170913131832) do
   create_table "pageflow_oembed_oembeds", force: :cascade do |t|
     t.string   "type",             limit: 255,   default: "", null: false
     t.string   "version",          limit: 255,   default: "", null: false
-    t.string   "url",              limit: 191,   default: "", null: false
+    t.string   "url",              limit: 255,   default: "", null: false
     t.string   "title",            limit: 255
     t.string   "author_name",      limit: 255
     t.string   "author_url",       limit: 255
