@@ -27,6 +27,37 @@ To inspect the queues, visit `/background_jobs` with a web browser. You need to 
 
 Make sure to create config/application.yml and set the ENV variables.
 
+
+## CORS
+
+Since Pageflow 12, [CORS headers are required on the output bucket](https://github.com/codevise/pageflow/blob/a8a53e57b8ca6003d9fc5f971bb878680264528b/doc/setting_up_external_services.md#bucket-configuration).
+
+To enable them, go into your output bucket configuration and paste into CORS configuration:
+
+``` xml
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+    <CORSRule>
+        <AllowedOrigin>*</AllowedOrigin>
+        <AllowedMethod>GET</AllowedMethod>
+        <MaxAgeSeconds>28800</MaxAgeSeconds>
+        <AllowedHeader>*</AllowedHeader>
+    </CORSRule>
+</CORSConfiguration>
+```
+
+To debug assets, this command is your best friend:
+
+``` shell
+curl \
+  -H "Origin: https://verhalen.volkskrant.nl/bla" \
+  -H "Access-Control-Request-Method: GET" \
+  -H "Access-Control-Request-Headers: X-Requested-With" \
+  -X OPTIONS \
+  --verbose \ https://output.scrollytelling.io/v1/main/pageflow/video_files/000/001/963/dash/medium/rendition-video-1.mp4
+```
+
+This should return with `204 No Content`.
+
 ## Deploying a new theme
 
 Register it:
