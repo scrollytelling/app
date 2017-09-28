@@ -51,7 +51,7 @@ Pageflow.configure do |config|
     blof buildingbridges ricostickstyphoon sbb worldpressphoto
     phtgrphr waddenzee humanrightswatch alab ed krisberry meerveerkracht
     yip destijl omroepbrabant paxforpeace zevensloten
-    hu).each do |theme|
+    hu centraalmuseum).each do |theme|
       config.themes.register(theme)
   end
 

@@ -1,9 +1,13 @@
-$main-color: #133472;
-
+// import or declare fonts
 // @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
+// variables
+$main-color: #133472;
+
+// import base stylesheet
 @import "./base.scss";
 
+// custom styles
 .entry {
   // font-family: Calibri, 'PT Sans', system, sans-serif;
 

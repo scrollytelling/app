@@ -1,0 +1,41 @@
+// @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+$main-color: #FD3DB9;
+$body-font: "Andale Mono WT", "Andale Mono", Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$title-font: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "HelveticaNeue-CondensedBlack", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+
+@import "./base.scss";
+
+.entry {
+  // font-family: Calibri, 'PT Sans', system, sans-serif;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  p {
+  }
+
+  span.title {
+    // font-weight: bold;
+  }
+
+  span.subtitle {
+    // text-transform: uppercase;
+  }
+
+  span.tagline {
+    // text-transform: uppercase;
+  }
+}
+
+.loader_logo,
+.js .page:first-child .contentWrapper:after {
+  height: 200px;
+  background-image: image-url("pageflow/themes/centraalmuseum/logo-centraal-museum-tekst-wit.svg");
+}
+
+.js .page.invert:first-child .contentWrapper:after {
+  height: 200px;
+  background-image: image-url("pageflow/themes/centraalmuseum/logo-centraal-museum-tekst-zwart.svg");
+}
