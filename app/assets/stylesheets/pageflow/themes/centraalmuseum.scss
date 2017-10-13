@@ -1,10 +1,26 @@
-// @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@font-face {
+  font-family: 'Franklin Gothic Book';
+  font-style: normal;
+  font-weight: normal;
+  src: font-url('pageflow/themes/centraalmuseum/FRABK.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Franklin Gothic Book Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: font-url('pageflow/themes/centraalmuseum/FRABKIT.woff') format('woff');
+}
 
 $main-color: #FD3DB9;
-$body-font: "Andale Mono WT", "Andale Mono", Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$body-font: "Franklin Gothic Book", system, sans-serif;
 $title-font: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "HelveticaNeue-CondensedBlack", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
 
 @import "./base.scss";
+
+#scrollytelling-navigation a.active span {
+  background: $main-color;
+}
 
 .entry {
   // font-family: Calibri, 'PT Sans', system, sans-serif;
