@@ -23,7 +23,7 @@ gem 'rack-attack'
 gem 'figaro'
 gem 'whenever', require: false
 gem "sentry-raven"
-gem "snitcher"
+gem "resque-sentry"
 gem "okcomputer"
 
 # We extend Devise to increase securitay.
