@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.3.4'
 
 # rails
-gem 'rails', '4.2.9'
+gem 'rails', '4.2.10'
 
 # database
 gem 'mysql2'
