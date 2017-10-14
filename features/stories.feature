@@ -19,6 +19,13 @@ Feature: stories
     And I click "Update Story"
     Then I see "Story was successfully updated"
 
+  Scenario: I can preview a story
+    Given a story "Vertical cities"
+    When I click "Stories"
+    And I click "Vertical cities"
+    And I click "Preview"
+    Then I see "Vertical cities"
+
   @javascript
   Scenario: I can publish a story
     Given a story "Vertical cities"
