@@ -79,7 +79,7 @@ pageflow/themes/newtheme/logo_print.png
 pageflow/themes/newtheme/favicon.ico
 ```
 
-Place fonts in `app/assets/fonts/pageflow/themes/newtheme`. Only use .woff and maybe .woff2—these formats are implemented in all browsers. Other formats are just pollution.
+Place fonts in `app/assets/fonts/pageflow/themes/newtheme`. Only use `.woff` and `.woff2`. These formats are implemented in all browsers. Other formats are just pollution.
 
 ## Deploying new analytics
 

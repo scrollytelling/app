@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'TheSans';
+    src: font-url('pageflow/themes/anwb/TheSansC4s-Bold.woff2') format('woff2'),
+         font-url('pageflow/themes/anwb/TheSansC4s-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: font-url('pageflow/themes/anwb/TheSansC4s-BoldItalic.woff2') format('woff2'),
+         font-url('pageflow/themes/anwb/TheSansC4s-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: font-url('pageflow/themes/anwb/TheSansC4s-SemiBoldItalic.woff2') format('woff2'),
+         font-url('pageflow/themes/anwb/TheSansC4s-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+// variables
+$main-color: #003c85;
+$title-font: 'TheSans', system;
+$body-font: Verdana, Arial, sans-serif;
+
+// import base stylesheet
+@import "./base.scss";
+
+// custom styles
+.entry {
+  // font-family: Calibri, 'PT Sans', system, sans-serif;
+
+  h2 {
+    span {
+      line-height: 1.5;
+    }
+  }
+
+  p {
+  }
+
+  span.title {
+    font-style: italic;
+  }
+
+  span.subtitle {
+    line-height: 1.4;
+  }
+
+  span.tagline {
+    // text-transform: uppercase;
+  }
+}
+
+.loader_logo,
+.js .page:first-child .contentWrapper:after {
+  height: 100px;
+  background-image: image-url("pageflow/themes/anwb/ANWB.png");
+}
+
+.js .page.invert:first-child .contentWrapper:after {
+  height: 100px;
+  background-image: image-url("pageflow/themes/anwb/ANWB.png");
+}
