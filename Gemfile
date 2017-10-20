@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # ruby
-ruby '2.3.4'
+ruby '2.4.2'
 
 # rails
 gem 'rails', '4.2.10'
