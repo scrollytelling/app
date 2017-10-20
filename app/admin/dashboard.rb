@@ -16,7 +16,7 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Cloud 66" do
           div do
-            img src: "https://app.cloud66.com/stacks/badge/5ab71f9be03652639847e5da1362cafe.svg", height: 18
+            img src: "https://app.cloud66.com/stacks/badge/10057d9994bc47c4edd94b88e9fce635.svg", height: 18
           end
           i "Cloud 66 zet het vervolgens geautomatiseerd online."
         end
