@@ -19,6 +19,8 @@ production:
   load_balancer:
     configuration:
       httpchk: /okcomputer
+    server:
+      unique_name: lb
   rails:
     configuration:
       <<: *config
