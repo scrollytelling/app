@@ -56,13 +56,31 @@ $body-font: Verdana, Arial, sans-serif;
   }
 }
 
+.page {
+  .shadow {
+    background: -moz-linear-gradient(left, $main-color 0%, transparent 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, $main-color), color-stop(100%, transparent));
+    background: -webkit-linear-gradient(left, $main-color 0%, transparent 100%);
+    background: -o-linear-gradient(left, $main-color 0%, transparent 100%);
+    background: -ms-linear-gradient(left, $main-color 0%, transparent 100%);
+    background: linear,to right,$main-color 0%,transparent 100%;
+  }
+}
+
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
-  height: 100px;
+  height: 50px;
   background-image: image-url("pageflow/themes/anwb/ANWB.png");
 }
 
 .js .page.invert:first-child .contentWrapper:after {
-  height: 100px;
+  height: 50px;
   background-image: image-url("pageflow/themes/anwb/ANWB.png");
+}
+
+// Override indicators
+.entry .indicator,
+ul.scrollytelling-home_button {
+  font-family: $title-font;
+  text-transform: none;
 }
