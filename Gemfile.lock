@@ -61,6 +61,8 @@ GEM
       activerecord (> 3.2.0, < 5.0)
     arbre (1.1.1)
       activesupport (>= 3.0.0)
+    archive-zip (0.7.0)
+      io-like (~> 0.3.0)
     arel (6.0.4)
     aws-sdk (1.67.0)
       aws-sdk-v1 (= 1.67.0)
@@ -87,9 +89,13 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    childprocess (0.8.0)
+      ffi (~> 1.0, >= 1.0.11)
+    chromedriver-helper (1.1.0)
+      archive-zip (~> 0.7.0)
+      nokogiri (~> 1.6)
     chronic (0.10.2)
     climate_control (0.2.0)
-    cliver (0.3.2)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.2.2)
@@ -174,6 +180,7 @@ GEM
       has_scope (~> 0.6)
       railties (>= 3.2, < 5.2.x)
       responders
+    io-like (0.3.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -286,10 +293,6 @@ GEM
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
       mime-types
-    poltergeist (1.16.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      websocket-driver (>= 0.2.0)
     polyamorous (1.3.1)
       activerecord (>= 3.0)
     public_suffix (3.0.0)
@@ -398,6 +401,7 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.0)
+    rubyzip (1.2.1)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.5.2)
@@ -417,6 +421,9 @@ GEM
     scrollytelling-navigation (12.0.2)
       pageflow (~> 12.x)
       rails (>= 3.0, < 5.0)
+    selenium-webdriver (3.6.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
     sentry-raven (2.7.1)
       faraday (>= 0.7.6, < 1.0)
     sinatra (1.4.8)
@@ -451,9 +458,6 @@ GEM
       activemodel (>= 4.2)
       debug_inspector
       railties (>= 4.2)
-    websocket-driver (0.7.0)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
     webvtt-ruby (0.3.2)
     whenever (0.9.7)
       chronic (>= 0.6.3)
@@ -471,6 +475,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chromedriver-helper
   coffee-rails
   cucumber-rails
   database_cleaner
@@ -488,7 +493,6 @@ DEPENDENCIES
   pageflow-internal-links
   pageflow-linkmap-page
   pageflow-text-page
-  poltergeist
   rack-attack
   rails (= 4.2.10)
   redis-rails
@@ -497,6 +501,7 @@ DEPENDENCIES
   sass-rails
   scrollytelling-loading_spinner
   scrollytelling-navigation
+  selenium-webdriver
   sentry-raven
   spring
   state_machine!
