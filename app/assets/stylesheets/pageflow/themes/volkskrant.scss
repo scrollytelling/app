@@ -16,19 +16,23 @@ $title-font: 'Crimson Text', Georgia, serif;
 }
 
 .js .page:first-child .contentWrapper:after {
+  height: 45px;
+  top: 15px;
   background-image: image-url("pageflow/themes/volkskrant/de-volkskrant-black.svg");
 }
 
 .js .page.invert:first-child .contentWrapper:after {
+  height: 45px;
+  top: 15px;
   background-image: image-url("pageflow/themes/volkskrant/de-volkskrant-white.svg");
 }
 
 @include mobile {
   .js .page:first-child .contentWrapper:after {
-    background-image: image-url("pageflow/themes/volkskrant/V-black.svg");
+    background-image: image-url("pageflow/themes/volkskrant/V-white.svg");
   }
 
   .js .page.invert:first-child .contentWrapper:after {
-    background-image: image-url("pageflow/themes/volkskrant/V-white.svg");
+    background-image: image-url("pageflow/themes/volkskrant/V-black.svg");
   }
 }
