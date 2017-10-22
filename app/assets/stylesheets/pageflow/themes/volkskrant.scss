@@ -12,15 +12,23 @@ $title-font: 'Crimson Text', Georgia, serif;
 }
 
 .loader_logo {
-  background-image: image-url("pageflow/themes/volkskrant/logo.png");
+  background-image: image-url("pageflow/themes/volkskrant/loading.svg");
 }
 
 .js .page:first-child .contentWrapper:after {
-  height: 30px;
-  background-image: image-url("pageflow/themes/volkskrant/logo.png");
+  background-image: image-url("pageflow/themes/volkskrant/de-volkskrant-black.svg");
 }
 
 .js .page.invert:first-child .contentWrapper:after {
-  height: 30px;
-  background-image: image-url("pageflow/themes/volkskrant/logo_header_invert.png");
+  background-image: image-url("pageflow/themes/volkskrant/de-volkskrant-white.svg");
+}
+
+@include mobile {
+  .js .page:first-child .contentWrapper:after {
+    background-image: image-url("pageflow/themes/volkskrant/V-black.svg");
+  }
+
+  .js .page.invert:first-child .contentWrapper:after {
+    background-image: image-url("pageflow/themes/volkskrant/V-white.svg");
+  }
 }
