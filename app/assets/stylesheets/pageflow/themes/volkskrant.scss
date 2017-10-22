@@ -18,13 +18,13 @@ $title-font: 'Crimson Text', Georgia, serif;
 .js .page:first-child .contentWrapper:after {
   height: 45px;
   top: 15px;
-  background-image: image-url("pageflow/themes/volkskrant/de-volkskrant-black.svg");
+  background-image: image-url("pageflow/themes/volkskrant/de-volkskrant-white.svg");
 }
 
 .js .page.invert:first-child .contentWrapper:after {
   height: 45px;
   top: 15px;
-  background-image: image-url("pageflow/themes/volkskrant/de-volkskrant-white.svg");
+  background-image: image-url("pageflow/themes/volkskrant/de-volkskrant-black.svg");
 }
 
 @include mobile {
