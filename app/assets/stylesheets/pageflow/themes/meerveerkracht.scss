@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
+@font-face {
+    font-family: 'Calibri';
+    src: font-url('pageflow/themes/meerveerkracht/Calibri.woff2') format('woff2'),
+         font-url('pageflow/themes/meerveerkracht/Calibri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: font-url('pageflow/themes/meerveerkracht/CALIBRIB.woff2') format('woff2'),
+         font-url('pageflow/themes/meerveerkracht/CALIBRIB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 $main-color: #ca3249; // e498a4 lighter // f4d6db lightest
 $body-font: Calibri, 'PT Sans', sans-serif;
 
@@ -29,7 +45,7 @@ $body-font: Calibri, 'PT Sans', sans-serif;
 
 .js .page:first-child .contentWrapper {
 	@include mobile {
-		margin-top: 80px; //as the logo is quite tall
+		padding-top: 80px; //as the logo is quite tall
 	}
 }
 
@@ -39,8 +55,6 @@ $body-font: Calibri, 'PT Sans', sans-serif;
   background-image: image-url("pageflow/themes/meerveerkracht/logo.png");
 
   @include mobile {
-    left: 20px;
-    top: 40px;
     height: 60px;
   }
 }
