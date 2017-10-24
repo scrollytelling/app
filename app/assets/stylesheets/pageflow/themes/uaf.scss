@@ -27,7 +27,7 @@ $body-font: 'Calibri Light', system, sans-serif;
 
 // custom styles
 .entry {
-  // font-family: Calibri, 'PT Sans', system, sans-serif;
+  font-size: 20px;
 
   h2 {
     // font-family: serif;
@@ -36,12 +36,16 @@ $body-font: 'Calibri Light', system, sans-serif;
   p {
   }
 
+  span {
+    line-height: 1.6;
+  }
+
   span.title {
     // font-weight: bold;
   }
 
   span.subtitle {
-    // text-transform: uppercase;
+    margin-top: 0;
   }
 
   span.tagline {
@@ -51,11 +55,13 @@ $body-font: 'Calibri Light', system, sans-serif;
 
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
+  top: 14px;
   height: 100px;
   background-image: image-url("pageflow/themes/uaf/LogoUAF.svg");
 }
 
 .js .page.invert:first-child .contentWrapper:after {
+  top: 14px;
   height: 100px;
   background-image: image-url("pageflow/themes/uaf/LogoUAF.svg");
 }
