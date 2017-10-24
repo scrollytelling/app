@@ -9,7 +9,10 @@
 
 .blank_entry h2:before {
   background-image: asset-url("logo60x60@2x.png");
-  background-size: 60px;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
 }
 
 [data-wysihtml5-command="formatInline"] {
