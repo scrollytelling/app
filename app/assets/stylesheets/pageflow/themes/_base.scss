@@ -44,9 +44,12 @@ $font-size: 18px !default;
 @import "./external_links_page_overrides";
 @import "./embedded_video_page_overrides";
 
-.entry {
-	text-rendering: optimizeLegibility;
+h1, h2, h3, h4, p, li, span, td, a, label, select, input, textarea, button, :after {
 	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+.entry {
 	font-family: $body-font;
 	line-height: 1.6;
 	font-size: $font-size;
