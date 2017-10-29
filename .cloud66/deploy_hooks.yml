@@ -1,0 +1,7 @@
+production:
+  after_rails:
+    - command: cp -r $STACK_PATH/.cloud66/server.d /opt/nginx/conf
+      target: rails
+      run_as: root
+      apply_during: all
+      run_on: all_servers

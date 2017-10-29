@@ -1,12 +1,5 @@
-config: &config
-  nginx:
-    cors:
-      origin: '*'
-      methods: 'GET, OPTIONS'
 staging:
   rails:
-    configuration:
-      <<: *config
     server:
       unique_name: app
   mysql:
@@ -22,8 +15,6 @@ production:
     server:
       unique_name: lb
   rails:
-    configuration:
-      <<: *config
     server:
       unique_name: app
   mysql:
