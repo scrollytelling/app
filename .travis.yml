@@ -1,16 +1,19 @@
+dist: trusty
 language: ruby
 cache: bundler
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 before_script:
-- export RAILS_ENV=test
-- bin/rake db:create
-- bin/rake db:schema:load
+  - bin/rake db:create
+  - bin/rake db:schema:load
 script:
-- bundle exec cucumber --tags @javascript
+  - bundle exec cucumber --tags @javascript
 addons:
   browserstack:
     username: joostbaaij1
     access_key:
       secure: H6MTMLtCxthuV4o6CVacvLKTOzDEtM7ByGHEyV7WT0LpWdbSX0nz4FDKMgi6Nq3e5juMv2KIGicj9mCp+nvvRIjFMvuIBIpUIN5HqquUSPuLKh2ol4P9F3n10ZBQD1nUXz2uSkxHcxMGhYIVtTeYgZh1bS1Fhk9625squnxOjaTCHOi59LKSZz5k3bmpzegWzPwjiW1YVP7gXXVIzYhYHSTizlBK2kcke8DEvKR2cqt0fE2ZqZ5Vys+R6d7G5CHx2P+sMSUqKPUZa3kEasKpvpebV3exeFA4OK88hcpoM3wm5jimZgdhkNDQKIHk1qPpZz+icd3n+6FiObXjpEzim3Q/ANj58moXJW8njwP+QL7jUqD/rZc1gnpBJXuZVG9NLVT/7OuGa/TFav4j6yDWdl+4Olh/VUtV3/gTQNzvw/aFr8sKOzx8U+ojGtXuS8LJOFBd+3ktcujD3j/2hT0AOm8uCUpRQCw3jy74chMeNopEpr0Eq4Fffp/ZUAAozq3PccxK/8BP/U1s0ylTkeQ2f2ETS7iO0YQQrY2yT6+1whD92vfS0+uJ1IruvST634/djcDZnoaGAfaN1sGokzM2yzfpGBOxJf+fKAyZ9L5uMorpygRrrDVcEEHqTr8/UnZav4FimKGRCIdFNkfMDW53Bf1T/xRNMoLAPVMRx2FknxA=
+  chrome: stable
 notifications:
   email: false
   slack:

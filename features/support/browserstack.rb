@@ -1,26 +1,30 @@
-require 'selenium-webdriver'
+if ENV['BROWSERSTACK_LOCAL_IDENTIFIER']
 
-# Input capabilities
-caps = Selenium::WebDriver::Remote::Capabilities.new
-caps['browserstack.local'] = 'true'
-caps['browserstack.localIdentifier'] = ENV['BROWSERSTACK_LOCAL_IDENTIFIER']
-caps['os'] = ENV['BS_AUTOMATE_OS']
-caps['os_version'] = ENV['BS_AUTOMATE_OS_VERSION']
-caps['browser'] = ENV['SELENIUM_BROWSER']
-caps['browser_version'] = ENV['SELENIUM_VERSION']
-caps['browserstack.debug'] = "true"
+  require 'selenium-webdriver'
 
-caps['project'] = ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT']
-caps['build'] = ENV['BS_AUTOMATE_BUILD'] if ENV['BS_AUTOMATE_BUILD']
+  # Input capabilities
+  caps = Selenium::WebDriver::Remote::Capabilities.new
+  caps['browserstack.local'] = 'true'
+  caps['browserstack.localIdentifier'] = ENV['BROWSERSTACK_LOCAL_IDENTIFIER']
+  caps['os'] = ENV['BS_AUTOMATE_OS']
+  caps['os_version'] = ENV['BS_AUTOMATE_OS_VERSION']
+  caps['browser'] = ENV['SELENIUM_BROWSER']
+  caps['browser_version'] = ENV['SELENIUM_VERSION']
+  caps['browserstack.debug'] = "true"
 
-browser = Selenium::WebDriver.for(:remote,
-  :url => "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
-  :desired_capabilities => caps)
+  caps['project'] = ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT']
+  caps['build'] = ENV['BS_AUTOMATE_BUILD'] if ENV['BS_AUTOMATE_BUILD']
 
-Before do |scenario|
-  @browser = browser
-end
+  browser = Selenium::WebDriver.for(:remote,
+    :url => "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
+    :desired_capabilities => caps)
 
-at_exit do
-  browser.quit
+  Before do |scenario|
+    @browser = browser
+  end
+
+  at_exit do
+    browser.quit
+  end
+
 end
