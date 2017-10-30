@@ -2,10 +2,10 @@ language: ruby
 cache: bundler
 before_script:
 - export RAILS_ENV=test
-- bin/rake db:setup
+- bin/rake db:create
 - bin/rake db:schema:load
 script:
-- bundle exec rake
+- bin/cucumber
 addons:
   browserstack:
     username: joostbaaij1
