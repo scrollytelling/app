@@ -1,13 +1,16 @@
 language: ruby
 cache: bundler
 before_script:
-  - export RAILS_ENV=test
-  - bin/rake db:setup
-  - bin/rake db:schema:load
+- export RAILS_ENV=test
+- bin/rake db:setup
+- bin/rake db:schema:load
 script:
-  - bundle exec rake
+- bundle exec rake
 addons:
   browserstack:
     username: joostbaaij1
     access_key:
       secure: H6MTMLtCxthuV4o6CVacvLKTOzDEtM7ByGHEyV7WT0LpWdbSX0nz4FDKMgi6Nq3e5juMv2KIGicj9mCp+nvvRIjFMvuIBIpUIN5HqquUSPuLKh2ol4P9F3n10ZBQD1nUXz2uSkxHcxMGhYIVtTeYgZh1bS1Fhk9625squnxOjaTCHOi59LKSZz5k3bmpzegWzPwjiW1YVP7gXXVIzYhYHSTizlBK2kcke8DEvKR2cqt0fE2ZqZ5Vys+R6d7G5CHx2P+sMSUqKPUZa3kEasKpvpebV3exeFA4OK88hcpoM3wm5jimZgdhkNDQKIHk1qPpZz+icd3n+6FiObXjpEzim3Q/ANj58moXJW8njwP+QL7jUqD/rZc1gnpBJXuZVG9NLVT/7OuGa/TFav4j6yDWdl+4Olh/VUtV3/gTQNzvw/aFr8sKOzx8U+ojGtXuS8LJOFBd+3ktcujD3j/2hT0AOm8uCUpRQCw3jy74chMeNopEpr0Eq4Fffp/ZUAAozq3PccxK/8BP/U1s0ylTkeQ2f2ETS7iO0YQQrY2yT6+1whD92vfS0+uJ1IruvST634/djcDZnoaGAfaN1sGokzM2yzfpGBOxJf+fKAyZ9L5uMorpygRrrDVcEEHqTr8/UnZav4FimKGRCIdFNkfMDW53Bf1T/xRNMoLAPVMRx2FknxA=
+notifications:
+  slack:
+    secure: N6VGMImlXR1XY/hDMkwlSjiVA8S+H29ldKwmq+d/kkIH8xoTgl3uZymyjKPASoEsfLE9VonPuCtKCkYydWWxmHfFz7L6pIgaraybhoyQ5fF6ZK/JvIc+UZVvj4wPOl4Chsgnt75VY4Zz/z+Il2E+EOnt2qbJAT+KVjR4FkNFDLc1Ih5nzqF6Zp0WOMJokgYQi+TD0k/mspDdmZhpBZ2QsQ9/OheIyf8XKcCxvHddYB1oVCHYvdHhn7Kz8c8DhQrxkk18VSeYQ0Yd9hH+qIDCPNrrqULTpU//jFYzX0vna0LJIflyeLuxHIjSJmHiw6uD06jWVjrO5zVJEPpAWeEog3VytqUdRvqsA1S7OeP92da7bmUlQJ3FkicM0EbXWYWzfbpa3rCi4yzUI7P8GR+HWQiaKzA0EJU+dFYN52FihAK6y5dqBgX0dSQHYybW9/dKJbh2ppR/HaiYpUIXb3hahzTigibQxpLxQzauKJDlzC9XXVWLZLrhQNPEDjaAYe9/Z9jvpY29KMeCyM9qrbyp/In8TIxp2YCedVm7RptdDLHPlhRnW1V3uEShF0ZO8PcC2gBqz8kfC5hKqDVAmZ9qVsvzwZd57Y15ihhKEqmKNAXFNE/rAHveeRkKg9CFWX1P/69ankNOAXCFmOnIH3Q5bKgf76133H1Mst0hKE8HuXM=
