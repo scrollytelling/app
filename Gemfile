@@ -37,7 +37,6 @@ gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
 gem 'pageflow-before-after'
 gem 'pageflow-chart'
-# gem 'pageflow-oembed'
 
 # Scrollytelling
 gem 'scrollytelling-navigation'

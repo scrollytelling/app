@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170913131832) do
+ActiveRecord::Schema.define(version: 20171030161913) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 191
@@ -232,29 +232,6 @@ ActiveRecord::Schema.define(version: 20170913131832) do
 
   add_index "pageflow_memberships", ["entity_id"], name: "index_pageflow_memberships_on_entity_id", using: :btree
   add_index "pageflow_memberships", ["user_id"], name: "index_pageflow_memberships_on_user_id", using: :btree
-
-  create_table "pageflow_oembed_oembeds", force: :cascade do |t|
-    t.string   "type",             limit: 255,   default: "", null: false
-    t.string   "version",          limit: 255,   default: "", null: false
-    t.string   "url",              limit: 255,   default: "", null: false
-    t.string   "title",            limit: 255
-    t.string   "author_name",      limit: 255
-    t.string   "author_url",       limit: 255
-    t.text     "html",             limit: 65535
-    t.integer  "width",            limit: 8
-    t.integer  "height",           limit: 8
-    t.string   "provider_name",    limit: 255
-    t.string   "provider_url",     limit: 255
-    t.integer  "cache_age",        limit: 8
-    t.datetime "cache_until"
-    t.string   "thumbnail_url",    limit: 255
-    t.integer  "thumbnail_width",  limit: 8
-    t.integer  "thumbnail_height", limit: 8
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "pageflow_oembed_oembeds", ["url"], name: "index_pageflow_oembed_oembeds_on_url", unique: true, using: :btree
 
   create_table "pageflow_pages", force: :cascade do |t|
     t.integer  "chapter_id",            limit: 4
