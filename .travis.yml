@@ -7,7 +7,7 @@ before_script:
   - bin/rake db:create
   - bin/rake db:schema:load
 script:
-  - bundle exec cucumber --tags @javascript
+  - bundle exec cucumber --profile browserstack
 addons:
   browserstack:
     username: joostbaaij1

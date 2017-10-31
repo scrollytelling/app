@@ -1,5 +1,7 @@
 Given(/^a story "(.*?)"$/) do |title|
-  @story = Pageflow::Entry.create! title: title, theming: Pageflow::Theming.first, account: Pageflow::Account.first
+  account(name: "Story Account") do |account|
+    @story = sample_entry(account: account, title: title)
+  end
 end
 
 When(/^I publish the story$/) do
