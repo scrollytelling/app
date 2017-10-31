@@ -1,6 +1,6 @@
 require 'chromedriver/helper'
 
-Capybara.register_driver :headless_chrome do |app|
+Capybara.register_driver :javascript_driver do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
     chromeOptions: { args: %w(headless disable-gpu) }
   )
@@ -9,5 +9,3 @@ Capybara.register_driver :headless_chrome do |app|
     browser: :chrome,
     desired_capabilities: capabilities
 end
-
-Capybara.javascript_driver = :headless_chrome

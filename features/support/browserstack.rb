@@ -1,8 +1,6 @@
-if ENV['BROWSERSTACK_LOCAL_IDENTIFIER']
+require 'selenium/webdriver'
 
-  require 'selenium-webdriver'
-
-  # Input capabilities
+Capybara.register_driver :browserstack_driver do |app|
   caps = Selenium::WebDriver::Remote::Capabilities.new
   caps['browserstack.local'] = 'true'
   caps['browserstack.localIdentifier'] = ENV['BROWSERSTACK_LOCAL_IDENTIFIER']
@@ -19,7 +17,7 @@ if ENV['BROWSERSTACK_LOCAL_IDENTIFIER']
     :url => "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
     :desired_capabilities => caps)
 
-  Before do |scenario|
+  Before '@browserstack' do
     @browser = browser
   end
 
