@@ -13,9 +13,9 @@ Capybara.register_driver :browserstack_driver do |app|
   caps['project'] = ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT']
   caps['build'] = ENV['BS_AUTOMATE_BUILD'] if ENV['BS_AUTOMATE_BUILD']
 
-  browser = Selenium::WebDriver.for(:remote,
-    :url => "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
-    :desired_capabilities => caps)
+  browser = Capybara::Selenium::Driver.new app,
+    url: "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
+    desired_capabilities: capabilities
 
   Before '@browserstack' do
     @browser = browser
