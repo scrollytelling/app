@@ -1,6 +1,4 @@
-# Deliver devise mails inside resque jobs.
-
 require 'devise/async'
 
-Devise::Async.enabled = Rails.env.production?
-Devise::Async.backend = :resque
+# We do not use Async devise because Resque is unreliable.
+Devise::Async.enabled = false
