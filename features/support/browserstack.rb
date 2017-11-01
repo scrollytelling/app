@@ -1,5 +1,4 @@
 require 'selenium-webdriver'
-require 'browserstack/local'
 
 Capybara.register_driver :browserstack do |app|
   options = {}
@@ -15,11 +14,7 @@ Capybara.register_driver :browserstack do |app|
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(options)
 
-  # Start browserstack local right here, so we can tear it down at exit.
-  bs_local = BrowserStack::Local.new
-  bs_local.start(key: ENV['BROWSERSTACK_ACCESS_KEY'])
-
-  Capybara::Selenium::Driver.new app,
+  $browserstack_driver = Capybara::Selenium::Driver.new app,
     browser: :remote,
     url: "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
     desired_capabilities: capabilities
@@ -29,5 +24,5 @@ Capybara.run_server = false
 
 # Stop browserstack local at the end of the run.
 at_exit do
-  bs_local.stop if bs_local
+  $browserstack_driver.quit
 end
