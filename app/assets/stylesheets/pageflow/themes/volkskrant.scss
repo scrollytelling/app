@@ -31,8 +31,4 @@ $title-font: 'Crimson Text', Georgia, serif;
   .js .page:first-child .contentWrapper:after {
     background-image: image-url("pageflow/themes/volkskrant/V-white.svg");
   }
-
-  .js .page.invert:first-child .contentWrapper:after {
-    background-image: image-url("pageflow/themes/volkskrant/V-black.svg");
-  }
 }
