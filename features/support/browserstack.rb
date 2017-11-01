@@ -1,30 +1,32 @@
-if ENV['BROWSERSTACK_LOCAL_IDENTIFIER']
+require 'selenium-webdriver'
+require 'browserstack/local'
 
-  require 'selenium-webdriver'
+Capybara.register_driver :browserstack do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new({
+    'browserstack.local' => 'true',
+    'browserstack.localIdentifier' => ENV['BROWSERSTACK_LOCAL_IDENTIFIER'],
+    'os' => ENV['BS_AUTOMATE_OS'],
+    'os_version' => ENV['BS_AUTOMATE_OS_VERSION'],
+    'browser' => ENV['SELENIUM_BROWSER']
+    'browser_version' => ENV['SELENIUM_VERSION']
+    'browserstack.debug' => "true"
+    'project' => ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT']
+    'build' => ENV['BS_AUTOMATE_BUILD'] if ENV['BS_AUTOMATE_BUILD']
+  })
 
-  # Input capabilities
-  caps = Selenium::WebDriver::Remote::Capabilities.new
-  caps['browserstack.local'] = 'true'
-  caps['browserstack.localIdentifier'] = ENV['BROWSERSTACK_LOCAL_IDENTIFIER']
-  caps['os'] = ENV['BS_AUTOMATE_OS']
-  caps['os_version'] = ENV['BS_AUTOMATE_OS_VERSION']
-  caps['browser'] = ENV['SELENIUM_BROWSER']
-  caps['browser_version'] = ENV['SELENIUM_VERSION']
-  caps['browserstack.debug'] = "true"
+  # Start browserstack local right here, so we can tear it down at exit.
+  bs_local = BrowserStack::Local.new
+  bs_local.start(key: ENV['BROWSERSTACK_ACCESS_KEY'])
 
-  caps['project'] = ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT']
-  caps['build'] = ENV['BS_AUTOMATE_BUILD'] if ENV['BS_AUTOMATE_BUILD']
+  Capybara::Selenium::Driver.new app,
+    browser: :remote,
+    url: "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
+    desired_capabilities: capabilities
+end
 
-  browser = Selenium::WebDriver.for(:remote,
-    :url => "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
-    :desired_capabilities => caps)
+Capybara.run_server = false
 
-  Before do |scenario|
-    @browser = browser
-  end
-
-  at_exit do
-    browser.quit
-  end
-
+# Stop browserstack local at the end of the run.
+at_exit do
+  bs_local.stop if bs_local
 end
