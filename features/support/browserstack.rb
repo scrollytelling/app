@@ -7,10 +7,10 @@ Capybara.register_driver :browserstack do |app|
     'browserstack.localIdentifier' => ENV['BROWSERSTACK_LOCAL_IDENTIFIER'],
     'os' => ENV['BS_AUTOMATE_OS'],
     'os_version' => ENV['BS_AUTOMATE_OS_VERSION'],
-    'browser' => ENV['SELENIUM_BROWSER']
-    'browser_version' => ENV['SELENIUM_VERSION']
-    'browserstack.debug' => "true"
-    'project' => ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT']
+    'browser' => ENV['SELENIUM_BROWSER'],
+    'browser_version' => ENV['SELENIUM_VERSION'],
+    'browserstack.debug' => "true",
+    'project' => ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT'],
     'build' => ENV['BS_AUTOMATE_BUILD'] if ENV['BS_AUTOMATE_BUILD']
   })
 
