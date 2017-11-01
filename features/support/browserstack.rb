@@ -12,17 +12,8 @@ Capybara.register_driver :browserstack do |app|
   options['browser_version'] = ENV['SELENIUM_VERSION']
   options['browserstack.debug'] = 'true'
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new(options)
-
-  $browserstack_driver = Capybara::Selenium::Driver.new app,
+  Capybara::Selenium::Driver.new app,
     browser: :remote,
     url: "http://joostbaaij1:#{ENV['BROWSERSTACK_ACCESS_KEY']}@hub-cloud.browserstack.com/wd/hub",
-    desired_capabilities: capabilities
-end
-
-Capybara.run_server = false
-
-# Stop browserstack local at the end of the run.
-at_exit do
-  $browserstack_driver.quit
+    desired_capabilities: Selenium::WebDriver::Remote::Capabilities.new(options)
 end
