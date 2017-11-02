@@ -1,4 +1,4 @@
-@javascript
+@browserstack
 Feature: Cross-browser testing
 
 We test each change on multiple browsers, so that everyone has a great experience.
