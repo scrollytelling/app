@@ -122,9 +122,9 @@ Then deploy the code and enable the widget in the corresponding account, and the
 
 ### Thank you!
 
-# ![BrowserStack](public/img/BrowserStack.jpg) ❤️
+# ![BrowserStack](public/img/BrowserStack.jpg)
 
-Cross-platform quality assurance is graciously donated by @browserstack, thanks folks!
+Cross-platform quality assurance is graciously donated by @browserstack, thanks folks! ❤️
 
 ## Code of conduct
 
