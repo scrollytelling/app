@@ -120,6 +120,10 @@ Change the asset version, because the widget names are cached in the front-end a
 
 Then deploy the code and enable the widget in the corresponding account, and the code in the corresponding theming (edit account). After that, all new stories will have this widget enabled. For previous stories, you need to add the widget manually.
 
+### Thank you!
+
+![BrowserStack](public/img/BrowserStack.jpg "Cross-platform quality assurance is graciously donated by @browserstack, thanks folks!")
+
 ## Code of conduct
 
 Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
