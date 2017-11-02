@@ -1,6 +1,6 @@
 require 'capybara'
 
-Capybara.javascript_driver = :headless_chrome
+Capybara.javascript_driver = :javascript_driver
 
 Around('@browserstack') do |scenario, block|
   original_driver = Capybara.javascript_driver
