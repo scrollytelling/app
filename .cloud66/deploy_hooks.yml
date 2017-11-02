@@ -1,4 +1,13 @@
 production:
+  first_thing:
+    - command: apt-get install nfs-common -y
+      target: rails
+      run_as: root
+      apply_during: build_only
+    - command: mkdir /efs && mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-85ed0fdc.efs.eu-central-1.amazonaws.com:/ /efs
+      target: rails
+      run_as: root
+      apply_during: build_only
   after_rails:
     - command: cp -r $STACK_PATH/.cloud66/server.d /opt/nginx/conf
       target: rails
