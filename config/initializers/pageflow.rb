@@ -62,7 +62,7 @@ Pageflow.configure do |config|
   # Path to the location in the filesystem where attachments shall
   # be stored. The value of this option is available via the
   # pageflow_filesystem_root paperclip interpolation.
-  config.paperclip_filesystem_root = 'tmp/attachments/production'
+  config.paperclip_filesystem_root = '/efs/uploads'
 
   # How to handle https requests for URLs which will have assets in the page.
   # If you wish to serve all assets over http and prevent mixed-content warnings,
