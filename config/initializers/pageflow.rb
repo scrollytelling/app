@@ -59,10 +59,16 @@ Pageflow.configure do |config|
   config.default_author_meta_tag = 'Scrollytelling'
   config.default_publisher_meta_tag = 'Scrollytelling'
 
-  # Path to the location in the filesystem where attachments shall
-  # be stored. The value of this option is available via the
-  # pageflow_filesystem_root paperclip interpolation.
-  config.paperclip_filesystem_root = '/efs/uploads'
+  # The directory on the server where uploads are stored before processing.
+  # If you are using more than one server to host Pageflow, it is required
+  # that all web servers and all process servers have write access to it.
+  #
+  # The :pageflow_filesystem_root interpolation is available in paperclip.
+  if Rails.env.production? || Rails.env.staging?
+    config.paperclip_filesystem_root = '/efs/uploads'
+  else
+    config.paperclip_filesystem_root = '/tmp/uploads'
+  end
 
   # How to handle https requests for URLs which will have assets in the page.
   # If you wish to serve all assets over http and prevent mixed-content warnings,
