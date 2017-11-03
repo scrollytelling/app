@@ -64,11 +64,7 @@ Pageflow.configure do |config|
   # that all web servers and all process servers have write access to it.
   #
   # The :pageflow_filesystem_root interpolation is available in paperclip.
-  if Rails.env.production? || Rails.env.staging?
-    config.paperclip_filesystem_root = '/efs/uploads'
-  else
-    config.paperclip_filesystem_root = '/tmp/uploads'
-  end
+  config.paperclip_filesystem_root = ENV.fetch('PAPERCLIP_FILESYSTEM_ROOT')
 
   # How to handle https requests for URLs which will have assets in the page.
   # If you wish to serve all assets over http and prevent mixed-content warnings,
@@ -78,9 +74,7 @@ Pageflow.configure do |config|
   #     config.public_https_mode = :prevent (default) # => redirects https to http
   #     config.public_https_mode = :enforce # => redirects http to https
   #     config.public_https_mode = :ignore # => does nothing
-  if Rails.env.production? || Rails.env.staging?
-    config.public_https_mode = :enforce
-  end
+  config.public_https_mode = ENV.fetch('public_https_mode', 'ignore').to_sym
 
   # Rewrite the below section to use your favorite configuration
   # method: ENV variables, secrets.yml, custom yml files. If you use
