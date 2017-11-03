@@ -7,6 +7,8 @@ Pageflow.configure do |config|
   # This is useful when you have accounts with CNAMEs.
   config.editor_route_constraint = HostConstraint.new
 
+  config.available_locales = [:nl, :en]
+
   # Page types available in the editor. Add futher page types from
   # page type engines below.
   config.plugin(Pageflow.built_in_page_types_plugin)
@@ -64,7 +66,9 @@ Pageflow.configure do |config|
   # that all web servers and all process servers have write access to it.
   #
   # The :pageflow_filesystem_root interpolation is available in paperclip.
-  config.paperclip_filesystem_root = ENV.fetch('PAPERCLIP_FILESYSTEM_ROOT')
+  if ENV['PAPERCLIP_FILESYSTEM_ROOT']
+    config.paperclip_filesystem_root = ENV['PAPERCLIP_FILESYSTEM_ROOT']
+  end
 
   # How to handle https requests for URLs which will have assets in the page.
   # If you wish to serve all assets over http and prevent mixed-content warnings,
