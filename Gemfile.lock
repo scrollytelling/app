@@ -419,7 +419,7 @@ GEM
     scrollytelling-loading_spinner (12.0.1)
       pageflow (~> 12.x)
       rails (~> 4.2.9)
-    scrollytelling-navigation (12.0.3)
+    scrollytelling-navigation (12.0.2)
       pageflow (~> 12.x)
       rails (>= 3.0, < 5.0)
     selenium-webdriver (3.6.0)
