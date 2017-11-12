@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030161913) do
+ActiveRecord::Schema.define(version: 20171112094728) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 191
@@ -255,16 +255,16 @@ ActiveRecord::Schema.define(version: 20171030161913) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "credits",                     limit: 65535
-    t.string   "title",                       limit: 191,   default: "",    null: false
+    t.string   "title",                       limit: 191,   default: "",        null: false
     t.text     "summary",                     limit: 65535
     t.boolean  "manual_start",                              default: false
     t.integer  "restored_from_id",            limit: 4
     t.datetime "frozen_at"
     t.string   "snapshot_type",               limit: 191
-    t.string   "home_url",                    limit: 191,   default: "",    null: false
-    t.boolean  "home_button_enabled",                       default: false, null: false
-    t.boolean  "emphasize_chapter_beginning",               default: false, null: false
-    t.boolean  "emphasize_new_pages",                       default: false, null: false
+    t.string   "home_url",                    limit: 191,   default: "",        null: false
+    t.boolean  "home_button_enabled",                       default: false,     null: false
+    t.boolean  "emphasize_chapter_beginning",               default: false,     null: false
+    t.boolean  "emphasize_new_pages",                       default: false,     null: false
     t.integer  "share_image_id",              limit: 4
     t.integer  "share_image_x",               limit: 4
     t.integer  "share_image_y",               limit: 4
@@ -273,8 +273,9 @@ ActiveRecord::Schema.define(version: 20171030161913) do
     t.string   "author",                      limit: 191
     t.string   "publisher",                   limit: 191
     t.string   "keywords",                    limit: 191
-    t.boolean  "overview_button_enabled",                   default: true,  null: false
-    t.string   "share_url",                   limit: 255,   default: "",    null: false
+    t.boolean  "overview_button_enabled",                   default: true,      null: false
+    t.string   "share_url",                   limit: 255,   default: "",        null: false
+    t.string   "theme_name",                  limit: 255,   default: "default", null: false
   end
 
   add_index "pageflow_revisions", ["entry_id", "published_at", "published_until"], name: "index_pageflow_revisions_on_publication_timestamps", using: :btree
@@ -374,12 +375,13 @@ ActiveRecord::Schema.define(version: 20171030161913) do
   add_index "pageflow_video_files", ["parent_file_id", "parent_file_model_type"], name: "index_video_files_on_parent_id_and_parent_model_type", using: :btree
 
   create_table "pageflow_widgets", force: :cascade do |t|
-    t.integer  "subject_id",   limit: 4
-    t.string   "subject_type", limit: 191
-    t.string   "type_name",    limit: 191
-    t.string   "role",         limit: 191
+    t.integer  "subject_id",    limit: 4
+    t.string   "subject_type",  limit: 191
+    t.string   "type_name",     limit: 191
+    t.string   "role",          limit: 191
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "configuration", limit: 65535
   end
 
   create_table "users", force: :cascade do |t|
