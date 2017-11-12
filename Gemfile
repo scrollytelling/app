@@ -17,7 +17,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 
 # gems we need
-gem 'pageflow', '~> 12.0.1'
+gem 'pageflow', '~> 12.1.0'
 gem 'state_machine', git: 'https://github.com/codevise/state_machine.git'
 gem 'postmark-rails'
 gem 'rack-attack'
