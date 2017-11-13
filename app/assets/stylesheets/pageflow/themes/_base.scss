@@ -40,6 +40,7 @@ $font-size: 18px !default;
 // @import "pageflow/before_after/themes/default";
 @import "pageflow/chart/themes/default";
 
+@import "./default_page_overrides";
 @import "./text_page_overrides";
 @import "./external_links_page_overrides";
 @import "./embedded_video_page_overrides";
@@ -100,42 +101,6 @@ section.delayed_text_fade_in_short {
 	.page_header,
 	.shadow_wrapper {
 		opacity: 0;
-	}
-}
-
-// required to start with .js because that's how Pageflow is styled.
-.js .page {
-	color: $text-color;
-
-	&:first-child .contentWrapper:after {
-		content: " ";
-		position: absolute;
-		top: 20px;
-		left: 0;
-		right: 0;
-		width: 90%;
-		height: 50px;
-		margin-left: auto;
-		margin-right: auto;
-		background-image: image-url('scrollytelling/loading_spinner/logo.png');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-	}
-
-	&.invert,
-	&.invert.text_position_right {
-		color: $text-invert-color;
-		background-color: transparent;
-	}
-
-	.scroller > div {
-		pointer-events: all;
-		padding: $desktop-margins;
-	}
-
-	.embedded_video_page .scroller > div {
-		padding-top: 100px;
 	}
 }
 

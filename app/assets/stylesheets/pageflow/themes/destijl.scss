@@ -125,11 +125,6 @@ section[id="10828"] .contentText p {
   }
 }
 
-// hand-tweak titles that don't flow naturally
-.page[id="10409"] h2 .title {
-  max-width: 500px;
-}
-
 // this text is unreadable because of a very wild background.
 // we're giving the text itself a background.
 @include mobile {

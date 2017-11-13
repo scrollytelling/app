@@ -16,7 +16,7 @@ $title-font: 'Pragati Narrow', system, sans-serif;
   background-image: image-url("pageflow/themes/concertatsea/logo-black.png");
 }
 
-@media screen and (max-width: 900px) {
+@include mobile {
   h2.tagline {
     font-size: 1.6em;
   }
