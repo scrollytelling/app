@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   mount Pageflow::LinkmapPage::Engine, at: '/linkmap_page'
   mount Pageflow::Chart::Engine, at: '/chart'
-  # mount Pageflow::Oembed::Engine, at: '/oembed'
 
   constraints HostConstraint.new do
     devise_for :users, ActiveAdmin::Devise.config
