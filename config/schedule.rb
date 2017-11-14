@@ -3,7 +3,7 @@ env :PATH, '/usr/local/bin:/usr/bin:$PATH'
 set :output, 'log/cron.log'
 
 every :month do
-  rake pageflow:prune_auto_snapshots_jobs:enqueue
+  rake "pageflow:prune_auto_snapshots_jobs:enqueue"
 end
 
 # * * * * *  command to execute
