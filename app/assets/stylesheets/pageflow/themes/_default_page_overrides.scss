@@ -1,44 +1,76 @@
 // required to start with .js because that's how Pageflow is styled.
-.js .page {
-	color: $text-color;
+.js {
+	.page {
+		color: $text-color;
 
-	&:first-child .contentWrapper:after {
-		content: " ";
-		position: absolute;
-		top: 20px;
-		left: 0;
-		right: 0;
-		width: 90%;
-		height: 50px;
-		margin-left: auto;
-		margin-right: auto;
-		background-image: image-url('scrollytelling/loading_spinner/logo.png');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
+		&:first-child .contentWrapper:after {
+			content: " ";
+			position: absolute;
+			top: 20px;
+			left: 0;
+			right: 0;
+			width: 90%;
+			height: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			background-image: image-url('scrollytelling/loading_spinner/logo.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		&.invert,
+		&.invert.text_position_right {
+			color: $text-invert-color;
+			background-color: transparent;
+		}
+
+		.scroller > div {
+			pointer-events: all;
+			padding: $desktop-margins;
+
+	    // Limit the length of text on desktops.
+	    // Otherwise the text becomes difficult to track on very wide displays.
+	    @include desktop {
+	      .contentWrapper .page_header,
+	      .contentWrapper .contentText {
+	        max-width: 500px;
+	      }
+	    }
+		}
+
+		.embedded_video_page .scroller > div {
+			padding-top: 100px;
+		}
 	}
 
-	&.invert,
-	&.invert.text_position_right {
-		color: $text-invert-color;
-		background-color: transparent;
-	}
+	@include desktop {
+		.page.text_position_left {
+			.scroller > div {
+				.contentWrapper .page_header,
+				.contentWrapper .contentText {
+					margin-right: auto;
+				}
+			}
+		}
 
-	.scroller > div {
-		pointer-events: all;
-		padding: $desktop-margins;
+		.page.text_position_center {
+			.scroller > div {
+				.contentWrapper .page_header,
+				.contentWrapper .contentText {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
 
-    // Limit the length of text on desktops.
-    // Otherwise the text becomes difficult to track on very wide displays.
-    @include desktop {
-      .contentWrapper .page_header,
-      .contentWrapper .contentText {
-        max-width: 500px;
-      }
-    }
-	}
-
-	.embedded_video_page .scroller > div {
-		padding-top: 100px;
+		.page.text_position_right {
+			.scroller > div {
+				.contentWrapper .page_header,
+				.contentWrapper .contentText {
+					margin-left: auto;
+				}
+			}
+		}
 	}
 }
