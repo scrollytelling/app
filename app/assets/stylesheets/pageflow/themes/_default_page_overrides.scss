@@ -31,8 +31,8 @@
     // Limit the length of text on desktops.
     // Otherwise the text becomes difficult to track on very wide displays.
     @include desktop {
-      .page_header,
-      .contentText {
+      .contentWrapper .page_header,
+      .contentWrapper .contentText {
         max-width: 500px;
       }
     }
