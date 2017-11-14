@@ -1,12 +1,85 @@
-.page .text_page,
-.js .page .text_page,
-.page:first-child .text_page,
-.js .page:first-child .text_page {
+// A wrapper around image (centered text)
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.js .page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.js .page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.js .page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.js .page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.page .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller.inline_text_position_left > div .contentInnerWrapper .contentText .inline_image,
+.page:first-child .text_page .scroller.inline_text_position_right > div .contentInnerWrapper .contentText .inline_image {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 1.5em;
+  display: block;
+  max-width: none;
+  position: relative;
+  top: inherit !important;
+}
+// Position from top of page (because of logo)
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
+.page .text_page .scroller > div .contentInnerWrapper .contentText,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
+  padding-top: 4em;
+  @include desktop {
+    padding-top: 8em;
+  }
+}
+// Title size
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText h3,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3,
+.page .text_page .scroller > div .contentInnerWrapper .contentText h3,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText h3 {
+  padding-bottom: 1em;
+  @include desktop {
+    font-size: 3em;
+    line-height: 1.2em;
+    padding-bottom: 1em;
+  }
+}
+// Text size
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText p,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p,
+.page .text_page .scroller > div .contentInnerWrapper .contentText p,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText p {
+  @include desktop {
+    font-size: 1.6em;
+  }
+}
+// Make text wider and scroll to the next one later
+.js .page .text_page .scroller > div .contentInnerWrapper .contentText,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .contentText,
+.page .text_page .scroller > div .contentInnerWrapper .contentText,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .contentText {
+  @include desktop {
+    max-width: 700px;
+  }
+  @include mobile {
+    width: 84% !important;
+    margin: 0 auto !important;
+  }
+}
+// Remove large padding on the right of page_header
+.js .page .text_page .scroller > div .contentInnerWrapper .page_header h2,
+.js .page:first-child .text_page .scroller > div .contentInnerWrapper .page_header h2,
+.page .text_page .scroller > div .contentInnerWrapper .page_header h2,
+.page:first-child .text_page .scroller > div .contentInnerWrapper .page_header h2 {
+  padding-right: 0;
+}
+
+.page .text_page {
+  .backgroundArea,
+  .page_header {
+    opacity: 0;
+  }
 
   .content {
-    // hide the big box of nothing
-    .contentWrapper > .page_spacer {
-      display: none;
+    .page_spacer {
+      display: block !important;
     }
 
     .contentText {
@@ -22,83 +95,36 @@
     }
   }
 
-  .scroller.inline_text_position_left > div .contentInnerWrapper {
-    .page_header h2 {
-      text-align: left;
-    }
-  }
-
-  .scroller.inline_text_position_right > div .contentInnerWrapper {
-    .page_header h2 {
-      text-align: right;
-    }
-  }
-
-  .scroller > div .contentInnerWrapper {
-    .page_header {
-      position: relative;
-      display: block;
-      max-width: 100%;
-      padding: 4em 8% 2em 8%;
-
-      h2 {
-        color: white;
-        padding-right: 0;
-      }
+  .page_header {
+    h2 {
+      color: #fff;
     }
 
-    .contentText {
-      // Position from top of page (because of logo)
-      // Make text wider and scroll to the next one later
-      padding-top: 4em;
+    span:last-child {
+      margin-bottom: 2em;
+    }
 
-      @include desktop {
-        padding-top: 8em;
-        max-width: 700px;
-      }
-
-      @include mobile {
-        width: 84% !important;
-        margin: 0 auto !important;
-      }
-
-      // Title size
-      h3 {
-        padding-bottom: 1em;
-
-        @include desktop {
-          font-size: 3em;
-          line-height: 1.2em;
-          padding-bottom: 1em;
-        }
-      }
-
-      // Text size
-      p {
-        @include desktop {
-          font-size: 1.6em;
-        }
-      }
-
-      // A wrapper around image (centered text)
-      .inline_image {
-        width: 100%;
-        padding: 0;
-        margin: 0 0 1.5em;
-        display: block;
-        max-width: none;
-        position: relative;
-        top: inherit !important;
-      }
+    h1,
+    h2 span.subtitle,
+    h2 span.tagline,
+    h3,
+    p {
+      width: 100%;
     }
   }
 }
-
 // Inverted colors
 .page.invert .text_page {
   .page_header {
     h2 {
       color: #000;
     }
+  }
+}
+// Page finished loading
+.slideshow .page .text_page {
+  .backgroundArea,
+  .page_header {
+    opacity: 1;
   }
 }
