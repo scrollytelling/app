@@ -34,17 +34,13 @@ $body-font: Verdana, Arial, sans-serif;
 .entry {
   // font-family: Calibri, 'PT Sans', system, sans-serif;
 
-  h2 {
-    span {
-      line-height: 1.5;
-    }
-  }
-
   p {
+    line-height: 1.4;
   }
 
   span.title {
     font-style: italic;
+    line-height: 1.1;
   }
 
   span.subtitle {
@@ -52,18 +48,7 @@ $body-font: Verdana, Arial, sans-serif;
   }
 
   span.tagline {
-    // text-transform: uppercase;
-  }
-}
-
-.page {
-  .shadow {
-    background: -moz-linear-gradient(left, $main-color 0%, transparent 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, $main-color), color-stop(100%, transparent));
-    background: -webkit-linear-gradient(left, $main-color 0%, transparent 100%);
-    background: -o-linear-gradient(left, $main-color 0%, transparent 100%);
-    background: -ms-linear-gradient(left, $main-color 0%, transparent 100%);
-    background: linear,to right,$main-color 0%,transparent 100%;
+    line-height: 1.3
   }
 }
 
