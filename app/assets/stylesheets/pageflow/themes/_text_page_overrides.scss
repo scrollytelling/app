@@ -71,6 +71,23 @@
   padding-right: 0;
 }
 
+.page .text_page .backgroundArea .fixed_header_area,
+.js .page .text_page .backgroundArea .fixed_header_area,
+.js .page:first-child .text_page .backgroundArea .fixed_header_area,
+.page:first-child .text_page .backgroundArea .fixed_header_area {
+  height: 100vh;
+}
+
+.page .text_page .backgroundArea .fixed_header_area .page_header_wrapper,
+.js .page .text_page .backgroundArea .fixed_header_area .page_header_wrapper,
+.js .page:first-child .text_page .backgroundArea .fixed_header_area .page_header_wrapper,
+.page:first-child .text_page .backgroundArea .fixed_header_area .page_header_wrapper {
+  position: absolute;
+  bottom: 0;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
 .page .text_page {
   .backgroundArea,
   .page_header {
@@ -115,6 +132,31 @@
     }
   }
 }
+
+.text_position_left.page {
+  .text_page h2 .title,
+  .text_page h2 .subtitle,
+  .text_page h2 .tagline {
+    text-align: left;
+  }
+}
+
+.text_position_center.page {
+  .text_page h2 .title,
+  .text_page h2 .subtitle,
+  .text_page h2 .tagline {
+    text-align: center;
+  }
+}
+
+.text_position_right.page {
+  .text_page h2 .title,
+  .text_page h2 .subtitle,
+  .text_page h2 .tagline {
+    text-align: right;
+  }
+}
+
 // Inverted colors
 .page.invert .text_page {
   .page_header {
