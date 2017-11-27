@@ -1,0 +1,68 @@
+en:
+  pageflow:
+    anwb_theme:
+      name: ANWB
+    alab_theme:
+      name: A Lab
+    amnesty_international_theme:
+      name: Amnesty International
+    beeldengeluid_theme:
+      name: Beeld en Geluid
+    blof_theme:
+      name: BLØF
+    buildingbridges_theme:
+      name: Building Bridges
+    centraalmuseum_theme:
+      name: Centraal Museum
+    concertatsea_theme:
+      name: Concert at Sea
+    destijl_theme:
+      name: De Schatkamer van De Stijl
+    growinghome_theme:
+      name: Growing Home
+    omroepbrabant_theme:
+      name: Omroep Brabant
+    paxforpeace_theme:
+      name: Pax for Peace
+    ed_theme:
+      name: Ed van der Elsken
+    krisberry_theme:
+      name: Kris Berry
+    scrollytelling_theme:
+      name: Scrollytelling
+    nos_theme:
+      name: NOS
+    nieuwsuur_theme:
+      name: Nieuwsuur
+    meerveerkracht_theme:
+      name: Meer Veerkracht
+    humanrightswatch_theme:
+      name: Human Rights Watch
+    radio1_theme:
+      name: Radio 1
+    grasnapolsky_theme:
+      name: Grasnapolsky
+    volkskrant_theme:
+      name: de Volkskrant
+    phtgrphr_theme:
+      name: Phtgrphr
+    psv_theme:
+      name: PSV
+    ricostickstyphoon_theme:
+      name: Rico, Sticks en Typhoon
+    sbb_theme:
+      name: Staatsbosbeheer
+    stephaniestruijk_theme:
+      name: Stephanie Struijk
+    uaf_theme:
+      name: UAF
+    waddenzee_theme:
+      name: Waddenzee
+    worldpressphoto_theme:
+      name: World Press Photo
+    yip_theme:
+      name: Young in Prison
+    zevensloten_theme:
+      name: Zeven Sloten
+    hu_theme:
+      name: Hogeschool Utrecht

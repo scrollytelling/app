@@ -74,12 +74,15 @@ In `app/assets/stylesheets/pageflow/themes`, copy `default.scss` to `newtheme.sc
 Images to be placed:
 
 ```
-pageflow/themes/newtheme/logo.png
-pageflow/themes/newtheme/logo_print.png
+pageflow/themes/newtheme/logo.svg
+pageflow/themes/newtheme/logo-black.svg
 pageflow/themes/newtheme/favicon.ico
+pageflow/themes/newtheme/preview.png
 ```
 
 Place fonts in `app/assets/fonts/pageflow/themes/newtheme`. Only use `.woff` and `.woff2`. These formats are implemented in all browsers. Other formats are just pollution.
+
+Register the theme name in `config/locales/themes.en.yml` and other language files, if applicable. This is needed for per-entry theme selection.
 
 ## Deploying new analytics
 
