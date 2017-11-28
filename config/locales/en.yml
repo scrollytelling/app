@@ -25,9 +25,6 @@ en:
       ricostickstyphoon:
         feature_name: Analytics for Rico, Sticks en Typhoon
         widget_type_name: Rico, Sticks en Typhoon tracking codes
-      buildingbridges:
-        feature_name: Building Bridges trackers
-        widget_type_name: Building Bridges
       default:
         feature_name: Analytics default (blank)
         widget_type_name: Blank (no tracking codes)

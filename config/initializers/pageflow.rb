@@ -33,7 +33,7 @@ Pageflow.configure do |config|
     default
     scrollytelling volkskrant nos nieuwsuur radio1 grasnapolsky
     beeldengeluid psv amnesty_international stephaniestruijk concertatsea
-    blof buildingbridges ricostickstyphoon sbb worldpressphoto
+    blof ricostickstyphoon sbb worldpressphoto
     phtgrphr waddenzee humanrightswatch alab ed krisberry meerveerkracht
     yip destijl omroepbrabant paxforpeace zevensloten
     hu centraalmuseum uaf anwb growinghome).each do |theme|
