@@ -52,7 +52,7 @@ $body-font: Calibri, 'PT Sans', sans-serif;
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
   height: 100px;
-  background-image: image-url("pageflow/themes/meerveerkracht/logo.png");
+  background-image: image-url("pageflow/themes/meerveerkracht/meer-veerkracht-langer-thuis-wit.svg");
 
   @include mobile {
     height: 60px;
@@ -61,5 +61,5 @@ $body-font: Calibri, 'PT Sans', sans-serif;
 
 .js .page.invert:first-child .contentWrapper:after {
   height: 100px;
-  background-image: image-url("pageflow/themes/meerveerkracht/logo-black.png");
+  background-image: image-url("pageflow/themes/meerveerkracht/meer-veerkracht-langer-thuis-zwart.svg");
 }
