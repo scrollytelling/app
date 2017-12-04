@@ -71,3 +71,7 @@ $body-font: 'Calibri Light', system, sans-serif;
 		padding-top: 90px;  // because the logo takes up space
 	}
 }
+
+#scrollytelling-navigation {
+  display: none;  // they are confusing with storylines
+}
