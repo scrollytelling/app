@@ -17,20 +17,17 @@ $body-font: 'Amiri', serif;
 // import base stylesheet
 @import "./base.scss";
 
-.scrollytelling-pageflow-navigation-tooltip {
+.scrollytelling-navigation-tooltip {
   font-family: $body-font;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 2px;
+  font-size: 14px;
 }
 
+.entry .indicator,
 ul.scrollytelling-home_button {
   font-family: $body-font;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 2px;
+  font-size: 16px;
+  letter-spacing: 3px;
 }
-
 
 // custom styles
 .entry {
