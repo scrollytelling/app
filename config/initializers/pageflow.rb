@@ -15,6 +15,7 @@ Pageflow.configure do |config|
   config.plugin(Pageflow::InternalLinks.plugin)
   config.plugin(Pageflow::ExternalLinks.plugin)
   config.plugin(Pageflow::LinkmapPage.plugin)
+  config.plugin(Pageflow::Localfocus.plugin)
   config.page_types.register(Pageflow::TextPage.page_type)
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
   config.page_types.register(Pageflow::BeforeAfter.page_type)
