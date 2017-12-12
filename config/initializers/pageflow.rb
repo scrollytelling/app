@@ -115,6 +115,12 @@ Pageflow.configure do |config|
   )
 end
 
+Pageflow.after_configure do
+  Pageflow::EntriesHelper.prepend(HelperOverrides)
+  Pageflow::EntriesController.helper(AnalyticsHelper)
+  Pageflow::RevisionsController.helper(AnalyticsHelper)
+end
+
 # Comment out this call if you wish to run rails generators or rake
 # tasks while the Pageflow configuration is in an invalid
 # state. Otherwise Pageflow configuration errors might prevent you
