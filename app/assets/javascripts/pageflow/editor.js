@@ -11,6 +11,7 @@
 //= require pageflow/embedded_video/editor
 //= require pageflow/before_after/editor
 //= require pageflow/chart/editor
+//= require pageflow/localfocus/editor
 
 pageflow.ready.then(function() {
   _.extend(pageflow.Configuration.prototype.defaults, {gradient_opacity: 0});
