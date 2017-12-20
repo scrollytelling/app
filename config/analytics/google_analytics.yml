@@ -1,3 +1,7 @@
+anwb:
+  id: UA-60370009-11
+  anonymize_ip: true
+  autotrack: true
 amnesty:
   id: UA-1282760-38
 beeldengeluid:
