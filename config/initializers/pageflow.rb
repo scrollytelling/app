@@ -97,10 +97,11 @@ Pageflow.configure do |config|
       bucket: ENV['S3_BUCKET'],
       access_key_id: ENV['S3_ACCESS_KEY'],
       secret_access_key: ENV['S3_SECRET_KEY'],
-      s3_host_name: ENV['S3_HOST_NAME']
     },
+    s3_region: 'eu-central-1',
+    s3_host_name: ENV['S3_HOST_NAME'],
     s3_host_alias: ENV['S3_HOST_ALIAS'],
-    s3_protocol: ENV['S3_PROTOCOL']
+    s3_protocol: 'https'
   )
 
   # Default options for paperclip attachments which are supposed to
@@ -110,7 +111,7 @@ Pageflow.configure do |config|
     api_key: ENV['ZENCODER_API_KEY'],
     output_bucket: ENV['S3_OUTPUT_BUCKET'],
     s3_host_alias: ENV['S3_OUTPUT_HOST_ALIAS'],
-    s3_protocol: ENV['S3_PROTOCOL'],
+    s3_protocol: 'https',
     attachments_version: 'v1',
     skip_smil: true
   )
