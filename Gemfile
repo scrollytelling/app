@@ -26,6 +26,7 @@ gem 'whenever', require: false
 gem "sentry-raven"
 gem "resque-sentry"
 gem "okcomputer"
+gem 'oj'
 
 # We extend Devise to increase securitay.
 gem 'devise_zxcvbn'
