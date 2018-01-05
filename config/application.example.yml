@@ -1,0 +1,12 @@
+ZENCODER_API_KEY: placeholder
+S3_BUCKET: "storyboard-pageflow-development"
+S3_OUTPUT_BUCKET: "storyboard-pageflow-development-out"
+S3_ACCESS_KEY: placeholder
+S3_SECRET_KEY: placeholder
+S3_HOST_NAME: s3.eu-central-1.amazonaws.com
+S3_HOST_ALIAS: storyboard-pageflow-development.s3-website.eu-central-1.amazonaws.com
+S3_OUTPUT_HOST_ALIAS: storyboard-pageflow-development-out.s3-website.eu-central-1.amazonaws.com
+S3_PROTOCOL: http
+SENTRY_URL: http://www.example.com
+INTERCOM_APP_ID: placeholder
+INTERCOM_SECRET_KEY: placeholder

@@ -4,35 +4,40 @@
 
 ## Getting started
 
-You need Ruby, version is listed in `.ruby-version`. Use rbenv or RVM to install it.
-You also need MySQL, Redis and ImageMagick. On a mac, use Homebrew to install them all.
+This project is made in [Ruby on Rails](http://rubyonrails.org).
 
-After installing Ruby and doing `gem install bundler` you can switch to the project
-root directory and install the required software, and set up the database.
+To get started, and install all needed software using Homebrew:
 
 ```
-bundle
-bin/rake db:setup
+bin/setup
 ```
-
-Then start the server with `bin/rails s`.
 
 ## Background jobs
 
-Remember you need to run background jobs to process uploads. See `Procfile`.
+If you need to add new media (photos, videos or audio) to your local install, the background jobs have to be running. They are listed in `Procfile` and the easiest way to run everything is using Foreman:
 
-To inspect the queues, visit `/background_jobs` with a web browser. You need to be authenticated to do so.
+```
+foreman start
+```
+
+To inspect the status of background jobs, visit `/background_jobs` with a web browser. You need to be authenticated to do so.
 
 ## Environment variables
 
-Make sure to create config/application.yml and set the ENV variables.
+A default set of credentials is installed during setup. Currently we use
+environment variables for this, using [figaro](https://github.com/laserlemon/figaro). Real
+credentials are not present in this file and must never be committed in code. To start using
+external systems, you need to replace the placeholders with real secrets. Get
+them from a friendly Scrollytelling representative.
 
+Put those secrets in `config/application.yml` which is gitignored.
 
 ## CORS
 
-Since Pageflow 12, [CORS headers are required on the output bucket](https://github.com/codevise/pageflow/blob/a8a53e57b8ca6003d9fc5f971bb878680264528b/doc/setting_up_external_services.md#bucket-configuration).
+Since Pageflow 12, [CORS headers are required on the output bucket](https://github.com/codevise/pageflow/blob/a8a53e57b8ca6003d9fc5f971bb878680264528b/doc/setting_up_external_services.md#bucket-configuration) because the MPEG-DASH player fetches
+new video segments using Ajax all the time.
 
-To enable them, go into your output bucket configuration and paste into CORS configuration:
+To enable CORS, go into your output bucket configuration and paste into CORS configuration:
 
 ``` xml
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
