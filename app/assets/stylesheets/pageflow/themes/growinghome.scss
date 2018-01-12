@@ -31,6 +31,10 @@ ul.scrollytelling-options a:before {
   background: $aquamarine;
 }
 
+ul.scrollytelling-sharing {
+  display: none;
+}
+
 .entry .indicator,
 ul.scrollytelling-home_button {
   font-family: $body-font;
