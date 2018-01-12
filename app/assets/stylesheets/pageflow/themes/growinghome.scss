@@ -10,7 +10,7 @@ $dull-yellow: #e8d33f;
 $jungle-green: #00845b;
 $pastel-orange: #ff9062;
 
-$main-color: $light-lavendar;
+$main-color: $aquamarine;
 $title-font: 'Inknut Antiqua', serif;
 $body-font: 'Amiri', serif;
 
@@ -20,6 +20,15 @@ $body-font: 'Amiri', serif;
 .scrollytelling-navigation-tooltip {
   font-family: $body-font;
   font-size: 14px;
+}
+
+ul.scrollytelling-sharing a:before,
+ul.scrollytelling-options a:before {
+  color: $aquamarine;
+}
+
+#scrollytelling-navigation a span {
+  background: $aquamarine;
 }
 
 .entry .indicator,
