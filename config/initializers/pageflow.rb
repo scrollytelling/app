@@ -19,7 +19,6 @@ Pageflow.configure do |config|
   config.page_types.register(Pageflow::TextPage.page_type)
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
   config.page_types.register(Pageflow::BeforeAfter.page_type)
-  config.page_types.register(Pageflow::Chart.page_type)
 
   # override the default player controls widget, to make slim player the default
   config.widget_types.register(Pageflow::BuiltInWidgetType.navigation, default: true)

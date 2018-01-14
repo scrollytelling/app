@@ -10,7 +10,6 @@
 //= require pageflow/text_page/editor
 //= require pageflow/embedded_video/editor
 //= require pageflow/before_after/editor
-//= require pageflow/chart/editor
 //= require pageflow/localfocus/editor
 
 pageflow.ready.then(function() {

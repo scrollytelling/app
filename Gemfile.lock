@@ -267,13 +267,6 @@ GEM
       jquery-ui-rails (~> 5.0)
       pageflow (>= 0.11, < 13)
       pageflow-public-i18n (~> 1.8)
-    pageflow-chart (1.1.0)
-      nokogiri (~> 1.0)
-      pageflow (~> 12.1)
-      pageflow-public-i18n (~> 1.0)
-      paperclip (~> 4.2)
-      state_machine (~> 1.2)
-      state_machine_job (>= 0.2, < 2)
     pageflow-embedded-video (1.1.0)
       pageflow (~> 12.1)
       pageflow-public-i18n (~> 1.0)
@@ -499,7 +492,6 @@ DEPENDENCIES
   okcomputer
   pageflow (~> 12.1.0)
   pageflow-before-after
-  pageflow-chart
   pageflow-embedded-video
   pageflow-external-links
   pageflow-internal-links

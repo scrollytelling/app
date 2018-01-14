@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get "/gtm.js", to: proc {|env| [404, {"Content-Type" => "text/plain"}, ["You're drunk."]] }
 
   mount Pageflow::LinkmapPage::Engine, at: '/linkmap_page'
-  mount Pageflow::Chart::Engine, at: '/chart'
 
   constraints HostConstraint.new do
     devise_for :users, ActiveAdmin::Devise.config
