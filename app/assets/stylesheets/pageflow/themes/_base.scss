@@ -8,17 +8,21 @@
 	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
+// Scrollytelling house style
+$color-scrolly-mintgreen: #c3e2dd;
+$color-scrolly-black: #090909;
+$desktop-margins: 200px 100px 70px 100px;
+$mobile-margins: 30px 20px 16px 20px;
+
 // derived themes can override these variables.
-$main-color: #c3e2dd !default;
+$main-color: $color-scrolly-mintgreen !default;
 $main-color-dark: darken($main-color, 30%) !default;
 $anchor-color: $main-color !default;
 $indicator-text-shadow-color: #3e3e3e !default;
 $text-color: #e3e3e3 !default;
-$text-invert-color: #090909 !default;
+$text-invert-color: $color-scrolly-black !default;
 $body-font: system, sans-serif !default;
 $title-font: system, sans-serif !default;
-$desktop-margins: 200px 100px 70px 100px;
-$mobile-margins: 30px 20px 16px 20px;
 $font-size: 18px !default;
 
 @import "bourbon";
@@ -41,6 +45,10 @@ $font-size: 18px !default;
 @import "./text_page_overrides";
 @import "./external_links_page_overrides";
 @import "./embedded_video_page_overrides";
+
+body {
+	background-color: $color-scrolly-black;
+}
 
 h1, h2, h3, h4, p, li, span, td, a, label, select, input, textarea, button, :after {
 	-webkit-font-smoothing: antialiased;
