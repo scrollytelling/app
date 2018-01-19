@@ -100,7 +100,8 @@ Pageflow.configure do |config|
     s3_region: 'eu-central-1',
     s3_host_name: ENV['S3_HOST_NAME'],
     s3_host_alias: ENV['S3_HOST_ALIAS'],
-    s3_protocol: ENV.fetch('S3_PROTOCOL', 'https')
+    s3_protocol: ENV.fetch('S3_PROTOCOL', 'https'),
+    processors: [:thumbnail, :compression]
   )
 
   # Default options for paperclip attachments which are supposed to

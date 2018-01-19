@@ -28,8 +28,8 @@ gem "resque-sentry"
 gem "okcomputer"
 gem 'oj'
 
-# We extend Devise to increase securitay.
-gem 'devise_zxcvbn'
+gem 'devise_zxcvbn' # We extend Devise to increase securitay.
+gem 'paperclip-compression' # we would like to compress our images
 
 # Pageflow extensions
 gem 'pageflow-internal-links'
