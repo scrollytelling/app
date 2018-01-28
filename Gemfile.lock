@@ -4,6 +4,14 @@ GIT
   specs:
     state_machine (1.2.0)
 
+PATH
+  remote: /Users/joost/Gems/pageflow-closewindow
+  specs:
+    pageflow-closewindow (0.1.0)
+      pageflow (~> 12.x)
+      pageflow-public-i18n (~> 1.12.x)
+      rails (>= 4.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -498,6 +506,7 @@ DEPENDENCIES
   okcomputer
   pageflow (~> 12.1.0)
   pageflow-before-after
+  pageflow-closewindow!
   pageflow-embedded-video
   pageflow-external-links
   pageflow-internal-links

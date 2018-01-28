@@ -39,6 +39,7 @@ gem 'pageflow-text-page'
 gem 'pageflow-embedded-video'
 gem 'pageflow-before-after'
 gem 'pageflow-localfocus'
+gem 'pageflow-closewindow', path: '/Users/joost/Gems/pageflow-closewindow'
 
 # Scrollytelling
 gem 'scrollytelling-navigation'
