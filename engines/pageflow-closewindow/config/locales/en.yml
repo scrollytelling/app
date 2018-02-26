@@ -2,7 +2,7 @@ en:
   pageflow:
     closewindow:
       feature_name: Custom window close widget
-      widget_type_name: Home/close button
+      widget_type_name: Press “×” to go Home
     widgets:
       roles:
         home: Home button
