@@ -72,11 +72,9 @@ ul.scrollytelling-home_button {
 
 .loader_logo,
 .js .page:first-child .contentWrapper:after {
-  // height: 100px;
-  background-image: image-url("pageflow/themes/growinghome/growinghome.svg");
+  background-image: none; // handled in closewindow
 }
 
 .js .page.invert:first-child .contentWrapper:after {
-  // height: 100px;
-  background-image: image-url("pageflow/themes/growinghome/growinghome-black.svg");
+  background-image: none; // handled in closewindow
 }

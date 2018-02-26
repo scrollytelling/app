@@ -1,0 +1,64 @@
+@import "themes/default";
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.closewindow-widget {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+
+  &.enabled {
+    .closewindow-home {
+      opacity: 1;
+    }
+  }
+}
+
+.closewindow-home {
+  height: 22px;
+  width: 40px;
+  position: fixed;
+  left: 50%;
+  margin-left: -20px;
+  top: 20px;
+  pointer-events: all;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:0.5s;
+  animation-delay: 1s;
+
+  span {
+    display: none;
+    height: 2px;
+    background-color: $closewindow-color-close;
+    width: 100%;
+    transition: all .2s;
+
+    &:first-child {
+      display: block;
+      transform: rotate(45deg);
+    }
+
+    &:last-child {
+      display: block;
+      transform: rotate(-45deg);
+      margin-top: -22px;
+    }
+  }
+
+  &:hover {
+    span {
+      background-color: $closewindow-color-hover;
+    }
+  }
+}

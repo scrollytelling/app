@@ -1,0 +1,7 @@
+en:
+  pageflow:
+    widgets:
+      roles:
+        logo: Theme logo on the first page
+    closewindow:
+      widget_type_name: Close the Pageflow window
