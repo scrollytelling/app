@@ -1,15 +1,3 @@
-<% content_for :head do %>
-<script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
-<script>
-  Raven.config('https://c9c7210466c84700bcacc413530df644@sentry.io/63915').install();
-  Raven.setUserContext({
-    id: "<%= current_user.id %>",
-    email: "<%= current_user.email %>",
-    name: "<%= current_user.full_name %>"
-  });
-</script>
-<% end unless Rails.env.test? %>
-
 <script>
   window.intercomSettings = {
     app_id: "<%= ENV.fetch('INTERCOM_APP_ID') %>",

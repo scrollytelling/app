@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-	<link rel="stylesheet" href="/static.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0">
-  <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
-  <script>
-    Raven.config('https://c9c7210466c84700bcacc413530df644@sentry.io/63915').install();
-    document.addEventListener('ravenSuccess', function (event) {
-      Raven.showReportDialog({eventId: event.data.event_id});
-    }, false);
-  </script>
-    </head>
-    <body>
 
-    <div id="primaryContainer" class="primaryContainer clearfix">
-        <a href="/"><img id="image" src="/img/logo_scrollytelling.svg" class="image" /></a>
-        <p id="text">
-        <span id="textspan">Server Error</span><br />
-        </p>
-        <p id="text1">
-        <span id="textspan1">Something bad happened on the web server. This wasn't our intention. Please contact us to get this issue resolved and accept our apologies in the mean time.</span><br />
-        </p>
-        <p id="text2">
-          <a href="/">scrollytelling.io</a>
-        </p>
-        <img id="image1" src="/img/social.svg" class="image" />
-    </div>
-    </body>
+<head>
+  <link rel="stylesheet" href="/static.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0">
+</head>
+
+<body>
+
+  <div id="primaryContainer" class="primaryContainer clearfix">
+    <a href="/"><img id="image" src="/img/logo_scrollytelling.svg" class="image" /></a>
+    <p id="text">
+      <span id="textspan">Server Error</span><br />
+    </p>
+    <p id="text1">
+      <span id="textspan1">Something bad happened on the web server. This wasn't our intention. Please contact us to get this issue resolved and accept our apologies in the mean time.</span><br />
+    </p>
+    <p id="text2">
+      <a href="/">scrollytelling.io</a>
+    </p>
+    <img id="image1" src="/img/social.svg" class="image" />
+  </div>
+</body>
+
 </html>
