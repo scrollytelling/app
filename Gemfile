@@ -6,6 +6,9 @@ ruby '2.4.2'
 # rails
 gem 'rails', '4.2.10'
 
+# web
+gem 'puma'
+
 # database
 gem 'mysql2'
 gem "redis-rails"
