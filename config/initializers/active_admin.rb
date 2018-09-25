@@ -26,7 +26,7 @@ ActiveAdmin.setup do |config|
     end
 
     # Add custom scripts to the footer
-    config.view_factory.footer = Admin::Scripts
+    # config.view_factory.footer = Admin::Scripts
   end
 
   # == Site Title
