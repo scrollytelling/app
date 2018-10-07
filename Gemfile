@@ -10,7 +10,7 @@ gem 'rails', '4.2.10'
 gem 'puma'
 
 # database
-gem 'mysql2'
+gem 'mysql2', '< 0.5.0'
 gem "redis-rails"
 
 # asset pipeline

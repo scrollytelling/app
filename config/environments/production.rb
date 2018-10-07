@@ -62,17 +62,17 @@ Rails.application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.action_controller.asset_host = Proc.new { |source|
-    'scrollytelling.link' if source.starts_with?('/assets')
+    'https://scrollytelling.link' if source.starts_with?('/assets')
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = {host: 'app.scrollytelling.io'}
+  config.action_mailer.default_url_options = { protocol: 'https', host: 'app.scrollytelling.io' }
 
   # Use Postmark API to send email
   config.action_mailer.delivery_method = :postmark
-  config.action_mailer.postmark_settings = { :api_token => ENV.fetch('POSTMARK_API_TOKEN') }
+  config.action_mailer.postmark_settings = { api_token: ENV.fetch('POSTMARK_API_TOKEN') }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
