@@ -25,7 +25,13 @@ $body-font: system, sans-serif !default;
 $title-font: system, sans-serif !default;
 $font-size: 18px !default;
 
-@import "pageflow/themes/default/base";
+@import "bourbon";
+@import "pageflow/mixins";
+@import "pageflow/animations";
+@import "pageflow/themes/default/definitions";
+@import "pageflow/themes/default/player_controls";
+@import "pageflow/themes/default/video_player";
+@import "pageflow/themes/default/video_wrapper";
 @import "pageflow/embedded_video/themes/default";
 
 /* Pageflow plugins */
