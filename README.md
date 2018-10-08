@@ -6,7 +6,7 @@
 
 This project is made in [Ruby on Rails](http://rubyonrails.org).
 
-To get started, and install all needed software using Homebrew:
+To get started, and install all needed software:
 
 ```
 bin/setup
@@ -32,23 +32,36 @@ them from a friendly Scrollytelling representative.
 
 Put those secrets in `config/application.yml` which is gitignored.
 
-## CORS
+## Upload media
 
-Since Pageflow 12, [CORS headers are required on the output bucket](https://github.com/codevise/pageflow/blob/a8a53e57b8ca6003d9fc5f971bb878680264528b/doc/setting_up_external_services.md#bucket-configuration) because the MPEG-DASH player fetches
-new video segments using Ajax all the time.
+Stories can contain images, video and audio. We need a place to store it all, and S3 object storage was chosen for the task. Follow the Pageflow docs on how to create the buckets you will need.
 
-To enable CORS, go into your output bucket configuration and paste into CORS configuration:
+Pageflow canon dictates that you should create separate buckets for each
+environment. We don't subscribe to this idea. All assets are scoped by unique
+path anyway, which works just fine. So, we need just two buckets:
 
-``` xml
-<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-    <CORSRule>
-        <AllowedOrigin>*</AllowedOrigin>
-        <AllowedMethod>GET</AllowedMethod>
-        <MaxAgeSeconds>28800</MaxAgeSeconds>
-        <AllowedHeader>*</AllowedHeader>
-    </CORSRule>
-</CORSConfiguration>
 ```
+media.scrollytellig.com # => initial uploads and hosting images
+output.scrollytelling.com # => converted output, i.e. video and audio files
+```
+
+Buckets need public read access for everyone.
+
+## Content Delivery
+
+Set up a CDN of choice so that your uploads load zippy, have awesome cache expiration
+and you're not hit by a surprise S3 transfer bill. Some suggested settings:
+
+Cache-Control: expire in 12 months
+If possible, enable gzip compression
+Drop incoming cookie headers
+Add CORS, allowing access from the hosts you use. (or `*`)
+Add a robots.txt, disallowing access to everything
+
+#### CORS
+
+> Since Pageflow 12, [CORS headers are required on the output bucket](https://github.com/codevise/pageflow/blob/a8a53e57b8ca6003d9fc5f971bb878680264528b/doc/setting_up_external_services.md#bucket-configuration) because the MPEG-DASH player fetches
+new video segments using Ajax all the time.
 
 To debug assets, this command is your best friend:
 
@@ -58,7 +71,7 @@ curl \
   -H "Access-Control-Request-Method: GET" \
   -H "Access-Control-Request-Headers: X-Requested-With" \
   -X OPTIONS \
-  --verbose \ https://output.scrollytelling.io/v1/main/pageflow/video_files/000/001/963/dash/medium/rendition-video-1.mp4
+  --verbose \ https://output.scrollytelling.com/v1/main/pageflow/video_files/000/001/963/dash/medium/rendition-video-1.mp4
 ```
 
 This should return with `204 No Content`.
