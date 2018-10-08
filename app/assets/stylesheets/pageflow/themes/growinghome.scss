@@ -70,11 +70,14 @@ ul.scrollytelling-home_button {
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
   background-image: none; // handled in closewindow
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo {
+  background-image: none; // handled in closewindow
+}
+
+@include logo-invert {
   background-image: none; // handled in closewindow
 }

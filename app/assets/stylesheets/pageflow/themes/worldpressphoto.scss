@@ -15,6 +15,6 @@ $title-font: 'akkuratregular', system, sans-serif;
   background-image: image-url("pageflow/themes/worldpressphoto/logo.png");
 }
 
-.js .page:first-child .contentWrapper:after {
+@include logo {
   background-image: image-url("pageflow/themes/worldpressphoto/logo_header.png");
 }

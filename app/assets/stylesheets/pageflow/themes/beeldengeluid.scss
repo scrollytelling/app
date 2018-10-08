@@ -29,7 +29,10 @@ h2 {
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
+  background-image: image-url("pageflow/themes/beeldengeluid/logo.png");
+}
+
+@include logo {
   background-image: image-url("pageflow/themes/beeldengeluid/logo.png");
 }

@@ -71,41 +71,33 @@ $title-font: Aller, serif;
   }
 }
 
-.js {
-  .page:first-child .contentWrapper:after,
-  .page.invert:first-child .contentWrapper:after,
-  .loader_logo {
-    background-image: none;
-  }
+.loader_logo {
+  background-image: image-url("pageflow/themes/zevensloten/logo.png");
+}
 
-  .page:last-of-type .contentWrapper:after {
-    content: " ";
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    width: 90%;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: image-url("pageflow/themes/zevensloten/logo.png");
-  }
+// we don't have the logo first, but on the last page!
+@include logo {
+  background-image: none;
+}
+
+.page:last-of-type .content_and_background .scroller > div:after {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: image-url("pageflow/themes/zevensloten/logo.png");
 }
 
 @include mobile {
   .entry {
     font-size: 16px;
   }
-
-	.js .page:last-of-type .contentWrapper {
-		margin-top: 50px;
-	}
-
-	.js .page:last-of-type .contentWrapper:after {
-		height: 35px;
-		max-width: 60%;
-	}
 }

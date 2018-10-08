@@ -30,18 +30,17 @@ $main-color: #133472;
   background-image: image-url("pageflow/themes/yip/logo.png");
 }
 
-.js .page:first-child .contentWrapper:after {
+@include logo {
   height: 80px;
   background-image: image-url("pageflow/themes/yip/logo.png");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
-  height: 80px;
+@include logo-invert {
   background-image: image-url("pageflow/themes/yip/logo-black.png");
 }
 
 @include mobile {
-  .js .page:first-child .contentWrapper {
+  .js .page:first-child .content_and_background {
     padding-top: 80px;
   }
 }

@@ -136,11 +136,10 @@ section[id="10828"] .contentText p {
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
   background-image: none;
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo {
   background-image: none;
 }

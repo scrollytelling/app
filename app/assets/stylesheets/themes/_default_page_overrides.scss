@@ -3,22 +3,6 @@
 	.page {
 		color: $text-color;
 
-		&:first-child .contentWrapper:after {
-			content: " ";
-			position: absolute;
-			top: 20px;
-			left: 0;
-			right: 0;
-			width: 90%;
-			height: 50px;
-			margin-left: auto;
-			margin-right: auto;
-			background-image: image-url('scrollytelling/loading_spinner/logo.png');
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
-		}
-
 		&.invert,
 		&.invert.text_position_right {
 			color: $text-invert-color;
@@ -32,8 +16,8 @@
 	    // Limit the length of text on desktops.
 	    // Otherwise the text becomes difficult to track on very wide displays.
 	    @include desktop {
-	      .contentWrapper .page_header,
-	      .contentWrapper .contentText {
+	      .content_and_background .page_header,
+	      .content_and_background .contentText {
 	        max-width: 500px;
 	      }
 	    }
@@ -47,8 +31,8 @@
 	@include desktop {
 		.page.text_position_left {
 			.scroller > div {
-				.contentWrapper .page_header,
-				.contentWrapper .contentText {
+				.content_and_background .page_header,
+				.content_and_background .contentText {
 					margin-right: auto;
 				}
 			}
@@ -56,8 +40,8 @@
 
 		.page.text_position_center {
 			.scroller > div {
-				.contentWrapper .page_header,
-				.contentWrapper .contentText {
+				.content_and_background .page_header,
+				.content_and_background .contentText {
 					margin-left: auto;
 					margin-right: auto;
 				}
@@ -66,8 +50,8 @@
 
 		.page.text_position_right {
 			.scroller > div {
-				.contentWrapper .page_header,
-				.contentWrapper .contentText {
+				.content_and_background .page_header,
+				.content_and_background .contentText {
 					margin-left: auto;
 				}
 			}

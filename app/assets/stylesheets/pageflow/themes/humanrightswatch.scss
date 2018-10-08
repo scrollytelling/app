@@ -2,7 +2,10 @@ $main-color: #0079c6;
 
 @import "./base.scss";
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
+  background-image: image-url("pageflow/themes/humanrightswatch/logo.png");
+}
+
+@include logo {
   background-image: image-url("pageflow/themes/humanrightswatch/logo.png");
 }

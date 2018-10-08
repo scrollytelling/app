@@ -9,10 +9,10 @@ $body-font: 'Karla', system, sans-serif;
   background-image: image-url("pageflow/themes/stephaniestruijk/logo.png");
 }
 
-.js .page:first-child .contentWrapper:after {
+@include logo {
   background-image: image-url("pageflow/themes/stephaniestruijk/logo_header.png");
 }
 
-.invert .js .page:first-child .contentWrapper:after {
+@include logo-invert {
   background-image: image-url("pageflow/themes/stephaniestruijk/logo_header_invert.png");
 }

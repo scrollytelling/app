@@ -26,11 +26,10 @@ p {
   font-size: 18px;
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
   background-image: image-url("pageflow/themes/nieuwsuur/logo.png");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo {
   background-image: image-url("pageflow/themes/nieuwsuur/logo.png");
 }

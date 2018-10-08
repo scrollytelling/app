@@ -36,13 +36,12 @@ h2 {
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
-  height: 90px;
-  background-position: center -15px;
+.loader_logo {
   background-image: image-url("pageflow/themes/ed/logo.png");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo {
+  height: 90px;
+  background-position: center -15px;
   background-image: image-url("pageflow/themes/ed/logo.png");
 }

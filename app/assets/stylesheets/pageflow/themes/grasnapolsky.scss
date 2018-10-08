@@ -20,10 +20,10 @@ $title-font: 'Neue Droschke', serif;
   background-image: image-url("pageflow/themes/grasnapolsky/logo.png");
 }
 
-.js .page:first-child .contentWrapper:after {
+@include logo {
   background-image: image-url("pageflow/themes/grasnapolsky/logo_header.png");
 }
 
-.invert .js .page:first-child .contentWrapper:after {
+@include logo-invert {
   background-image: image-url("pageflow/themes/grasnapolsky/logo_header_invert.png");
 }

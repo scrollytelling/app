@@ -40,13 +40,10 @@ $body-font: 'Amiri', serif;
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
-  // height: 100px;
-  // background-image: image-url("pageflow/themes/default/logo.png");
+.loader_logo {
+	background-image: none;
 }
 
-.js .page.invert:first-child .contentWrapper:after {
-  // height: 100px;
-  // background-image: image-url("pageflow/themes/default/logo-black.png");
+@include logo {
+	background-image: none;
 }

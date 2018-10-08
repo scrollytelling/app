@@ -1,16 +1,12 @@
 // Base stylesheet for all Scrollytelling themes.
 
-/*! system-font.css v1.1.0 | CC0-1.0 License | github.com/jonathantneal/system-font-face */
-@font-face {
-	font-family: system;
-	font-style: normal;
-	font-weight: 300;
-	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-}
+@import "themes/fonts";
 
-// Scrollytelling house style
+// COLORS
 $color-scrolly-mintgreen: #c3e2dd;
 $color-scrolly-black: #090909;
+$text-color: #e3e3e3 !default;
+// MARGINS
 $desktop-margins: 200px 100px 70px 100px;
 $mobile-margins: 30px 20px 16px 20px;
 
@@ -19,19 +15,15 @@ $main-color: $color-scrolly-mintgreen !default;
 $main-color-dark: darken($main-color, 30%) !default;
 $anchor-color: $main-color !default;
 $indicator-text-shadow-color: #3e3e3e !default;
-$text-color: #e3e3e3 !default;
+$page-shadow-color: $text-color !default;
+$page-shadow-inverted-color: $color-scrolly-black !default;
 $text-invert-color: $color-scrolly-black !default;
 $body-font: system, sans-serif !default;
 $title-font: system, sans-serif !default;
 $font-size: 18px !default;
 
-@import "bourbon";
-@import "pageflow/mixins";
-@import "pageflow/animations";
-@import "pageflow/themes/default/definitions";
-@import "pageflow/themes/default/player_controls";
-@import "pageflow/themes/default/video_player";
-@import "pageflow/themes/default/video_wrapper";
+/* Load Pageflow defaults */
+@import "pageflow/themes/default/base";
 @import "pageflow/embedded_video/themes/default";
 
 /* Pageflow plugins */
@@ -41,10 +33,12 @@ $font-size: 18px !default;
 @import "pageflow/linkmap_page/themes/default";
 @import "pageflow/linkmap_page/themes/default/scroll_indicators";
 
-@import "./default_page_overrides";
-@import "./text_page_overrides";
-@import "./external_links_page_overrides";
-@import "./embedded_video_page_overrides";
+/* Destroy some stuff that comes with Pageflow */
+@import "themes/logo_overrides";
+@import "themes/default_page_overrides";
+@import "themes/text_page_overrides";
+@import "themes/external_links_page_overrides";
+@import "themes/embedded_video_page_overrides";
 
 body {
 	background-color: $color-scrolly-black;
@@ -125,11 +119,11 @@ section.delayed_text_fade_in_short {
 		padding: $mobile-margins;
 	}
 
-	.js .page:first-child .contentWrapper {
+	.js .page:first-child .content_and_background .scroller {
 		padding-top: 50px;  // because the logo takes up space
 	}
 
-	.js .page:first-child .contentWrapper:after {
+	.js .page:first-child .content_and_background .scroller:after {
 		height: 35px;
 		max-width: 60%;
 	}

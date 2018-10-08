@@ -6,6 +6,6 @@ $main-color: #468c3f;
   background-image: image-url("pageflow/themes/sbb/logo.png");
 }
 
-.js .page:first-child .contentWrapper:after {
+@include logo {
   background-image: none;
 }

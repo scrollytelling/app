@@ -53,21 +53,18 @@ $body-font: 'Calibri', system, sans-serif;
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
-  top: 14px;
-  height: 100px;
+.loader_logo {
   background-image: image-url("pageflow/themes/uaf/LogoUAF.svg");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo {
   top: 14px;
   height: 100px;
   background-image: image-url("pageflow/themes/uaf/LogoUAF.svg");
 }
 
 @include mobile {
-	.js .page:first-child .contentWrapper {
+	.js .page:first-child .content_and_background {
 		padding-top: 90px;  // because the logo takes up space
 	}
 }

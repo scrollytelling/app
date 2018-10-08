@@ -2,11 +2,14 @@ $main-color: #cf282c;
 
 @import "./base.scss";
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
   background-image: image-url("pageflow/themes/nos/NOS-wit-rood.svg");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo {
+  background-image: image-url("pageflow/themes/nos/NOS-wit-rood.svg");
+}
+
+@include logo-invert {
   background-image: image-url("pageflow/themes/nos/NOS-zilver-rood.svg");
 }

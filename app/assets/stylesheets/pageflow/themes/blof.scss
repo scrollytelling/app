@@ -27,7 +27,10 @@ h2 {
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
+  background-image: image-url("pageflow/themes/blof/logo.png");
+}
+
+@include logo {
   background-image: image-url("pageflow/themes/blof/logo.png");
 }

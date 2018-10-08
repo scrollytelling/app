@@ -1,0 +1,51 @@
+/**
+ * The selector required to override logo is quite specific.
+* We have this mixin to remove duplication and effort.
+*/
+
+@mixin logo() {
+  @include mobile {
+   .js .page .scroller > div {
+     padding: $mobile-margins;
+   }
+
+   .js .page:first-child .content_and_background .scroller {
+     padding-top: 50px;  // because the logo takes up space
+   }
+
+   .js .page:first-child .content_and_background .scroller:after {
+     height: 35px;
+     max-width: 60%;
+   }
+ }
+
+  .page:first-child .content_and_background .scroller > div:after {
+    @content;
+  }
+}
+
+@mixin logo-invert() {
+  .page:first-child.invert .content_and_background .scroller > div:after {
+    @content;
+  }
+}
+
+@include logo {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: image-url('scrollytelling/loading_spinner/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@include logo-invert {
+  // override anything from logo you don't like
+}

@@ -52,13 +52,11 @@ $body-font: Verdana, Arial, sans-serif;
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
-  height: 50px;
+.loader_logo {
   background-image: image-url("pageflow/themes/anwb/ANWB.png");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo {
   height: 50px;
   background-image: image-url("pageflow/themes/anwb/ANWB.png");
 }

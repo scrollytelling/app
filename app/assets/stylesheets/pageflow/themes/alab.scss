@@ -9,11 +9,10 @@ $title-font: 'Merriweather', serif;
   line-height: 1.5;
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
   background-image: image-url("pageflow/themes/alab/logo.png");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo {
   background-image: image-url("pageflow/themes/alab/logo.png");
 }

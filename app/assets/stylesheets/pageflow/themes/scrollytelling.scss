@@ -16,10 +16,10 @@ $title-font: 'Bree Serif', system, serif;
   background-image: image-url("pageflow/themes/scrollytelling/logo.png");
 }
 
-.js .page:first-child .contentWrapper:after {
+@include logo {
   background-image: image-url("pageflow/themes/scrollytelling/logo_header.png");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
+@include logo-invert {
   background-image: image-url("pageflow/themes/scrollytelling/logo_header_invert.png");
 }

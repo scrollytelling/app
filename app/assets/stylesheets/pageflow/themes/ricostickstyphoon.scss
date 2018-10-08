@@ -19,6 +19,6 @@ h2 {
   background-image: image-url("pageflow/themes/ricostickstyphoon/logo.png");
 }
 
-.js .page:first-child .contentWrapper:after {
+@include logo {
   background-image: image-url("pageflow/themes/ricostickstyphoon/logo_header.png");
 }

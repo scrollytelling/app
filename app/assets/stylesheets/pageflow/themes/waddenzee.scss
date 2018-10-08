@@ -14,7 +14,10 @@ $body-font: 'Share', system, sans-serif;
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
+  background-image: none;
+}
+
+@include logo {
   background-image: none;
 }

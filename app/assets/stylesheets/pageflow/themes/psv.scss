@@ -13,6 +13,6 @@ $title-font: 'Klavika Medium Condensed', system, sans-serif;
   background-image: image-url("pageflow/themes/psv/logo.png");
 }
 
-.js .page:first-child .contentWrapper:after {
+@include logo {
   background-image: image-url("pageflow/themes/psv/logo_header.png");
 }

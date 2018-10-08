@@ -27,13 +27,15 @@ $main-color: #133472;
   }
 }
 
-.loader_logo,
-.js .page:first-child .contentWrapper:after {
+.loader_logo {
+  // background-image: image-url("pageflow/themes/default/logo.png");
+}
+
+@include logo {
   // height: 100px;
   // background-image: image-url("pageflow/themes/default/logo.png");
 }
 
-.js .page.invert:first-child .contentWrapper:after {
-  // height: 100px;
+@include logo-invert {
   // background-image: image-url("pageflow/themes/default/logo-black.png");
 }
