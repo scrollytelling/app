@@ -41,7 +41,7 @@ environment. We don't subscribe to this idea. All assets are scoped by unique
 path anyway, which works just fine. So, we need just two buckets:
 
 ```
-media.scrollytellig.com # => initial uploads and hosting images
+media.scrollytelling.com # => initial uploads and hosting images
 output.scrollytelling.com # => converted output, i.e. video and audio files
 ```
 
