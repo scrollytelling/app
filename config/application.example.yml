@@ -1,9 +1,9 @@
 ZENCODER_API_KEY: placeholder
-S3_BUCKET: media.scrollytelling.io
-S3_OUTPUT_BUCKET: output.scrollytelling.io
+S3_BUCKET: media.scrollytelling.com
+S3_OUTPUT_BUCKET: output.scrollytelling.com
 S3_ACCESS_KEY: placeholder
 S3_SECRET_KEY: placeholder
 S3_HOST_NAME: s3.eu-central-1.amazonaws.com
-S3_HOST_ALIAS: media.scrollytelling.io.s3-website.eu-central-1.amazonaws.com
-S3_OUTPUT_HOST_ALIAS: output.scrollytelling.io.s3-website.eu-central-1.amazonaws.com
+S3_HOST_ALIAS: media.scrollytelling.com.s3-website.eu-central-1.amazonaws.com
+S3_OUTPUT_HOST_ALIAS: output.scrollytelling.com.s3-website.eu-central-1.amazonaws.com
 S3_PROTOCOL: https
