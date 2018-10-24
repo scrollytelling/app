@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import "https://fonts.googleapis.com/css?family=Crimson+Text";
 
 $main-color: #cf282c;
 $body-font: Georgia, system, serif;
 $title-font: 'Crimson Text', Georgia, serif;
 
-@import "./base.scss";
+@import "base";
 
 #outer_wrapper {
   line-height: 1.7;

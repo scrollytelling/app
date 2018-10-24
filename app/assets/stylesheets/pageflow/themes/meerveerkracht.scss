@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import "https://fonts.googleapis.com/css?family=PT+Sans";
 
 @font-face {
     font-family: 'Calibri';
@@ -19,7 +19,7 @@
 $main-color: #ca3249; // e498a4 lighter // f4d6db lightest
 $body-font: Calibri, 'PT Sans', sans-serif;
 
-@import "./base.scss";
+@import "base";
 
 .entry {
   font-size: 22px;

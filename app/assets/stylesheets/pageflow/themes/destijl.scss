@@ -19,7 +19,7 @@ $body-font: 'Maxeville Regular', system, sans-serif;
 $title-font: 'Maxeville Constructed', system, sans-serif;
 $font-size: 20px;
 
-@import "./base.scss";
+@import "base";
 
 .scrollytelling-navigation-tooltip {
   font-family: $body-font;

@@ -16,7 +16,7 @@ $main-color: #FD3DB9;
 $body-font: "Franklin Gothic Book", system, sans-serif;
 $title-font: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "HelveticaNeue-CondensedBlack", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
 
-@import "./base.scss";
+@import "base";
 
 #scrollytelling-navigation a.active span {
   background: $main-color;

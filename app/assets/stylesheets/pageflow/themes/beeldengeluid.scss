@@ -20,7 +20,7 @@ $main-color: #df0b37;
 $body-font: 'Akzidenz Grotesk Light', system, sans-serif;
 $title-font: 'Akzidenz Grotesk Condensed', system, sans-serif;
 
-@import "./base.scss";
+@import "base";
 
 h2 {
   &.tagline,

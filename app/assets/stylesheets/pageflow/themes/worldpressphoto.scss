@@ -9,7 +9,7 @@
 $main-color: #cb0936;
 $title-font: 'akkuratregular', system, sans-serif;
 
-@import "./base.scss";
+@import "base";
 
 .loader_logo {
   background-image: image-url("pageflow/themes/worldpressphoto/logo.png");

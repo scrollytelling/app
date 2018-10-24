@@ -1,10 +1,10 @@
-@import 'https://fonts.googleapis.com/css?family=Bree+Serif|Imprima';
+@import "https://fonts.googleapis.com/css?family=Bree+Serif|Imprima";
 
 $main-color: #133472;
 $body-font: 'Imprima', system, sans-serif;
 $title-font: 'Bree Serif', system, serif;
 
-@import "./base.scss";
+@import "base";
 
 .entry {
   p {

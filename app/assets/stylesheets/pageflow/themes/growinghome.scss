@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amiri|Inknut+Antiqua');
+@import "https://fonts.googleapis.com/css?family=Amiri|Inknut+Antiqua";
 
 // variables
 $light-lavendar: #ffaeff;
@@ -15,7 +15,7 @@ $title-font: 'Inknut Antiqua', serif;
 $body-font: 'Amiri', serif;
 
 // import base stylesheet
-@import "./base.scss";
+@import "base";
 
 .scrollytelling-navigation-tooltip {
   font-family: $body-font;

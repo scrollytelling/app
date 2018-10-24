@@ -28,7 +28,7 @@ $title-font: 'TheSans', system;
 $body-font: Verdana, Arial, sans-serif;
 
 // import base stylesheet
-@import "./base.scss";
+@import "base";
 
 // custom styles
 .entry {

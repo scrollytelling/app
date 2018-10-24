@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Pragati+Narrow');
+@import "https://fonts.googleapis.com/css?family=Pragati+Narrow";
 
 $main-color: #d63926; // ffd122 lighter
 $title-font: 'Pragati Narrow', system, sans-serif;
 
-@import "./base.scss";
+@import "base";
 
 .loader_logo {
   background-image: image-url("pageflow/themes/concertatsea/logo.png");

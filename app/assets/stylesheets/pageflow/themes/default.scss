@@ -1,5 +1,5 @@
 // import or declare fonts
-// @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+// @import "https://fonts.googleapis.com/css?family=PT+Sans";
 
 // variables
 $main-color: #133472;
@@ -7,7 +7,7 @@ $main-color: #133472;
 // $body-font: 'Calibri Light', system, sans-serif;
 
 // import base stylesheet
-@import "./base.scss";
+@import "base";
 
 // custom styles
 .entry {

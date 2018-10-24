@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+@import "https://fonts.googleapis.com/css?family=Raleway:400,600";
 
 $main-color: #333333;
 $title-font: 'Raleway', sans-serif;
 
-@import "./base.scss";
+@import "base";
 
 #outer_wrapper {
   font-size: 20px;

@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Karla|Merriweather);
+@import "https://fonts.googleapis.com/css?family=Karla|Merriweather";
 
 $main-color: #0072bf;
 $body-font: 'Karla', sans-serif;
 $title-font: 'Merriweather', serif;
 
-@import "./base.scss";
+@import "base";
 
 #outer_wrapper {
   line-height: 1.5;

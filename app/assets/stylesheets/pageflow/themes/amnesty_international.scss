@@ -1,6 +1,6 @@
 $main-color: #ffff43;
 
-@import "./base.scss";
+@import "base";
 
 .loader_logo {
   background-image: image-url("pageflow/themes/amnesty_international/logo.png");

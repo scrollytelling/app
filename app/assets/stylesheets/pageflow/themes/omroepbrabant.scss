@@ -1,8 +1,8 @@
 $main-color: #ff8200; // ff8200 is omroep brabant orange
 
-// @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+// @import "https://fonts.googleapis.com/css?family=PT+Sans";
 
-@import "./base.scss";
+@import "base";
 
 .entry {
   // font-family: Calibri, 'PT Sans', system, sans-serif;

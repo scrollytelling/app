@@ -18,7 +18,7 @@ $main-color: #3f97aa;
 $body-font: 'Imprima', system, sans-serif;
 $title-font: 'pmn_caecilia85_heavy', system, sans-serif;
 
-@import "./base.scss";
+@import "base";
 
 h2 {
   &.tagline,

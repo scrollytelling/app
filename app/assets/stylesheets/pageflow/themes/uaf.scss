@@ -23,7 +23,7 @@ $title-font: 'Nexa Bold', system, sans-serif;
 $body-font: 'Calibri', system, sans-serif;
 
 // import base stylesheet
-@import "./base.scss";
+@import "base";
 
 // custom styles
 .entry {

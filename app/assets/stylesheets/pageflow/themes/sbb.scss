@@ -1,6 +1,6 @@
 $main-color: #468c3f;
 
-@import "./base.scss";
+@import "base";
 
 .loader_logo {
   background-image: image-url("pageflow/themes/sbb/logo.png");

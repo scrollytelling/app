@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amiri');
+@import "https://fonts.googleapis.com/css?family=Amiri";
 
 @font-face {
 	font-family: "Bagnard";
@@ -13,9 +13,9 @@ $main-color: #133472;
 $title-font: 'Bagnard', serif;
 $body-font: 'Amiri', serif;
 
-// @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+// @import "https://fonts.googleapis.com/css?family=PT+Sans";
 
-@import "./base.scss";
+@import "base";
 
 .entry {
   // font-family: Calibri, 'PT Sans', system, sans-serif;

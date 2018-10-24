@@ -1,6 +1,6 @@
 $main-color: #0079c6;
 
-@import "./base.scss";
+@import "base";
 
 .loader_logo {
   background-image: image-url("pageflow/themes/humanrightswatch/logo.png");

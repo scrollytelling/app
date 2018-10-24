@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Karla);
+@import "https://fonts.googleapis.com/css?family=Karla";
 
 @font-face {
     font-family: 'Neue Droschke';
@@ -10,7 +10,7 @@ $main-color: #ff33c8;
 $body-font: 'Karla', system, sans-serif;
 $title-font: 'Neue Droschke', serif;
 
-@import "./base.scss";
+@import "base";
 
 .contentText {
   font-size: 1.3em;

@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Lato|Merriweather);
+@import "https://fonts.googleapis.com/css?family=Lato|Merriweather";
 
 $main-color: #0072bf;
 $title-font: 'Merriweather', serif;
 
-@import "./base.scss";
+@import "base";
 
 #outer_wrapper {
   line-height: 1.5;

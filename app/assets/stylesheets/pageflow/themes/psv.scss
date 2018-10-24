@@ -7,7 +7,7 @@
 $main-color: #ed1c24;
 $title-font: 'Klavika Medium Condensed', system, sans-serif;
 
-@import "./base.scss";
+@import "base";
 
 .loader_logo {
   background-image: image-url("pageflow/themes/psv/logo.png");
