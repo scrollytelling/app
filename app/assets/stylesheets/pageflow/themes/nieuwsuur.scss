@@ -6,24 +6,26 @@ $title-font: 'Merriweather', serif;
 
 @import "base";
 
+.entry {
+  font-family: $body-font;
+
+  h2 {
+    font-family: $title-font;
+
+    span.title {
+      font-size: 2.3em;
+    }
+
+    span.title,
+    span.subtitle {
+      line-height: 1.4;
+    }
+  }
+}
+
 #outer_wrapper {
   line-height: 1.5;
   font-weight: bold;
-}
-
-h2 {
-  span.title {
-    font-size: 2.3em;
-  }
-
-  span.title,
-  span.subtitle {
-    line-height: 1.4;
-  }
-}
-
-p {
-  font-size: 18px;
 }
 
 .loader_logo {

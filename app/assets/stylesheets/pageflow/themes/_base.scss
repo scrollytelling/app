@@ -2,22 +2,19 @@
 
 @import "themes/fonts";
 
-// COLORS
-$color-scrolly-mintgreen: #c3e2dd;
-$color-scrolly-black: #090909;
-$text-color: #e3e3e3 !default;
 // MARGINS
 $desktop-margins: 200px 100px 70px 100px;
 $mobile-margins: 30px 20px 16px 20px;
 
 // derived themes can override these variables.
-$main-color: $color-scrolly-mintgreen !default;
+$main-color: #c3e2dd !default;
 $main-color-dark: darken($main-color, 30%) !default;
 $anchor-color: $main-color !default;
 $indicator-text-shadow-color: #3e3e3e !default;
 $page-shadow-color: $text-color !default;
-$page-shadow-inverted-color: $color-scrolly-black !default;
-$text-invert-color: $color-scrolly-black !default;
+$page-shadow-inverted-color: #090909 !default;
+$text-color: #e3e3e3 !default;
+$text-invert-color: #090909 !default;
 $body-font: system, sans-serif !default;
 $title-font: system, sans-serif !default;
 $font-size: 18px !default;
@@ -41,7 +38,7 @@ $font-size: 18px !default;
 @import "themes/embedded_video_page_overrides";
 
 body {
-	background-color: $color-scrolly-black;
+	background-color: $text-invert-color;
 }
 
 h1, h2, h3, h4, p, li, span, td, a, label, select, input, textarea, button, :after {
