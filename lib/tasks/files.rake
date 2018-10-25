@@ -5,11 +5,13 @@ task files: :environment do
     theming = account.default_theming.theme_name
     files[theming] = {}
     STDERR.puts "# #{theming}"
+    STDERR.puts
 
     account.entries.published.find_each do |entry|
       published = Pageflow::PublishedEntry.find(entry.slug, Pageflow::Entry)
       files[theming][entry.slug] = {}
       STDERR.puts "## #{entry.slug}"
+      STDERR.puts
 
       # "url":"https://media.scrollytelling.com/main/video_files/attachment_on_s3s/000/003/013/original/187G1126.mp4?1528532883"
       Pageflow.config.file_types.to_a.each do |file_type|
