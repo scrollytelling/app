@@ -12,7 +12,14 @@ $main-color-dark: darken($main-color, 30%) !default;
 $text-color: #e3e3e3 !default;
 $text-invert-color: #090909 !default;
 $anchor-color: $main-color !default;
+
+$indicator-text-color: $text-color !default;
+$indicator-active-text-color: $text-color !default;
 $indicator-text-shadow-color: $text-color !default;
+$indicator-inverted-text-color: $text-invert-color !default;
+$indicator-inverted-active-text-color: $text-invert-color !default;
+$indicator-inverted-text-shadow-color: $text-invert-color !default;
+
 $page-shadow-color: $text-invert-color !default;
 $page-shadow-inverted-color: $text-color !default;
 $body-font: system, sans-serif !default;
@@ -65,6 +72,17 @@ h1, h2, h3, h4, p, li, span, td, a, label, select, input, textarea, button, :aft
 	}
 }
 
+@include phone {
+	.page .contentText > * {
+		font-size: $font-size;
+		font-family: $body-font;
+		font-weight: normal;
+		line-height: 1.6;
+	}
+}
+
+}
+
 h2 {
 	word-wrap: break-word;
 	font-family: $title-font;
@@ -90,6 +108,10 @@ h2 {
 	}
 }
 
+.navigation_mobile .menu.index {
+	background-image: none;
+}
+
 section.delayed_text_fade_in_long,
 section.delayed_text_fade_in_medium,
 section.delayed_text_fade_in_short {
@@ -97,6 +119,24 @@ section.delayed_text_fade_in_short {
 	.page_header,
 	.shadow_wrapper {
 		opacity: 0;
+	}
+}
+
+.slideshow {
+	> .indicator {
+		text-shadow: none;
+
+		@include phone {
+			text-shadow: none;
+		}
+
+		&.invert {
+			text-shadow: none;
+
+			@include phone {
+				text-shadow: none;
+			}
+		}
 	}
 }
 

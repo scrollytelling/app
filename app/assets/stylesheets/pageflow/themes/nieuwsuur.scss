@@ -35,3 +35,9 @@ $title-font: 'Merriweather', serif;
 @include logo {
   background-image: image-url("pageflow/themes/nieuwsuur/logo.png");
 }
+
+@include mobile {
+	.js .page:first-child .content_and_background .scroller:after {
+    top: -30px;
+	}
+}
