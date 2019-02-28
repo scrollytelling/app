@@ -9,6 +9,7 @@ Dir.chdir APP_ROOT do
   system '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 
   puts "\n== Installing required binaries =="
+  system 'sudo apt install mariadb-server mariadb-client libmariadb-dev'
   system 'brew install rbenv ruby-build mysql redis imagemagick'
 
   puts "\n== Installing Ruby =="

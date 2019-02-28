@@ -12,6 +12,45 @@ To get started, and install all needed software:
 bin/setup
 ```
 
+## MySQL
+
+We recommend you use MariaDB for the databae server. Version 10.1 worked without any problems. Just to end all utf8mb4 madness, you should switch to the 'Barracuda' storage type too. Follow these steps:
+
+```
+sudo apt install mariadb-server mariadb-client libmariadb-dev
+
+# allow root to connect without a password:
+sudo mysql -uroot
+<give your own password, this is for sudo>
+> use mysql;
+> update user set authentication_string=password(''), plugin='mysql_native_password' where user='root';
+> flush privileges;
+exit
+
+# in /etc/mysql/conf.d/client.cnf
+# and also in /etc/mysql/conf.d/mysql.cnf
+# 
+[client]
+default-character-set=utf8mb4
+
+# in /etc/mysql/conf.d/mysqld.conf
+#
+[mysqld]
+innodb_file_format=Barracuda
+innodb_file_per_table=1
+innodb_large_prefix=ON
+
+init-connect='SET NAMES utf8mb4'
+character-set-server=utf8mb4
+collation-server=utf8mb4
+
+
+
+bundle exec rake db:setup
+
+sudo service mysql restart
+```
+
 ## Background jobs
 
 If you need to add new media (photos, videos or audio) to your local install, the background jobs have to be running. They are listed in `Procfile` and the easiest way to run everything is using Foreman:
